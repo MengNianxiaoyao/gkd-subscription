@@ -106,7 +106,7 @@ export default defineAppConfig({
     },
     {
       key: 12,
-      name: '功能类-福利中心我知道了',
+      name: '功能类-福利中心【我知道了】',
       desc: '福利中心看视频后获得奖励，自动点击“我知道了”',
       activityIds: 'com.qidian.QDReader.ui.activity.QDBrowserActivity',
       resetMatch: 'activity',
