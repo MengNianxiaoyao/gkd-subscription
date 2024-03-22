@@ -135,15 +135,11 @@ export default defineAppConfig({
       desc: '福利中心自动点击“看视频领福利”',
       rules: [
         {
-          matches: [
-            'Button[text*="看视频领福利"]'
-          ],
+          matches: ['Button[text*="看视频领福利"]'],
           snapshotUrls: [],
-          activityIds: [
-            'com.qidian.QDReader.ui.activity.QDBrowserActivity'
-          ]
-        }
-      ]
+          activityIds: ['com.qidian.QDReader.ui.activity.QDBrowserActivity'],
+        },
+      ],
     },
     {
       key: 15,
@@ -151,15 +147,11 @@ export default defineAppConfig({
       desc: '福利中心看视频限时彩蛋',
       rules: [
         {
-          matches: [
-            '[text="看视频"]'
-          ],
+          matches: ['[text="看视频"]'],
           snapshotUrls: [],
-          activityIds: [
-            'com.qidian.QDReader.ui.activity.QDBrowserActivity'
-          ]
-        }
-      ]
+          activityIds: ['com.qidian.QDReader.ui.activity.QDBrowserActivity'],
+        },
+      ],
     },
     {
       key: 16,
@@ -167,15 +159,11 @@ export default defineAppConfig({
       desc: '福利中心看视频开宝箱',
       rules: [
         {
-          matches: [
-            '[text="看视频开宝箱"]'
-          ],
+          matches: ['[text="看视频开宝箱"]'],
           snapshotUrls: [],
-          activityIds: [
-            'com.qidian.QDReader.ui.activity.QDBrowserActivity'
-          ]
-        }
-      ]
+          activityIds: ['com.qidian.QDReader.ui.activity.QDBrowserActivity'],
+        },
+      ],
     },
     {
       key: 17,
@@ -183,15 +171,11 @@ export default defineAppConfig({
       desc: '福利中心领奖励',
       rules: [
         {
-          matches: [
-            '[text="领奖励"]'
-          ],
+          matches: ['[text="领奖励"]'],
           snapshotUrls: [],
-          activityIds: [
-            'com.qidian.QDReader.ui.activity.QDBrowserActivity'
-          ]
-        }
-      ]
+          activityIds: ['com.qidian.QDReader.ui.activity.QDBrowserActivity'],
+        },
+      ],
     },
   ],
 });
