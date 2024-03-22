@@ -8,7 +8,7 @@
 https://fastly.jsdelivr.net/npm/gkd-subscription
 ```
 
-当前版本: v1
+当前版本: v2
 
 当前订阅文件已适配 610 个 APP, 共有 1371 规则组
 
@@ -18,4 +18,4 @@ https://fastly.jsdelivr.net/npm/gkd-subscription
 
 ## 感谢以下开发者的贡献
 
-![img](https://contrib.rocks/image?repo=gkd-kit/subscription&_v=1)
+![img](https://contrib.rocks/image?repo=gkd-kit/subscription&_v=2)
