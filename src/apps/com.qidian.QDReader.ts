@@ -106,16 +106,6 @@ export default defineAppConfig({
     },
     {
       key: 12,
-      name: '功能类-福利中心【我知道了】',
-      desc: '福利中心看视频后获得奖励，自动点击“我知道了”',
-      activityIds: 'com.qidian.QDReader.ui.activity.QDBrowserActivity',
-      resetMatch: 'activity',
-      matchTime: 10000,
-      rules: 'View[desc="我知道了"]',
-      snapshotUrls: 'https://i.gkd.li/import/13606901',
-    },
-    {
-      key: 13,
       quickFind: true,
       name: '全屏广告-红包弹窗',
       desc: '点击X',
@@ -128,6 +118,80 @@ export default defineAppConfig({
           snapshotUrls: 'https://i.gkd.li/import/13918466',
         },
       ],
+    },
+    {
+      key: 13,
+      name: '功能类-福利中心【我知道了】',
+      desc: '福利中心看视频后获得奖励，自动点击“我知道了”',
+      activityIds: 'com.qidian.QDReader.ui.activity.QDBrowserActivity',
+      resetMatch: 'activity',
+      matchTime: 10000,
+      rules: 'View[desc="我知道了"]',
+      snapshotUrls: 'https://i.gkd.li/import/13606901',
+    },
+    {
+      key: 14,
+      name: '功能类-看视频领福利',
+      desc: '福利中心自动点击“看视频领福利”',
+      rules: [
+        {
+          matches: [
+            'Button[text*="看视频领福利"]'
+          ],
+          snapshotUrls: [],
+          activityIds: [
+            'com.qidian.QDReader.ui.activity.QDBrowserActivity'
+          ]
+        }
+      ]
+    },
+    {
+      key: 15,
+      name: '功能类-看视频',
+      desc: '福利中心看视频限时彩蛋',
+      rules: [
+        {
+          matches: [
+            '[text="看视频"]'
+          ],
+          snapshotUrls: [],
+          activityIds: [
+            'com.qidian.QDReader.ui.activity.QDBrowserActivity'
+          ]
+        }
+      ]
+    },
+    {
+      key: 16,
+      name: '功能类-看视频开宝箱',
+      desc: '福利中心看视频开宝箱',
+      rules: [
+        {
+          matches: [
+            '[text="看视频开宝箱"]'
+          ],
+          snapshotUrls: [],
+          activityIds: [
+            'com.qidian.QDReader.ui.activity.QDBrowserActivity'
+          ]
+        }
+      ]
+    },
+    {
+      key: 17,
+      name: '功能类-领奖励',
+      desc: '福利中心领奖励',
+      rules: [
+        {
+          matches: [
+            '[text="领奖励"]'
+          ],
+          snapshotUrls: [],
+          activityIds: [
+            'com.qidian.QDReader.ui.activity.QDBrowserActivity'
+          ]
+        }
+      ]
     },
   ],
 });
