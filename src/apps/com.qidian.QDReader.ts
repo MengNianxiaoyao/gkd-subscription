@@ -89,7 +89,7 @@ export default defineAppConfig({
     {
       enable: false,
       key: 10,
-      name: '起点中文网登录自动确认',
+      name: '功能类-起点中文网登录自动确认',
       desc: '自动点击【登录】',
       activityIds: 'com.qidian.QDReader.ui.activity.QDBrowserActivity',
       resetMatch: 'activity',
