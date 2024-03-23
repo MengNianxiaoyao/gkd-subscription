@@ -247,8 +247,9 @@ export default defineAppConfig({
     {
       enable: false,
       key: 10,
-      name: '自动勾选原图',
+      name: '功能类-自动勾选原图',
       desc: '发送图片时自动勾选原图',
+      quickFind: true,
       activityIds: [
         'com.tencent.mobileqq.activity.SplashActivity',
         'com.tencent.qqnt.qbasealbum.WinkHomeActivity',
@@ -265,7 +266,7 @@ export default defineAppConfig({
     {
       enable: false,
       key: 11,
-      name: '自动查看原图',
+      name: '功能类-自动查看原图',
       desc: '查看图片时自动点击原图',
       activityIds: 'com.tencent.richframework.gallery.QQGalleryActivity',
       rules: '[desc="查看原图"][checked=false]',
@@ -277,7 +278,7 @@ export default defineAppConfig({
     {
       enable: false,
       key: 12,
-      name: 'QQ小世界评论区广告',
+      name: '分段广告-QQ小世界评论区广告',
       desc: '点击广告-弹出原因框-关闭此条广告',
       activityIds: [
         'com.tencent.mobileqq.activity.SplashActivity',
