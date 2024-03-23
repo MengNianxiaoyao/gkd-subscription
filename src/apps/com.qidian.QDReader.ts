@@ -133,6 +133,8 @@ export default defineAppConfig({
       key: 14,
       name: '功能类-看视频领福利',
       desc: '福利中心自动点击“看视频领福利”',
+      resetMatch: 'activity',
+      matchTime: 10000,
       rules: [
         {
           matches: ['Button[text*="看视频领福利"]'],
@@ -145,6 +147,8 @@ export default defineAppConfig({
       key: 15,
       name: '功能类-看视频',
       desc: '福利中心看视频限时彩蛋',
+      resetMatch: 'activity',
+      matchTime: 10000,
       rules: [
         {
           matches: ['[text="看视频"]'],
@@ -157,6 +161,8 @@ export default defineAppConfig({
       key: 16,
       name: '功能类-看视频开宝箱',
       desc: '福利中心看视频开宝箱',
+      resetMatch: 'activity',
+      matchTime: 10000,
       rules: [
         {
           matches: ['[text="看视频开宝箱"]'],
@@ -169,6 +175,8 @@ export default defineAppConfig({
       key: 17,
       name: '功能类-领奖励',
       desc: '福利中心领奖励',
+      resetMatch: 'activity',
+      matchTime: 10000,
       rules: [
         {
           matches: ['[text="领奖励"]'],
