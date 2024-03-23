@@ -92,6 +92,8 @@ export default defineAppConfig({
       name: '起点中文网登录自动确认',
       desc: '自动点击【登录】',
       activityIds: 'com.qidian.QDReader.ui.activity.QDBrowserActivity',
+      resetMatch: 'activity',
+      matchTime: 10000,
       rules: '[id="scanLogin"]',
       snapshotUrls: 'https://i.gkd.li/import/12903081',
     },
@@ -161,8 +163,8 @@ export default defineAppConfig({
       key: 16,
       name: '功能类-看视频开宝箱',
       desc: '福利中心看视频开宝箱',
-      resetMatch: 'activity',
-      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: [
         {
           matches: ['[text="看视频开宝箱"]'],
