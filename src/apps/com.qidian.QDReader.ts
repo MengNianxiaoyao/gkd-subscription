@@ -153,7 +153,7 @@ export default defineAppConfig({
       desc: '福利中心看视频开宝箱',
       activityIds: 'com.qidian.QDReader.ui.activity.QDBrowserActivity',
       rules: {
-        matches: 'TextView[text="看视频开宝箱"]',
+        matches: 'View[text="看视频开宝箱"]',
       },
       snapshotUrls: [],
     },
