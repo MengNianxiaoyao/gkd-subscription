@@ -326,7 +326,7 @@ export default defineAppConfig({
       enable: false,
       key: 9,
       name: '功能类-自动查看原图',
-      desc: '自动点击底部左侧[查看原图（*M）]按钮',
+      desc: '自动点击底部左侧[查看原图]按钮',
       quickFind: true,
       activityIds: 'com.tencent.mm.ui.chatting.gallery.ImageGalleryUI',
       rules: 'Button[text^="查看原图"][clickable=true]',
