@@ -2,8 +2,10 @@
 
 存在 1 规则组 - [com.qiqi.hhvideo](/src/apps/com.qiqi.hhvideo.ts)
 
-## 开屏广告
+## 青少年模式
 
-- [示例-0](https://m.gkd.li/48015717/236526b6-691f-4023-a3ac-64b4409ee759)
+默认禁用
 
-- [快照-0](https://i.gkd.li/import/13633385)
+- [示例-0](https://m.gkd.li/57941037/c50c5c8f-5fec-437e-908c-abc7b2cedee8)
+
+- [快照-0](https://i.gkd.li/i/14343546)

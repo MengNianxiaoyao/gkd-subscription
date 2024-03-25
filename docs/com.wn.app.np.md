@@ -2,8 +2,10 @@
 
 存在 1 规则组 - [com.wn.app.np](/src/apps/com.wn.app.np.ts)
 
-## 开屏广告
+## 全屏广告-广告弹窗
 
-- [快照-0](https://i.gkd.li/import/13400234)
-- [快照-1](https://i.gkd.li/import/13400250)
-- [快照-2](https://i.gkd.li/import/13400257)
+默认禁用 - 点击关闭
+
+- [示例-0](https://m.gkd.li/57941037/b75f4ba1-7e40-4ea2-9f65-20b61f018720)
+
+- [快照-0](https://i.gkd.li/i/14722550)

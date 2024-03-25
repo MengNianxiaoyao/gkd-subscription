@@ -2,8 +2,8 @@
 
 存在 1 规则组 - [com.miaoying.appmy](/src/apps/com.miaoying.appmy.ts)
 
-## 应用内广告弹窗
+## 全屏广告-广告弹窗
 
 默认禁用
 
-- [快照-0](https://i.gkd.li/import/12846524)
+- [快照-0](https://i.gkd.li/i/12846524)

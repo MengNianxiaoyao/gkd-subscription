@@ -2,14 +2,14 @@
 
 存在 2 规则组 - [com.lenovo.browser.hd](/src/apps/com.lenovo.browser.hd.ts)
 
-## 更新弹窗
+## 更新提示
 
 默认禁用
 
-- [快照-0](https://i.gkd.li/import/13401982)
+- [快照-0](https://i.gkd.li/i/13401982)
 
-## 请求通知权限弹窗
+## 通知提示-请求通知权限弹窗
 
 默认禁用
 
-- [快照-0](https://i.gkd.li/import/13401980)
+- [快照-0](https://i.gkd.li/i/13401980)

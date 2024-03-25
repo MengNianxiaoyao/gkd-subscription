@@ -2,8 +2,8 @@
 
 存在 1 规则组 - [com.zmsoft.forwatch](/src/apps/com.zmsoft.forwatch.ts)
 
-## 弹窗广告
+## 全屏广告-弹窗广告
 
 默认禁用
 
-- [快照-0](https://i.gkd.li/import/13545995)
+- [快照-0](https://i.gkd.li/i/13545995)

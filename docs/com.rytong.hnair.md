@@ -2,8 +2,8 @@
 
 存在 1 规则组 - [com.rytong.hnair](/src/apps/com.rytong.hnair.ts)
 
-## 首页-弹窗广告
+## 全屏广告-首页弹窗广告
 
 默认禁用
 
-- [快照-0](https://i.gkd.li/import/12846381)
+- [快照-0](https://i.gkd.li/i/12846381)

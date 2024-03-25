@@ -2,8 +2,8 @@
 
 存在 1 规则组 - [com.miui.virtualsim](/src/apps/com.miui.virtualsim.ts)
 
-## 广告弹窗
+## 全屏广告-广告弹窗
 
 默认禁用
 
-- [快照-0](https://i.gkd.li/import/13238467)
+- [快照-0](https://i.gkd.li/i/13238467)

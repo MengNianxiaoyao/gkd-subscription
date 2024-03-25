@@ -1,9 +1,30 @@
 # 酷狗概念版
 
-存在 1 规则组 - [com.kugou.android.lite](/src/apps/com.kugou.android.lite.ts)
+存在 4 规则组 - [com.kugou.android.lite](/src/apps/com.kugou.android.lite.ts)
 
-## 开屏广告
+## 青少年模式
 
-- [快照-0](https://i.gkd.li/import/13324363)
-- [快照-1](https://i.gkd.li/import/13318737)
-- [快照-2](https://i.gkd.li/import/12919282)
+默认禁用
+
+- [快照-0](https://i.gkd.li/i/14321697)
+
+## 全屏广告-VIP弹窗
+
+默认禁用
+
+- [快照-0](https://i.gkd.li/i/14321698)
+- [快照-1](https://i.gkd.li/i/14321700)
+
+## 分段广告-我的页面-右侧悬浮反馈图标
+
+默认禁用
+
+- [快照-0](https://i.gkd.li/i/14321713)
+- [快照-1](https://i.gkd.li/i/14321718)
+- [快照-2](https://i.gkd.li/i/14321724)
+
+## 更新提示
+
+默认禁用
+
+- [快照-0](https://i.gkd.li/i/14622566)

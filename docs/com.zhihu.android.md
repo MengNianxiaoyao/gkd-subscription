@@ -1,79 +1,95 @@
 # 知乎
 
-存在 13 规则组 - [com.zhihu.android](/src/apps/com.zhihu.android.ts)
+存在 8 规则组 - [com.zhihu.android](/src/apps/com.zhihu.android.ts)
 
-## 开屏广告
+## 分段广告-信息流广告
 
-- [快照-0](https://i.gkd.li/import/12707641)
-- [快照-1](https://i.gkd.li/import/12899263)
-- [快照-2](https://i.gkd.li/import/13070251)
-- [快照-3](https://i.gkd.li/import/12841423)
-- [快照-4](https://i.gkd.li/import/12883329)
-- [快照-5](https://i.gkd.li/import/12981146)
+默认禁用 - 点击关闭-点击内容不感兴趣
 
-## 关闭广告弹窗
+- [示例-0](https://m.gkd.li/57941037/f6498773-af55-4ba9-96fa-4c0597523d55)
+- [示例-1](https://m.gkd.li/57941037/c52e22c6-987e-46c2-a4ca-e1182972ed94)
 
-默认禁用 - 点击 关闭广告按钮 之后出现的广告弹窗
+- [快照-0](https://i.gkd.li/i/13849671)
+- [快照-1](https://i.gkd.li/i/14645530)
+- [快照-2](https://i.gkd.li/i/12647525)
+- [快照-3](https://i.gkd.li/i/14178516)
+- [快照-4](https://i.gkd.li/i/13849442)
+- [快照-5](https://i.gkd.li/i/14178979)
+- [快照-6](https://i.gkd.li/i/14321041)
+- [快照-7](https://i.gkd.li/i/14468152)
+- [快照-8](https://i.gkd.li/i/14192451)
+- [快照-9](https://i.gkd.li/i/14730741)
+- [快照-10](https://i.gkd.li/i/13849689)
 
-## 关闭广告原因
+## 通知提示-推送通知弹窗
 
-默认禁用 - 点击 关闭广告按钮 之后出现的选择原因
+默认禁用 - 点击x按钮
 
-## 关闭推荐
+- [示例-0](https://m.gkd.li/57941037/25cfef06-fe50-4250-bf45-1f6210f95063)
 
-默认禁用 - 关闭回答底部其他回答
+- [快照-0](https://i.gkd.li/i/12647583)
 
-## 分段广告-推荐页广告卡片
+## 全屏广告-广告弹窗
 
-默认禁用 - 赚稿费广告卡片,盐选推荐广告,知乎学课堂,汽车广告
+默认禁用 - 点击关闭
 
-## 分段广告-问题-回答列表-卡片广告
+- [示例-0](https://m.gkd.li/57941037/9eb78a95-c2dc-4a8b-9b86-f9d0fc0ed6fd)
+- [示例-1](https://m.gkd.li/57941037/a5c471b6-dbc7-4150-be52-3ae4a28806e0)
+- [示例-2](https://m.gkd.li/57941037/335dee89-4b55-40f1-8316-b7b4f86a8ee6)
 
-默认禁用
+- [快照-0](https://i.gkd.li/i/12707676)
+- [快照-1](https://i.gkd.li/i/14648128)
+- [快照-2](https://i.gkd.li/i/12647421)
 
-- [快照-0](https://i.gkd.li/import/13849671)
-- [快照-1](https://i.gkd.li/import/13849442)
-- [快照-2](https://i.gkd.li/import/13849689)
+## 局部广告-搜索栏上方广告
 
-## 回答底部评论顶部的任意广告推荐
+默认禁用 - 点击关闭
 
-默认禁用
+- [示例-0](https://m.gkd.li/101449500/11c26ab8-0b01-4345-8ea8-d4e97233b723)
 
-- [快照-0](https://i.gkd.li/import/12864109)
-- [快照-1](https://i.gkd.li/import/12647617)
-- [快照-2](https://i.gkd.li/import/12647659)
-- [快照-3](https://i.gkd.li/import/12647525)
-- [快照-4](https://i.gkd.li/import/12647541)
+- [快照-0](https://i.gkd.li/i/14156887)
 
-## 关闭首页广告
+## 局部广告-信息流广告
 
-默认禁用
+默认禁用 - 点击关闭
 
-## 推荐页-顶部广告
+- [示例-0](https://m.gkd.li/57941037/0443d5cb-aa24-4447-afd7-58c5a09af835)
+- [示例-1](https://m.gkd.li/45487685/c7d89c48-91d1-4658-b22e-d2626117be8b)
 
-默认禁用
+- [快照-0](https://i.gkd.li/i/14178980)
+- [快照-1](https://i.gkd.li/i/14206949)
+- [快照-2](https://i.gkd.li/i/14232195)
+- [快照-3](https://i.gkd.li/i/14235024)
+- [快照-4](https://i.gkd.li/i/14206988)
+- [快照-5](https://i.gkd.li/i/14220104)
+- [快照-6](https://i.gkd.li/i/14421277)
+- [快照-7](https://i.gkd.li/i/14296163)
+- [快照-8](https://i.gkd.li/i/14332161)
+- [快照-9](https://i.gkd.li/i/14391614)
 
-## 推送通知弹窗
-
-默认禁用 - 推送通知弹窗-点击x按钮
-
-- [快照-0](https://i.gkd.li/import/12647583)
-
-## 会员页面-月卡红包
-
-默认禁用
-
-- [快照-0](https://i.gkd.li/import/12647421)
-
-## 会员页面-广告弹窗
-
-默认禁用
-
-- [快照-0](https://i.gkd.li/import/12707676)
-
-## 问题回答-自动展开
+## 局部广告-悬浮小广告
 
 默认禁用
 
-- [快照-0](https://i.gkd.li/import/12647688)
-- [快照-1](https://i.gkd.li/import/12707687)
+- [快照-0](https://i.gkd.li/i/14296251)
+- [快照-1](https://i.gkd.li/i/14635636)
+
+## 更新提示
+
+默认禁用
+
+- [示例-0](https://m.gkd.li/57941037/728ea1cd-ca19-4de9-9e7e-eb2a3513f965)
+- [示例-1](https://m.gkd.li/57941037/728ea1cd-ca19-4de9-9e7e-eb2a3513f965)
+
+- [快照-0](https://i.gkd.li/i/14445502)
+- [快照-1](https://i.gkd.li/i/14445815)
+- [快照-2](https://i.gkd.li/i/14445502)
+
+## 功能类-自动展开回答
+
+默认禁用 - 自动点击展开
+
+- [示例-0](https://m.gkd.li/57941037/6f6e5fd0-98a8-4a92-be02-7f34e3c5b8bd)
+
+- [快照-0](https://i.gkd.li/i/12647688)
+- [快照-1](https://i.gkd.li/i/12707687)

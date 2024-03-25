@@ -2,9 +2,9 @@
 
 存在 1 规则组 - [com.zzw.october](/src/apps/com.zzw.october.ts)
 
-## 主页广告
+## 全屏广告-弹窗广告
 
 默认禁用
 
-- [快照-0](https://i.gkd.li/import/12842675)
-- [快照-1](https://i.gkd.li/import/12869369)
+- [快照-0](https://i.gkd.li/i/12842675)
+- [快照-1](https://i.gkd.li/i/12869369)

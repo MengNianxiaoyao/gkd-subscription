@@ -1,98 +1,123 @@
 # 抖音
 
-存在 14 规则组 - [com.ss.android.ugc.aweme](/src/apps/com.ss.android.ugc.aweme.ts)
+存在 16 规则组 - [com.ss.android.ugc.aweme](/src/apps/com.ss.android.ugc.aweme.ts)
 
-## 关闭青少年弹窗
-
-默认禁用
-
-## 关闭用户推荐
+## 局部广告-关闭用户推荐
 
 默认禁用
 
-- [快照-0](https://i.gkd.li/import/12520962)
-- [快照-1](https://i.gkd.li/import/12520943)
-- [快照-2](https://i.gkd.li/import/12675396)
-- [快照-3](https://i.gkd.li/import/12675129)
-- [快照-4](https://i.gkd.li/import/12675245)
+- [快照-0](https://i.gkd.li/i/12520943)
+- [快照-1](https://i.gkd.li/i/12520962)
+- [快照-2](https://i.gkd.li/i/12675396)
+- [快照-3](https://i.gkd.li/i/12675129)
+- [快照-4](https://i.gkd.li/i/12675245)
+- [快照-5](https://i.gkd.li/i/12525387)
+- [快照-6](https://i.gkd.li/i/12525389)
+- [快照-7](https://i.gkd.li/i/14661956)
 
-## 关闭朋友推荐弹窗
-
-默认禁用
-
-- [快照-0](https://i.gkd.li/import/12525387)
-- [快照-1](https://i.gkd.li/import/12525389)
-
-## 关闭更新弹窗
+## 更新提示-关闭更新弹窗
 
 默认禁用
 
-- [快照-0](https://i.gkd.li/import/12534016)
-- [快照-1](https://i.gkd.li/import/13328599)
+- [快照-0](https://i.gkd.li/i/12534016)
+- [快照-1](https://i.gkd.li/i/13328599)
 
-## 首页左上角广告
-
-默认禁用
-
-- [快照-0](https://i.gkd.li/import/12749276)
-
-## 广告弹窗
+## 局部广告-首页左上角广告
 
 默认禁用
 
-- [快照-0](https://i.gkd.li/import/12769137)
+- [快照-0](https://i.gkd.li/i/12749276)
 
-## 去商店评分
+## 全屏广告-广告弹窗
+
+默认禁用
+
+- [快照-0](https://i.gkd.li/i/12769137)
+
+## 评价提示-去商店评分
 
 默认禁用 - 点击[取消]
 
 - [示例-0](https://github.com/gkd-kit/inspect/assets/38517192/4554c785-39e0-4eac-9cfb-f1b1c2976008)
 
-- [快照-0](https://i.gkd.li/import/13053628)
+- [快照-0](https://i.gkd.li/i/13053628)
 
-## 设置无声进入抖音
+## 功能类-设置无声进入抖音弹窗
 
 默认禁用 - 点击[拒绝]
 
-- [快照-0](https://i.gkd.li/import/13256087)
+- [快照-0](https://i.gkd.li/i/13256087)
 
-## 请求开启通知提示信息
+## 通知提示-请求开启通知提示信息
 
 默认禁用 - 自动点击“暂不”
 
-- [快照-0](https://i.gkd.li/import/12675129)
-- [快照-1](https://i.gkd.li/import/13669790)
+- [快照-0](https://i.gkd.li/i/12675129)
+- [快照-1](https://i.gkd.li/i/13669790)
 
-## 自动勾选原图
+## 功能类-自动勾选原图
 
 默认禁用 - 聊天发送图片时自动勾选原图
 
-- [快照-0](https://i.gkd.li/import/12846036)
-- [快照-1](https://i.gkd.li/import/12846040)
+- [快照-0](https://i.gkd.li/i/12846036)
+- [快照-1](https://i.gkd.li/i/12846040)
 
-## 休息提醒
-
-默认禁用
-
-- [快照-0](https://i.gkd.li/import/13241564)
-- [快照-1](https://i.gkd.li/import/13372604)
-- [快照-2](https://i.gkd.li/import/13372725)
-
-## 添加快捷方式到桌面
+## 全屏广告-休息提醒
 
 默认禁用
 
-- [快照-0](https://i.gkd.li/import/13338556)
-- [快照-1](https://i.gkd.li/import/13669682)
+- [快照-0](https://i.gkd.li/i/13241564)
+- [快照-1](https://i.gkd.li/i/13372604)
+- [快照-2](https://i.gkd.li/i/14160675)
+- [快照-3](https://i.gkd.li/i/13372725)
 
-## 视频播放中途插入的打招呼界面
+## 功能类-[添加快捷方式到桌面]弹窗
+
+默认禁用 - 关闭弹窗
+
+- [快照-0](https://i.gkd.li/i/13338556)
+- [快照-1](https://i.gkd.li/i/13669682)
+- [快照-2](https://i.gkd.li/i/14740312)
+- [快照-3](https://i.gkd.li/i/14325749)
+
+## 全屏广告-视频播放中途插入的打招呼界面
 
 默认禁用
 
-- [快照-0](https://i.gkd.li/import/13379307)
+- [快照-0](https://i.gkd.li/i/13379307)
 
-## 关闭商城推荐
+## 全屏广告-关闭商城推荐
 
-默认禁用 - 点击【不感兴趣】
+默认禁用 - 点击"不感兴趣"
 
-- [快照-0](https://i.gkd.li/import/13800207)
+- [快照-0](https://i.gkd.li/i/13800207)
+
+## 局部广告-拍同款弹窗
+
+默认禁用 - 点击不感兴趣
+
+- [快照-0](https://i.gkd.li/i/13996724)
+
+## 全屏广告-[去首页商城]弹窗
+
+默认禁用 - 点击[知道了]
+
+- [示例-0](https://m.gkd.li/57941037/385f4262-d744-4482-887c-be2e1f0c0943)
+
+- [快照-0](https://i.gkd.li/i/14533732)
+
+## 全屏广告-低价秒杀券弹窗
+
+默认禁用 - 点击关闭
+
+- [示例-0](https://m.gkd.li/57941037/ef703cd7-99af-4e10-8345-9860ed160b8b)
+
+- [快照-0](https://i.gkd.li/i/14585377)
+
+## 权限提示-请求访问通讯录弹窗
+
+默认禁用 - 点击[拒绝]
+
+- [示例-0](https://m.gkd.li/57941037/8f70418d-92f0-4264-83fd-a680350c478e)
+
+- [快照-0](https://i.gkd.li/i/14735280)

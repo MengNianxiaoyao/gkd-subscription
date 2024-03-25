@@ -2,14 +2,14 @@
 
 存在 2 规则组 - [com.mem.MacaoLife](/src/apps/com.mem.MacaoLife.ts)
 
-## 開啟通知提示
+## 通知提示-请求通知提示弹窗
 
 默认禁用
 
-- [快照-0](https://i.gkd.li/import/13350665)
+- [快照-0](https://i.gkd.li/i/13350665)
 
-## 浮窗廣告
+## 局部广告-浮窗广告
 
 默认禁用
 
-- [快照-0](https://i.gkd.li/import/13350685)
+- [快照-0](https://i.gkd.li/i/13350685)

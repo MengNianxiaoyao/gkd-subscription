@@ -2,8 +2,8 @@
 
 存在 1 规则组 - [com.pcs.knowing_weather](/src/apps/com.pcs.knowing_weather.ts)
 
-## 版本更新
+## 更新提示
 
 默认禁用
 
-- [快照-0](https://i.gkd.li/import/13378992)
+- [快照-0](https://i.gkd.li/i/13378992)

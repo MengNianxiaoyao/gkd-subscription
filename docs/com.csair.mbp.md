@@ -2,8 +2,8 @@
 
 存在 1 规则组 - [com.csair.mbp](/src/apps/com.csair.mbp.ts)
 
-## 首页-弹窗广告
+## 全屏广告-首页弹窗广告
 
 默认禁用
 
-- [快照-0](https://i.gkd.li/import/13197497)
+- [快照-0](https://i.gkd.li/i/13197497)

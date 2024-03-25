@@ -1,23 +1,31 @@
 # 京东读书
 
-存在 3 规则组 - [com.jd.app.reader](/src/apps/com.jd.app.reader.ts)
+存在 4 规则组 - [com.jd.app.reader](/src/apps/com.jd.app.reader.ts)
 
-## 更新弹窗
+## 开屏广告
 
-默认禁用
+- [示例-0](https://m.gkd.li/57941037/6f4561e5-b998-43f9-8848-b6b43d045a3d)
+- [示例-1](https://m.gkd.li/57941037/ab677b66-4681-4672-a1d6-3b5938e7f374)
 
-- [快照-0](https://i.gkd.li/import/12686632)
+- [快照-0](https://i.gkd.li/i/14189228)
+- [快照-1](https://i.gkd.li/i/13264389)
 
-## 首页弹窗广告
-
-默认禁用
-
-- [快照-0](https://i.gkd.li/import/12686577)
-- [快照-1](https://i.gkd.li/import/12686664)
-
-## 阅读页面广告弹窗
+## 更新提示
 
 默认禁用
 
-- [快照-0](https://i.gkd.li/import/12881810)
-- [快照-1](https://i.gkd.li/import/12893631)
+- [快照-0](https://i.gkd.li/i/12686632)
+
+## 全屏广告-首页弹窗广告
+
+默认禁用
+
+- [快照-0](https://i.gkd.li/i/12686577)
+- [快照-1](https://i.gkd.li/i/12686664)
+
+## 全屏广告-阅读页面广告弹窗
+
+默认禁用
+
+- [快照-0](https://i.gkd.li/i/12881810)
+- [快照-1](https://i.gkd.li/i/12893631)

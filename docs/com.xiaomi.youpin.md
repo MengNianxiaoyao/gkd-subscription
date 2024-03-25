@@ -2,14 +2,14 @@
 
 存在 2 规则组 - [com.xiaomi.youpin](/src/apps/com.xiaomi.youpin.ts)
 
-## 广告弹窗
+## 全屏广告-广告弹窗
 
 默认禁用
 
-- [快照-0](https://i.gkd.li/import/12836727)
+- [快照-0](https://i.gkd.li/i/12836727)
 
 ## 更新提示-版本升级弹窗
 
 默认禁用
 
-- [快照-0](https://i.gkd.li/import/12836775)
+- [快照-0](https://i.gkd.li/i/12836775)

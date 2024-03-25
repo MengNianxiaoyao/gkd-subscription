@@ -2,17 +2,17 @@
 
 存在 2 规则组 - [com.seebaby](/src/apps/com.seebaby.ts)
 
-## 更新弹窗
+## 更新提示
 
 默认禁用
 
-- [快照-0](https://i.gkd.li/import/12705351)
+- [快照-0](https://i.gkd.li/i/12705351)
 
-## 信息流、文章底部广告
+## 分段广告-信息流、文章底部广告
 
 默认禁用
 
-- [快照-0](https://i.gkd.li/import/12705353)
-- [快照-1](https://i.gkd.li/import/12705363)
-- [快照-2](https://i.gkd.li/import/12705372)
-- [快照-3](https://i.gkd.li/import/12705358)
+- [快照-0](https://i.gkd.li/i/12705353)
+- [快照-1](https://i.gkd.li/i/12705363)
+- [快照-2](https://i.gkd.li/i/12705372)
+- [快照-3](https://i.gkd.li/i/12705358)

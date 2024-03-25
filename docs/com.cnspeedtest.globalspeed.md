@@ -2,8 +2,8 @@
 
 存在 1 规则组 - [com.cnspeedtest.globalspeed](/src/apps/com.cnspeedtest.globalspeed.ts)
 
-## 更新弹窗
+## 更新提示
 
 默认禁用
 
-- [快照-0](https://i.gkd.li/import/12642345)
+- [快照-0](https://i.gkd.li/i/12642345)

@@ -2,8 +2,8 @@
 
 存在 1 规则组 - [com.byyoung.setting](/src/apps/com.byyoung.setting.ts)
 
-## 忽略授权提示
+## 功能类-忽略授权提示
 
 默认禁用
 
-- [快照-0](https://i.gkd.li/import/12829909)
+- [快照-0](https://i.gkd.li/i/12829909)

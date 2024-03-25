@@ -2,15 +2,15 @@
 
 存在 2 规则组 - [com.lolaage.tbulu.tools](/src/apps/com.lolaage.tbulu.tools.ts)
 
-## 更新弹窗
+## 更新提示
 
 默认禁用
 
-- [快照-0](https://i.gkd.li/import/12882550)
+- [快照-0](https://i.gkd.li/i/12882550)
 
-## 弹窗广告
+## 全屏广告-弹窗广告
 
 默认禁用
 
-- [快照-0](https://i.gkd.li/import/13627861)
-- [快照-1](https://i.gkd.li/import/13650732)
+- [快照-0](https://i.gkd.li/i/13627861)
+- [快照-1](https://i.gkd.li/i/13650732)
