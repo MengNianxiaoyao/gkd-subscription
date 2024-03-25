@@ -223,5 +223,14 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 15,
+      name: '局部广告-书城-底部继续阅读浮窗',
+      desc: '点击"继续阅读"旁边的"x"',
+      resetMatch: 'app',
+      activityIds: 'com.dragon.read.pages.main.MainFragmentActivity',
+      rules: '[vid="container"] > ImageView',
+      snapshotUrls: 'https://i.gkd.li/import/14031943',
+    },
   ],
 });
