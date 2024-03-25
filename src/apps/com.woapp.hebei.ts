@@ -6,10 +6,12 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '更新弹窗',
-      activityIds: 'net.smartont.we.wohome.ui.main.view.MainActivity',
+      name: '更新提示',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: '@[text="忽略更新"] + [text="立即更新"]',
-      snapshotUrls: ['https://i.gkd.li/import/12707746'],
+      snapshotUrls: ['https://i.gkd.li/i/12707746'],
     },
   ],
 });

@@ -5,16 +5,15 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: 'Fa米家-升级提示',
+      name: '更新提示',
+      desc: '关闭升级弹窗',
       quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
-      desc: '关闭升级弹窗',
       rules: [
         {
-          activityIds: 'com.x2era.xcloud.app.MainActivity',
           matches: '[id$="com.x2era.xcloud.app:id/iv_cancel"]',
-          snapshotUrls: 'https://i.gkd.li/import/13420706',
+          snapshotUrls: 'https://i.gkd.li/i/13420706',
         },
       ],
     },

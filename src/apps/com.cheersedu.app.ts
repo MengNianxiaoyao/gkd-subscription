@@ -7,14 +7,13 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '版本更新',
+      name: '更新提示',
       quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      activityIds: 'com.cheersedu.app.main.MainActivity',
       rules: '[id="com.cheersedu.app:id/iv_version_close"]',
-      snapshotUrls: 'https://i.gkd.li/import/13315712',
+      snapshotUrls: 'https://i.gkd.li/i/13315712',
     },
   ],
 });

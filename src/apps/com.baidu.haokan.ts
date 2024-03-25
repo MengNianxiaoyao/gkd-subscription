@@ -6,14 +6,13 @@ export default defineAppConfig({
   groups: [
     {
       key: 3,
-      name: '青少年模式弹窗',
+      name: '青少年模式',
       quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      activityIds: 'com.baidu.haokan.app.activity.HomeActivity',
       rules: '[text="进入青少年模式"] + [text="我知道了"]',
-      snapshotUrls: 'https://i.gkd.li/import/13498610',
+      snapshotUrls: 'https://i.gkd.li/i/13498610',
     },
   ],
 });

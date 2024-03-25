@@ -6,14 +6,14 @@ export default defineAppConfig({
   groups: [
     {
       key: 6,
-      name: '首页红包弹窗',
+      name: '全屏广告-首页红包弹窗',
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
       activityIds: 'com.vdian.android.wdb.main.ui.activity.MainTabsActivity',
       rules:
         'FrameLayout > FrameLayout > RelativeLayout > ImageView[clickable=true][index=1]',
-      snapshotUrls: 'https://i.gkd.li/import/13646151',
+      snapshotUrls: 'https://i.gkd.li/i/13646151',
     },
   ],
 });

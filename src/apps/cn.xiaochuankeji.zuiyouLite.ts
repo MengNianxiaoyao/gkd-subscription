@@ -6,37 +6,72 @@ export default defineAppConfig({
   deprecatedKeys: [0],
   groups: [
     {
-      key: 1,
-      name: '青少年模式弹窗',
+      key: -1,
+      name: '开屏广告',
       quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      activityIds: 'cn.xiaochuankeji.zuiyouLite.ui.main',
-      rules: '[id="cn.xiaochuankeji.zuiyouLite:id/young_close_btn"]',
-      snapshotUrls: [
-        'https://i.gkd.li/import/12745083',
-        'https://i.gkd.li/import/13446652', //activityIds: 'cn.xiaochuankeji.zuiyouLite.ui.main.MainTest',
+      actionMaximumKey: 0,
+      rules: [
+        {
+          key: 0,
+          quickFind: true,
+          matches:
+            'FrameLayout > FrameLayout[childCount>2] > @View[clickable=true] + TextView <<n [id="android:id/content"]',
+          snapshotUrls: 'https://i.gkd.li/i/14546304',
+        },
+        {
+          key: 1,
+          matches: '[text*="跳过"][text.length<=10]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/12745095',
+            'https://i.gkd.li/i/13387320',
+          ],
+        },
+        {
+          key: 2,
+          position: {
+            left: 'width * 0.8778',
+            top: 'width * 0.1667',
+          },
+          matches:
+            '[id$="spalsh_ad_view"] >4 [id$="native_container"] >2 [id$="id/contentView"]', // 避免选中其他开屏广告节点
+          exampleUrls:
+            'https://m.gkd.li/57941037/485963ab-07b1-412a-a932-badc50cb2688',
+          snapshotUrls: 'https://i.gkd.li/i/13399391',
+        },
       ],
     },
     {
-      enable: false,
+      key: 1,
+      name: '青少年模式',
+      quickFind: true,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: '[id="cn.xiaochuankeji.zuiyouLite:id/young_close_btn"]',
+      snapshotUrls: [
+        'https://i.gkd.li/i/12745083',
+        'https://i.gkd.li/i/13446652', //activityIds: 'cn.xiaochuankeji.zuiyouLite.ui.main.MainTest',
+      ],
+    },
+    {
       key: 2,
-      name: '信息流广告',
+      name: '分段广告-信息流广告',
       quickFind: true,
       activityIds: 'cn.xiaochuankeji.zuiyouLite.ui.slide.ActivitySlideDetail',
       rules: [
         {
           key: 0,
-          name: '点击【x】',
+          name: '点击"x"',
           matches: '[id="cn.xiaochuankeji.zuiyouLite:id/ad_remove"]',
-          snapshotUrls: 'https://i.gkd.li/import/13387116',
+          snapshotUrls: 'https://i.gkd.li/i/13387116',
         },
         {
           preKeys: 0,
-          name: '点击【不喜欢广告主】',
+          name: '点击"不喜欢广告主"',
           matches: '@LinearLayout[clickable=true] > [text="不喜欢广告主"]',
-          snapshotUrls: 'https://i.gkd.li/import/13387155',
+          snapshotUrls: 'https://i.gkd.li/i/13387155',
         },
       ],
     },

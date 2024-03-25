@@ -6,13 +6,13 @@ export default defineAppConfig({
   groups: [
     {
       key: 3,
-      name: '广告弹窗',
+      name: '全屏广告-广告弹窗',
       quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
       rules: '[id="com.pandabus.android.zb:id/iv_native_dislike"]',
-      snapshotUrls: 'https://i.gkd.li/import/13400177',
+      snapshotUrls: 'https://i.gkd.li/i/13400177',
     },
   ],
 });

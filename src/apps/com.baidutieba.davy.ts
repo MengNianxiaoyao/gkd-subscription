@@ -7,16 +7,16 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '内部弹窗广告',
+      name: '全屏广告-内部弹窗广告',
       activityIds: 'com.davy.commonlibrary.utils.DialogUtil',
       rules: [
         {
           matches: '[id="com.baidutieba.davy:id/exit"]',
-          snapshotUrls: 'https://i.gkd.li/import/12504289',
+          snapshotUrls: 'https://i.gkd.li/i/12504289',
         },
         {
           matches: '[id="com.baidutieba.davy:id/mimo_interstitial_close_img"]',
-          snapshotUrls: 'https://i.gkd.li/import/12504291',
+          snapshotUrls: 'https://i.gkd.li/i/12504291',
         },
       ],
     },

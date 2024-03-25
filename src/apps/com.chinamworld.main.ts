@@ -6,11 +6,11 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '我的页面-广告弹窗',
+      name: '全屏广告-我的页面弹窗广告',
       activityIds: 'com.ccb.start.view.startdialog.StartDialogActivity',
       rules:
         '[id="com.chinamworld.main:id/indicator_container_container"] + [id="com.chinamworld.main:id/close"]',
-      snapshotUrls: 'https://i.gkd.li/import/12726961',
+      snapshotUrls: 'https://i.gkd.li/i/12726961',
     },
   ],
 });

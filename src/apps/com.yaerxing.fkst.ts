@@ -6,18 +6,16 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '更新弹窗',
-      activityIds: [
-        'com.yaerxing.fkst.activity.MainActivity',
-        'com.yaerxing.fkst.activity.SplashActivity',
-        'com.yaerxing.fkst.activity.SelectModuleActivity',
-      ],
+      name: '更新提示',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules:
         '@[id="com.yaerxing.fkst:id/iv_close"] < LinearLayout - LinearLayout > [id="com.yaerxing.fkst:id/btn_update"]',
       snapshotUrls: [
-        'https://i.gkd.li/import/12715037',
-        'https://i.gkd.li/import/12715047',
-        'https://i.gkd.li/import/12715053',
+        'https://i.gkd.li/i/12715037',
+        'https://i.gkd.li/i/12715047',
+        'https://i.gkd.li/i/12715053',
       ],
     },
   ],

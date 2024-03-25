@@ -6,13 +6,13 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '版本更新',
+      name: '更新提示',
       quickFind: true,
       matchTime: 10000,
       resetMatch: 'app',
       actionMaximum: 1,
       rules: '[text="现在升级"] - TextView[text="以后再说"]',
-      snapshotUrls: 'https://i.gkd.li/import/13766557',
+      snapshotUrls: 'https://i.gkd.li/i/13766557',
     },
   ],
 });

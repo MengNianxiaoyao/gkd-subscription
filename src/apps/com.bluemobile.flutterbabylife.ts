@@ -6,7 +6,7 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '应用内广告弹窗',
+      name: '全屏广告-弹窗广告',
       matchTime: 10000,
       actionMaximum: 1,
       rules: [
@@ -16,7 +16,7 @@ export default defineAppConfig({
           activityIds:
             'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
           matches: 'View[childCount=7] > View[index=1]',
-          snapshotUrls: 'https://i.gkd.li/import/13632639',
+          snapshotUrls: 'https://i.gkd.li/i/13632639',
         },
       ],
     },

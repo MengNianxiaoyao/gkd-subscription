@@ -6,7 +6,7 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '应用内会员活动弹窗',
+      name: '全屏广告-会员活动弹窗',
       quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
@@ -15,7 +15,7 @@ export default defineAppConfig({
       rules: [
         {
           matches: '@ImageView[id="com.yikaobang.yixue:id/close"]',
-          snapshotUrls: 'https://i.gkd.li/import/13425853',
+          snapshotUrls: 'https://i.gkd.li/i/13425853',
         },
       ],
     },

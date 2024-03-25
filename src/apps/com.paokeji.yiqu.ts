@@ -7,12 +7,16 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      matchTime: 10000,
       quickFind: true,
+      matchTime: 10000,
       resetMatch: 'app',
       actionMaximum: 1,
-      rules: '@View[clickable=true] <<n [vid="lyContainer"]',
-      snapshotUrls: 'https://i.gkd.li/import/14031922',
+      rules:
+        'FrameLayout > FrameLayout[childCount>2] > @View[clickable=true] + TextView <<n [id="android:id/content"]',
+      snapshotUrls: [
+        'https://i.gkd.li/i/14031922',
+        'https://i.gkd.li/i/14322264',
+      ],
     },
     {
       key: 1,
@@ -30,9 +34,9 @@ export default defineAppConfig({
           matches:
             '[id="android:id/content"] >(-n+4) FrameLayout > FrameLayout[childCount=1] > ImageView[index=0 && id!=null]',
           snapshotUrls: [
-            'https://i.gkd.li/import/13830354',
-            'https://i.gkd.li/import/13842716',
-            'https://i.gkd.li/import/13842966',
+            'https://i.gkd.li/i/13830354',
+            'https://i.gkd.li/i/13842716',
+            'https://i.gkd.li/i/13842966',
           ],
         },
         {
@@ -40,8 +44,8 @@ export default defineAppConfig({
           name: '字节SDK',
           matches: 'FrameLayout[desc*="close"] > View',
           snapshotUrls: [
-            'https://i.gkd.li/import/13839432',
-            'https://i.gkd.li/import/13839519',
+            'https://i.gkd.li/i/13839432',
+            'https://i.gkd.li/i/13839519',
           ],
         },
         {
@@ -56,12 +60,12 @@ export default defineAppConfig({
             '[text="反馈"] <<n View - View[childCount=1]',
           ],
           snapshotUrls: [
-            'https://i.gkd.li/import/13830798', //规则2
-            'https://i.gkd.li/import/13810767', //规则1
-            'https://i.gkd.li/import/13829749', //规则3
-            'https://i.gkd.li/import/13809737', //规则4 index=0
-            'https://i.gkd.li/import/13809578', //规则4 index=1
-            'https://i.gkd.li/import/13810150', //规则5
+            'https://i.gkd.li/i/13830798', //规则2
+            'https://i.gkd.li/i/13810767', //规则1
+            'https://i.gkd.li/i/13829749', //规则3
+            'https://i.gkd.li/i/13809737', //规则4 index=0
+            'https://i.gkd.li/i/13809578', //规则4 index=1
+            'https://i.gkd.li/i/13810150', //规则5
           ],
         },
         {
@@ -73,10 +77,68 @@ export default defineAppConfig({
             '[vid="ksad_video_container"] < * >n ViewGroup[index=1] >n @ViewGroup[clickable=true] > ImageView',
           ],
           snapshotUrls: [
-            'https://i.gkd.li/import/13809629', //规则1
-            'https://i.gkd.li/import/13829312', //规则3
-            'https://i.gkd.li/import/13837855', //规则2
+            'https://i.gkd.li/i/13809629', //规则1
+            'https://i.gkd.li/i/13829312', //规则3
+            'https://i.gkd.li/i/13837855', //规则2
           ],
+        },
+      ],
+    },
+    {
+      key: 2,
+      name: '更新提示',
+      desc: '点击"暂不"',
+      matchTime: 10000,
+      quickFind: true,
+      resetMatch: 'app',
+      actionMaximum: 1,
+      rules: [
+        {
+          matches: '[id="com.paokeji.yiqu:id/btnCancel"]',
+          exampleUrls:
+            'https://m.gkd.li/57941037/2ce54292-bfc6-41c6-b2e5-e7d8302fc522',
+          snapshotUrls: 'https://i.gkd.li/i/14140265',
+        },
+      ],
+    },
+    {
+      key: 3,
+      name: '全屏广告-广告弹窗',
+      rules: [
+        {
+          key: 0,
+          activityIds:
+            'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
+          matches: '[text="反馈"] + @View[childCount=2] > [text="跳过"]',
+          exampleUrls:
+            'https://m.gkd.li/57941037/6f12fd12-b956-474a-834c-8ebba00efbff',
+          snapshotUrls: 'https://i.gkd.li/i/14362119',
+        },
+        {
+          key: 1,
+          activityIds:
+            'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
+          matches:
+            'Image[text=""] < @View +4 [text="反馈"] + * >2 [text="广告"]',
+          exampleUrls:
+            'https://m.gkd.li/57941037/9bf34f1f-f1a1-4fb8-a84a-96cb8e1c2669',
+          snapshotUrls: 'https://i.gkd.li/i/14717730',
+        },
+      ],
+    },
+    {
+      key: 4,
+      name: '功能类-漫画页链接断开提示',
+      desc: '点击[点我重试]',
+      actionMaximum: 3,
+      rules: [
+        {
+          quickFind: true,
+          activityIds: 'com.aster.comic.app.view.reader.ReaderActivity',
+          matches: '@[clickable=true] > [text="点我重试"]',
+          exampleUrls:
+            'https://m.gkd.li/57941037/d71c73bb-289f-4205-a253-fcd8bd32f196',
+          snapshotUrls: 'https://i.gkd.li/i/14572053',
         },
       ],
     },

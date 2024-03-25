@@ -7,10 +7,10 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '首页顶部横幅广告',
+      name: '局部广告-首页顶部横幅广告',
       activityIds: 'chuxin.shimo.shimowendang.MainActivity',
       rules: '[desc="banner-desktop-announcement-close"]',
-      snapshotUrls: 'https://i.gkd.li/import/13627960',
+      snapshotUrls: 'https://i.gkd.li/i/13627960',
     },
   ],
 });

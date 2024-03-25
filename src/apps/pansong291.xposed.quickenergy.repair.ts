@@ -5,14 +5,14 @@ export default defineAppConfig({
   name: '芝麻粒',
   groups: [
     {
-      name: '开屏弹窗跳过',
+      name: '未分类-开屏弹窗跳过',
       key: 1,
       desc: '打开app点击知道了',
       rules: [
         {
           activityIds: ['pansong291.xposed.quickenergy.ui.MainActivity'],
-          matches: ['[id=\'android:id/button2\']'],
-          snapshotUrls: ['https://i.gkd.li/import/13445477'],
+          matches: ['[id="android:id/button2"]'],
+          snapshotUrls: ['https://i.gkd.li/i/13445477'],
         },
       ],
     },

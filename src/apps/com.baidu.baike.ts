@@ -7,11 +7,13 @@ export default defineAppConfig({
   groups: [
     {
       key: 10,
-      name: '请求通知权限弹窗',
-      desc: '自动点击【不允许】',
-      activityIds: 'com.baidu.baike.component.push.NotificationEnableDialog',
+      name: '通知提示-请求通知权限弹窗',
+      desc: '自动点击"不允许"',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: '[text^="打开推送通知"] +2 [text="不允许"]',
-      snapshotUrls: 'https://i.gkd.li/import/12755717',
+      snapshotUrls: 'https://i.gkd.li/i/12755717',
     },
   ],
 });

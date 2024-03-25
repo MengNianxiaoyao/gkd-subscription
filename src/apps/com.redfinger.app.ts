@@ -6,24 +6,25 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '更新弹窗',
+      name: '更新提示',
+      matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
       quickFind: true,
       rules:
         '[id="com.redfinger.app:id/btn_update"] + [id="com.redfinger.app:id/iv_close"]',
-      snapshotUrls: 'https://i.gkd.li/import/13761821',
+      snapshotUrls: 'https://i.gkd.li/i/13761821',
     },
     {
       key: 2,
-      name: '弹窗广告',
+      name: '全屏广告-弹窗广告',
       rules: [
         {
           key: 0,
           activityIds: 'com.redfinger.app.activity.MainActivity',
           quickFind: true,
           matches: '[id="com.redfinger.app:id/rl_screen_ad_close"]',
-          snapshotUrls: 'https://i.gkd.li/import/13761825',
+          snapshotUrls: 'https://i.gkd.li/i/13761825',
         },
       ],
     },

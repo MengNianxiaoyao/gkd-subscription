@@ -6,7 +6,7 @@ export default defineAppConfig({
   groups: [
     {
       key: 0,
-      name: '底部横幅广告',
+      name: '局部广告-底部横幅广告',
       activityIds:
         'com.xiaomi.mitv.phone.remotecontroller.HoriWidgetMainActivityV2',
       rules:
@@ -14,7 +14,7 @@ export default defineAppConfig({
     },
     {
       key: 4,
-      name: '申请定位',
+      name: '定位提示',
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
@@ -23,7 +23,7 @@ export default defineAppConfig({
         'com.xiaomi.mitv.phone.remotecontroller.HoriWidgetMainActivityV2',
       rules:
         '[id="com.duokan.phone.remotecontroller:id/ll_permission"] [text="取消"]',
-      snapshotUrls: 'https://i.gkd.li/import/13642080',
+      snapshotUrls: 'https://i.gkd.li/i/13642080',
     },
   ],
 });

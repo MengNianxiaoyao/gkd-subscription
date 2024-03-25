@@ -6,13 +6,15 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '更新弹窗',
-      activityIds: 'weaver.fw.com.MainActivity',
+      name: '更新提示',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: [
         {
           matches:
             '@[id="com.weaver.emobile7:id/sdl__negative_button"][text="取消"] +(2) [id="com.weaver.emobile7:id/sdl__positive_button"][text="更新"]',
-          snapshotUrls: ['https://i.gkd.li/import/12673154'],
+          snapshotUrls: ['https://i.gkd.li/i/12673154'],
         },
       ],
     },

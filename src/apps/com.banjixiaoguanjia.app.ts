@@ -7,19 +7,19 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '应用内广告卡片',
+      name: '分段广告-卡片广告',
       activityIds: 'com.banjixiaoguanjia.app.MainActivity',
       rules: [
         {
           key: 0,
           matches: '[id="com.byted.pangle:id/tt_bu_close"]',
-          snapshotUrls: 'https://i.gkd.li/import/12904612',
+          snapshotUrls: 'https://i.gkd.li/i/12904612',
         },
         {
           preKeys: 0,
           key: 1,
           matches: '@LinearLayout > [text="不感兴趣"]',
-          snapshotUrls: 'https://i.gkd.li/import/12906196',
+          snapshotUrls: 'https://i.gkd.li/i/12906196',
         },
       ],
     },

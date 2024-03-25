@@ -7,14 +7,14 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '版本更新',
+      name: '更新提示',
       quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
       rules:
         '@[id="com.daimajia.gold:id/iv_close"] -n LinearLayout [id="com.daimajia.gold:id/tv_title"][text="发现新版本"]',
-      snapshotUrls: 'https://i.gkd.li/import/13498703',
+      snapshotUrls: 'https://i.gkd.li/i/13498703',
     },
   ],
 });

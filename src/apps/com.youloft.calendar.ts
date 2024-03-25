@@ -6,7 +6,7 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '悬浮广告',
+      name: '局部广告-悬浮广告',
       rules: [
         {
           key: 0,
@@ -14,7 +14,7 @@ export default defineAppConfig({
           activityIds: 'com.youloft.calendar.MainActivity',
           quickFind: true,
           matches: '[id="com.youloft.calendar:id/ad_iv_close"]',
-          snapshotUrls: 'https://i.gkd.li/import/13348416',
+          snapshotUrls: 'https://i.gkd.li/i/13348416',
         },
       ],
     },

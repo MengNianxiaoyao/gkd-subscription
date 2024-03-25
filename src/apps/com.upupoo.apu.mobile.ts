@@ -7,14 +7,15 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
+      quickFind: true,
       matchTime: 10000,
       resetMatch: 'app',
       actionMaximum: 1,
       rules:
-        'FrameLayout > FrameLayout[childCount>2] > @View[clickable=true] + TextView',
+        'FrameLayout > FrameLayout[childCount>2] > @View[clickable=true] + TextView <<n [id="android:id/content"]',
       snapshotUrls: [
-        'https://i.gkd.li/import/13830230',
-        'https://i.gkd.li/import/14052232',
+        'https://i.gkd.li/i/13830230',
+        'https://i.gkd.li/i/14052232',
       ],
     },
     {
@@ -26,9 +27,8 @@ export default defineAppConfig({
       actionMaximum: 1,
       rules: [
         {
-          activityIds: 'com.upupoo.apu.mobile.MainActivity',
           matches: '[desc="青少年模式"] +3 [desc="我知道了"]',
-          snapshotUrls: 'https://i.gkd.li/import/14052188',
+          snapshotUrls: 'https://i.gkd.li/i/14052188',
         },
       ],
     },

@@ -10,44 +10,44 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
+      actionMaximumKey: 0,
       rules: [
         {
           key: 0,
           quickFind: true,
           matches: '[text*="跳过"][text.length<=10]',
           snapshotUrls: [
-            'https://i.gkd.li/import/12775918',
-            'https://i.gkd.li/import/12775926',
-            'https://i.gkd.li/import/13063151',
-            'https://i.gkd.li/import/13063246',
-            'https://i.gkd.li/import/13071599',
+            'https://i.gkd.li/i/12775918',
+            'https://i.gkd.li/i/12775926',
+            'https://i.gkd.li/i/13063151',
+            'https://i.gkd.li/i/13063246',
+            'https://i.gkd.li/i/13071599',
           ],
         },
         {
           key: 1,
           matches:
             '[id="com.cyl.musiccy.ou:id/ksad_splash_root_container"] [childCount=3] > @ImageView[clickable=true] - [text="|"]',
-          snapshotUrls: ['https://i.gkd.li/import/12775919'],
+          snapshotUrls: 'https://i.gkd.li/i/12775919',
         },
       ],
     },
     {
       key: 1,
-      name: '首页通知',
+      name: '通知提示-首页公告弹窗',
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      activityIds: ['com.cyl.musiccy.ou.MainActivity'],
       rules: [
         {
           matches: '[desc="我知道了"]',
-          snapshotUrls: 'https://i.gkd.li/import/13063206',
+          snapshotUrls: 'https://i.gkd.li/i/13063206',
         },
       ],
     },
     {
       key: 2,
-      name: '弹窗广告',
+      name: '全屏广告-弹窗广告',
       actionDelay: 300,
       rules: [
         {
@@ -60,8 +60,8 @@ export default defineAppConfig({
           matches:
             '[id$="ksad_container"] >n @ViewGroup[clickable=true] > [text="跳过"]',
           snapshotUrls: [
-            'https://i.gkd.li/import/12775922',
-            'https://i.gkd.li/import/13063222',
+            'https://i.gkd.li/i/12775922',
+            'https://i.gkd.li/i/13063222',
           ],
         },
         {
@@ -74,8 +74,8 @@ export default defineAppConfig({
           matches:
             '[text="广告"] <2 ViewGroup -2 ViewGroup > @ViewGroup[clickable=true] > ImageView',
           snapshotUrls: [
-            'https://i.gkd.li/import/12775923',
-            'https://i.gkd.li/import/13800051',
+            'https://i.gkd.li/i/12775923',
+            'https://i.gkd.li/i/13800051',
           ],
         },
         {
@@ -87,9 +87,9 @@ export default defineAppConfig({
           ],
           matches: '[id="ad_area"] [id="close_btn"][clickable=true]',
           snapshotUrls: [
-            'https://i.gkd.li/import/13759345',
-            'https://i.gkd.li/import/12775925',
-            'https://i.gkd.li/import/12775924',
+            'https://i.gkd.li/i/13759345',
+            'https://i.gkd.li/i/12775925',
+            'https://i.gkd.li/i/12775924',
           ],
         },
         {
@@ -102,11 +102,11 @@ export default defineAppConfig({
           matches:
             'ImageView <n FrameLayout > FrameLayout[index=1] > FrameLayout[index=2] > ImageView',
           snapshotUrls: [
-            'https://i.gkd.li/import/12775921',
-            'https://i.gkd.li/import/12776903',
-            'https://i.gkd.li/import/12789928',
-            'https://i.gkd.li/import/13215476',
-            'https://i.gkd.li/import/13071595',
+            'https://i.gkd.li/i/12775921',
+            'https://i.gkd.li/i/12776903',
+            'https://i.gkd.li/i/12789928',
+            'https://i.gkd.li/i/13215476',
+            'https://i.gkd.li/i/13071595',
           ],
         },
         {
@@ -115,7 +115,7 @@ export default defineAppConfig({
           activityIds: 'com.cyl.musiccy.ou.MainActivity',
           matches:
             'ImageView <n FrameLayout - FrameLayout > FrameLayout[index=1] > ImageView',
-          snapshotUrls: 'https://i.gkd.li/import/13063249',
+          snapshotUrls: 'https://i.gkd.li/i/13063249',
         },
         {
           key: 5,
@@ -123,7 +123,7 @@ export default defineAppConfig({
           activityIds: 'com.cyl.musiccy.ou.MainActivity',
           matches:
             'ImageView <n FrameLayout > FrameLayout[index=0] > FrameLayout FrameLayout > ImageView',
-          snapshotUrls: 'https://i.gkd.li/import/13422363',
+          snapshotUrls: 'https://i.gkd.li/i/13422363',
         },
       ],
     },

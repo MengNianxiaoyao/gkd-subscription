@@ -7,8 +7,7 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      enable: false,
-      name: '加速页-分享抽奖浮窗',
+      name: '局部广告-加速页分享抽奖浮窗',
       activityIds: 'cn.ccspeed.app.MainActivity',
       quickFind: true,
       matchTime: 10000,
@@ -18,7 +17,7 @@ export default defineAppConfig({
         {
           matches:
             'FrameLayout[id="cn.ccspeed:id/float_layout"] > ImageView - ImageView',
-          snapshotUrls: 'https://i.gkd.li/import/13539299',
+          snapshotUrls: 'https://i.gkd.li/i/13539299',
         },
       ],
     },

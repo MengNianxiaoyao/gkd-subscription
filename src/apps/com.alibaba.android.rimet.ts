@@ -6,9 +6,8 @@ export default defineAppConfig({
   deprecatedKeys: [0],
   groups: [
     {
-      enable: false,
       key: 1,
-      name: '消息列表上方广告',
+      name: '局部广告-消息列表上方广告',
       quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
@@ -18,14 +17,13 @@ export default defineAppConfig({
           key: 0,
           matches:
             '@FrameLayout > [id="com.alibaba.android.rimet:id/icft_close"]',
-          snapshotUrls: 'https://i.gkd.li/import/13325125',
+          snapshotUrls: 'https://i.gkd.li/i/13325125',
         },
       ],
     },
     {
-      enable: false,
       key: 2,
-      name: '文件即将过期提示',
+      name: '功能类-文件即将过期提示',
       quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
@@ -36,13 +34,12 @@ export default defineAppConfig({
           matches:
             '@FrameLayout[id="com.alibaba.android.rimet:id/layout_close"] -2 TextView[text="文件即将过期请备份"]',
           action: 'clickCenter',
-          snapshotUrls: 'https://i.gkd.li/import/13325125',
+          snapshotUrls: 'https://i.gkd.li/i/13325125',
         },
       ],
     },
     {
-      name: '自动点击原图',
-      enable: false,
+      name: '功能类-自动点击原图',
       key: 3,
       actionMaximum: 1,
       quickFind: true,
@@ -54,16 +51,15 @@ export default defineAppConfig({
           matches:
             'CheckBox[id="com.alibaba.android.rimet:id/cb_send_origin"][text="原图"][checked=false]',
           snapshotUrls: [
-            'https://i.gkd.li/import/13309648', //未选中 [checked=false]
-            'https://i.gkd.li/import/13309845', //已选中 [checked=true]
+            'https://i.gkd.li/i/13309648', //未选中 [checked=false]
+            'https://i.gkd.li/i/13309845', //已选中 [checked=true]
           ],
         },
       ],
     },
     {
-      enable: false,
       key: 4,
-      name: '版本更新弹窗',
+      name: '更新提示',
       quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
@@ -72,19 +68,18 @@ export default defineAppConfig({
         {
           key: 0,
           matches: '@Button[text*="暂不更新"] + Button[text*="更新"]',
-          snapshotUrls: 'https://i.gkd.li/import/13402478',
+          snapshotUrls: 'https://i.gkd.li/i/13402478',
         },
         {
           matches:
             'TextView[id="com.alibaba.android.rimet:id/dialog_close_button"]',
-          snapshotUrls: 'https://i.gkd.li/import/13772151',
+          snapshotUrls: 'https://i.gkd.li/i/13772151',
         },
       ],
     },
     {
-      enable: false,
       key: 5,
-      name: '扫码自动登录桌面版',
+      name: '功能类-扫码自动登录桌面版',
       quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
@@ -93,7 +88,7 @@ export default defineAppConfig({
       rules: [
         {
           matches: '[id="com.alibaba.android.rimet:id/btn_login"]',
-          snapshotUrls: 'https://i.gkd.li/import/13433981',
+          snapshotUrls: 'https://i.gkd.li/i/13433981',
         },
       ],
     },

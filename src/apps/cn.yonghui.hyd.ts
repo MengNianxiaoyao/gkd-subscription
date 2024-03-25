@@ -7,7 +7,7 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '红包弹窗',
+      name: '全屏广告-红包弹窗',
       rules: [
         {
           key: 0,
@@ -16,7 +16,7 @@ export default defineAppConfig({
             'cn.yonghui.hyd.coupon.couponfactory.CouponFactoryActivity',
           matches:
             '[id="cn.yonghui.hyd:id/advance"] +n [id="cn.yonghui.hyd:id/close"]',
-          snapshotUrls: 'https://i.gkd.li/import/13414401',
+          snapshotUrls: 'https://i.gkd.li/i/13414401',
         },
         {
           key: 1,
@@ -25,7 +25,7 @@ export default defineAppConfig({
             'cn.yonghui.hyd.coupon.couponfactory.CouponFactoryActivity',
           matches:
             '[id="cn.yonghui.hyd:id/couponsWillGoneHeaderIv"] +n [id="cn.yonghui.hyd:id/close"]',
-          snapshotUrls: 'https://i.gkd.li/import/13414444',
+          snapshotUrls: 'https://i.gkd.li/i/13414444',
         },
       ],
     },

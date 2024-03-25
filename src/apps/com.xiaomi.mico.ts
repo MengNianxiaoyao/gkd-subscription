@@ -6,11 +6,11 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '首页广告弹窗',
+      name: '全屏广告-首页广告弹窗',
       activityIds: 'com.xiaomi.mico.main.MainActivity',
       rules:
         '[id="com.xiaomi.mico:id/adImage"] + [id="com.xiaomi.mico:id/ivCloseAd"]',
-      snapshotUrls: 'https://i.gkd.li/import/12745621',
+      snapshotUrls: 'https://i.gkd.li/i/12745621',
     },
   ],
 });

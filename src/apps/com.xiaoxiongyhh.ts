@@ -6,7 +6,7 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '弹窗广告',
+      name: '全屏广告-弹窗广告',
       rules: [
         {
           key: 1,
@@ -14,7 +14,7 @@ export default defineAppConfig({
           activityIds: 'com.uzmap.pkg.EntranceActivity',
           matches:
             'View[childCount=2] > ImageView + Button[childCount=0][clickable=true]',
-          snapshotUrls: 'https://i.gkd.li/import/13401975',
+          snapshotUrls: 'https://i.gkd.li/i/13401975',
         },
       ],
     },

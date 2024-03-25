@@ -8,12 +8,11 @@ export default defineAppConfig({
       key: 1,
       name: '青少年模式',
       quickFind: true,
-      activityIds: 'com.tvbc.maiduidui.MainHomeActivity',
       matchTime: 10000,
       resetMatch: 'app',
       actionMaximum: 1,
       rules: '@[vid="tv_ok"] - [vid="tv_open_child_model"]',
-      snapshotUrls: 'https://i.gkd.li/import/13847804',
+      snapshotUrls: 'https://i.gkd.li/i/13847804',
     },
   ],
 });

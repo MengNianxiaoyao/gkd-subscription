@@ -7,12 +7,13 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '升级弹窗',
+      name: '更新提示',
       quickFind: true,
-      enable: false,
-      activityIds: ['com.bw.zsch.MainActivityTab'],
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: '[id="com.bw30.zsch:id/tv_cancel"]',
-      snapshotUrls: ['https://i.gkd.li/import/13068699'],
+      snapshotUrls: ['https://i.gkd.li/i/13068699'],
     },
   ],
 });

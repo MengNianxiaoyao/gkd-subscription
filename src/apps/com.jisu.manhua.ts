@@ -6,14 +6,14 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '弹窗广告',
+      name: '全屏广告-弹窗广告',
       quickFind: true,
       activityIds: 'com.ilike.cartoon.activities.HomeActivity',
       rules: [
         {
           matches:
             '[id="com.jisu.manhua:id/iv_promotion"] + [id="com.jisu.manhua:id/iv_close"]',
-          snapshotUrls: 'https://i.gkd.li/import/13688186',
+          snapshotUrls: 'https://i.gkd.li/i/13688186',
         },
       ],
     },

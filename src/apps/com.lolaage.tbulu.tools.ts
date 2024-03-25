@@ -6,16 +6,17 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '更新弹窗',
+      name: '更新提示',
+      matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
       rules:
         '[id="com.lolaage.tbulu.tools:id/tvFullUpgrade"] + [id="com.lolaage.tbulu.tools:id/tvCancel"]',
-      snapshotUrls: 'https://i.gkd.li/import/12882550',
+      snapshotUrls: 'https://i.gkd.li/i/12882550',
     },
     {
       key: 2,
-      name: '弹窗广告',
+      name: '全屏广告-弹窗广告',
       rules: [
         {
           key: 0,
@@ -24,8 +25,8 @@ export default defineAppConfig({
           matches:
             'FrameLayout > FrameLayout[childCount=1] > ImageView[width<80][height<80]',
           snapshotUrls: [
-            'https://i.gkd.li/import/13627861',
-            'https://i.gkd.li/import/13650732',
+            'https://i.gkd.li/i/13627861',
+            'https://i.gkd.li/i/13650732',
           ],
         },
       ],

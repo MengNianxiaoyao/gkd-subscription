@@ -6,28 +6,52 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '更新弹窗',
-      activityIds: 'com.sf.activity.MainActivity',
+      name: '更新提示',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: [
         {
           key: 0,
           matches:
             '@[text="取消"] < ViewGroup - ScrollView >(2) [text*="新版本"]',
-          snapshotUrls: 'https://i.gkd.li/import/12642445',
+          snapshotUrls: 'https://i.gkd.li/i/12642445',
         },
         {
           key: 1,
           matches: '@[desc="取消"] - ViewGroup >n [text="立即升级"]',
-          snapshotUrls: 'https://i.gkd.li/import/13291144',
+          snapshotUrls: 'https://i.gkd.li/i/13291144',
         },
       ],
     },
     {
       key: 2,
-      name: '专属月报弹窗',
-      activityIds: 'com.sf.activity.MainActivity',
-      rules: ['[id="MonthReportDialogCloseBtn"] > ImageView'],
-      snapshotUrls: 'https://i.gkd.li/import/12642441',
+      name: '功能类-专属月报弹窗',
+      rules: [
+        {
+          activityIds: 'com.sf.activity.MainActivity',
+          matches: '[id="MonthReportDialogCloseBtn"] > ImageView',
+          exampleUrls:
+            'https://m.gkd.li/57941037/83023ed5-f143-4355-9fff-e078011dfa4a',
+          snapshotUrls: 'https://i.gkd.li/i/12642441',
+        },
+      ],
+    },
+    {
+      key: 3,
+      name: '全屏广告-广告弹窗',
+      desc: '点击关闭',
+      rules: [
+        {
+          key: 0,
+          name: '本月礼包',
+          activityIds: 'com.sf.activity.MainActivity',
+          matches: '[id="BmsAdDialogViewCloseButton"]',
+          exampleUrls:
+            'https://m.gkd.li/57941037/6baf1ea4-9424-4360-b28b-7907b0d7aa4a',
+          snapshotUrls: 'https://i.gkd.li/i/14502128',
+        },
+      ],
     },
   ],
 });

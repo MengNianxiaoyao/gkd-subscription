@@ -1,8 +1,8 @@
 import { defineAppConfig } from '../types';
 
 export default defineAppConfig({
-  id: 'com.hxak.liangongbao',
-  name: '链工宝',
+  id: 'com.oneshareclap.malaysian',
+  name: '水果派',
   groups: [
     {
       key: 0,
@@ -10,7 +10,8 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      rules: '[id=`com.hxak.liangongbao:id/time_down`]',
+      rules: '[text="关闭广告"]',
+      snapshotUrls: 'https://i.gkd.li/i/14275367',
     },
   ],
 });

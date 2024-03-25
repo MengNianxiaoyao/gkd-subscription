@@ -13,10 +13,11 @@ export default defineAppConfig({
       rules: [
         {
           quickFind: true,
-          matches: '@View[clickable=true] <n * <2 * < [vid="flCSJAdContainer"]',
+          matches:
+            'FrameLayout > FrameLayout[childCount>2] > @View[clickable=true] + TextView <<n [id="android:id/content"]',
           snapshotUrls: [
-            'https://i.gkd.li/import/13988957',
-            'https://i.gkd.li/import/13989178',
+            'https://i.gkd.li/i/13988957',
+            'https://i.gkd.li/i/13989178',
           ],
         },
       ],

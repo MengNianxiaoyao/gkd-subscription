@@ -6,7 +6,7 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '弹窗广告',
+      name: '全屏广告-弹窗广告',
       activityIds: 'com.svm.core.pro.view.activity.MainActivityEx',
       rules: [
         {
@@ -14,7 +14,7 @@ export default defineAppConfig({
             '[text="打开或下载第三方应用"]',
             'FrameLayout[childCount=3] + FrameLayout > ImageView',
           ],
-          snapshotUrls: 'https://i.gkd.li/import/13185377',
+          snapshotUrls: 'https://i.gkd.li/i/13185377',
         },
       ],
     },

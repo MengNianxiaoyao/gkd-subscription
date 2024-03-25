@@ -10,17 +10,24 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
+      actionMaximumKey: 0,
       rules: [
         {
           key: 0,
           matches: '[id="com.qq.qcloud:id/gdt_ad_text"] + ImageView',
-          snapshotUrls: 'https://i.gkd.li/import/12755789',
+          snapshotUrls: 'https://i.gkd.li/i/12755789',
         },
         {
           key: 1,
           matches:
             '[text^="互动广告"] + @LinearLayout[clickable=true] > ImageView',
-          snapshotUrls: 'https://i.gkd.li/import/12755799',
+          snapshotUrls: 'https://i.gkd.li/i/12755799',
+        },
+        {
+          key: 2,
+          matches:
+            '[id="android:id/content"] >2 FrameLayout[childCount=4] > @LinearLayout[clickable=true] > ImageView',
+          snapshotUrls: 'https://i.gkd.li/i/14735621',
         },
       ],
     },

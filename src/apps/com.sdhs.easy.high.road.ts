@@ -6,7 +6,7 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '卡片式广告',
+      name: '局部广告-卡片式广告',
       rules: [
         {
           key: 0,
@@ -16,7 +16,7 @@ export default defineAppConfig({
             '[desc^="logoad"]',
             '[desc^="dislike"] > View[clickable=true]',
           ],
-          snapshotUrls: 'https://i.gkd.li/import/13670340',
+          snapshotUrls: 'https://i.gkd.li/i/13670340',
         },
       ],
     },

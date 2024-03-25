@@ -6,7 +6,7 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '弹窗广告',
+      name: '全屏广告-弹窗广告',
       rules: [
         {
           key: 0,
@@ -14,7 +14,7 @@ export default defineAppConfig({
           activityIds: [],
           matches:
             'ImageView -2 FrameLayout > FrameLayout > FrameLayout[childCount=1] > ImageView[childCount=0]',
-          snapshotUrls: 'https://i.gkd.li/import/13625479',
+          snapshotUrls: 'https://i.gkd.li/i/13625479',
         },
         {
           key: 1,
@@ -24,7 +24,7 @@ export default defineAppConfig({
             'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
           matches:
             '@Image[text=""] < View +n View > View > TextView[text="广告"]',
-          snapshotUrls: 'https://i.gkd.li/import/13759331',
+          snapshotUrls: 'https://i.gkd.li/i/13759331',
         },
       ],
     },

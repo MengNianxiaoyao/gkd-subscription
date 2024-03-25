@@ -6,13 +6,13 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '应用内广告弹窗',
+      name: '全屏广告-广告弹窗',
       rules: [
         {
           key: 0,
           activityIds: 'com.huawei.android.launcher.unihome.UniHomeLauncher',
           matches: 'ImageView - FrameLayout > FrameLayout > ImageView',
-          snapshotUrls: 'https://i.gkd.li/import/12846524',
+          snapshotUrls: 'https://i.gkd.li/i/12846524',
         },
       ],
     },

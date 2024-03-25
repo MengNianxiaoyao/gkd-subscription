@@ -6,7 +6,7 @@ export default defineAppConfig({
   groups: [
     {
       key: 0,
-      name: '弹窗广告',
+      name: '全屏广告-弹窗广告',
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
@@ -14,7 +14,7 @@ export default defineAppConfig({
       rules: [
         {
           matches: '[id="com.qingdaonews.bus:id/iv_native_dislike"]',
-          snapshotUrls: 'https://i.gkd.li/import/13467193',
+          snapshotUrls: 'https://i.gkd.li/i/13467193',
         },
       ],
     },

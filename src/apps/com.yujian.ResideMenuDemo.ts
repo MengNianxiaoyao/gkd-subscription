@@ -5,7 +5,6 @@ export default defineAppConfig({
   name: '雨见',
   groups: [
     {
-      enable: false,
       key: 1,
       name: '更新提示',
       quickFind: true,
@@ -13,7 +12,7 @@ export default defineAppConfig({
       actionMaximum: 1,
       resetMatch: 'app',
       rules: 'TextView[id="com.yujian.ResideMenuDemo:id/btn_selectOther"]',
-      snapshotUrls: 'https://i.gkd.li/import/13224234',
+      snapshotUrls: 'https://i.gkd.li/i/13224234',
     },
   ],
 });

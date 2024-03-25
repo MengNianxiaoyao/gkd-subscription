@@ -7,19 +7,22 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
+      quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      quickFind: true,
+      actionMaximumKey: 0,
       rules: [
         {
+          key: 0,
           matches: '[text*="跳过"][text.length<=10]',
-          snapshotUrls: 'https://i.gkd.li/import/13727905',
+          snapshotUrls: 'https://i.gkd.li/i/13727905',
         },
         {
+          key: 1,
           matches:
-            '@View <3 FrameLayout[childCount=4] <2 FrameLayout[childCount=2] < [vid="ad_view"]',
-          snapshotUrls: 'https://i.gkd.li/import/13867880',
+            'FrameLayout > FrameLayout[childCount>2] > @View[clickable=true] + TextView <<n [id="android:id/content"]',
+          snapshotUrls: 'https://i.gkd.li/i/13867880',
         },
       ],
     },
@@ -35,15 +38,15 @@ export default defineAppConfig({
           matches:
             'FrameLayout[childCount>1] > FrameLayout[childCount=1] > ImageView[width<90][height<90]',
           snapshotUrls: [
-            'https://i.gkd.li/import/13728018',
-            'https://i.gkd.li/import/13867878',
+            'https://i.gkd.li/i/13728018',
+            'https://i.gkd.li/i/13867878',
           ],
         },
       ],
     },
     {
       key: 7,
-      name: '信息流广告',
+      name: '局部广告-信息流广告',
       activityIds:
         'com.xiaoenai.app.presentation.home.view.activity.HomeActivity',
       rules: [
@@ -52,7 +55,7 @@ export default defineAppConfig({
           quickFind: true,
           matches:
             '@ImageView[clickable=true][width<90][height<90] -3 ImageView <<n [id="com.xiaoenai.app:id/view_ad_tpl"]',
-          snapshotUrls: 'https://i.gkd.li/import/13728026',
+          snapshotUrls: 'https://i.gkd.li/i/13728026',
         },
       ],
     },

@@ -6,7 +6,7 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '首页广告弹窗',
+      name: '全屏广告-首页广告弹窗',
       activityIds: [
         'com.moutai.mall.MainActivity',
         'com.moutai.mall.module.splash.SplashActivity',
@@ -14,18 +14,19 @@ export default defineAppConfig({
       rules:
         '[id="com.moutai.mall:id/ivPic"] + ViewGroup + [id="com.moutai.mall:id/vClose"]',
       snapshotUrls: [
-        'https://i.gkd.li/import/12745130', // activityId: 'com.moutai.mall.MainActivity'
-        'https://i.gkd.li/import/12745153', // activityId: 'com.moutai.mall.module.splash.SplashActivity'
+        'https://i.gkd.li/i/12745130', // activityId: 'com.moutai.mall.MainActivity'
+        'https://i.gkd.li/i/12745153', // activityId: 'com.moutai.mall.module.splash.SplashActivity'
       ],
     },
     {
-      enable: false,
       key: 10,
-      name: '请求通知权限弹窗',
-      activityIds: 'com.moutai.mall.MainActivity',
+      name: '通知提示-请求通知权限弹窗',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules:
         '@[id="com.moutai.mall:id/vClose"] - LinearLayout > [text*="开通消息通知"]',
-      snapshotUrls: 'https://i.gkd.li/import/12745142',
+      snapshotUrls: 'https://i.gkd.li/i/12745142',
     },
   ],
 });

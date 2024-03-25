@@ -6,18 +6,19 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '更新弹窗',
+      name: '更新提示',
+      matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
       rules: '[id="com.sankuai.meituan.takeoutnew:id/wm_upgrade_force_cancel"]',
       snapshotUrls: [
-        'https://i.gkd.li/import/13415044',
-        'https://i.gkd.li/import/13276882',
+        'https://i.gkd.li/i/13415044',
+        'https://i.gkd.li/i/13276882',
       ],
     },
     {
       key: 2,
-      name: '关闭美食广告弹窗',
+      name: '全屏广告-美食广告弹窗',
       activityIds: 'com.sankuai.waimai.platform.mach.dialog.DynamicDialog',
       rules: [
         '@[desc="关闭"][clickable=true] > ImageView', // 1686969062508
@@ -25,7 +26,7 @@ export default defineAppConfig({
     },
     {
       key: 3,
-      name: '付款后广告弹窗',
+      name: '全屏广告-付款后广告弹窗',
       activityIds:
         'com.sankuai.waimai.bussiness.order.detail.WMOrderDetailActivity',
       rules: [
@@ -37,10 +38,10 @@ export default defineAppConfig({
         },
         {
           key: 1,
-          name: '领取外卖神卷-点击底部【x】',
+          name: '领取外卖神卷-点击底部"x"',
           matches:
             '@ImageView[clickable=true] - FrameLayout > FrameLayout > FrameLayout TextView[text="点我领取"]',
-          snapshotUrls: 'https://i.gkd.li/import/13175526',
+          snapshotUrls: 'https://i.gkd.li/i/13175526',
         },
       ],
     },

@@ -6,12 +6,12 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '弹窗广告',
+      name: '全屏广告-弹窗广告',
       actionMaximum: 1,
       resetMatch: 'app',
       quickFind: true,
       rules: '[vid="app_update_later_button"]',
-      snapshotUrls: 'https://i.gkd.li/import/13800011',
+      snapshotUrls: 'https://i.gkd.li/i/13800011',
     },
   ],
 });

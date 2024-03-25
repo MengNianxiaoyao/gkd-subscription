@@ -6,12 +6,14 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '升级弹窗',
-      activityIds: 'com.fenbi.android.module.home.HomeActivity',
+      name: '更新提示',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: [
         {
           matches: '[id="com.fenbi.android.servant:id/close"]',
-          snapshotUrls: 'https://i.gkd.li/import/12999725',
+          snapshotUrls: 'https://i.gkd.li/i/12999725',
         },
       ],
     },

@@ -6,14 +6,14 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '优惠卷提示',
+      name: '全屏广告-优惠卷提示',
       quickFind: true,
       activityIds: 'com.ddsy.songyao.activity.SplashActivity',
       rules: [
         {
           matches:
             '[id="com.ddsy.songyao:id/iv_coupon_bottom"] + [id="com.ddsy.songyao:id/iv_close"]',
-          snapshotUrls: 'https://i.gkd.li/import/13048720',
+          snapshotUrls: 'https://i.gkd.li/i/13048720',
         },
       ],
     },

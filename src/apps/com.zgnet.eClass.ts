@@ -13,19 +13,18 @@ export default defineAppConfig({
       rules: [
         {
           matches: 'TextView[id$="tv_close_time"&&text^="关闭"]',
-          snapshotUrls: ['https://i.gkd.li/import/12644260'],
+          snapshotUrls: 'https://i.gkd.li/i/12644260',
         },
       ],
     },
     {
       key: 2,
-      enable: false,
-      name: '退出确认弹窗（默认关闭）',
+      name: '功能类-退出确认弹窗',
       rules: [
         {
           matches:
             '[text*="确定要退出"] < LinearLayout +n LinearLayout > TextView[id$="tv_exit_sure"]',
-          snapshotUrls: ['https://i.gkd.li/import/12645513'],
+          snapshotUrls: 'https://i.gkd.li/i/12645513',
         },
       ],
     },

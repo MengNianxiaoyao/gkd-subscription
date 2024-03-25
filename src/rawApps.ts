@@ -4,7 +4,7 @@ import url from 'node:url';
 import picocolors from 'picocolors';
 import { pinyin } from 'pinyin-pro';
 import { walk } from './file';
-import type { RawApp } from './types';
+import { RawApp } from './types';
 import { OPEN_AD_ORDER } from './utils';
 
 const rawApps: RawApp[] = [];
@@ -23,6 +23,7 @@ for await (const tsFp of walk(process.cwd() + '/src/apps')) {
       )} `,
     );
   }
+  delete appConfig.deprecatedKeys;
   appConfig.groups?.forEach((g) => {
     if (!g.name.startsWith('开屏广告')) {
       g.enable = false;

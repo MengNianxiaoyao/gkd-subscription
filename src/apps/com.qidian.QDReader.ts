@@ -6,39 +6,40 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '更新弹窗',
+      name: '更新提示',
       quickFind: true,
+      matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
       rules: [
         {
           matches:
             '[text$="新版本"] +2 * >2 [id="com.qidian.QDReader:id/cancel"]',
-          snapshotUrls: ['https://i.gkd.li/import/12641026'],
+          snapshotUrls: ['https://i.gkd.li/i/12641026'],
         },
         {
           matches: '[id="com.qidian.QDReader:id/upgrade_dialog_close_btn"]',
-          snapshotUrls: ['https://i.gkd.li/import/13116821'],
+          snapshotUrls: ['https://i.gkd.li/i/13116821'],
         },
       ],
     },
     {
       key: 2,
-      name: '青少年模式弹窗',
+      name: '青少年模式',
       quickFind: true,
       actionMaximum: 1,
       resetMatch: 'app',
       rules:
         '[id="com.qidian.QDReader:id/btnEnterTeen"] + [id="com.qidian.QDReader:id/btnCancel"]',
       snapshotUrls: [
-        'https://i.gkd.li/import/12640241',
-        'https://i.gkd.li/import/12709168',
-        'https://i.gkd.li/import/12905817',
+        'https://i.gkd.li/i/12640241',
+        'https://i.gkd.li/i/12709168',
+        'https://i.gkd.li/i/12905817',
       ],
     },
     {
       key: 3,
-      name: '活动弹窗',
+      name: '全屏广告-活动弹窗',
       activityIds: [
         'com.qidian.QDReader.ui.activity.MainGroupActivity',
         'com.tencent.mm.plugin.webview.ui.tools.SDKOAuthUI',
@@ -48,24 +49,26 @@ export default defineAppConfig({
       rules:
         '[id="com.qidian.QDReader:id/imgBKT"] + [id="com.qidian.QDReader:id/imgClose"]',
       snapshotUrls: [
-        'https://i.gkd.li/import/12640195',
-        'https://i.gkd.li/import/12640158',
-        'https://i.gkd.li/import/12818198',
-        'https://i.gkd.li/import/13469004', // .ui.activity.BookLastPageNewActivity
+        'https://i.gkd.li/i/12640195',
+        'https://i.gkd.li/i/12640158',
+        'https://i.gkd.li/i/12818198',
+        'https://i.gkd.li/i/13469004', // .ui.activity.BookLastPageNewActivity
       ],
     },
     {
       key: 4,
-      name: '请求通知权限提示信息',
+      name: '通知提示-请求通知权限提示信息',
       desc: '点击顶部提醒左侧x按钮',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       quickFind: true,
-      activityIds: 'com.afollestad.materialdialogs.MaterialDialog',
       rules: '@[id="com.qidian.QDReader:id/ivClose"] + [text^="开启推送"]',
-      snapshotUrls: 'https://i.gkd.li/import/12640242',
+      snapshotUrls: 'https://i.gkd.li/i/12640242',
     },
     {
       key: 5,
-      name: '悬浮广告',
+      name: '局部广告-悬浮广告',
       rules: [
         {
           key: 0,
@@ -74,7 +77,7 @@ export default defineAppConfig({
           quickFind: true,
           matches:
             '[id="com.qidian.QDReader:id/ivAd"] + [id="com.qidian.QDReader:id/ivAdClose"]',
-          snapshotUrls: 'https://i.gkd.li/import/12717032',
+          snapshotUrls: 'https://i.gkd.li/i/12717032',
         },
         {
           key: 1,
@@ -82,27 +85,25 @@ export default defineAppConfig({
           activityIds: 'com.qidian.QDReader.ui.activity.QDBookDetailActivity',
           matches:
             '[id="com.qidian.QDReader:id/floatingView"] + [id="com.qidian.QDReader:id/ivAdClose"]',
-          snapshotUrls: 'https://i.gkd.li/import/13459031',
+          snapshotUrls: 'https://i.gkd.li/i/13459031',
         },
       ],
     },
     {
-      enable: false,
       key: 10,
       name: '功能类-起点中文网登录自动确认',
-      desc: '自动点击【登录】',
+      desc: '自动点击"登录"',
       activityIds: 'com.qidian.QDReader.ui.activity.QDBrowserActivity',
       rules: '[id="scanLogin"]',
-      snapshotUrls: 'https://i.gkd.li/import/12903081',
+      snapshotUrls: 'https://i.gkd.li/i/12903081',
     },
     {
-      enable: false,
       key: 11,
-      name: '信息流广告',
-      desc: '自动点击【x】',
+      name: '局部广告-信息流广告',
+      desc: '自动点击"x"',
       activityIds: 'com.qidian.QDReader.flutter.DailyReadingMainPageActivity',
       rules: 'View[desc="更多游戏"] - ImageView[clickable=true]',
-      snapshotUrls: 'https://i.gkd.li/import/13406169',
+      snapshotUrls: 'https://i.gkd.li/i/13406169',
     },
     {
       key: 12,
@@ -115,7 +116,7 @@ export default defineAppConfig({
             'com.qidian.QDReader.ui.activity.hongbao_square.NewHongBaoSquareActivity',
           matches:
             '[id="com.qidian.QDReader:id/rootView"] > [id="com.qidian.QDReader:id/btnHongbaoClose"]',
-          snapshotUrls: 'https://i.gkd.li/import/13918466',
+          snapshotUrls: 'https://i.gkd.li/i/13918466',
         },
       ],
     },
@@ -125,7 +126,7 @@ export default defineAppConfig({
       desc: '福利中心看视频后获得奖励，自动点击“我知道了”',
       activityIds: 'com.qidian.QDReader.ui.activity.QDBrowserActivity',
       rules: 'TextView[text="我知道了"]',
-      snapshotUrls: 'https://i.gkd.li/import/13606901',
+      snapshotUrls: 'https://i.gkd.li/i/13606901',
     },
     {
       key: 14,

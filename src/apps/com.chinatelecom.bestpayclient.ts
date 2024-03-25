@@ -7,18 +7,17 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '版本更新',
+      name: '更新提示',
       quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      activityIds: 'com.chinatelecom.bestpayclient.ui.MainActivity',
       rules: '[id="com.chinatelecom.bestpayclient:id/bupdate_tv_bottom_tip"]',
-      snapshotUrls: 'https://i.gkd.li/import/13391544',
+      snapshotUrls: 'https://i.gkd.li/i/13391544',
     },
     {
       key: 3,
-      name: '弹窗广告',
+      name: '全屏广告-弹窗广告',
       actionMaximum: 1,
       resetMatch: 'activity',
       rules: [
@@ -29,7 +28,7 @@ export default defineAppConfig({
           quickFind: true,
           matches:
             'Image < @View[clickable=true][index=1] <<n Dialog <<n [id="com.chinatelecom.bestpayclient:id/best_h5_container"]',
-          snapshotUrls: 'https://i.gkd.li/import/13402692',
+          snapshotUrls: 'https://i.gkd.li/i/13402692',
         },
         {
           key: 1,
@@ -38,7 +37,7 @@ export default defineAppConfig({
           quickFind: true,
           matches:
             '[id="com.chinatelecom.bestpayclient:id/iv_dialog_close_one"]',
-          snapshotUrls: 'https://i.gkd.li/import/13455790',
+          snapshotUrls: 'https://i.gkd.li/i/13455790',
         },
         {
           key: 2,
@@ -46,8 +45,8 @@ export default defineAppConfig({
           activityIds: 'com.alipay.mobile.nebulacore.ui.H5Activity',
           quickFind: true,
           matches:
-            '@Image[clickable=true][text!=null] < View[childCount=2] <<n FrameLayout[id="com.chinatelecom.bestpayclient:id/h5_pc_container"]',
-          snapshotUrls: 'https://i.gkd.li/import/13626324',
+            '[text="甜橙信用卡"] >2  View[childCount=2] > @Image[clickable=true][text!=null] <<n [id="com.chinatelecom.bestpayclient:id/h5_pc_container"]',
+          snapshotUrls: 'https://i.gkd.li/i/13626324',
         },
         {
           key: 3,
@@ -56,43 +55,83 @@ export default defineAppConfig({
           quickFind: true,
           matches:
             '@View[clickable=true][text=""] <<n [id="com.chinatelecom.bestpayclient:id/best_h5_container"]',
-          snapshotUrls: 'https://i.gkd.li/import/13455929',
+          snapshotUrls: 'https://i.gkd.li/i/13455929',
         },
         {
           key: 4,
           name: '信用卡页面',
           activityIds: 'com.alipay.mobile.nebulacore.ui.H5Activity',
           matches:
-            '[id="com.chinatelecom.bestpayclient:id/h5_pc_container"] >n View[childCount=3] > @*[clickable=true] + * + *[childCount=0]',
+            '[id="com.chinatelecom.bestpayclient:id/h5_pc_container"] >n View[childCount=3] > @[clickable=true] + * + [childCount=0]',
           snapshotUrls: [
-            'https://i.gkd.li/import/13696322',
-            'https://i.gkd.li/import/13696323',
+            'https://i.gkd.li/i/13696322',
+            'https://i.gkd.li/i/13696323',
           ],
         },
       ],
     },
     {
-      enable: false,
       key: 4,
-      name: '悬浮窗小广告',
+      name: '局部广告-悬浮窗小广告',
       actionMaximum: 1,
       resetMatch: 'app',
-      activityIds: 'com.chinatelecom.bestpayclient.ui.MainActivity',
-      rules:
-        '[id="com.chinatelecom.bestpayclient:id/best_h5_container"] View[childCount=2] > @View[clickable=true] +  View[clickable=true] > Image[text!=null]',
-      snapshotUrls: 'https://i.gkd.li/import/13402711',
+      rules: [
+        {
+          key: 0,
+          activityIds: 'com.chinatelecom.bestpayclient.ui.MainActivity',
+          matches:
+            '[id="com.chinatelecom.bestpayclient:id/best_h5_container"] View[childCount=2] > @View[clickable=true] + View[clickable=true] > Image[text!=null]',
+          exampleUrls:
+            'https://m.gkd.li/57941037/4457a342-5750-45d8-ad8e-233dd1da3de3',
+          snapshotUrls: 'https://i.gkd.li/i/13402711',
+        },
+        {
+          key: 1,
+          quickFind: true,
+          activityIds: 'com.chinatelecom.bestpayclient.ui.MainActivity',
+          matches: '[vid="iv_market_close"]',
+          exampleUrls:
+            'https://m.gkd.li/57941037/14326e73-6c7c-4659-8493-d4b196746b2a',
+          snapshotUrls: 'https://i.gkd.li/i/14456159',
+        },
+      ],
     },
     {
       key: 5,
-      name: '年底积分活动弹窗',
+      name: '全屏广告-年底积分活动弹窗',
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'activity',
       activityIds: 'com.alipay.mobile.nebulacore.ui.H5Activity',
       rules: 'View > View[index=1][clickable=true][childCount=1] > Image',
       snapshotUrls: [
-        'https://i.gkd.li/import/13543032',
-        'https://i.gkd.li/import/13625037', //修改规则，避免在此误触
+        'https://i.gkd.li/i/13543032',
+        'https://i.gkd.li/i/13625037', //修改规则，避免在此误触
+      ],
+    },
+    {
+      key: 6,
+      name: '功能类-自动签到',
+      desc: '点击[立即打卡]-关闭弹窗',
+      rules: [
+        {
+          key: 0,
+          action: 'clickCenter',
+          activityIds: 'com.alipay.mobile.nebulacore.ui.H5Activity',
+          matches: '[text^="已连续签到"] +12 * >2 Image[visibleToUser=true]',
+          exampleUrls:
+            'https://m.gkd.li/57941037/8fd8a0ce-90a3-460b-9882-33fdb55cbca4',
+          snapshotUrls: 'https://i.gkd.li/i/14459643',
+        },
+        {
+          preKeys: 0,
+          key: 1,
+          activityIds: 'com.alipay.mobile.nebulacore.ui.H5Activity',
+          matches: '[text="明日签到可得惊喜盲盒"] <2 View + View > Image',
+          exampleUrls:
+            'https://m.gkd.li/57941037/31296e53-7d32-405b-b8ae-25855a02291d',
+          snapshotUrls: 'https://i.gkd.li/i/14459494',
+        },
       ],
     },
   ],

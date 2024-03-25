@@ -5,9 +5,8 @@ export default defineAppConfig({
   name: 'Google翻译',
   groups: [
     {
-      enable: false,
       key: 4,
-      name: '登录弹窗',
+      name: '功能类-登录弹窗',
       desc: '登录备份翻译记录',
       quickFind: true,
       matchTime: 10000,
@@ -16,7 +15,7 @@ export default defineAppConfig({
       activityIds: 'com.google.android.apps.translate.TranslateActivity',
       rules:
         'Button[id="com.google.android.apps.translate:id/sign_in_button"] + [id="com.google.android.apps.translate:id/secondary_action_button"]',
-      snapshotUrls: 'https://i.gkd.li/import/13495796',
+      snapshotUrls: 'https://i.gkd.li/i/13495796',
     },
   ],
 });

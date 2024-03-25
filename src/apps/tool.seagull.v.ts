@@ -6,7 +6,7 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '卡片式广告',
+      name: '局部广告-卡片式广告',
       rules: [
         {
           key: 0,
@@ -14,13 +14,13 @@ export default defineAppConfig({
           activityIds: 'io.github.trojan_gfw.igniter.MainActivity',
           matches:
             'View[childCount=2] > @Button[clickable=true] - View > View > View > Image',
-          snapshotUrls: 'https://i.gkd.li/import/13413556',
+          snapshotUrls: 'https://i.gkd.li/i/13413556',
         },
       ],
     },
     {
       key: 2,
-      name: '谷歌广告',
+      name: '全屏广告-谷歌广告',
       rules: [
         {
           key: 0,
@@ -34,8 +34,8 @@ export default defineAppConfig({
             '@View[clickable=true] > [text="关闭"]',
           ],
           snapshotUrls: [
-            'https://i.gkd.li/import/13426255',
-            'https://i.gkd.li/import/13459399',
+            'https://i.gkd.li/i/13426255',
+            'https://i.gkd.li/i/13459399',
           ],
         },
         {
@@ -46,14 +46,14 @@ export default defineAppConfig({
             '[id="mys-wrapper"] + View >n Image',
             '[id="mys-wrapper"] >n View > View > Button',
           ],
-          snapshotUrls: 'https://i.gkd.li/import/13476799',
+          snapshotUrls: 'https://i.gkd.li/i/13476799',
         },
         {
           key: 2,
           name: '谷歌广告-3',
           activityIds: 'com.google.android.gms.ads.AdActivity',
           matches: '[desc="Interstitial close button"]',
-          snapshotUrls: 'https://i.gkd.li/import/13476579',
+          snapshotUrls: 'https://i.gkd.li/i/13476579',
         },
       ],
     },

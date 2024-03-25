@@ -6,10 +6,10 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '广告弹窗',
+      name: '全屏广告-广告弹窗',
       activityIds: 'com.xfani.app.MainActivity',
       rules: 'ImageView - LinearLayout - FrameLayout > FrameLayout > ImageView',
-      snapshotUrls: 'https://i.gkd.li/import/13188550',
+      snapshotUrls: 'https://i.gkd.li/i/13188550',
     },
   ],
 });

@@ -7,7 +7,7 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '弹窗广告',
+      name: '全屏广告-弹窗广告',
       rules: [
         {
           key: 0,
@@ -15,7 +15,7 @@ export default defineAppConfig({
           activityIds: 'net.duohuo.magappx.main.IndexTabActivity',
           quickFind: true,
           matches: '[id="com.badmintoncn.bbs:id/iv_close_ad"]',
-          snapshotUrls: 'https://i.gkd.li/import/13635224',
+          snapshotUrls: 'https://i.gkd.li/i/13635224',
         },
       ],
     },

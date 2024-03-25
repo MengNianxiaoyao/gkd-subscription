@@ -6,15 +6,14 @@ export default defineAppConfig({
   groups: [
     {
       key: 3,
-      name: '版本更新',
+      name: '更新提示',
       quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      activityIds: 'com.yitong.mbank.app.android.activity.SplashActivity',
       rules:
         '[text="是否下载最新版客户端？"] <<n [id="android:id/parentPanel"] Button[text="取消"]',
-      snapshotUrls: 'https://i.gkd.li/import/13536762',
+      snapshotUrls: 'https://i.gkd.li/i/13536762',
     },
   ],
 });

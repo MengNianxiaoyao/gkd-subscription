@@ -6,7 +6,7 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '弹窗广告',
+      name: '全屏广告-弹窗广告',
       rules: [
         {
           key: 1,
@@ -14,7 +14,7 @@ export default defineAppConfig({
           activityIds: 'com.cfmoto.oilmoto.ui.MainCfActivity',
           matches:
             'RelativeLayout[childCount=2] > [id="com.lxt.cfmoto:id/image"] + [id="com.lxt.cfmoto:id/closeClick"]',
-          snapshotUrls: 'https://i.gkd.li/import/13401967',
+          snapshotUrls: 'https://i.gkd.li/i/13401967',
         },
       ],
     },

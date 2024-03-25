@@ -6,13 +6,13 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '应用内弹窗',
+      name: '全屏广告-弹窗广告',
       activityIds: 'com.zero.flutter_qq_ads.page.AdSplashActivity',
       rules: [
         {
           matches:
             '[text="去微信看看"] < FrameLayout <n FrameLayout[childCount=2] -n FrameLayout > ImageView',
-          snapshotUrls: 'https://i.gkd.li/import/13163314',
+          snapshotUrls: 'https://i.gkd.li/i/13163314',
         },
       ],
     },

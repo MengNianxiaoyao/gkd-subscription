@@ -7,18 +7,17 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '更新弹窗',
+      name: '更新提示',
       quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      activityIds: 'com.cebbank.mobile.cemb.view.CustomizedDialog',
       rules: '@[text="不再提示"] +2 [text="立即更新"]',
-      snapshotUrls: 'https://i.gkd.li/import/12727241',
+      snapshotUrls: 'https://i.gkd.li/i/12727241',
     },
     {
       key: 2,
-      name: '首页广告弹窗',
+      name: '全屏广告-首页弹窗广告',
       quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
@@ -29,8 +28,8 @@ export default defineAppConfig({
       ],
       rules: '[id="com.cebbank.mobile.cemb:id/home_advertising_iv_close"]',
       snapshotUrls: [
-        'https://i.gkd.li/import/12727248',
-        'https://i.gkd.li/import/13471080', // activityIds: 'com.cebbank.mobile.cemb.ui.activity.HomeActivity',
+        'https://i.gkd.li/i/12727248',
+        'https://i.gkd.li/i/13471080', // activityIds: 'com.cebbank.mobile.cemb.ui.activity.HomeActivity',
       ],
     },
   ],

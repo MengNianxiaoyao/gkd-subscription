@@ -6,7 +6,7 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '版本更新',
+      name: '更新提示',
       quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
@@ -15,7 +15,7 @@ export default defineAppConfig({
         {
           key: 0,
           matches: '[id="com.jsmcc:id/cancelVersionTV"]',
-          snapshotUrls: 'https://i.gkd.li/import/13327322',
+          snapshotUrls: 'https://i.gkd.li/i/13327322',
         },
       ],
     },

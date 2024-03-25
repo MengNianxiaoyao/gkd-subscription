@@ -6,7 +6,7 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '购买会员弹窗',
+      name: '全屏广告-购买会员弹窗',
       activityIds: 'cn.chuci.and.wkfenshen.ActMain',
       rules: [
         {
@@ -15,7 +15,7 @@ export default defineAppConfig({
             '[id="cn.chuci.and.wkfenshen:id/dialog_local_buy_btn"]',
             '[id="cn.chuci.and.wkfenshen:id/action_close"]',
           ],
-          snapshotUrls: 'https://i.gkd.li/import/13226988',
+          snapshotUrls: 'https://i.gkd.li/i/13226988',
         },
       ],
     },

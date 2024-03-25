@@ -7,18 +7,25 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
+      quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
+      actionMaximumKey: 0,
       rules: [
-        '[id="me.zhouzhuo810.zznote:id/native_ad_container"] + [id^="me.zhouzhuo810.zznote:id/btn_next"]',
-        '@LinearLayout > [text*="跳过"]',
-      ],
-      snapshotUrls: [
-        'https://i.gkd.li/import/12798528',
-        'https://i.gkd.li/import/12912217',
-        'https://i.gkd.li/import/13059838',
-        'https://i.gkd.li/import/13800235', //@LinearLayout > [text*="跳过"]
+        {
+          key: 0,
+          matches: '@[vid^="btn_next_"] - [vid="native_ad_container"]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/12798528',
+            'https://i.gkd.li/i/14662294',
+          ],
+        },
+        {
+          key: 1,
+          matches: '@LinearLayout > [text*="跳过"]',
+          snapshotUrls: 'https://i.gkd.li/i/13800235',
+        },
       ],
     },
   ],

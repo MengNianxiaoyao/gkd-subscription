@@ -6,18 +6,18 @@ export default defineAppConfig({
   groups: [
     {
       key: 10,
-      name: '应用评分弹窗',
-      activityIds: [
-        'me.chunyu.ChunyuDoctor.Activities.WelcomeActivity',
-        'me.chunyu.ChunyuDoctor.Activities.MainActivity',
-      ],
+      name: '评价提示-应用评分弹窗',
+      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: [
         {
           matches:
             '[text="给应用评分"] +(2) RelativeLayout > [text="下次再说"]',
           snapshotUrls: [
-            'https://i.gkd.li/import/12661907',
-            'https://i.gkd.li/import/12661924',
+            'https://i.gkd.li/i/12661907',
+            'https://i.gkd.li/i/12661924',
           ],
         },
       ],

@@ -7,13 +7,30 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '弹窗广告',
+      name: '全屏广告-弹窗广告',
       quickFind: true,
       activityIds: 'com.black.unique.feature.home.HomeActivity',
       rules: [
         {
           matches: '@ImageView[id="com.black.unique:id/iv_close"]',
-          snapshotUrls: 'https://i.gkd.li/import/13499502',
+          snapshotUrls: 'https://i.gkd.li/i/13499502',
+        },
+      ],
+    },
+    {
+      key: 2,
+      name: '开屏广告',
+      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          matches:
+            'FrameLayout > FrameLayout[childCount>2] > @View[clickable=true] + TextView <<n [id="android:id/content"]',
+          exampleUrls:
+            'https://m.gkd.li/57941037/63a72bd6-72be-410c-86ab-09ba7a4fa318',
+          snapshotUrls: 'https://i.gkd.li/i/14167393',
         },
       ],
     },

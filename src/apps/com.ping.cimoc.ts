@@ -6,11 +6,11 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '广告弹窗',
+      name: '全屏广告-广告弹窗',
       activityIds: 'com.ping.cimoc.ui.activity.MainActivity',
       rules:
         'ImageView < FrameLayout + FrameLayout > FrameLayout[childCount=1] > ImageView',
-      snapshotUrls: 'https://i.gkd.li/import/13187751',
+      snapshotUrls: 'https://i.gkd.li/i/13187751',
     },
   ],
 });

@@ -6,17 +6,17 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '首页-WiFi列表广告',
+      name: '局部广告-首页-WiFi列表广告',
       activityIds: ['com.wifitutu.ui.main.MainActivity'],
       rules: [
         {
           matches: 'View < [desc^="dislike"][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/import/13233916',
+          snapshotUrls: 'https://i.gkd.li/i/13233916',
         },
         {
           matches:
             '@Image[text=""] < View +n View > View > TextView[text="广告"]',
-          snapshotUrls: 'https://i.gkd.li/import/13234048',
+          snapshotUrls: 'https://i.gkd.li/i/13234048',
         },
       ],
     },

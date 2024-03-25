@@ -1,8 +1,8 @@
 import { defineAppConfig } from '../types';
 
 export default defineAppConfig({
-  id: 'com.yek.android.kfc.activitys',
-  name: '肯德基',
+  id: 'tw.com.gamer.android.activecenter',
+  name: '巴哈姆特',
   groups: [
     {
       key: 0,
@@ -10,7 +10,8 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      rules: '[id=`com.yek.android.kfc.activitys:id/splash_tv_3`]',
+      rules: '[desc="Interstitial close button"][clickable=true]',
+      snapshotUrls: 'https://i.gkd.li/i/14292691',
     },
   ],
 });

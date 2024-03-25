@@ -6,16 +6,15 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '悬浮广告',
+      name: '局部广告-悬浮广告',
       rules: [
         {
           key: 0,
           name: '首页中心悬浮广告',
-
           activityIds: 'com.bbk.launcher2.Launcher',
           matches:
             '[id="com.m4399.gamecenter:id/image"] + [id="com.m4399.gamecenter:id/close"]',
-          snapshotUrls: 'https://i.gkd.li/import/13297551',
+          snapshotUrls: 'https://i.gkd.li/i/13297551',
         },
         {
           key: 1,
@@ -25,7 +24,7 @@ export default defineAppConfig({
           quickFind: true,
           matches:
             '@[id="com.m4399.gamecenter:id/close"] + [id="com.m4399.gamecenter:id/image"]',
-          snapshotUrls: 'https://i.gkd.li/import/13297466',
+          snapshotUrls: 'https://i.gkd.li/i/13297466',
         },
       ],
     },

@@ -6,7 +6,7 @@ export default defineAppConfig({
   groups: [
     {
       key: 0,
-      name: '顶部广告卡片',
+      name: '局部广告-顶部广告卡片',
       desc: '点击卡片右上角关闭按钮',
       activityIds: [
         'com.jim.qrcode.MainActivity',
@@ -14,8 +14,8 @@ export default defineAppConfig({
       ],
       rules: 'TextView[text.length>0] < FrameLayout + FrameLayout > ImageView',
       snapshotUrls: [
-        'https://i.gkd.li/import/12606861',
-        'https://i.gkd.li/import/12606862',
+        'https://i.gkd.li/i/12606861',
+        'https://i.gkd.li/i/12606862',
       ],
     },
   ],

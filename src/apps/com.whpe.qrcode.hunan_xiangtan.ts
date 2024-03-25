@@ -6,7 +6,7 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '弹窗广告',
+      name: '全屏广告-弹窗广告',
       rules: [
         {
           key: 0,
@@ -15,7 +15,7 @@ export default defineAppConfig({
           quickFind: true,
           matches:
             '@[id="com.whpe.qrcode.hunan_xiangtan:id/iv_close"] +n * >n [text="广告"]',
-          snapshotUrls: 'https://i.gkd.li/import/13476265',
+          snapshotUrls: 'https://i.gkd.li/i/13476265',
         },
       ],
     },

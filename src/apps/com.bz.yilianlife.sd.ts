@@ -7,7 +7,7 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '弹窗广告',
+      name: '全屏广告-弹窗广告',
       rules: [
         {
           key: 0,
@@ -15,7 +15,7 @@ export default defineAppConfig({
           activityIds: 'com.deep.search.MainActivity',
           matches:
             '@ImageView[clickable=true] <3 ViewGroup -2 ViewGroup >n [text="广告"]',
-          snapshotUrls: 'https://i.gkd.li/import/13766176',
+          snapshotUrls: 'https://i.gkd.li/i/13766176',
         },
       ],
     },

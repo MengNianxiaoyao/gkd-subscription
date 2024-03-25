@@ -1,4 +1,4 @@
-import type { RawCategory } from './types';
+import { RawCategory } from '@gkd-kit/api';
 
 const categories: RawCategory[] = [
   {
@@ -50,6 +50,10 @@ const categories: RawCategory[] = [
     key: 9,
     name: '功能类',
     // 非广告, 点击某些功能按钮
+  },
+  {
+    key: 10,
+    name: '未分类', // 不知道怎么分类就往这放
   },
 ];
 

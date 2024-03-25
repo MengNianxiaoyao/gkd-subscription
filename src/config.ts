@@ -1,7 +1,7 @@
 import categories from './categories';
 import globalGroups from './globalGroups';
 import apps from './rawApps';
-import type { RawSubscription } from './types';
+import { RawSubscription } from '@gkd-kit/api';
 
 const subsConfig: RawSubscription = {
   id: 1,

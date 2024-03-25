@@ -6,13 +6,13 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '更新弹窗',
+      name: '更新提示',
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
       quickFind: true,
       rules: '[text="暂不更新"]',
-      snapshotUrls: 'https://i.gkd.li/import/13310265',
+      snapshotUrls: 'https://i.gkd.li/i/13310265',
     },
   ],
 });

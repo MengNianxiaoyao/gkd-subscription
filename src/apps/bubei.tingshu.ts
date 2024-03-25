@@ -7,7 +7,7 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '悬浮广告',
+      name: '局部广告-悬浮广告',
       rules: [
         {
           key: 0,
@@ -16,18 +16,19 @@ export default defineAppConfig({
           activityIds:
             'bubei.tingshu.listen.book.detail.activity.DetailActivity',
           matches: '[id="bubei.tingshu:id/closeIcon"][desc="关闭"]',
-          snapshotUrls: 'https://i.gkd.li/import/13348489',
+          snapshotUrls: 'https://i.gkd.li/i/13348489',
         },
       ],
     },
     {
       key: 2,
-      name: '更新弹窗',
+      name: '更新提示',
+      matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
       quickFind: true,
       rules: '[text="发现新版本"] +2 * > [text="暂不升级"]',
-      snapshotUrls: 'https://i.gkd.li/import/13545953',
+      snapshotUrls: 'https://i.gkd.li/i/13545953',
     },
   ],
 });

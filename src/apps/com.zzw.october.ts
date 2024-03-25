@@ -6,7 +6,7 @@ export default defineAppConfig({
   groups: [
     {
       key: 2,
-      name: '主页广告',
+      name: '全屏广告-弹窗广告',
       activityIds: ['com.zzw.october.MainActivity'],
       rules: [
         {
@@ -15,8 +15,8 @@ export default defineAppConfig({
           matches:
             '[id="com.zzw.october:id/interact_ad_root"] >n ImageView[id="com.zzw.october:id/iv_close"]',
           snapshotUrls: [
-            'https://i.gkd.li/import/12842675',
-            'https://i.gkd.li/import/12869369',
+            'https://i.gkd.li/i/12842675',
+            'https://i.gkd.li/i/12869369',
           ],
         },
       ],

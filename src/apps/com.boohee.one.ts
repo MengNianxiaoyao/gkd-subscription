@@ -7,29 +7,31 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '更新弹窗',
-      activityIds: 'com.boohee.library.update.UpdateDialogActivity',
+      name: '更新提示',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules:
         '@[id="com.boohee.one:id/tv_ignore"] + [id="com.boohee.one:id/tv_update"]',
-      snapshotUrls: 'https://i.gkd.li/import/12716918',
+      snapshotUrls: 'https://i.gkd.li/i/12716918',
     },
     {
       key: 2,
-      name: '发现页广告弹窗',
+      name: '全屏广告-发现页广告弹窗',
       activityIds: 'com.sensorsdata.sf.ui.view.DialogActivity',
       rules:
         'LinearLayout[childCount=2] > @ImageView[id=null][clickable=true] + ImageView',
-      snapshotUrls: 'https://i.gkd.li/import/12716970',
+      snapshotUrls: 'https://i.gkd.li/i/12716970',
     },
     {
-      enable: true,
       key: 10,
-      name: '请求开启通知权限弹窗',
+      name: '通知提示-请求开启通知权限弹窗',
       desc: '自动点击x按钮',
-      activityIds:
-        'com.boohee.one.app.account.ui.activity.MsgCategoryActivityV2',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: '[id="com.boohee.one:id/img_close_push"]',
-      snapshotUrls: 'https://i.gkd.li/import/12716950',
+      snapshotUrls: 'https://i.gkd.li/i/12716950',
     },
   ],
 });

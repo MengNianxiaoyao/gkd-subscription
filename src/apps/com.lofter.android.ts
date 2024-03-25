@@ -1,8 +1,8 @@
 import { defineAppConfig } from '../types';
 
 export default defineAppConfig({
-  id: 'com.midea.vm.washer',
-  name: 'U净',
+  id: 'com.lofter.android',
+  name: 'LOFTER',
   groups: [
     {
       key: 0,
@@ -11,8 +11,9 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      rules: '[text*="跳过"][text.length<=10]',
-      snapshotUrls: 'https://i.gkd.li/import/13407199',
+      rules:
+        'FrameLayout > FrameLayout[childCount>2] > @View[clickable=true] + TextView <<n [id="android:id/content"]',
+      snapshotUrls: 'https://i.gkd.li/i/14204158',
     },
   ],
 });

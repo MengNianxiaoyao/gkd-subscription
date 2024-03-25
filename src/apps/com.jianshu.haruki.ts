@@ -6,7 +6,7 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: 'VIP弹窗',
+      name: '全屏广告-VIP弹窗',
       quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
@@ -15,7 +15,7 @@ export default defineAppConfig({
         {
           activityIds: 'com.baiji.jianshu.ui.splash.SplashScreenActivity',
           matches: '[id="com.jianshu.haruki:id/dialog_lucky_prize_close"]',
-          snapshotUrls: 'https://i.gkd.li/import/13327286',
+          snapshotUrls: 'https://i.gkd.li/i/13327286',
         },
       ],
     },

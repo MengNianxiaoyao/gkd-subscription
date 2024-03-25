@@ -7,12 +7,34 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '更新弹窗',
+      name: '更新提示',
       quickFind: true,
-      activityIds: 'com.alibaba.ailabs.tg.activity.HomeActivity',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules:
         '[id="com.alibaba.ailabs.tg:id/ll_download"] + [id="com.alibaba.ailabs.tg:id/va_dialog_cancel"]',
-      snapshotUrls: 'https://i.gkd.li/import/13296332',
+      snapshotUrls: 'https://i.gkd.li/i/13296332',
+    },
+    {
+      key: 2,
+      name: '全屏广告-超级会员弹窗',
+      desc: '点击关闭',
+      rules: [
+        {
+          quickFind: true,
+          position: {
+            left: 'width * 0.9444',
+            top: 'width * 1.0583',
+          },
+          activityIds:
+            'com.alibaba.ailabs.flutter.container.FlutterPaymentActivity',
+          matches: 'FrameLayout > LinearLayout > [id="android:id/content"]',
+          exampleUrls:
+            'https://m.gkd.li/57941037/4a823639-f400-4249-81ea-f920d09317f4',
+          snapshotUrls: 'https://i.gkd.li/i/14443874',
+        },
+      ],
     },
   ],
 });

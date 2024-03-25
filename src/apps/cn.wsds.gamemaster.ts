@@ -7,15 +7,15 @@ export default defineAppConfig({
     {
       key: 1,
       name: '开屏广告',
-      desc: '点击跳过',
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
       rules: [
         {
+          quickFind: true,
           matches:
-            '@View <2 FrameLayout[childCount=3] <2 FrameLayout[childCount=2] < [vid="splash_container"]',
-          snapshotUrls: 'https://i.gkd.li/import/13930391',
+            'FrameLayout > FrameLayout[childCount>2] > @View[clickable=true] + TextView <<n [id="android:id/content"]',
+          snapshotUrls: 'https://i.gkd.li/i/13930391',
         },
       ],
     },
@@ -29,14 +29,14 @@ export default defineAppConfig({
           activityIds: 'cn.wsds.gamemaster.ui.gamedetails.ActivityGameDetails',
           matches:
             '[id="cn.wsds.gamemaster:id/feed_ad"] [text="立即下载"] + ImageView[clickable=true]',
-          snapshotUrls: 'https://i.gkd.li/import/13930398',
+          snapshotUrls: 'https://i.gkd.li/i/13930398',
         },
         {
           preKeys: 0,
           quickFind: true,
           activityIds: 'cn.wsds.gamemaster.ui.gamedetails.ActivityGameDetails',
           matches: '[text="不感兴趣"]',
-          snapshotUrls: 'https://i.gkd.li/import/13930399',
+          snapshotUrls: 'https://i.gkd.li/i/13930399',
         },
       ],
     },

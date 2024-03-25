@@ -6,19 +6,20 @@ export default defineAppConfig({
   groups: [
     {
       key: 3,
-      name: '活动广告',
+      name: '全屏广告-活动广告',
       matchTime: 10000,
       actionMaximum: 1,
       activityIds: 'com.vivo.space.ui.VivoSpaceTabActivity',
       rules: 'Image[text=""] + [text=""][clickable=true]',
       snapshotUrls: [
-        'https://i.gkd.li/import/13218155',
-        'https://i.gkd.li/import/13292907',
+        'https://i.gkd.li/i/13218155',
+        'https://i.gkd.li/i/13292907',
       ],
     },
     {
       key: 4,
-      name: '消息通知弹窗',
+      name: '通知提示-请求消息通知弹窗',
+      desc: '点击取消',
       quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
@@ -26,7 +27,7 @@ export default defineAppConfig({
       rules: [
         {
           matches: 'Button[id="com.vivo.space:id/vbutton_title"][text="取消"]',
-          snapshotUrls: 'https://i.gkd.li/import/13771581',
+          snapshotUrls: 'https://i.gkd.li/i/13771581',
         },
       ],
     },

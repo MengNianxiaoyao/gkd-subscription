@@ -6,13 +6,13 @@ export default defineAppConfig({
   groups: [
     {
       key: 6,
-      name: '弹窗广告',
+      name: '全屏广告-弹窗广告',
       desc: '腾讯广告SDK',
       quickFind: true,
       activityIds: 'com.pcncn.jj.act.AnswerDetail2Activity',
       rules:
         '[id="com.pcncn.jj:id/interact_ad_root"] [id="com.pcncn.jj:id/iv_close"]',
-      snapshotUrls: 'https://i.gkd.li/import/13695874',
+      snapshotUrls: 'https://i.gkd.li/i/13695874',
     },
   ],
 });

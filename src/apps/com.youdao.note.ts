@@ -6,7 +6,7 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '卡片式广告',
+      name: '局部广告-卡片式广告',
       rules: [
         {
           key: 1,
@@ -15,7 +15,7 @@ export default defineAppConfig({
           quickFind: true,
           matches:
             '[id="com.youdao.note:id/recycle_view"] + [id="com.youdao.note:id/close_ad"]',
-          snapshotUrls: 'https://i.gkd.li/import/13379524',
+          snapshotUrls: 'https://i.gkd.li/i/13379524',
         },
       ],
     },
