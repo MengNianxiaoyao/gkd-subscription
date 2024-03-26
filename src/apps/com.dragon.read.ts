@@ -230,7 +230,7 @@ export default defineAppConfig({
       resetMatch: 'app',
       activityIds: 'com.dragon.read.pages.main.MainFragmentActivity',
       rules: '[vid="container"] > ImageView',
-      snapshotUrls: 'https://i.gkd.li/import/14031943',
+      snapshotUrls: 'https://i.gkd.li/i/14031943',
     },
   ],
 });

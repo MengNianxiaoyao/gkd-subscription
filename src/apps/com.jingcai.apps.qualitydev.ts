@@ -12,7 +12,7 @@ export default defineAppConfig({
             activityIds:
                 'com.jingcai.apps.qualitydev.qualitync.activity_home.ActivityMainTab',
             rules: 'TextView[text="关闭"][clickable=true][id$="id/tv_step"]',
-            snapshotUrls: 'https://i.gkd.li/import/14054117',
+            snapshotUrls: 'https://i.gkd.li/i/14054117',
         },
     ],
 });
