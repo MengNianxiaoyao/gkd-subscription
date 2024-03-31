@@ -268,5 +268,46 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 18,
+      name: '全屏广告-小程序-红包弹窗',
+      desc: '点击关闭',
+      rules: [
+        {
+          action: 'clickCenter',
+          activityIds:
+            'com.alipay.mobile.nebulax.xriver.activity.XRiverActivity$XRiverLite1',
+          matches: 'View[childCount=2] > View > Image < * + [text="X"]',
+          exampleUrls:
+            'https://m.gkd.li/57941037/19ba92ce-0c57-4559-ab53-89b912fe8506',
+          snapshotUrls: 'https://i.gkd.li/i/14783332',
+        },
+      ],
+    },
+    {
+      key: 19,
+      name: '分段广告-服务消息页面-卡片广告',
+      desc: '点击[关闭]-点击[不感兴趣]',
+      quickFind: true,
+      activityIds:
+        'com.alipay.android.phone.messageboxapp.ui.MsgBoxTabActivity',
+      rules: [
+        {
+          key: 0,
+          matches: '@[clickable=true] > [text="广告"]',
+          exampleUrls:
+            'https://m.gkd.li/57941037/c3e08729-6d97-4a87-bfc3-1e38dd95c384',
+          snapshotUrls: 'https://i.gkd.li/i/14787644',
+        },
+        {
+          preKeys: [0],
+          key: 1,
+          matches: '@[clickable=true] >2 [text="不感兴趣"]',
+          exampleUrls:
+            'https://m.gkd.li/57941037/64c8c27d-23de-43b1-a87b-e2107b644eb1',
+          snapshotUrls: 'https://i.gkd.li/i/14787585',
+        },
+      ],
+    },
   ],
 });

@@ -85,5 +85,33 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 14,
+      name: '全屏广告-广告弹窗',
+      desc: '点击关闭',
+      rules: [
+        {
+          key: 0,
+          name: '[欢迎]弹窗',
+          quickFind: true,
+          activityIds: 'com.autonavi.map.activity.NewMapActivity',
+          matches:
+            'ViewGroup[childCount=6] >4 ViewGroup[childCount=5] > @ImageView + View[text!=null] <<n [vid="fragment_container"]',
+          exampleUrls:
+            'https://m.gkd.li/57941037/660ef360-eee8-4fb8-9764-7a1822ccb6e9',
+          snapshotUrls: 'https://i.gkd.li/i/14800704',
+        },
+        {
+          key: 1,
+          name: '签到弹窗',
+          quickFind: true,
+          activityIds: 'com.autonavi.map.activity.NewMapActivity',
+          matches: '[vid="main_map_msg_dialog_close"]',
+          exampleUrls:
+            'https://m.gkd.li/57941037/e059109b-f4bb-4ed6-81a8-6010b51ebfd5',
+          snapshotUrls: 'https://i.gkd.li/i/14809993',
+        },
+      ],
+    },
   ],
 });

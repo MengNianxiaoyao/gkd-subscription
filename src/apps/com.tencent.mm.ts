@@ -28,6 +28,18 @@ export default defineAppConfig({
             'https://i.gkd.li/i/14647413',
           ],
         },
+        {
+          key: 1,
+          quickFind: true,
+          position: {
+            left: 'width * 0.9223',
+            top: 'width * 0.0349',
+          },
+          excludeMatches:
+            'RelativeLayout >5 LinearLayout[childCount=2] > TextView[text!=null] + LinearLayout[visibleToUser=true][clickable=true]',
+          matches: '@LinearLayout >2 [text="广告"]',
+          snapshotUrls: 'https://i.gkd.li/i/14783802',
+        },
 
         // 预留key
         // 第二段
@@ -59,7 +71,7 @@ export default defineAppConfig({
           snapshotUrls: 'https://i.gkd.li/i/13791202',
         },
         {
-          preKeys: [0],
+          preKeys: [0, 1],
           key: 28,
           name: '点击[关闭该广告]',
           quickFind: true,
@@ -68,6 +80,7 @@ export default defineAppConfig({
           snapshotUrls: [
             'https://i.gkd.li/i/12642584',
             'https://i.gkd.li/i/14647839',
+            'https://i.gkd.li/i/14783820',
           ],
         },
         {
@@ -89,6 +102,7 @@ export default defineAppConfig({
           snapshotUrls: [
             'https://i.gkd.li/i/12663984',
             'https://i.gkd.li/i/14647940',
+            'https://i.gkd.li/i/14783534',
           ],
         },
         {
@@ -411,12 +425,12 @@ export default defineAppConfig({
     {
       key: 14,
       name: '分段广告-小程序-内部广告',
-      activityIds: ['com.tencent.mm.plugin.appbrand.ui.AppBrandUI'],
+      activityIds: 'com.tencent.mm.plugin.appbrand.ui.AppBrandUI',
       quickFind: true,
       rules: [
         {
           key: 0,
-          name: '"广告"0',
+          name: '广告0',
           matches:
             'FrameLayout[childCount=3] >n FrameLayout > FrameLayout > [text="广告"][visibleToUser=true]',
           excludeMatches:
@@ -428,21 +442,21 @@ export default defineAppConfig({
         },
         {
           key: 1,
-          name: '"广告"1',
+          name: '广告1',
           matches: 'Image[text="feedback_icon"] - [text="广告"]',
           snapshotUrls: 'https://i.gkd.li/i/13378208',
         },
         {
           preKeys: [0, 1],
           key: 11,
-          name: '点击原因"不感兴趣"',
+          name: '点击原因[不感兴趣]',
           matches: '[text="不感兴趣"][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/13200044',
         },
         {
           preKeys: 11,
           key: 12,
-          name: '点击原因"与我无关"',
+          name: '点击原因[与我无关]',
           matches: '[text="与我无关"][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/13200048',
         },
@@ -579,7 +593,8 @@ export default defineAppConfig({
         {
           key: 0,
           activityIds: 'com.tencent.mm.plugin.appbrand.ui.AppBrandUI',
-          matches: 'WebView > View > View > View[childCount=2] > View + Image',
+          matches:
+            'WebView > View[childCount=15] > View > View[childCount=2] > View > Image < * + Image',
           snapshotUrls: 'https://i.gkd.li/i/14392363',
         },
       ],
@@ -723,6 +738,21 @@ export default defineAppConfig({
           exampleUrls:
             'https://m.gkd.li/57941037/43632b72-d389-4fe7-9708-dac78e900679',
           snapshotUrls: 'https://i.gkd.li/i/14645385',
+        },
+      ],
+    },
+    {
+      key: 33,
+      name: '全屏广告-小程序-微快递',
+      desc: '点击关闭',
+      rules: [
+        {
+          activityIds: 'com.tencent.mm.plugin.appbrand.ui.AppBrandUI00',
+          matches:
+            'View > View[childCount=2] > View > Image < * + TextView[visibleToUser=true]',
+          exampleUrls:
+            'https://m.gkd.li/57941037/24350c08-ae93-46c9-8d68-cde2402bea8c',
+          snapshotUrls: 'https://i.gkd.li/i/14813758',
         },
       ],
     },
