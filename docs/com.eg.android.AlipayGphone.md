@@ -1,6 +1,6 @@
 # 支付宝
 
-存在 13 规则组 - [com.eg.android.AlipayGphone](/src/apps/com.eg.android.AlipayGphone.ts)
+存在 15 规则组 - [com.eg.android.AlipayGphone](/src/apps/com.eg.android.AlipayGphone.ts)
 
 ## 更新提示-关闭花呗升级弹窗
 
@@ -103,3 +103,21 @@
 
 - [快照-0](https://i.gkd.li/i/14630824)
 - [快照-1](https://i.gkd.li/i/14630825)
+
+## 全屏广告-小程序-红包弹窗
+
+默认禁用 - 点击关闭
+
+- [示例-0](https://m.gkd.li/57941037/19ba92ce-0c57-4559-ab53-89b912fe8506)
+
+- [快照-0](https://i.gkd.li/i/14783332)
+
+## 分段广告-服务消息页面-卡片广告
+
+默认禁用 - 点击[关闭]-点击[不感兴趣]
+
+- [示例-0](https://m.gkd.li/57941037/c3e08729-6d97-4a87-bfc3-1e38dd95c384)
+- [示例-1](https://m.gkd.li/57941037/64c8c27d-23de-43b1-a87b-e2107b644eb1)
+
+- [快照-0](https://i.gkd.li/i/14787644)
+- [快照-1](https://i.gkd.li/i/14787585)

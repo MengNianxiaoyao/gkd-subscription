@@ -1,6 +1,6 @@
 # 微信
 
-存在 29 规则组 - [com.tencent.mm](/src/apps/com.tencent.mm.ts)
+存在 30 规则组 - [com.tencent.mm](/src/apps/com.tencent.mm.ts)
 
 ## 分段广告-朋友圈广告
 
@@ -12,17 +12,20 @@
 - [快照-1](https://i.gkd.li/i/12905837)
 - [快照-2](https://i.gkd.li/i/13791200)
 - [快照-3](https://i.gkd.li/i/14647413)
-- [快照-4](https://i.gkd.li/i/12907642)
-- [快照-5](https://i.gkd.li/i/13926578)
-- [快照-6](https://i.gkd.li/i/14207480)
-- [快照-7](https://i.gkd.li/i/13791202)
-- [快照-8](https://i.gkd.li/i/12642584)
-- [快照-9](https://i.gkd.li/i/14647839)
-- [快照-10](https://i.gkd.li/i/12905838)
-- [快照-11](https://i.gkd.li/i/12663984)
-- [快照-12](https://i.gkd.li/i/14647940)
-- [快照-13](https://i.gkd.li/i/12905846)
+- [快照-4](https://i.gkd.li/i/14783802)
+- [快照-5](https://i.gkd.li/i/12907642)
+- [快照-6](https://i.gkd.li/i/13926578)
+- [快照-7](https://i.gkd.li/i/14207480)
+- [快照-8](https://i.gkd.li/i/13791202)
+- [快照-9](https://i.gkd.li/i/12642584)
+- [快照-10](https://i.gkd.li/i/14647839)
+- [快照-11](https://i.gkd.li/i/14783820)
+- [快照-12](https://i.gkd.li/i/12905838)
+- [快照-13](https://i.gkd.li/i/12663984)
 - [快照-14](https://i.gkd.li/i/14647940)
+- [快照-15](https://i.gkd.li/i/14783534)
+- [快照-16](https://i.gkd.li/i/12905846)
+- [快照-17](https://i.gkd.li/i/14647940)
 
 ## 功能类-电脑微信快捷自动登录
 
@@ -258,3 +261,11 @@
 - [示例-0](https://m.gkd.li/57941037/43632b72-d389-4fe7-9708-dac78e900679)
 
 - [快照-0](https://i.gkd.li/i/14645385)
+
+## 全屏广告-小程序-微快递
+
+默认禁用 - 点击关闭
+
+- [示例-0](https://m.gkd.li/57941037/24350c08-ae93-46c9-8d68-cde2402bea8c)
+
+- [快照-0](https://i.gkd.li/i/14813758)

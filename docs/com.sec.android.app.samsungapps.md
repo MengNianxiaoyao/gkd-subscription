@@ -1,6 +1,10 @@
 # 应用商店
 
-存在 1 规则组 - [com.sec.android.app.samsungapps](/src/apps/com.sec.android.app.samsungapps.ts)
+存在 2 规则组 - [com.sec.android.app.samsungapps](/src/apps/com.sec.android.app.samsungapps.ts)
+
+## 开屏广告
+
+- [快照-0](https://i.gkd.li/i/14810528)
 
 ## 功能类-[您是否年满 18 岁？]弹窗
 
