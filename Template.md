@@ -1,6 +1,16 @@
 # gkd-subscription
 
+## 声明
+
 来自 GKD 官方的订阅规则，个人使用
+
+## 更新策略
+
+同步[AIsouler](https://github.com/AIsouler/GKD_subscription)订阅更新为主
+
+## 订阅
+
+**仅启用`开屏广告`一类规则**
 
 在 GKD 内添加以下链接即可使用此规则
 
