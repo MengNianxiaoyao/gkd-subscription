@@ -127,7 +127,7 @@ export default defineAppConfig({
       activityIds: 'com.qidian.QDReader.ui.activity.QDBrowserActivity',
       rules: {
         action: 'clickNode',
-        matches: 'TextView[text="我知道了"]'
+        matches: 'TextView[text="我知道了"]',
       },
       snapshotUrls: 'https://i.gkd.li/i/13606901',
     },
