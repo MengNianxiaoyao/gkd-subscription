@@ -125,7 +125,10 @@ export default defineAppConfig({
       name: '功能类-福利中心【我知道了】',
       desc: '福利中心看视频后获得奖励，自动点击“我知道了”',
       activityIds: 'com.qidian.QDReader.ui.activity.QDBrowserActivity',
-      rules: 'TextView[text="我知道了"]',
+      rules: {
+        action: 'clickNode',
+        matches: 'TextView[text="我知道了"]'
+      },
       snapshotUrls: 'https://i.gkd.li/i/13606901',
     },
     {
@@ -133,7 +136,10 @@ export default defineAppConfig({
       name: '功能类-看视频领福利',
       desc: '福利中心自动点击“看视频领福利”',
       activityIds: 'com.qidian.QDReader.ui.activity.QDBrowserActivity',
+      resetMatch: 'app',
+      actionMaximum: 1,
       rules: {
+        action: 'clickNode',
         matches: 'Button[text*="看视频领福利"]',
       },
       snapshotUrls: [],
@@ -144,6 +150,7 @@ export default defineAppConfig({
       desc: '福利中心看视频限时彩蛋',
       activityIds: 'com.qidian.QDReader.ui.activity.QDBrowserActivity',
       rules: {
+        action: 'clickNode',
         matches: 'TextView[text="看视频"]',
       },
       snapshotUrls: [],
@@ -154,6 +161,7 @@ export default defineAppConfig({
       desc: '福利中心看视频开宝箱',
       activityIds: 'com.qidian.QDReader.ui.activity.QDBrowserActivity',
       rules: {
+        action: 'clickNode',
         matches: 'View[text="看视频开宝箱"]',
       },
       snapshotUrls: [],
@@ -164,6 +172,7 @@ export default defineAppConfig({
       desc: '福利中心领奖励',
       activityIds: 'com.qidian.QDReader.ui.activity.QDBrowserActivity',
       rules: {
+        action: 'clickNode',
         matches: 'TextView[text="领奖励"]',
       },
       snapshotUrls: [],
