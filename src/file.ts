@@ -636,7 +636,7 @@ export const updateReadMeMd = async (
                 .map((a) =>
                   [
                     '',
-                    '全局规则',
+                    '-',
                     a.addGlobalGroups.map((g) => '<li>' + g.name).join(''),
                     a.changeGlobalGroups.map((g) => '<li>' + g.name).join(''),
                     a.removeGlobalGroups.map((g) => '<li>' + g.name).join(''),
