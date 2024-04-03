@@ -18,7 +18,7 @@
 https://registry.npmmirror.com/gkd-subscription/latest/files
 ```
 
-当前版本: v16
+当前版本: v17
 
 当前订阅文件已适配 719 个 APP, 共有 1685 规则组, 3 全局规则组
 
