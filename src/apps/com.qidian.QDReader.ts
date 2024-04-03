@@ -136,8 +136,6 @@ export default defineAppConfig({
       name: '功能类-看视频领福利',
       desc: '福利中心自动点击“看视频领福利”',
       activityIds: 'com.qidian.QDReader.ui.activity.QDBrowserActivity',
-      resetMatch: 'app',
-      actionMaximum: 1,
       rules: {
         action: 'clickNode',
         matches: 'Button[text*="看视频领福利"]',
@@ -160,6 +158,8 @@ export default defineAppConfig({
       name: '功能类-看视频开宝箱',
       desc: '福利中心看视频开宝箱',
       activityIds: 'com.qidian.QDReader.ui.activity.QDBrowserActivity',
+      resetMatch: 'app',
+      actionMaximum: 1,
       rules: {
         action: 'clickNode',
         matches: 'View[text="看视频开宝箱"]',
