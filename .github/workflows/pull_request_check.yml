@@ -7,7 +7,7 @@ on:
 
 jobs:
   check:
-    if: github.repository == 'MengNianxiaoyao/gkd-subscription' && github.event.pull_request.user.name != 'renovate'
+    if: github.repository == 'MengNianxiaoyao/gkd-subscription' && github.event.pull_request.user.login != 'renovate[bot]'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
