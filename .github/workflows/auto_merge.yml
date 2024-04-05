@@ -1,0 +1,16 @@
+name: Automerge
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  automerge:
+    if: github.repository == 'MengNianxiaoyao/gkd-subscription' && github.event.pull_request.user.login == 'renovate[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: reitermarkus/automerge@v2.8.0
+        with:
+          token: ${{ secrets.MY_GITHUB_TOKEN }}
+          merge-method: merge
