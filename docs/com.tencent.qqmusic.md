@@ -1,6 +1,6 @@
 # QQ音乐
 
-存在 7 规则组 - [com.tencent.qqmusic](/src/apps/com.tencent.qqmusic.ts)
+存在 8 规则组 - [com.tencent.qqmusic](/src/apps/com.tencent.qqmusic.ts)
 
 ## 局部广告-广告卡片
 
@@ -50,3 +50,9 @@
 - [示例-0](https://m.gkd.li/57941037/5efa87c2-5097-4c3f-b36d-2cb3bb768e8a)
 
 - [快照-0](https://i.gkd.li/i/14549936)
+
+## 评价提示
+
+默认禁用
+
+- [快照-0](https://i.gkd.li/i/14881903)
