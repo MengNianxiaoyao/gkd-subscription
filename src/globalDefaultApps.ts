@@ -116,10 +116,10 @@ export const openAdBlackListAppIDs = new Set([
 ]);
 
 // 全屏广告黑名单
-export const fullAdBlackListAppIDs = new Set([...blackListAppIDs,]);
+export const fullAdBlackListAppIDs = new Set([...blackListAppIDs]);
 
 // 局部广告黑名单
-export const partialAdBlackListAppIDs = new Set([...blackListAppIDs,]);
+export const partialAdBlackListAppIDs = new Set([...blackListAppIDs]);
 
 // 更新提示黑名单
 export const updateBlackListAppIDs = new Set([

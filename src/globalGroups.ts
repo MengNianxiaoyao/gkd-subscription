@@ -32,7 +32,8 @@ const globalGroups: RawGlobalGroup[] = [
       {
         key: 0,
         quickFind: true,
-        matches: '[text*="跳过"][text.length<10][visibleToUser=true][height>0&&width>0]',
+        matches:
+          '[text*="跳过"][text.length<10][visibleToUser=true][height>0&&width>0]',
       },
       {
         key: 1,
@@ -257,7 +258,10 @@ const globalGroups: RawGlobalGroup[] = [
     apps: [...appList.partialAdBlackListAppIDs]
       .map((id) => ({ id, enable: false }))
       .concat(
-        [...appList.partialAdWhiteListAppIDs].map((id) => ({ id, enable: true })),
+        [...appList.partialAdWhiteListAppIDs].map((id) => ({
+          id,
+          enable: true,
+        })),
       ),
   },
   {
@@ -355,7 +359,10 @@ const globalGroups: RawGlobalGroup[] = [
     apps: [...appList.notificationBlackListAppIDs]
       .map((id) => ({ id, enable: false }))
       .concat(
-        [...appList.notificationWhiteListAppIDs].map((id) => ({ id, enable: true })),
+        [...appList.notificationWhiteListAppIDs].map((id) => ({
+          id,
+          enable: true,
+        })),
       ),
   },
 ];
