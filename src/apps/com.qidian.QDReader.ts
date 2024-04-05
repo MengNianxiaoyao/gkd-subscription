@@ -122,8 +122,8 @@ export default defineAppConfig({
     },
     {
       key: 13,
-      name: '功能类-福利中心【我知道了】',
-      desc: '福利中心看视频后获得奖励，自动点击“我知道了”',
+      name: '功能类-自动点击"我知道了"',
+      desc: '福利中心看视频后获得奖励，自动点击"我知道了"',
       activityIds: 'com.qidian.QDReader.ui.activity.QDBrowserActivity',
       rules: {
         action: 'clickNode',
@@ -134,7 +134,7 @@ export default defineAppConfig({
     {
       key: 14,
       name: '功能类-看视频领福利',
-      desc: '福利中心自动点击“看视频领福利”',
+      desc: '福利中心自动点击"看视频领福利"',
       activityIds: 'com.qidian.QDReader.ui.activity.QDBrowserActivity',
       rules: {
         action: 'clickNode',
@@ -144,7 +144,7 @@ export default defineAppConfig({
     },
     {
       key: 15,
-      name: '功能类-看视频',
+      name: '功能类-看视频限时彩蛋',
       desc: '福利中心看视频限时彩蛋',
       activityIds: 'com.qidian.QDReader.ui.activity.QDBrowserActivity',
       rules: {
@@ -168,8 +168,8 @@ export default defineAppConfig({
     },
     {
       key: 17,
-      name: '功能类-领奖励',
-      desc: '福利中心领奖励',
+      name: '功能类-福利中心领奖励',
+      desc: '福利中心自动点击"领奖励"',
       activityIds: 'com.qidian.QDReader.ui.activity.QDBrowserActivity',
       rules: {
         action: 'clickNode',

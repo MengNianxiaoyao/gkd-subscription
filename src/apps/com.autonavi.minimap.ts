@@ -29,6 +29,15 @@ export default defineAppConfig({
       ],
     },
     {
+      key: 3,
+      name: '功能类-点亮角落弹窗',
+      activityIds: 'com.autonavi.map.activity.NewMapActivity',
+      rules: '@ImageView < ViewGroup - ViewGroup >2 [text="一键点亮"]',
+      exampleUrls:
+        'https://m.gkd.li/101449500/c6275cd3-65eb-4ca1-949d-7d6ff80d6716',
+      snapshotUrls: 'https://i.gkd.li/i/14881505',
+    },
+    {
       key: 4,
       name: '功能类-截屏分享',
       desc: '关闭截屏时app弹出的分享弹窗',

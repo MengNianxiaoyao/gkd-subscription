@@ -65,6 +65,7 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
+      activityIds: 'com.magicalstory.AppStore.main.MainActivity',
       rules: [
         {
           matches:
@@ -83,6 +84,16 @@ export default defineAppConfig({
       rules:
         '[id="com.magicalstory.AppStore:id/tv_update"] <2 * + * > [id="com.magicalstory.AppStore:id/iv_close"]',
       snapshotUrls: 'https://i.gkd.li/i/13459373',
+    },
+    {
+      key: 5,
+      name: '功能类-签到页-自动签到',
+      desc: '签到页自动点击【签到】按钮',
+      quickFind: true,
+      actionMaximum: 1,
+      activityIds: 'com.magicalstory.AppStore.user.sign.signActivity',
+      rules: '[text="签到"][vid="button"]',
+      snapshotUrls: 'https://i.gkd.li/i/14168441',
     },
   ],
 });
