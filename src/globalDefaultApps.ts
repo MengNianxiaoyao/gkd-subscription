@@ -116,10 +116,10 @@ export const openAdBlackListAppIDs = new Set([
 ]);
 
 // 全屏广告黑名单
-export const fullAdBlackListAppIDs = new Set([...blackListAppIDs]);
+export const fullAdBlackListAppIDs = new Set([...blackListAppIDs, ...filterAppsByGroup(apps, '全屏广告'),]);
 
 // 局部广告黑名单
-export const partialAdBlackListAppIDs = new Set([...blackListAppIDs]);
+export const partialAdBlackListAppIDs = new Set([...blackListAppIDs, ...filterAppsByGroup(apps, '局部广告'),]);
 
 // 更新提示黑名单
 export const updateBlackListAppIDs = new Set([
@@ -136,10 +136,10 @@ export const yongBlackListAppIDs = new Set([
 ]);
 
 // 评价提示黑名单
-export const reviewBlackListAppIDs = new Set([...blackListAppIDs]);
+export const reviewBlackListAppIDs = new Set([...blackListAppIDs, ...filterAppsByGroup(apps, '评价提示'),]);
 
 // 通知提示黑名单
-export const notificationBlackListAppIDs = new Set([...blackListAppIDs]);
+export const notificationBlackListAppIDs = new Set([...blackListAppIDs, ...filterAppsByGroup(apps, '通知提示'),]);
 
 // 全局规则白名单（由于系统应用默认禁用全局规则，所以对系统应用启用白名单模式）
 // 在一些系统软件中启用所有全局规则
