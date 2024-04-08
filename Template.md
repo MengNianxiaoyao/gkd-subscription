@@ -28,7 +28,7 @@ https://registry.npmmirror.com/gkd-subscription/latest/files
 
 ### 第三方规则快速订阅
 
-使用[GKDTool](https://rules.adproqwq.xyz) By [@adproqwq](https://github.com/adproqwq) [GKDTool_Vue](https://github.com/adproqwq/GKDTool_Vue)
+使用 [GKDTool](https://rules.adproqwq.xyz) By [@adproqwq](https://github.com/adproqwq) [GKDTool_Vue](https://github.com/adproqwq/GKDTool_Vue)
 
 ## 贡献
 
