@@ -30,7 +30,6 @@ https://registry.npmmirror.com/gkd-subscription/latest/files
 
 如何编写订阅/贡献此项目 -> [CONTRIBUTING.md](./CONTRIBUTING.md)
 
-
 ## 第三方规则快速订阅
 
 使用[GKDTool](https://rules.adproqwq.xyz) By [@adproqwq](https://github.com/adproqwq) [GKDTool_Vue](https://github.com/adproqwq/GKDTool_Vue)
