@@ -81,5 +81,4 @@ jobs:
 
       - name: sync jsDelivr
         if: ${{ steps.commit.outcome == 'success' }}
-        run: |
-          curl -X PUT 'https://purge.jsdelivr.net/gh/MengNianxiaoyao/gkd-subscription@main/dist'
+        run: curl -X PUT 'https://purge.jsdelivr.net/npm/gkd-subscription/dist'
