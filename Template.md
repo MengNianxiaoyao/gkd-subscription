@@ -12,10 +12,24 @@
 
 **仅启用`开屏广告`一类规则**
 
-在 GKD 内添加以下链接即可使用此规则
+**订阅链接**
+
+- npmmirror源（推荐）
 
 ```txt
 https://registry.npmmirror.com/gkd-subscription/latest/files
+```
+
+- unpkg源
+
+```txt
+https://unpkg.com/gkd-subscription@latest
+```
+
+- jsDelivr源
+
+```txt
+https://cdn.jsdelivr.net/npm/gkd-subscription@latest/dist/gkd.json5
 ```
 
 当前版本: v--VERSION--
