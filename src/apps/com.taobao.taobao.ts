@@ -11,6 +11,7 @@ export default defineAppConfig({
       rules: [
         {
           key: 0,
+          quickFind: true,
           activityIds: [
             'com.taobao.tao.welcome.Welcome',
             'com.taobao.tao.TBMainActivity',
@@ -18,8 +19,7 @@ export default defineAppConfig({
             'com.taobao.android.detail.wrapper.activity.DetailActivity',
             'com.alibaba.triver.container.TriverMainActivity',
           ],
-          matches:
-            '@[desc="关闭按钮"] - [id="com.taobao.taobao:id/poplayer_native_state_id"]',
+          matches: '@[desc="关闭按钮"] - [vid="poplayer_native_state_id"]',
           snapshotUrls: [
             'https://i.gkd.li/i/12642792',
             'https://i.gkd.li/i/13180826',
@@ -28,6 +28,7 @@ export default defineAppConfig({
             'https://i.gkd.li/i/13198239',
             'https://i.gkd.li/i/13198052',
             'https://i.gkd.li/i/13249418',
+            'https://i.gkd.li/i/14905372',
           ],
         },
       ],
@@ -35,8 +36,8 @@ export default defineAppConfig({
     {
       key: 2,
       name: '局部广告-消息页面热门活动卡片',
-      activityIds: 'com.taobao.tao.welcome.Welcome',
       quickFind: true,
+      activityIds: 'com.taobao.tao.welcome.Welcome',
       rules: 'View[desc.length>0] +2n FrameLayout > TextView[text="퀺"]',
       snapshotUrls: [
         'https://i.gkd.li/i/12642795',
