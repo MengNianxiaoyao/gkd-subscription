@@ -7,7 +7,7 @@ export default defineAppConfig({
     {
       key: 1,
       name: '全屏广告-首页弹窗广告',
-      activityIds: 'com.android.app.station.NewMainAct'],
+      activityIds: 'com.android.app.station.NewMainAct',
       rules:
         '[id="com.longshine.nanwang.electric.charge:id/bodyFL"] + [id="com.longshine.nanwang.electric.charge:id/ivClose"]',
       snapshotUrls: ['https://i.gkd.li/i/12700011'],
