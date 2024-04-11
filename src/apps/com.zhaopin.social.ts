@@ -24,7 +24,7 @@ export default defineAppConfig({
     {
       key: 3,
       name: '全屏广告-社区页面弹窗广告',
-      activityIds: ['com.zhaopin.social.homepage.ZSC_MainTabActivity'],
+      activityIds: 'com.zhaopin.social.homepage.ZSC_MainTabActivity',
       rules:
         'ImageView[clickable=true&&focusable=true] < FrameLayout + FrameLayout > ImageView[clickable=false&&focusable=false]',
       snapshotUrls: 'https://i.gkd.li/i/13063442',

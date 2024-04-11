@@ -24,7 +24,7 @@ export default defineAppConfig({
       key: 3,
       name: '局部广告-悬浮窗广告',
       desc: '关闭广告悬浮窗',
-      activityIds: ['com.baidu.youavideo.home.view.HomeActivity'],
+      activityIds: 'com.baidu.youavideo.home.view.HomeActivity',
       quickFind: true,
       rules: [
         {
@@ -52,7 +52,7 @@ export default defineAppConfig({
       key: 5,
       name: '全屏广告-会员充值提示',
       desc: '点击x关闭充值提示',
-      activityIds: ['com.baidu.youavideo.home.view.HomeActivity'],
+      activityIds: 'com.baidu.youavideo.home.view.HomeActivity',
       quickFind: true,
       rules: [
         {

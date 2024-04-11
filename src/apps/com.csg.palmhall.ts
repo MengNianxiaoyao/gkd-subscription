@@ -16,7 +16,7 @@ export default defineAppConfig({
     {
       key: 2,
       name: '全屏广告-首页弹窗广告',
-      activityIds: ['com.csg.palmhall.MainActivity'],
+      activityIds: 'com.csg.palmhall.MainActivity',
       rules: 'View > Image +(3) [text="不再显示"][clickable=true]',
       snapshotUrls: ['https://i.gkd.li/i/12700075'],
     },

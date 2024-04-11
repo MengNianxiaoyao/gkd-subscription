@@ -116,7 +116,7 @@ export default defineAppConfig({
       name: '分段广告-用户资料页信息流广告',
       desc: '点击右上角关闭,点击我不喜欢',
       quickFind: true,
-      activityIds: ['com.twitter.app.profiles.ProfileActivity'],
+      activityIds: 'com.twitter.app.profiles.ProfileActivity',
       actionCd: 3000,
       rules: [
         {

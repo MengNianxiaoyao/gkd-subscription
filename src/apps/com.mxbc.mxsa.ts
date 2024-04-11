@@ -7,7 +7,7 @@ export default defineAppConfig({
     {
       key: 2,
       name: '全屏广告-主界面弹窗广告',
-      activityIds: ['com.mxbc.mxsa.modules.main.MainActivity'],
+      activityIds: 'com.mxbc.mxsa.modules.main.MainActivity',
       rules: [
         {
           key: 1,

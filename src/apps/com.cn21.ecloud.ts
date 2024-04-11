@@ -8,7 +8,7 @@ export default defineAppConfig({
     {
       key: 1,
       name: '全屏广告-首页弹窗广告',
-      activityIds: ['com.cn21.ecloud.activity.MainPageActivity'],
+      activityIds: 'com.cn21.ecloud.activity.MainPageActivity',
       rules:
         '[id="com.cn21.ecloud:id/content_frame"] >n FrameLayout >n @ImageView[desc=null] - View < View[childCount=2]',
       snapshotUrls: [

@@ -27,7 +27,7 @@ export default defineAppConfig({
     {
       key: 1,
       name: '局部广告-“我的”页会员广告',
-      activityIds: ['com.huawei.health.MainActivity'],
+      activityIds: 'com.huawei.health.MainActivity',
       rules: [
         {
           matches: '[id="com.huawei.health:id/item_banner_ad_close_icon"]',

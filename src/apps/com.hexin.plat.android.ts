@@ -8,7 +8,7 @@ export default defineAppConfig({
       key: 1,
       name: '分段广告-信息流广告',
       desc: '信息流广告-点击x按钮-点击内容质量差',
-      activityIds: ['com.hexin.plat.android.Hexin'],
+      activityIds: 'com.hexin.plat.android.Hexin'],
       rules: [
         {
           key: 1,
@@ -28,7 +28,7 @@ export default defineAppConfig({
     {
       key: 10,
       name: '局部广告-底部产品广告',
-      activityIds: ['com.hexin.plat.android'],
+      activityIds: 'com.hexin.plat.android'],
       rules: [
         {
           matches:

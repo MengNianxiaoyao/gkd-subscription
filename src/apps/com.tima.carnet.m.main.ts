@@ -30,7 +30,7 @@ export default defineAppConfig({
     {
       key: 3,
       name: '分段广告-设备界面顶部广告',
-      activityIds: ['com.tima.carnet.m.main.app.main.MainActivity'],
+      activityIds: 'com.tima.carnet.m.main.app.main.MainActivity',
       rules: [
         {
           key: 1,

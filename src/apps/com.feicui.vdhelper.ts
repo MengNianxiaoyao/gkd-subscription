@@ -7,7 +7,7 @@ export default defineAppConfig({
     {
       key: 1,
       name: '全屏广告-首页弹窗广告',
-      activityIds: ['com.ys.resemble.ui.MainActivity'],
+      activityIds: 'com.ys.resemble.ui.MainActivity',
       rules: [
         {
           matches: 'ImageView - FrameLayout >(2) ImageView[id=null]',
@@ -26,7 +26,7 @@ export default defineAppConfig({
           snapshotUrls: ['https://i.gkd.li/i/12700800'],
         },
         {
-          activityIds: ['com.sigmob.sdk.base.common.TransparentAdActivity'],
+          activityIds: 'com.sigmob.sdk.base.common.TransparentAdActivity',
           matches: '[id="close_btn"][clickable=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/12700837',

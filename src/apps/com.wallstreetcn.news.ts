@@ -24,7 +24,7 @@ export default defineAppConfig({
       key: 10,
       name: '局部广告-卡片广告',
       desc: '点击关闭',
-      activityIds: ['com.wallstreetcn.news.ProxyMainActivity'],
+      activityIds: 'com.wallstreetcn.news.ProxyMainActivity',
       quickFind: true,
       rules: [
         {

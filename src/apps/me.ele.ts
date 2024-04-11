@@ -89,7 +89,7 @@ export default defineAppConfig({
         },
         {
           key: 2,
-          activityIds: ['me.ele.application.ui.Launcher.LauncherActivity'],
+          activityIds: 'me.ele.application.ui.Launcher.LauncherActivity',
           matches:
             '[id="me.ele:id/fl_render_e_shop"] + FrameLayout >n ViewGroup[childCount=6] > View[index=5]',
           snapshotUrls: [
@@ -99,7 +99,7 @@ export default defineAppConfig({
         },
         {
           key: 3,
-          activityIds: ['me.ele.application.ui.Launcher.LauncherActivity'],
+          activityIds: 'me.ele.application.ui.Launcher.LauncherActivity',
           matches: 'ViewGroup[clickable=true] - TextView[text="放弃"]',
           snapshotUrls: [
             'https://i.gkd.li/i/13710574',
@@ -116,7 +116,7 @@ export default defineAppConfig({
     },
     {
       key: 5,
-      name: '全屏广告-付款后广告弹窗',
+      name: '全屏广告-付款后弹窗广告',
       quickFind: true,
       activityIds: 'me.ele.component.pops2.TransparentAppWebActivity',
       rules: 'bb Button[text="关闭"]',

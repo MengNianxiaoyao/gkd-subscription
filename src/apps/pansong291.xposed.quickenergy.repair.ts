@@ -10,7 +10,7 @@ export default defineAppConfig({
       desc: '打开app点击知道了',
       rules: [
         {
-          activityIds: ['pansong291.xposed.quickenergy.ui.MainActivity'],
+          activityIds: 'pansong291.xposed.quickenergy.ui.MainActivity',
           matches: ['[id="android:id/button2"]'],
           snapshotUrls: ['https://i.gkd.li/i/13445477'],
         },

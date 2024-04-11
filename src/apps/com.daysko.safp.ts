@@ -40,7 +40,7 @@ export default defineAppConfig({
       key: 2,
       name: '全屏广告-视频广告',
       desc: '点击跳过视频-点击关闭按钮',
-      activityIds: ['com.google.android.gms.ads.AdActivity'],
+      activityIds: 'com.google.android.gms.ads.AdActivity',
       rules: [
         {
           key: 1,

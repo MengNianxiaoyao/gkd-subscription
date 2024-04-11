@@ -7,14 +7,14 @@ export default defineAppConfig({
     {
       key: 1,
       name: '局部广告-首页卡片广告',
-      activityIds: ['com.xtuone.android.friday.MainFragmentActivity'],
+      activityIds: 'com.xtuone.android.friday.MainFragmentActivity',
       rules: '[id="com.xtuone.android.syllabus:id/treehole_banner_close"]',
       snapshotUrls: 'https://i.gkd.li/i/12840733',
     },
     {
       key: 2,
       name: '局部广告-课程表界面广告',
-      activityIds: ['com.xtuone.android.friday.MainFragmentActivity'],
+      activityIds: 'com.xtuone.android.friday.MainFragmentActivity',
       rules: '[id="com.xtuone.android.syllabus:id/imgv_close"]',
       snapshotUrls: 'https://i.gkd.li/i/12999642',
     },

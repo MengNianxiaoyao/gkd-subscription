@@ -51,7 +51,7 @@ export default defineAppConfig({
       key: 2,
       name: '分段广告-信息流广告',
       quickFind: true,
-      activityIds: ['net.csdn.csdnplus.activity.MainActivity'],
+      activityIds: 'net.csdn.csdnplus.activity.MainActivity',
       rules: [
         {
           key: 1,

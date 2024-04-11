@@ -227,7 +227,7 @@ export default defineAppConfig({
       quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
-      activityIds: ['com.xunmeng.pinduoduo.ui.activity.HomeActivity'],
+      activityIds: 'com.xunmeng.pinduoduo.ui.activity.HomeActivity',
       rules: [
         {
           key: 0,

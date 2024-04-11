@@ -65,7 +65,7 @@ export default defineAppConfig({
     {
       key: 3,
       name: '局部广告-主题详情页广告关闭弹窗',
-      activityIds: ['com.huawei.openalliance.ad.activity.FeedbackActivity'],
+      activityIds: 'com.huawei.openalliance.ad.activity.FeedbackActivity',
       rules: [
         {
           matches: '[text="直接关闭"]',
@@ -102,7 +102,7 @@ export default defineAppConfig({
     {
       key: 5,
       name: '局部广告-分类页“免费领取”',
-      activityIds: ['com.huawei.android.thememanager.HwThemeManagerActivity'],
+      activityIds: 'com.huawei.android.thememanager.HwThemeManagerActivity',
       rules: [
         {
           matches: '[id="com.huawei.android.thememanager:id/rl_ad_close"]',
@@ -113,7 +113,7 @@ export default defineAppConfig({
     {
       key: 6,
       name: '分段广告-主页面（推荐、分类、我的）广告',
-      activityIds: ['com.huawei.android.thememanager.HwThemeManagerActivity'],
+      activityIds: 'com.huawei.android.thememanager.HwThemeManagerActivity',
       rules: [
         {
           matches:

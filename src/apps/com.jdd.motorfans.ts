@@ -36,7 +36,7 @@ export default defineAppConfig({
     {
       key: 2,
       name: '分段广告-信息流广告',
-      activityIds: ['com.jdd.motorfans.MTMainActivity'],
+      activityIds: 'com.jdd.motorfans.MTMainActivity',
       rules: [
         {
           name: '点x按钮',

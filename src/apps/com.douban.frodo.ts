@@ -174,7 +174,7 @@ export default defineAppConfig({
         {
           key: 0,
           name: '点击"x"关闭型',
-          activityIds: ['com.douban.frodo.group.activity.GroupTopicActivity'],
+          activityIds: 'com.douban.frodo.group.activity.GroupTopicActivity',
           matches:
             'ImageView[id=null] +(n) LinearLayout[childCount<=2] + FrameLayout[childCount=1] > ImageView[id=null][visibleToUser=true][top>250]',
           snapshotUrls: [
@@ -222,7 +222,7 @@ export default defineAppConfig({
       name: '局部广告-个性化内容推荐弹窗',
       desc: '首页底部-个性化内容推荐弹窗-点击卡片右上角x直接关闭',
       rules: {
-        activityIds: ['com.douban.frodo.activity.SplashActivity'],
+        activityIds: 'com.douban.frodo.activity.SplashActivity',
         matches:
           '[id="com.douban.frodo:id/info"][text^="开启个性化推荐"] - [id="com.douban.frodo:id/close"]',
         snapshotUrls: 'https://i.gkd.li/i/12836798',

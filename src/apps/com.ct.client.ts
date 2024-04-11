@@ -32,7 +32,7 @@ export default defineAppConfig({
       name: '全屏广告-浮窗广告',
       desc: '会出现在首页、查询办理页面',
       quickFind: true,
-      activityIds: ['com.ct.client.common.ConfirmDialogActivity'],
+      activityIds: 'com.ct.client.common.ConfirmDialogActivity',
       rules: [
         {
           matches: 'ImageView[id="com.ct.client:id/close"]',

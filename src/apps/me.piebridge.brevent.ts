@@ -8,7 +8,7 @@ export default defineAppConfig({
       key: 1,
       name: '权限提示-权限不足弹窗',
       desc: '点击取消',
-      activityIds: ['me.piebridge.brevent.ui.BreventActivity'],
+      activityIds: 'me.piebridge.brevent.ui.BreventActivity',
       quickFind: true,
       actionMaximum: 1,
       resetMatch: 'app',

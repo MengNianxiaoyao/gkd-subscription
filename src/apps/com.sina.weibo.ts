@@ -67,7 +67,7 @@ export default defineAppConfig({
       rules: [
         {
           key: 0,
-          activityIds: ['com.sina.weibo.feed.DetailWeiboActivity'],
+          activityIds: 'com.sina.weibo.feed.DetailWeiboActivity',
           matches:
             'RelativeLayout[visibleToUser=true] - RelativeLayout >n @[id="com.sina.weibo:id/ll_close"] > [id="com.sina.weibo:id/tv_tips"] + [id="com.sina.weibo:id/iv_close_icon"]',
           snapshotUrls: [
@@ -93,7 +93,7 @@ export default defineAppConfig({
       key: 7,
       name: '局部广告-首页顶部话题分享窗口',
       quickFind: true,
-      activityIds: ['com.sina.weibo.MainTabActivity'],
+      activityIds: 'com.sina.weibo.MainTabActivity',
       rules:
         '[id="com.sina.weibo:id/tvGuide"] + [id="com.sina.weibo:id/v_close"] + [id="com.sina.weibo:id/iv_close"]',
       snapshotUrls: ['https://i.gkd.li/i/12705972'],
@@ -156,7 +156,7 @@ export default defineAppConfig({
       name: '局部广告-首页顶部签到卡片',
       desc: '自动点击x按钮',
       quickFind: true,
-      activityIds: ['com.sina.weibo.MainTabActivity'],
+      activityIds: 'com.sina.weibo.MainTabActivity',
       rules:
         '[id="com.sina.weibo:id/ll_check_in_container"] < FrameLayout - FrameLayout > TextView + [id="com.sina.weibo:id/v_close"]',
       snapshotUrls: ['https://i.gkd.li/i/12749876'],

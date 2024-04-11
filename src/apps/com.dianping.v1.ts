@@ -7,7 +7,7 @@ export default defineAppConfig({
     {
       key: 1,
       name: '全屏广告-主页推荐关注弹窗',
-      activityIds: ['com.dianping.main.guide.SplashActivity'],
+      activityIds: 'com.dianping.main.guide.SplashActivity',
       rules:
         'FrameLayout[id="android:id/content"] >2 FrameLayout > ImageView + FrameLayout[id=null][desc="关闭"][clickable=true]',
       snapshotUrls: 'https://i.gkd.li/i/12727011',
@@ -29,7 +29,7 @@ export default defineAppConfig({
       key: 3,
       name: '局部广告-关闭[签到开红包]',
       desc: '点击右下角悬浮图片右上角的x图标',
-      activityIds: ['com.dianping.v1.NovaMainActivity'],
+      activityIds: 'com.dianping.v1.NovaMainActivity',
       rules:
         '[id="com.dianping.v1:id/float_image"] + [id="com.dianping.v1:id/close"][clickable=true]',
       snapshotUrls: 'https://i.gkd.li/i/12727366',
