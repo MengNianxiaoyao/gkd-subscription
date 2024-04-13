@@ -10,11 +10,11 @@ jobs:
     if: github.repository == 'MengNianxiaoyao/gkd-subscription' && github.event.pull_request.user.login != 'renovate[bot]'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4.1.2
 
       - name: Get changed files
         id: changed_files
-        uses: tj-actions/changed-files@v44
+        uses: tj-actions/changed-files@v44.0.1
 
       - name: Check changed files
         run: |
@@ -26,11 +26,11 @@ jobs:
             echo "$file was changed"
           done
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4.0.2
         with:
           node-version: 20
 
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@v3.0.0
 
       - run: pnpm install
 
