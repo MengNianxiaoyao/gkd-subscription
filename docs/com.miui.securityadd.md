@@ -2,7 +2,7 @@
 
 存在 1 规则组 - [com.miui.securityadd](/src/apps/com.miui.securityadd.ts)
 
-## 全屏广告-游戏加速广告弹窗
+## 全屏广告-游戏加速弹窗广告
 
 默认禁用 - 点击X
 

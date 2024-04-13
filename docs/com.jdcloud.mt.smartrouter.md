@@ -2,7 +2,7 @@
 
 存在 1 规则组 - [com.jdcloud.mt.smartrouter](/src/apps/com.jdcloud.mt.smartrouter.ts)
 
-## 全屏广告-广告弹窗
+## 全屏广告-弹窗广告
 
 默认禁用 - 点击关闭
 
