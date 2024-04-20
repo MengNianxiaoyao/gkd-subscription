@@ -38,7 +38,7 @@ export default defineAppConfig({
             '@ImageView[id!=null] + FrameLayout[childCount=3] > ImageView + LinearLayout + TextView',
           snapshotUrls: 'https://i.gkd.li/i/13242002',
         },
-      {
+        {
           key: 2,
           matches: '[desc="关闭浮层icon"]',
           snapshotUrls: [
