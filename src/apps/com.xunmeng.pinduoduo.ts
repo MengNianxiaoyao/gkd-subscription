@@ -31,7 +31,6 @@ export default defineAppConfig({
       rules: [
         {
           key: 0,
-          name: '首页优惠弹窗1',
           activityIds: 'com.xunmeng.pinduoduo.ui.activity.HomeActivity',
           matches:
             'FrameLayout > FrameLayout > RelativeLayout[childCount=2] > @ImageView[id!=null][clickable=true][visibleToUser=true] + ImageView',
@@ -39,7 +38,6 @@ export default defineAppConfig({
         },
         {
           key: 1,
-          name: '首页优惠弹窗2',
           activityIds: 'com.xunmeng.pinduoduo.ui.activity.HomeActivity',
           matches:
             'View[id=null] > TextView + View > View +(4) View[clickable=true] > Image[id=null]',
@@ -47,11 +45,18 @@ export default defineAppConfig({
         },
         {
           key: 2,
-          name: '首页优惠弹窗3',
           activityIds: 'com.xunmeng.pinduoduo.ui.activity.HomeActivity',
           matches:
             'ImageView < @ViewGroup[clickable=true][visibleToUser=true] < ViewGroup + ViewGroup >7 [text="开心收下"]',
           snapshotUrls: 'https://i.gkd.li/i/13761182',
+        },
+        {
+          key: 3,
+          quickFind: true,
+          activityIds: 'com.xunmeng.pinduoduo.ui.activity.HomeActivity',
+          matches:
+            '@ImageView[visibleToUser=true] < * < * +2 * [text="去抢购"]',
+          snapshotUrls: 'https://i.gkd.li/i/15032649',
         },
       ],
     },
@@ -312,9 +317,16 @@ export default defineAppConfig({
             '[text="拼单返现"]',
             'WebView[text="拼多多"] >3 View[index=0] > Image[clickable=true][visibleToUser=true][childCount=0]',
           ],
-          exampleUrls:
-            'https://m.gkd.li/57941037/abc035bb-0d18-4711-b64c-a5319dd2191d',
           snapshotUrls: 'https://i.gkd.li/i/14549422',
+        },
+        {
+          key: 2,
+          activityIds: 'com.xunmeng.pinduoduo.activity.NewPageMaskActivity',
+          matches: [
+            '[text="赶快邀请好友来拼单吧"]',
+            '[text$="下单成功"] + Image[visibleToUser=true]',
+          ],
+          snapshotUrls: 'https://i.gkd.li/i/15025702',
         },
       ],
     },
@@ -392,8 +404,12 @@ export default defineAppConfig({
         {
           key: 1,
           quickFind: true,
-          matches: '@ImageView[clickable=true] + * >2 [text="开启通知"]',
-          snapshotUrls: 'https://i.gkd.li/i/15004580',
+          action: 'back',
+          matches: '[text="及时获取物流消息"]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/15004580',
+            'https://i.gkd.li/i/15048085',
+          ],
         },
       ],
     },
