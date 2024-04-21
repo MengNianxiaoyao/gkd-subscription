@@ -5,7 +5,7 @@
   "gkd": {
     "outDir": "dist",
     "file": "gkd.json5",
-    "versionFile": "gkd.version.json5",
+    "versionFile": "gkd.version.json",
     "changelog": "CHANGELOG.md",
     "README.md": "README.md"
   },
