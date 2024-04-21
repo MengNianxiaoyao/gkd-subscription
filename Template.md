@@ -17,13 +17,13 @@
 - npmmirror源（推荐）
 
 ```txt
-https://registry.npmmirror.com/gkd-subscription/latest/files/dist/gkd.json5
+https://registry.npmmirror.com/gkd-subscription/latest/files
 ```
 
 - unpkg源
 
 ```txt
-https://unpkg.com/gkd-subscription@latest/dist/gkd.json5
+https://unpkg.com/gkd-subscription@latest
 ```
 
 - jsDelivr源
