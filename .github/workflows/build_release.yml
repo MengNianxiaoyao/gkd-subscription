@@ -24,7 +24,7 @@ jobs:
 
       - id: version
         run: |
-          version=$(pnpm exec tsx ./scripts/showVersion.ts)
+          version=$(node -e "import('@gkd-kit/tools').then((m) => m.stdoutGkdVersion());")
           echo "version=${version}" >> "$GITHUB_OUTPUT"
 
       - name: Git commit
@@ -32,8 +32,6 @@ jobs:
         run: |
           git config --local user.email github-actions[bot]@users.noreply.github.com
           git config --local user.name github-actions[bot]
-          git config --global core.autocrlf true
-          git config --global core.safecrlf false
           git status
           git add .
           git commit -a -m "chore: v${{steps.version.outputs.version}}"
@@ -56,7 +54,7 @@ jobs:
         with:
           tag_name: v${{ steps.version.outputs.version }}
           release_name: Release ${{ steps.version.outputs.version }}
-          body_path: ./CHANGELOG.md
+          body_path: ./dist/CHANGELOG.md
 
       - name: Upload Release
         if: ${{ steps.commit.outcome == 'success' }}
@@ -75,10 +73,8 @@ jobs:
           pnpm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
           pnpm publish
 
-      - name: sync npmmirror
+      - name: sync
         if: ${{ steps.commit.outcome == 'success' }}
-        run: curl -X PUT 'https://registry-direct.npmmirror.com/gkd-subscription/sync'
-
-      - name: sync jsDelivr
-        if: ${{ steps.commit.outcome == 'success' }}
-        run: curl -X PUT 'https://purge.jsdelivr.net/npm/gkd-subscription/dist'
+        run: |
+          curl -X PUT 'https://registry-direct.npmmirror.com/gkd-subscription/sync'
+          curl -X PUT 'https://purge.jsdelivr.net/npm/gkd-subscription/dist'
