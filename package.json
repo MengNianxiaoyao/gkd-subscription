@@ -37,7 +37,7 @@
   "files": [
     "./dist"
   ],
-  "devDependencies": {
+  "dependencies": {
     "@commitlint/cli": "19.2.2",
     "@commitlint/config-conventional": "19.2.2",
     "@commitlint/types": "19.0.3",

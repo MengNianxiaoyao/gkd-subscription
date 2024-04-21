@@ -7,7 +7,7 @@ settings:
 importers:
 
   .:
-    devDependencies:
+    dependencies:
       '@commitlint/cli':
         specifier: 19.2.2
         version: 19.2.2(@types/node@20.12.7)(typescript@5.4.5)
