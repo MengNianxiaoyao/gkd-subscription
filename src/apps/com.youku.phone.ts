@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'com.youku.phone',
   name: '优酷视频',
-  deprecatedKeys: [1],
   groups: [
     {
       key: 2,

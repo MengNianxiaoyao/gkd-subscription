@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'com.miui.systemAdSolution',
   name: '智能服务',
-  deprecatedKeys: [1],
   groups: [
     {
       // 全局规则无效，单独规则有效

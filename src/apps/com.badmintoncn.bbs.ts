@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'com.badmintoncn.bbs',
   name: '中羽在线',
-  deprecatedKeys: [0],
   groups: [
     {
       key: 1,

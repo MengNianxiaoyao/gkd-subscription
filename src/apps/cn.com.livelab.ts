@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'cn.com.livelab',
   name: '纷玩岛',
-  deprecatedKeys: [0],
   groups: [
     {
       key: 1,

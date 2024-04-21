@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'com.bbk.appstore',
   name: 'vivo应用商店',
-  deprecatedKeys: [0],
   groups: [
     {
       key: 1,

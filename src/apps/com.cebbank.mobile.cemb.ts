@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'com.cebbank.mobile.cemb',
   name: '光大银行',
-  deprecatedKeys: [0],
   groups: [
     {
       key: 1,

@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'com.danlan.xiaolan',
   name: 'Blued极速版',
-  deprecatedKeys: [0],
   groups: [
     {
       key: 1,

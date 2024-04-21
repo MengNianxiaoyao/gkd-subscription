@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'cmb.pb',
   name: '招商银行',
-  deprecatedKeys: [0],
   groups: [
     {
       key: 3,

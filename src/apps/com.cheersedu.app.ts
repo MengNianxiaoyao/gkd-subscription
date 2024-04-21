@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'com.cheersedu.app',
   name: '湛庐阅读',
-  deprecatedKeys: [0],
   groups: [
     {
       key: 1,

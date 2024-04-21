@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'com.taptap',
   name: 'TapTap',
-  deprecatedKeys: [1],
   groups: [
     {
       key: 2,

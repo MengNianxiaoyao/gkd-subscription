@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'cn.yonghui.hyd',
   name: '永辉生活',
-  deprecatedKeys: [0],
   groups: [
     {
       key: 1,

@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'com.ct.client',
   name: '中国电信',
-  deprecatedKeys: [0],
   groups: [
     {
       key: 1,

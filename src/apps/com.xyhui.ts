@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'com.xyhui',
   name: 'PU口袋校园',
-  deprecatedKeys: [4],
   groups: [
     {
       key: 0,

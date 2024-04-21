@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'com.zhihu.android',
   name: '知乎',
-  deprecatedKeys: [0, 1, 2, 3, 4, 5, 7, 8, 9, 11],
   groups: [
     {
       key: 6,

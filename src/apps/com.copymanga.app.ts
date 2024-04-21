@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'com.copymanga.app',
   name: '拷貝漫畫',
-  deprecatedKeys: [0],
   groups: [
     {
       key: 1,

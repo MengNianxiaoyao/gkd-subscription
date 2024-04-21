@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'com.chaozh.iReader',
   name: 'VIVO 电子书',
-  deprecatedKeys: [0],
   groups: [
     {
       key: 1,

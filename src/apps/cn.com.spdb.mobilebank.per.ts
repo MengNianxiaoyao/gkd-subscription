@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'cn.com.spdb.mobilebank.per',
   name: '浦发银行',
-  deprecatedKeys: [0],
   groups: [
     {
       key: 1,

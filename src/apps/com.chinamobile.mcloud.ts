@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'com.chinamobile.mcloud',
   name: '中国移动云盘',
-  deprecatedKeys: [0],
   groups: [
     {
       key: 1,

@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'com.xunlei.downloadprovider',
   name: '迅雷',
-  deprecatedKeys: [11],
   groups: [
     {
       key: 0,

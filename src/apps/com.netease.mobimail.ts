@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'com.netease.mobimail',
   name: '网易邮箱',
-  deprecatedKeys: [2],
   groups: [
     {
       key: 0,

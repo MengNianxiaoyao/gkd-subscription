@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'com.cctv.cctv5ultimate',
   name: '央视体育',
-  deprecatedKeys: [0],
   groups: [
     {
       key: 1,

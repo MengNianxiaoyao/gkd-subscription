@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'com.baidu.BaiduMap',
   name: '百度地图',
-  deprecatedKeys: [0],
   groups: [
     {
       key: 1,

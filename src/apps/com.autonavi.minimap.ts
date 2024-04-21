@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'com.autonavi.minimap',
   name: '高德地图',
-  deprecatedKeys: [0],
   groups: [
     {
       key: 1,

@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'com.bw30.zsch',
   name: '四川航空',
-  deprecatedKeys: [0],
   groups: [
     {
       key: 1,

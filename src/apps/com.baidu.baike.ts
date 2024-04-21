@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'com.baidu.baike',
   name: '百度百科',
-  deprecatedKeys: [0],
   groups: [
     {
       key: 10,

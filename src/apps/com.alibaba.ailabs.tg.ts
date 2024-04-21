@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'com.alibaba.ailabs.tg',
   name: '天猫精灵',
-  deprecatedKeys: [0],
   groups: [
     {
       key: 1,

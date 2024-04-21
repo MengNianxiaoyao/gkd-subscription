@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'client.android.yixiaotong',
   name: '乐校通',
-  deprecatedKeys: [0],
   groups: [
     {
       key: 1,

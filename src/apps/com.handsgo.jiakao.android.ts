@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'com.handsgo.jiakao.android',
   name: '驾考宝典',
-  deprecatedKeys: [0],
   groups: [
     {
       key: -1,

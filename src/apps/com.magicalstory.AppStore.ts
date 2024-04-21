@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'com.magicalstory.AppStore',
   name: '奇妙应用',
-  deprecatedKeys: [6],
   groups: [
     {
       key: 1,

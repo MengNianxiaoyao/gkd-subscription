@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'com.cqcsy.ifvod',
   name: '爱壹帆',
-  deprecatedKeys: [0],
   groups: [
     {
       key: 1,

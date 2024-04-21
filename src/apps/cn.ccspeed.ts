@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'cn.ccspeed',
   name: 'CC加速器',
-  deprecatedKeys: [0],
   groups: [
     {
       key: 1,

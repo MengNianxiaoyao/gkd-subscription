@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'com.daimajia.gold',
   name: '稀土掘金',
-  deprecatedKeys: [0],
   groups: [
     {
       key: 1,

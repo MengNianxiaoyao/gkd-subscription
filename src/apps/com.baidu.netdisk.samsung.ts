@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'com.baidu.netdisk.samsung',
   name: '百度网盘-三星版本',
-  deprecatedKeys: [0, 3, 4],
   groups: [
     {
       key: -1,

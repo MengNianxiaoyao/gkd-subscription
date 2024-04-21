@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'cn.xiaochuankeji.tieba',
   name: '最右',
-  deprecatedKeys: [0, 11],
   groups: [
     {
       key: 1,

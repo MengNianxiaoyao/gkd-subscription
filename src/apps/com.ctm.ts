@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'com.ctm',
   name: 'CTM Buddy',
-  deprecatedKeys: [0],
   groups: [
     {
       key: 1,

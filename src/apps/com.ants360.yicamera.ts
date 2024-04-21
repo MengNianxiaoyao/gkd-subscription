@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'com.ants360.yicamera',
   name: '小蚁摄像机',
-  deprecatedKeys: [0],
   groups: [
     {
       key: 1,

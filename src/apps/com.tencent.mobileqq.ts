@@ -1,10 +1,8 @@
-import { matches } from 'lodash';
 import { defineGkdApp } from '@gkd-kit/define';
 
 export default defineGkdApp({
   id: 'com.tencent.mobileqq',
   name: 'QQ',
-  deprecatedKeys: [6, 14],
   groups: [
     {
       key: 0,

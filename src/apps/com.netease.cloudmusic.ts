@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'com.netease.cloudmusic',
   name: '网易云音乐',
-  deprecatedKeys: [3, 9, 11, 12],
   groups: [
     {
       key: 1,

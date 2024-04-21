@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'com.baidu.xin.aiqicha',
   name: '爱企查',
-  deprecatedKeys: [0, 11],
   groups: [
     {
       key: 1,

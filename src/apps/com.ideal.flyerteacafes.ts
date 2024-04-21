@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'com.ideal.flyerteacafes',
   name: '飞客',
-  deprecatedKeys: [7],
   groups: [
     {
       key: 3,

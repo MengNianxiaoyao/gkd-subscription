@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'android.zhibo8',
   name: '直播吧',
-  deprecatedKeys: [0],
   groups: [
     {
       key: 1,

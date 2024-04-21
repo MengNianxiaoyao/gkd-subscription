@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'com.alibaba.wireless',
   name: '阿里巴巴',
-  deprecatedKeys: [0],
   groups: [
     {
       key: 1,

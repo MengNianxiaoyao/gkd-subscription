@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'cn.com.hkgt.gasapp',
   name: '易捷加油',
-  deprecatedKeys: [0],
   groups: [
     {
       key: 1,

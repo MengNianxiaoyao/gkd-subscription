@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'com.sankuai.meituan',
   name: '美团',
-  deprecatedKeys: [5, 6, 9],
   groups: [
     {
       key: 1,

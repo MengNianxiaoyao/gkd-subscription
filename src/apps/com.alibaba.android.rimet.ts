@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'com.alibaba.android.rimet',
   name: '钉钉',
-  deprecatedKeys: [0],
   groups: [
     {
       key: 1,

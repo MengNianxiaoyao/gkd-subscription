@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'com.chaoxing.mobile',
   name: '学习通',
-  deprecatedKeys: [0],
   groups: [
     {
       key: 10,

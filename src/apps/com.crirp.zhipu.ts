@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'com.crirp.zhipu',
   name: '智谱',
-  deprecatedKeys: [3],
   groups: [
     {
       key: 1,

@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'com.tencent.qqlive',
   name: '腾讯视频',
-  deprecatedKeys: [5, 19],
   groups: [
     {
       key: 0,

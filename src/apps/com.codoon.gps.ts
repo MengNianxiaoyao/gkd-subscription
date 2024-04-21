@@ -3,7 +3,6 @@ import { defineGkdApp } from '@gkd-kit/define';
 export default defineGkdApp({
   id: 'com.codoon.gps',
   name: '咕咚',
-  deprecatedKeys: [0],
   groups: [
     {
       key: 1,
