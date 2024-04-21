@@ -24,7 +24,7 @@ jobs:
 
       - id: version
         run: |
-          version=$(pnpm exec tsx ./scripts/showVersion.ts)
+          version=$(node -e "import('@gkd-kit/tools').then((m) => m.stdoutGkdVersion());")
           echo "version=${version}" >> "$GITHUB_OUTPUT"
 
       - name: Git commit

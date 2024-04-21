@@ -24,7 +24,8 @@ export default defineGkdSubscription({
   name: '梦念逍遥のGKD订阅',
   author: '梦念逍遥',
   supportUri: 'https://github.com/MengNianxiaoyao/gkd-subscription',
-  updateUrl: 'https://registry.npmmirror.com/gkd-subscription/latest/files',
+  updateUrl:
+    'https://registry.npmmirror.com/gkd-subscription/latest/files/gkd.json5',
   checkUpdateUrl:
     'https://registry.npmmirror.com/gkd-subscription/latest/files/dist/gkd.version.json5',
   categories,
