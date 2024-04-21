@@ -7,7 +7,7 @@ export default defineGkdApp({
     {
       key: 0,
       name: '全屏广告-首页班课列表广告',
-      activityIds: 'com.mosoink.teach.MainMenuActivity',
+      activityIds: ['com.mosoink.teach.MainMenuActivity'],
       rules: [
         {
           matches: '[text="广告"] <2 ViewGroup -2 ViewGroup > ViewGroup',

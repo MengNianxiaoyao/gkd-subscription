@@ -7,7 +7,7 @@ export default defineGkdApp({
     {
       key: 2,
       name: '全屏广告-弹窗广告',
-      activityIds: 'cn.thepaper.paper.ui.main.MainActivity',
+      activityIds: ['cn.thepaper.paper.ui.main.MainActivity'],
       rules: [
         {
           matches:

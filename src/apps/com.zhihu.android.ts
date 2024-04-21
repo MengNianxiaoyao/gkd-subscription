@@ -20,7 +20,7 @@ export default defineGkdApp({
         {
           key: 0,
           matches:
-            '@ImageView[clickable=true][visibleToUser=true] <n * > [text="广告"]',
+            '@ImageView[clickable=true][visibleToUser=true] <n * >n [text*="广告"]',
           snapshotUrls: [
             'https://i.gkd.li/i/13849671',
             'https://i.gkd.li/i/14645530',
@@ -48,7 +48,7 @@ export default defineGkdApp({
           snapshotUrls: 'https://i.gkd.li/i/14730741',
         },
         {
-          preKeys: [0, 1, 2, 3, 4],
+          preKeys: [0, 2, 3, 4],
           key: 90,
           matches: '@[clickable=true] >3 [text$="不感兴趣"]',
           snapshotUrls: 'https://i.gkd.li/i/13849689',

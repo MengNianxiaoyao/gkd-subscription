@@ -7,6 +7,7 @@ export default defineGkdApp({
     {
       key: 1,
       name: '更新提示',
+      quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
@@ -27,7 +28,7 @@ export default defineGkdApp({
             'com.lolaage.tbulu.tools.ui.activity.main.MainActivity',
           ],
           matches:
-            'FrameLayout > FrameLayout[childCount=1] > ImageView[width<80][height<80]',
+            '[id="android:id/content"] >(3,4) FrameLayout[childCount>4] > FrameLayout[childCount=1] > ImageView',
           snapshotUrls: [
             'https://i.gkd.li/i/13627861',
             'https://i.gkd.li/i/13650732',

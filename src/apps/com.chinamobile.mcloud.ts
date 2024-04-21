@@ -9,8 +9,8 @@ export default defineGkdApp({
       name: '更新提示',
       matchTime: 10000,
       actionMaximum: 1,
-      actionMaximumKey: 0,
       resetMatch: 'app',
+      actionMaximumKey: 0,
       rules: [
         {
           key: 0,
@@ -71,11 +71,26 @@ export default defineGkdApp({
       key: 4,
       name: '功能类-请求开启自动备份弹窗',
       desc: '点击关闭',
-      activityIds: 'com.chinamobile.mcloud.client.ui.MenuActivity',
       quickFind: true,
+      activityIds: 'com.chinamobile.mcloud.client.ui.MenuActivity',
       rules:
         '[text="开启自动备份"] +n [id="com.chinamobile.mcloud:id/tv_skip"]',
       snapshotUrls: 'https://i.gkd.li/i/13627830',
+    },
+    {
+      key: 5,
+      name: '通知提示',
+      desc: '点击关闭',
+      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          matches: '[vid="btn_push_notice_close_dialog"]',
+          snapshotUrls: 'https://i.gkd.li/i/14882447',
+        },
+      ],
     },
   ],
 });

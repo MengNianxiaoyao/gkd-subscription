@@ -134,6 +134,16 @@ export default defineGkdApp({
       activityIds: 'com.dragon.read.reader.ui.ReaderActivity',
       rules: [
         {
+          key: 2,
+          name: '点击[继续阅读下一页]',
+          order: -1,
+          matches: '[text="继续阅读下一页"]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/13674556',
+            'https://i.gkd.li/i/13843155',
+          ],
+        },
+        {
           key: 0,
           name: '点击[反馈]按钮',
           matches: '[text="反馈"][visibleToUser=true][name$="UIText"]',
@@ -152,16 +162,6 @@ export default defineGkdApp({
             'https://i.gkd.li/i/13674550',
             'https://i.gkd.li/i/13816454',
             'https://i.gkd.li/i/14913207',
-          ],
-        },
-        {
-          key: 2,
-          name: '点击[继续阅读下一页]',
-          order: -1,
-          matches: '[text="继续阅读下一页"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/13674556',
-            'https://i.gkd.li/i/13816453',
           ],
         },
       ],

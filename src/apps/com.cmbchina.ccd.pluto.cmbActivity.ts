@@ -26,7 +26,7 @@ export default defineGkdApp({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      activityIds: 'com.cmbchina.ccd.pluto.cmbActivity.CMBRootActivityV2',
+      activityIds: ['com.cmbchina.ccd.pluto.cmbActivity.CMBRootActivityV2'],
       rules:
         '[id="com.cmbchina.ccd.pluto.cmbActivity:id/lly_pop_shell"] > [id="com.cmbchina.ccd.pluto.cmbActivity:id/img_cf_view_close"]',
       snapshotUrls: [

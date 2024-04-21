@@ -7,7 +7,7 @@ export default defineGkdApp({
     {
       key: 1,
       name: '局部广告-主页面上方广告',
-      activityIds: 'com.gspace.android.ui.activity.main.MainActivity',
+      activityIds: ['com.gspace.android.ui.activity.main.MainActivity'],
       rules: [
         {
           key: 0,

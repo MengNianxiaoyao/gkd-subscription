@@ -7,7 +7,7 @@ export default defineGkdApp({
     {
       key: 1,
       name: '全屏广告-弹窗广告',
-      activityIds: 'com.ukids.client.phone.parent.ParentClientHomeActivity',
+      activityIds: ['com.ukids.client.phone.parent.ParentClientHomeActivity'],
       rules: [
         {
           quickFind: true,

@@ -7,7 +7,7 @@ export default defineGkdApp({
     {
       key: 0,
       name: '局部广告-关闭[个性推荐开启提示]',
-      activityIds: 'com.android.browser.BrowserActivity',
+      activityIds: ['com.android.browser.BrowserActivity'],
       rules: [
         {
           matches:

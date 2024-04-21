@@ -136,7 +136,7 @@ export default defineGkdApp({
     {
       key: 13,
       name: '局部广告-底部话题推荐弹窗',
-      activityIds: 'com.ss.android.article.news.activity.MainActivity',
+      activityIds: ['com.ss.android.article.news.activity.MainActivity'],
       rules: [
         {
           name: '话题谈论',

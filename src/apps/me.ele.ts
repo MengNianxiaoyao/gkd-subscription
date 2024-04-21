@@ -88,7 +88,7 @@ export default defineGkdApp({
         },
         {
           key: 2,
-          activityIds: 'me.ele.application.ui.Launcher.LauncherActivity',
+          activityIds: ['me.ele.application.ui.Launcher.LauncherActivity'],
           matches:
             '[id="me.ele:id/fl_render_e_shop"] + FrameLayout >n ViewGroup[childCount=6] > View[index=5]',
           snapshotUrls: [
@@ -98,7 +98,7 @@ export default defineGkdApp({
         },
         {
           key: 3,
-          activityIds: 'me.ele.application.ui.Launcher.LauncherActivity',
+          activityIds: ['me.ele.application.ui.Launcher.LauncherActivity'],
           matches: 'ViewGroup[clickable=true] - TextView[text="放弃"]',
           snapshotUrls: [
             'https://i.gkd.li/i/13710574',

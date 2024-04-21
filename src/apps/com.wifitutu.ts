@@ -7,7 +7,7 @@ export default defineGkdApp({
     {
       key: 1,
       name: '局部广告-首页-WiFi列表广告',
-      activityIds: 'com.wifitutu.ui.main.MainActivity',
+      activityIds: ['com.wifitutu.ui.main.MainActivity'],
       rules: [
         {
           matches: 'View < [desc^="dislike"][visibleToUser=true]',

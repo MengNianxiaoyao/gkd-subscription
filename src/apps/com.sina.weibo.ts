@@ -66,7 +66,7 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
-          activityIds: 'com.sina.weibo.feed.DetailWeiboActivity',
+          activityIds: ['com.sina.weibo.feed.DetailWeiboActivity'],
           matches:
             'RelativeLayout[visibleToUser=true] - RelativeLayout >n @[id="com.sina.weibo:id/ll_close"] > [id="com.sina.weibo:id/tv_tips"] + [id="com.sina.weibo:id/iv_close_icon"]',
           snapshotUrls: [

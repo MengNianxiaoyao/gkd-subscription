@@ -7,7 +7,7 @@ export default defineGkdApp({
     {
       key: 1,
       name: '分段广告-首页信息流广告',
-      activityIds: 'com.baidu.tieba.tblauncher.MainTabActivity',
+      activityIds: ['com.baidu.tieba.tblauncher.MainTabActivity'],
       rules: [
         {
           key: 0,
