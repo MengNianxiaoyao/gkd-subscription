@@ -26,7 +26,7 @@ export default defineGkdSubscription({
   supportUri: 'https://github.com/MengNianxiaoyao/gkd-subscription',
   updateUrl: 'https://registry.npmmirror.com/gkd-subscription/latest/files',
   checkUpdateUrl:
-    'https://registry.npmmirror.com/gkd-subscription/latest/files/dist/gkd.version.json',
+    'https://registry.npmmirror.com/gkd-subscription/latest/files/dist/gkd.version.json5',
   categories,
   globalGroups,
   apps: rawApps,
