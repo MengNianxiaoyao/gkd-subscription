@@ -165,9 +165,9 @@ Android>=11 的无障碍可以自己截屏, 所以如果你的设备不满足 An
 这个文件的初始内容是
 
 ```ts
-import { defineAppConfig } from '../types';
+import { defineGkdApp } from '@gkd-kit/define';
 
-export default defineAppConfig({
+export default defineGkdApp({
   id: 'cn.wps.moffice_eng',
   name: 'WPS',
   groups: [],
@@ -177,9 +177,9 @@ export default defineAppConfig({
 然后在的 group 节点后添加你的规则及其快照链接, 文件内容变成
 
 ```ts
-import { defineAppConfig } from '../types';
+import { defineGkdApp } from '@gkd-kit/define';
 
-export default defineAppConfig({
+export default defineGkdApp({
   id: 'cn.wps.moffice_eng',
   name: 'WPS',
   groups: [

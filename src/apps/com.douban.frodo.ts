@@ -1,6 +1,6 @@
-import { defineAppConfig } from '../types';
+import { defineGkdApp } from '@gkd-kit/define';
 
-export default defineAppConfig({
+export default defineGkdApp({
   id: 'com.douban.frodo',
   name: '豆瓣',
   deprecatedKeys: [0, 7, 12],

@@ -1,6 +1,16 @@
-import { RawGlobalGroup } from '@gkd-kit/api';
-import * as utils from './utils';
+import { defineGkdGlobalGroups } from '@gkd-kit/define';
 import * as appList from './globalDefaultApps';
+
+export const OPEN_AD_ORDER = -10; // 开屏广告
+export const UPDATE_ORDER = -9; // 更新提示
+export const YOUNG_ORDER = -8; // 青少年模式
+export const REVIEW_PROMPT_ORDER = -7; // 评价提示
+export const NOTIFICATION_PROMPT_ORDER = -6; // 通知提示
+export const LOCATION_PROMPT_ORDER = -5; // 定位提示
+export const PERMISSION_PROMPT_ORDER = -4; // 权限提示
+export const PARTIAL_AD_ORDER = -3; // 局部广告
+export const FULLSCREEN_AD_ORDER = -2; // 全屏广告
+export const SEGMENTED_AD_ORDER = -1; // 分段广告
 
 const COMMON_PREFIX =
   '[name!$=".CheckBox"][childCount=0][visibleToUser=true][height>0&&width>0]';
@@ -16,11 +26,11 @@ const PA_commonTextPatterns =
 const PA_commonDescPatterns =
   '[desc^="广告"||desc$="广告"||desc^="廣告"||desc$="廣告"||desc$="限时福利"||desc^="热门活动"||desc$="热门活动"||desc$="限時福利"||desc^="限时福利"||desc^="限時福利"||((desc~="(?is).*AD"||desc~="ad")&&((desc!~="(?is).*load.*")&&(desc!~="(?is).*read.*")&&(desc!~="(?is).*add.*")&&(desc!~="(?is).*ead.*")))||(desc*="申请"||desc*="开启"||desc*="打开"||desc*="获取"||desc*="订阅"||desc*="接收"||desc~="(?is).*Turn on.*")&&(desc*="个性化"||desc*="推荐"||desc*="感兴趣"||desc*="個性化"||desc*="推薦"||desc*="感興趣"||desc*="感興趣")]';
 
-const globalGroups: RawGlobalGroup[] = [
+export default defineGkdGlobalGroups([
   {
     key: 0,
     name: '开屏广告',
-    order: utils.OPEN_AD_ORDER,
+    order: OPEN_AD_ORDER,
     matchTime: 10000,
     actionMaximum: 2,
     resetMatch: 'app',
@@ -53,7 +63,7 @@ const globalGroups: RawGlobalGroup[] = [
     key: 1,
     name: '更新提示',
     enable: false,
-    order: utils.UPDATE_ORDER,
+    order: UPDATE_ORDER,
     matchTime: 10000,
     actionMaximum: 2,
     resetMatch: 'app',
@@ -103,7 +113,7 @@ const globalGroups: RawGlobalGroup[] = [
     key: 2,
     name: '青少年模式',
     enable: false,
-    order: utils.YOUNG_ORDER,
+    order: YOUNG_ORDER,
     actionMaximum: 2,
     matchTime: 10000,
     resetMatch: 'app',
@@ -153,7 +163,7 @@ const globalGroups: RawGlobalGroup[] = [
     key: 3,
     name: '全屏广告',
     enable: false,
-    order: utils.FULLSCREEN_AD_ORDER,
+    order: FULLSCREEN_AD_ORDER,
     matchTime: 10000,
     resetMatch: 'activity',
     actionCdKey: 0,
@@ -199,7 +209,7 @@ const globalGroups: RawGlobalGroup[] = [
     key: 4,
     name: '局部广告',
     enable: false,
-    order: utils.PARTIAL_AD_ORDER,
+    order: PARTIAL_AD_ORDER,
     matchTime: 10000,
     resetMatch: 'activity',
     actionCdKey: 0,
@@ -270,7 +280,7 @@ const globalGroups: RawGlobalGroup[] = [
     key: 5,
     name: '评价提示',
     enable: false,
-    order: utils.REVIEW_PROMPT_ORDER,
+    order: REVIEW_PROMPT_ORDER,
     actionMaximum: 2,
     matchTime: 10000,
     resetMatch: 'app',
@@ -320,7 +330,7 @@ const globalGroups: RawGlobalGroup[] = [
     key: 6,
     name: '通知提示',
     enable: false,
-    order: utils.NOTIFICATION_PROMPT_ORDER,
+    order: NOTIFICATION_PROMPT_ORDER,
     matchTime: 10000,
     resetMatch: 'app',
     actionCdKey: 0,
@@ -367,5 +377,4 @@ const globalGroups: RawGlobalGroup[] = [
         })),
       ),
   },
-];
-export default globalGroups;
+]);

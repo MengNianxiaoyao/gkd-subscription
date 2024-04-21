@@ -1,6 +1,6 @@
-import { defineAppConfig } from '../types';
+import { defineGkdApp } from '@gkd-kit/define';
 
-export default defineAppConfig({
+export default defineGkdApp({
   id: 'chuxin.shimo.shimowendang',
   name: '石墨文档',
   deprecatedKeys: [0],

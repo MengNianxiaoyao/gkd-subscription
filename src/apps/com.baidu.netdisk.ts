@@ -1,6 +1,6 @@
-import { defineAppConfig } from '../types';
+import { defineGkdApp } from '@gkd-kit/define';
 
-export default defineAppConfig({
+export default defineGkdApp({
   id: 'com.baidu.netdisk',
   name: '百度网盘',
   deprecatedKeys: [0, 3, 4, 5, 7, 10, 11],

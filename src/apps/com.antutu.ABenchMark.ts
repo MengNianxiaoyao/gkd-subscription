@@ -1,6 +1,6 @@
-import { defineAppConfig } from '../types';
+import { defineGkdApp } from '@gkd-kit/define';
 
-export default defineAppConfig({
+export default defineGkdApp({
   id: 'com.antutu.ABenchMark',
   name: '安兔兔评测',
   deprecatedKeys: [0],

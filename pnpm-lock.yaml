@@ -7,28 +7,33 @@ settings:
 importers:
 
   .:
-    dependencies:
-      '@gkd-kit/api':
-        specifier: ^0.0.5
-        version: 0.0.5
     devDependencies:
       '@commitlint/cli':
-        specifier: ^19.2.1
+        specifier: 19.2.2
         version: 19.2.2(@types/node@20.12.7)(typescript@5.4.5)
       '@commitlint/config-conventional':
-        specifier: ^19.1.0
+        specifier: 19.2.2
         version: 19.2.2
       '@commitlint/types':
-        specifier: ^19.0.3
+        specifier: 19.0.3
         version: 19.0.3
-      '@gkd-kit/selector':
-        specifier: 0.0.25
-        version: 0.0.25
-      '@types/lodash':
-        specifier: ^4.17.0
-        version: 4.17.0
+      '@eslint/eslintrc':
+        specifier: ^3.0.2
+        version: 3.0.2
+      '@eslint/js':
+        specifier: ^9.1.1
+        version: 9.1.1
+      '@gkd-kit/api':
+        specifier: 0.0.5
+        version: 0.0.5
+      '@gkd-kit/define':
+        specifier: 0.0.1
+        version: 0.0.1(@gkd-kit/api@0.0.5)
+      '@gkd-kit/tools':
+        specifier: 0.2.0
+        version: 0.2.0(@gkd-kit/api@0.0.5)(json5@2.2.3)
       '@types/node':
-        specifier: ^20.11.30
+        specifier: 20.12.7
         version: 20.12.7
       '@typescript-eslint/eslint-plugin':
         specifier: 7.7.0
@@ -36,11 +41,8 @@ importers:
       '@typescript-eslint/parser':
         specifier: 7.7.0
         version: 7.7.0(eslint@9.1.0)(typescript@5.4.5)
-      dayjs:
-        specifier: ^1.11.10
-        version: 1.11.10
       eslint:
-        specifier: ^9.0.0
+        specifier: 9.1.0
         version: 9.1.0
       eslint-config-prettier:
         specifier: 9.1.0
@@ -48,32 +50,26 @@ importers:
       eslint-define-config:
         specifier: 2.1.0
         version: 2.1.0
-      husky:
-        specifier: ^9.0.11
-        version: 9.0.11
+      eslint-plugin-unused-imports:
+        specifier: 3.1.0
+        version: 3.1.0(@typescript-eslint/eslint-plugin@7.7.0(@typescript-eslint/parser@7.7.0(eslint@9.1.0)(typescript@5.4.5))(eslint@9.1.0)(typescript@5.4.5))(eslint@9.1.0)
       json5:
-        specifier: ^2.2.3
+        specifier: 2.2.3
         version: 2.2.3
       lint-staged:
-        specifier: ^15.2.2
+        specifier: 15.2.2
         version: 15.2.2
-      lodash:
-        specifier: ^4.17.21
-        version: 4.17.21
-      picocolors:
-        specifier: ^1.0.0
-        version: 1.0.0
-      pinyin-pro:
-        specifier: 3.20.2
-        version: 3.20.2
       prettier:
-        specifier: ^3.2.5
+        specifier: 3.2.5
         version: 3.2.5
+      simple-git-hooks:
+        specifier: 2.11.1
+        version: 2.11.1
       tsx:
-        specifier: ^4.7.1
+        specifier: 4.7.2
         version: 4.7.2
       typescript:
-        specifier: ^5.4.3
+        specifier: 5.4.5
         version: 5.4.5
 
 packages:
@@ -322,8 +318,19 @@ packages:
   '@gkd-kit/api@0.0.5':
     resolution: {integrity: sha512-eKHkqcjlhUiQgg1WUepq7CNxVR/Q3PQWr8TMmfbYTqeq0pO7ABYNDuGkOptR+u2jQ1Qr+8bbX/ODfdB6jK8UfQ==}
 
+  '@gkd-kit/define@0.0.1':
+    resolution: {integrity: sha512-ql/f0TIlBQOSaJS6e9c8B4rLHYWyCzDctP0vRpc6aYaWGJXnZKZIbuTUr2ET45eNzD4dviCjTU6cSv/wcA07IQ==}
+    peerDependencies:
+      '@gkd-kit/api': '*'
+
   '@gkd-kit/selector@0.0.25':
     resolution: {integrity: sha512-bW3nFcvKZH5I/DasukPcKEbnSCrEI1ioup9+mUUTj0RoPwPBZri/MRKIu8fQg2WWfZ3D38otpwO1ilG7fJI/cA==}
+
+  '@gkd-kit/tools@0.2.0':
+    resolution: {integrity: sha512-M49dhnzmzGobAmCJ6rXl157aZWQc0FGtcoBPp9Bm96u7q/0BqNoNjNGE8hm4Z0hxLvqB/EUegJYfI+uxNr11CA==}
+    peerDependencies:
+      '@gkd-kit/api': '*'
+      json5: '*'
 
   '@humanwhocodes/config-array@0.13.0':
     resolution: {integrity: sha512-DZLEEqFWQFiyK6h5YIeynKx7JlvCYWL0cImfSRXZ9l4Sg2efkFGTuFf6vzXjK1cq6IYkU+Eg/JizXw+TD2vRNw==}
@@ -357,9 +364,6 @@ packages:
 
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
-
-  '@types/lodash@4.17.0':
-    resolution: {integrity: sha512-t7dhREVv6dbNj0q17X12j7yDG4bD/DHYX7o5/DbDxobP0HnGPgpRz2Ej77aL7TZT3DSw13fqUTj8J4mMnqa7WA==}
 
   '@types/node@20.12.7':
     resolution: {integrity: sha512-wq0cICSkRLVaf3UGLMGItu/PtdY7oaXaI/RVU+xliKVOtRna3PRY57ZDfztpDL0n11vfymMUnXv8QwYCO7L1wg==}
@@ -445,8 +449,8 @@ packages:
   ajv@8.12.0:
     resolution: {integrity: sha512-sRu1kpcO9yLtYxBKvqfTeh9KzZEwO3STyX1HT+4CaDzC6HpTGYhIhPIzj9XuKU7KYDwnaeh5hcOwjy1QuJzBPA==}
 
-  ansi-escapes@6.2.0:
-    resolution: {integrity: sha512-kzRaCqXnpzWs+3z5ABPQiVke+iq0KXkHo8xiWV4RPTi5Yli0l97BEQuhXV1s7+aSU/fu1kUuxgS4MsQ0fRuygw==}
+  ansi-escapes@6.2.1:
+    resolution: {integrity: sha512-4nJ3yixlEthEJ9Rk4vPcdBRkZvQZlYyu8j4/Mqz5sgIkddmEnH2Yj2ZrnP9S3tQOvSNRUIgVNF/1yPpRAGNRig==}
     engines: {node: '>=14.16'}
 
   ansi-regex@5.0.1:
@@ -584,9 +588,6 @@ packages:
     resolution: {integrity: sha512-wAV9QHOsNbwnWdNW2FYvE1P56wtgSbM+3SZcdGiWQILwVjACCXDCI3Ai8QlCjMDB8YK5zySiXZYBiwGmNY3lnw==}
     engines: {node: '>=12'}
 
-  dayjs@1.11.10:
-    resolution: {integrity: sha512-vjAczensTgRcqDERK0SR2XMwsF/tSvnvlv6VcF2GIhg6Sx4yOIt/irsr1RDJsKiIyBzJDpCoXiWWq28MqH2cnQ==}
-
   debug@4.3.4:
     resolution: {integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==}
     engines: {node: '>=6.0'}
@@ -646,6 +647,20 @@ packages:
   eslint-define-config@2.1.0:
     resolution: {integrity: sha512-QUp6pM9pjKEVannNAbSJNeRuYwW3LshejfyBBpjeMGaJjaDUpVps4C6KVR8R7dWZnD3i0synmrE36znjTkJvdQ==}
     engines: {node: '>=18.0.0', npm: '>=9.0.0', pnpm: '>=8.6.0'}
+
+  eslint-plugin-unused-imports@3.1.0:
+    resolution: {integrity: sha512-9l1YFCzXKkw1qtAru1RWUtG2EVDZY0a0eChKXcL+EZ5jitG7qxdctu4RnvhOJHv4xfmUf7h+JJPINlVpGhZMrw==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    peerDependencies:
+      '@typescript-eslint/eslint-plugin': 6 - 7
+      eslint: '8'
+    peerDependenciesMeta:
+      '@typescript-eslint/eslint-plugin':
+        optional: true
+
+  eslint-rule-composer@0.3.0:
+    resolution: {integrity: sha512-bt+Sh8CtDmn2OajxvNO+BX7Wn4CIWMpTRm3MaiKPCQcnnlm0CS2mhui6QaoeQugs+3Kj2ESKEEGJUdVafwhiCg==}
+    engines: {node: '>=4.0.0'}
 
   eslint-scope@8.0.1:
     resolution: {integrity: sha512-pL8XjgP4ZOmmwfFE8mEhSxA7ZY4C+LWyqjQ3o4yWkkmD0qcMT9kkW3zWHOczhWcjTSgqycYAgwSlXvZltv65og==}
@@ -789,11 +804,6 @@ packages:
   human-signals@5.0.0:
     resolution: {integrity: sha512-AXcZb6vzzrFAUE61HnN4mpLqd/cSIwNQjtNWR0euPm6y0iqx3G4gOXaIDdtdDwZmhwe82LA6+zinmW4UBWVePQ==}
     engines: {node: '>=16.17.0'}
-
-  husky@9.0.11:
-    resolution: {integrity: sha512-AB6lFlbwwyIqMdHYhwPe+kjOC3Oc5P3nThEoW/AaO2BX3vJDjWPFxYLxokUZOo6RNX20He3AaT8sESs9NJcmEw==}
-    engines: {node: '>=18'}
-    hasBin: true
 
   ignore@5.3.1:
     resolution: {integrity: sha512-5Fytz/IraMjqpwfd34ke28PTVMjZjJG2MPn5t7OE4eUCUNf8BAa7b5WUS9/Qvr6mwOQS7Mk6vdsMno5he+T8Xw==}
@@ -953,9 +963,6 @@ packages:
   lodash.upperfirst@4.3.1:
     resolution: {integrity: sha512-sReKOYJIJf74dhJONhU4e0/shzi1trVbSWDOhKYE5XV2O+H7Sb2Dihwuc7xWxVl+DgFPyTqIN3zMfT9cq5iWDg==}
 
-  lodash@4.17.21:
-    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
-
   log-update@6.0.0:
     resolution: {integrity: sha512-niTvB4gqvtof056rRIrTZvjNYE4rCUzO6X/X+kYjd7WFxXeJ0NwEFnRxX6ehkvv3jTwrXnNdtAak5XYZuIyPFw==}
     engines: {node: '>=18'}
@@ -1075,9 +1082,6 @@ packages:
     engines: {node: '>=0.10'}
     hasBin: true
 
-  pinyin-pro@3.20.2:
-    resolution: {integrity: sha512-i+qJ+f8lmIxITL/0V2HorGlUfPwHJ/b4DDWh5SlN5lVC8g1lfKWDRjdWUOsY373J4il8gH0IfiYwPtRha49ITw==}
-
   prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
@@ -1146,6 +1150,10 @@ packages:
   signal-exit@4.1.0:
     resolution: {integrity: sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==}
     engines: {node: '>=14'}
+
+  simple-git-hooks@2.11.1:
+    resolution: {integrity: sha512-tgqwPUMDcNDhuf1Xf6KTUsyeqGdgKMhzaH4PAZZuzguOgTl5uuyeYe/8mWgAr6IBxB5V06uqEf6Dy37gIWDtDg==}
+    hasBin: true
 
   slash@3.0.0:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
@@ -1227,10 +1235,6 @@ packages:
   type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
     engines: {node: '>= 0.8.0'}
-
-  type-fest@3.13.1:
-    resolution: {integrity: sha512-tLq3bSNx+xSpwvAJnzrK0Ep5CLNWjvFTOp71URMaAEWBfRb9nnJiBoUe0tF8bI4ZFO3omgBR6NvnbzVUT3Ly4g==}
-    engines: {node: '>=14.16'}
 
   typescript@5.4.5:
     resolution: {integrity: sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==}
@@ -1510,7 +1514,17 @@ snapshots:
 
   '@gkd-kit/api@0.0.5': {}
 
+  '@gkd-kit/define@0.0.1(@gkd-kit/api@0.0.5)':
+    dependencies:
+      '@gkd-kit/api': 0.0.5
+
   '@gkd-kit/selector@0.0.25': {}
+
+  '@gkd-kit/tools@0.2.0(@gkd-kit/api@0.0.5)(json5@2.2.3)':
+    dependencies:
+      '@gkd-kit/api': 0.0.5
+      '@gkd-kit/selector': 0.0.25
+      json5: 2.2.3
 
   '@humanwhocodes/config-array@0.13.0':
     dependencies:
@@ -1543,8 +1557,6 @@ snapshots:
       '@types/node': 20.12.7
 
   '@types/json-schema@7.0.15': {}
-
-  '@types/lodash@4.17.0': {}
 
   '@types/node@20.12.7':
     dependencies:
@@ -1663,9 +1675,7 @@ snapshots:
       require-from-string: 2.0.2
       uri-js: 4.4.1
 
-  ansi-escapes@6.2.0:
-    dependencies:
-      type-fest: 3.13.1
+  ansi-escapes@6.2.1: {}
 
   ansi-regex@5.0.1: {}
 
@@ -1794,8 +1804,6 @@ snapshots:
 
   dargs@8.1.0: {}
 
-  dayjs@1.11.10: {}
-
   debug@4.3.4:
     dependencies:
       ms: 2.1.2
@@ -1857,6 +1865,15 @@ snapshots:
       eslint: 9.1.0
 
   eslint-define-config@2.1.0: {}
+
+  eslint-plugin-unused-imports@3.1.0(@typescript-eslint/eslint-plugin@7.7.0(@typescript-eslint/parser@7.7.0(eslint@9.1.0)(typescript@5.4.5))(eslint@9.1.0)(typescript@5.4.5))(eslint@9.1.0):
+    dependencies:
+      eslint: 9.1.0
+      eslint-rule-composer: 0.3.0
+    optionalDependencies:
+      '@typescript-eslint/eslint-plugin': 7.7.0(@typescript-eslint/parser@7.7.0(eslint@9.1.0)(typescript@5.4.5))(eslint@9.1.0)(typescript@5.4.5)
+
+  eslint-rule-composer@0.3.0: {}
 
   eslint-scope@8.0.1:
     dependencies:
@@ -2032,8 +2049,6 @@ snapshots:
 
   human-signals@5.0.0: {}
 
-  husky@9.0.11: {}
-
   ignore@5.3.1: {}
 
   import-fresh@3.3.0:
@@ -2162,11 +2177,9 @@ snapshots:
 
   lodash.upperfirst@4.3.1: {}
 
-  lodash@4.17.21: {}
-
   log-update@6.0.0:
     dependencies:
-      ansi-escapes: 6.2.0
+      ansi-escapes: 6.2.1
       cli-cursor: 4.0.0
       slice-ansi: 7.1.0
       strip-ansi: 7.1.0
@@ -2269,8 +2282,6 @@ snapshots:
 
   pidtree@0.6.0: {}
 
-  pinyin-pro@3.20.2: {}
-
   prelude-ls@1.2.1: {}
 
   prettier@3.2.5: {}
@@ -2315,6 +2326,8 @@ snapshots:
   signal-exit@3.0.7: {}
 
   signal-exit@4.1.0: {}
+
+  simple-git-hooks@2.11.1: {}
 
   slash@3.0.0: {}
 
@@ -2388,8 +2401,6 @@ snapshots:
   type-check@0.4.0:
     dependencies:
       prelude-ls: 1.2.1
-
-  type-fest@3.13.1: {}
 
   typescript@5.4.5: {}
 
