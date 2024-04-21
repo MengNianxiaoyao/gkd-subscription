@@ -17,13 +17,13 @@
 - npmmirror源（推荐）
 
 ```txt
-https://registry.npmmirror.com/gkd-subscription/latest/files
+https://registry.npmmirror.com/gkd-subscription/latest/files/dist/gkd.json5
 ```
 
 - unpkg源
 
 ```txt
-https://unpkg.com/gkd-subscription@latest
+https://unpkg.com/gkd-subscription@latest/dist/gkd.json5
 ```
 
 - jsDelivr源
@@ -32,7 +32,7 @@ https://unpkg.com/gkd-subscription@latest
 https://cdn.jsdelivr.net/npm/gkd-subscription@latest/dist/gkd.json5
 ```
 
-当前版本: v23
+当前版本: v24
 
 当前订阅文件已适配 725 个 APP, 共有 1701 规则组, 7 全局规则组
 
