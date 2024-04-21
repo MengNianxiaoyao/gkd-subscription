@@ -32,11 +32,11 @@ https://unpkg.com/gkd-subscription@latest
 https://cdn.jsdelivr.net/npm/gkd-subscription@latest/dist/gkd.json5
 ```
 
-当前版本: v21
+当前版本: v22
 
-当前订阅文件已适配 723 个 APP, 共有 1697 规则组, 7 全局规则组
+当前订阅文件已适配 725 个 APP, 共有 1701 规则组, 7 全局规则组
 
-查看 [适配 APP 列表](./AppList.md)
+查看 [适配 APP 列表](./dist/README.md)
 
 查看 [第三方订阅规则汇总](https://github.com/Adpro-Team/GKD_THS_List) By [@adproqwq](https://github.com/adproqwq)
 
