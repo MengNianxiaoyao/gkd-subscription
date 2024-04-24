@@ -59,9 +59,11 @@
     "json5": "2.2.3",
     "lint-staged": "15.2.2",
     "prettier": "3.2.5",
-    "simple-git-hooks": "2.11.1",
     "tsx": "4.7.2",
     "typescript": "5.4.5"
+  },
+  "devDependencies": {
+    "simple-git-hooks": "2.11.1"
   },
   "author": "梦念逍遥",
   "license": "MIT",
