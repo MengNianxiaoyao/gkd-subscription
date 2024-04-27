@@ -65,10 +65,11 @@ export default defineGkdApp({
       actionMaximum: 1,
       resetMatch: 'app',
       rules:
-        '[text^="开启系统通知"] + @Image[clickable=true] <<n [id="com.taobao.taobao:id/poplayer_inner_view"]',
+        '[text^="开启系统通知"] + @Image[visibleToUser=true] <<n [vid="poplayer_inner_view"]',
       snapshotUrls: [
         'https://i.gkd.li/i/13446901',
         'https://i.gkd.li/i/13455424',
+        'https://i.gkd.li/i/15104645',
       ],
     },
     {
@@ -232,6 +233,22 @@ export default defineGkdApp({
           exampleUrls:
             'https://m.gkd.li/57941037/a35c954d-5162-463c-aee3-b72b9c2d6625',
           snapshotUrls: 'https://i.gkd.li/i/14155537',
+        },
+      ],
+    },
+    {
+      key: 19,
+      name: '局部广告-商品详情页直播悬浮窗',
+      desc: '点击关闭',
+      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      rules: [
+        {
+          activityIds:
+            'com.taobao.android.detail.wrapper.activity.DetailActivity',
+          matches: '[vid="view_close"]',
+          snapshotUrls: 'https://i.gkd.li/i/15124094',
         },
       ],
     },

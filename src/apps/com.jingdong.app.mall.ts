@@ -25,10 +25,11 @@ export default defineGkdApp({
         {
           key: 0,
           matches:
-            'FrameLayout + RelativeLayout > RelativeLayout > ImageView + ImageView[desc!="返回"][visibleToUser=true]',
+            'FrameLayout + RelativeLayout > RelativeLayout > ImageView + ImageView[desc=null][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/12642270',
             'https://i.gkd.li/i/12774910', // 使用 [desc!="返回"] 进行限定，防止在进入商品详情页时点击返回按钮
+            'https://i.gkd.li/i/15110548', // 避免误触
           ],
         },
         {
@@ -123,7 +124,7 @@ export default defineGkdApp({
     },
     {
       key: 6,
-      name: '局部广告-首页底部横幅广告',
+      name: '局部广告-横幅广告',
       activityIds: 'com.jingdong.app.mall.MainFrameActivity',
       rules: [
         {
@@ -141,6 +142,12 @@ export default defineGkdApp({
           quickFind: true,
           matches: '@ViewGroup[clickable=true] - * > [text="去续费"]',
           snapshotUrls: 'https://i.gkd.li/i/15047238',
+        },
+        {
+          key: 2,
+          matches:
+            '[desc="吸顶楼层"] > [desc="关闭按钮"][clickable=true][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/15112953',
         },
       ],
     },
