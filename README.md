@@ -16,9 +16,9 @@
 | :----------------------------------------------------------: | :-----------------------------------------------: | :----------------------------------------------------------: |
 | [复制](https://registry.npmmirror.com/gkd-subscription/latest/files) | [复制](https://unpkg.com/gkd-subscription@latest) | [复制](https://cdn.jsdelivr.net/npm/gkd-subscription@latest/dist/gkd.json5) |
 
-当前版本: v27
+当前版本: v28
 
-当前订阅文件已适配 725 个 APP, 共有 1704 规则组, 7 全局规则组
+当前订阅文件已适配 731 个 APP, 共有 1714 规则组, 7 全局规则组
 
 查看 [适配 APP 列表](./dist/README.md)
 
