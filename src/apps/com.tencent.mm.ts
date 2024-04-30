@@ -56,10 +56,13 @@ export default defineGkdApp({
         {
           preKeys: [0],
           key: 26,
-          name: '点击[Close the ad]',
+          name: '点击[Close]',
           quickFind: true,
-          matches: '[text="Close the ad"][clickable=true]',
-          snapshotUrls: 'https://i.gkd.li/i/14207480',
+          matches: '[text*="Close"][clickable=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/14207480',
+            'https://i.gkd.li/i/15137016',
+          ],
         },
         {
           preKeys: [0],
@@ -341,7 +344,7 @@ export default defineGkdApp({
     },
     {
       key: 10,
-      name: '全屏广告-微信小程序-开屏广告',
+      name: '开屏广告-微信小程序',
       quickFind: true,
       matchTime: 10000,
       // actionMaximum: 1, // 经常需要点2次，首次点击过早大概率跳不过
@@ -593,6 +596,30 @@ export default defineGkdApp({
           exampleUrls:
             'https://m.gkd.li/57941037/43632b72-d389-4fe7-9708-dac78e900679',
           snapshotUrls: 'https://i.gkd.li/i/14645385',
+        },
+      ],
+    },
+    {
+      key: 34,
+      name: '功能类-付款时自动点击[支付]',
+      quickFind: true,
+      actionMaximum: 1,
+      activityIds: 'com.tencent.mm.framework.app.UIPageFragmentActivity',
+      rules: [
+        {
+          key: 0,
+          matches: '[vid="kinda_button_impl_wrapper"][desc="立即支付"]',
+          exampleUrls:
+            'https://m.gkd.li/57941037/13fd1e89-6d75-4efe-90d6-91687de8c9b1',
+          snapshotUrls: 'https://i.gkd.li/i/15144571',
+        },
+        {
+          preKeys: [0],
+          key: 1,
+          matches: '[vid="kinda_button_impl_wrapper"][desc="支付"]',
+          exampleUrls:
+            'https://m.gkd.li/57941037/69380aa0-e6d2-4ea4-8ee7-6a1e45889e6c',
+          snapshotUrls: 'https://i.gkd.li/i/15144570',
         },
       ],
     },

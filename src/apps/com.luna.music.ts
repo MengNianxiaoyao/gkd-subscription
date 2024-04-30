@@ -21,8 +21,11 @@ export default defineGkdApp({
         },
         {
           key: 1,
-          matches: '[text*="跳过"][text.length<10][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/i/15087528',
+          matches: '[text^="跳过"][text.length<10][visibleToUser=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/15087528',
+            'https://i.gkd.li/i/15148298', // 避免误触
+          ],
         },
       ],
     },
@@ -91,14 +94,15 @@ export default defineGkdApp({
       key: 8,
       name: '功能类-看广告获取听歌时长',
       desc: '点击领取成功-点击坚持退出',
-      quickFind: true,
       activityIds: [
+        'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
         'com.ss.android.excitingvideo.ExcitingVideoActivity',
         'com.luna.biz.ad.AdActivity',
       ],
       rules: [
         {
           key: 0,
+          quickFind: true,
           matches: '@[text*="领取成功"][clickable=true] - [text="反馈"]',
           snapshotUrls: [
             'https://i.gkd.li/i/14767236',
@@ -107,12 +111,19 @@ export default defineGkdApp({
           ],
         },
         {
-          preKeys: [0],
+          key: 2,
+          matches: '[text="奖励已领取"]',
+          snapshotUrls: 'https://i.gkd.li/i/15140802',
+        },
+        {
+          preKeys: [0, 2],
           key: 1,
+          quickFind: true,
           matches: '[text="坚持退出"]',
           snapshotUrls: [
             'https://i.gkd.li/i/14767235',
             'https://i.gkd.li/i/15033126',
+            'https://i.gkd.li/i/15140816',
           ],
         },
       ],

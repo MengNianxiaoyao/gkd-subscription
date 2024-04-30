@@ -52,8 +52,8 @@ export default defineGkdCategories([
     name: '功能类',
   },
   {
-    // 不知道怎么分类就往这放
+    // 分类不明确
     key: 10,
-    name: '未分类',
+    name: '其他',
   },
 ]);
