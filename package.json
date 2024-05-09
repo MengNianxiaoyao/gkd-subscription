@@ -76,7 +76,7 @@
     "url": "git+https://github.com/MengNianxiaoyao/gkd-subscription.git"
   },
   "volta": {
-    "node": "20.13.0"
+    "node": "20.13.1"
   },
   "engineStrict": true,
   "engines": {
