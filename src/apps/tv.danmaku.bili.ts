@@ -41,7 +41,7 @@ export default defineGkdApp({
     },
     {
       key: 2,
-      name: '局部广告-动态推荐广告卡片',
+      name: '局部广告-动态推荐卡片广告',
       desc: '点击卡片右上角[广告]按钮-点击不感兴趣',
       quickFind: true,
       matchDelay: 5000,
@@ -73,7 +73,7 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
-          name: '点击广告卡片右侧菜单图标',
+          name: '点击卡片广告右侧菜单图标',
           matches:
             'FrameLayout[id="tv.danmaku.bili:id/ad_tint_frame"] >n [id^="tv.danmaku.bili:id/more"]',
           snapshotUrls: [
@@ -180,7 +180,7 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
-          name: '点击广告卡片右下角菜单按钮',
+          name: '点击卡片广告右下角菜单按钮',
           quickFind: true,
           actionMaximum: 1,
           matches: '[vid="ad_tint_frame"] >2 [vid="more"]',
@@ -242,6 +242,30 @@ export default defineGkdApp({
       rules:
         '[text="开启个性化内容推荐"] +3 [id="tv.danmaku.bili:id/close_button"]',
       snapshotUrls: 'https://i.gkd.li/i/13448905',
+    },
+    {
+      key: 12,
+      name: '全屏广告-会员弹窗',
+      desc: '点击关闭',
+      rules: [
+        {
+          quickFind: true,
+          actionMaximum: 1,
+          forcedTime: 3000,
+          activityIds: [
+            'tv.danmaku.bili.MainActivityV2',
+            'com.bilibili.vip.web.VipWebActivity',
+          ],
+          matches:
+            'WebView[text="会员中心"] >4 [text="大会员服务协议"] +2 * >2 @TextView[visibleToUser=true] <<n [vid="webview"]',
+          exampleUrls:
+            'https://m.gkd.li/57941037/60eee9aa-8799-4097-8ddf-2783afd49586',
+          snapshotUrls: [
+            'https://i.gkd.li/i/15219142',
+            'https://i.gkd.li/i/15220560',
+          ],
+        },
+      ],
     },
   ],
 });
