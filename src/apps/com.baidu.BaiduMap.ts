@@ -46,7 +46,7 @@ export default defineGkdApp({
     },
     {
       key: 5,
-      name: '定位提示-请求定位弹窗',
+      name: '权限提示-定位权限',
       quickFind: true,
       actionMaximum: 1,
       resetMatch: 'app',
@@ -103,15 +103,14 @@ export default defineGkdApp({
     },
     {
       key: 8,
-      name: '通知提示-请求打开通知权限弹窗',
+      name: '权限提示-通知权限',
       desc: '点击关闭',
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
       quickFind: true,
-      rules:
-        '[text="打开通知权限"] <n LinearLayout + ImageView[id="com.baidu.BaiduMap:id/push_close"]',
-      snapshotUrls: 'https://i.gkd.li/i/13258995',
+      rules: '[vid="push_close"]',
+      snapshotUrls: 'https://i.gkd.li/i/15284736',
     },
     {
       key: 9,

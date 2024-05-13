@@ -48,7 +48,7 @@ export default defineGkdApp({
     },
     {
       key: 1,
-      name: '定位提示-请求定位权限弹窗',
+      name: '权限提示-定位权限',
       quickFind: true,
       actionMaximum: 1,
       resetMatch: 'app',
@@ -58,7 +58,7 @@ export default defineGkdApp({
     },
     {
       key: 2,
-      name: '通知提示-请求通知弹窗',
+      name: '权限提示-通知权限',
       actionMaximum: 1,
       resetMatch: 'app',
       quickFind: true,
@@ -308,6 +308,23 @@ export default defineGkdApp({
           exampleUrls:
             'https://m.gkd.li/57941037/2d714755-efe9-4c63-8187-7f9b7a5a199c',
           snapshotUrls: 'https://i.gkd.li/i/15144844',
+        },
+      ],
+    },
+    {
+      key: 22,
+      name: '其他-蚂蚁理财社区-[加入同路人]弹窗',
+      desc: '点击关闭',
+      rules: [
+        {
+          quickFind: true,
+          activityIds:
+            'com.alipay.mobile.nebulax.xriver.activity.XRiverTransActivity$Main',
+          matches:
+            '@TextView[clickable=true][text=""] < * > [text="立即加入"] <<n [id="com.alipay.mobile.nebula:id/h5_trans_web_content"]',
+          exampleUrls:
+            'https://m.gkd.li/57941037/e6332999-1c2b-49f0-84e1-780424a5cf2a',
+          snapshotUrls: 'https://i.gkd.li/i/15289022',
         },
       ],
     },

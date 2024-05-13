@@ -28,8 +28,22 @@ export default defineGkdApp({
         },
         {
           key: 1,
-          matches: '[text*="跳过"][text.length<=10]',
+          matches: '[text*="跳过"][visibleToUser=true][text.length<=10]',
           snapshotUrls: 'https://i.gkd.li/i/14553551',
+        },
+        {
+          // 该开屏广告需要点击坐标在跳过按钮下半部分内才能跳过
+          key: 2,
+          order: -1,
+          position: {
+            left: 'width * 0.0826',
+            top: 'width * 0.1',
+          },
+          matches: '[vid="splash_full_tk_play_card_view"]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/15269380',
+            'https://i.gkd.li/i/15285908',
+          ],
         },
       ],
     },
@@ -145,10 +159,13 @@ export default defineGkdApp({
           activityIds:
             'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
           matches:
-            '[text="反馈"] -4 @View[visibleToUser=true] > Image[text=""]',
+            '[text="反馈"] <n * > @View[childCount=1][index=0 || index=1] > Image[text=""]',
           exampleUrls:
             'https://m.gkd.li/57941037/155fdf95-1f5a-4bf3-a8e7-161e6bfe7bbf',
-          snapshotUrls: 'https://i.gkd.li/i/15209618',
+          snapshotUrls: [
+            'https://i.gkd.li/i/15209618',
+            'https://i.gkd.li/i/15282994',
+          ],
         },
       ],
     },

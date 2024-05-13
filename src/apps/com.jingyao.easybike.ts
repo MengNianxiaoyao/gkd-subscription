@@ -7,7 +7,7 @@ export default defineGkdApp({
     // 预留 key 0-8
     {
       key: 8,
-      name: '通知提示-请求通知权限弹窗',
+      name: '权限提示-通知权限',
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
@@ -20,7 +20,7 @@ export default defineGkdApp({
     },
     {
       key: 9,
-      name: '定位提示-请求定位权限弹窗',
+      name: '权限提示-定位权限',
       quickFind: true,
       actionMaximum: 1,
       resetMatch: 'app',

@@ -119,7 +119,7 @@ export default defineGkdApp({
     },
     {
       key: 7,
-      name: '定位提示',
+      name: '权限提示-定位权限',
       desc: '首页/外卖界面-"打开位置开关弹窗"-点击右侧x关闭',
       actionMaximum: 1,
       resetMatch: 'app',
@@ -155,7 +155,7 @@ export default defineGkdApp({
     },
     {
       key: 8,
-      name: '通知提示-请求开启通知权限弹窗',
+      name: '权限提示-通知权限',
       desc: '点击跳过',
       quickFind: true,
       matchTime: 10000,

@@ -2,6 +2,7 @@ import { defineGkdCategories } from '@gkd-kit/define';
 
 export default defineGkdCategories([
   {
+    // 各种权限请求
     key: -1,
     name: '权限提示',
   },
@@ -22,12 +23,10 @@ export default defineGkdCategories([
     name: '评价提示',
   },
   {
+    // 软件用于告知用户信息的弹窗
+    // 具体体现为公告弹窗一类
     key: 4,
     name: '通知提示',
-  },
-  {
-    key: 5,
-    name: '定位提示',
   },
   {
     // 不影响使用的广告, 所有的广告卡片及悬浮广告按钮

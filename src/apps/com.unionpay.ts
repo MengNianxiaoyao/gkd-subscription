@@ -60,25 +60,20 @@ export default defineGkdApp({
     },
     {
       key: 10,
-      name: '定位提示-定位权限悬浮弹窗',
+      name: '权限提示-定位权限',
+      quickFind: true,
       matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      quickFind: true,
-      activityIds: 'com.unionpay.activity.UPActivityMain',
-      rules: '[id="com.unionpay:id/view_locate_close"]',
-      snapshotUrls: 'https://i.gkd.li/i/13634882',
-    },
-    {
-      key: 11,
-      name: '定位提示-访问位置请求弹窗',
-      desc: '自动点击"不允许"',
-      quickFind: true,
       actionMaximum: 1,
       resetMatch: 'app',
       rules: [
         {
-          matches: '[text*="访问您的位置信息"] < * +n * > [text="不允许"]',
+          key: 0,
+          matches: '[id="com.unionpay:id/view_locate_close"]',
+          snapshotUrls: 'https://i.gkd.li/i/13634882',
+        },
+        {
+          key: 1,
+          matches: ['[text*="访问您的位置信息"]', '[text="不允许"]'],
           snapshotUrls: [
             'https://i.gkd.li/i/12695773',
             'https://i.gkd.li/i/14209001',
@@ -88,12 +83,12 @@ export default defineGkdApp({
     },
     {
       key: 12,
-      name: '通知提示-请求开启消息通知弹窗',
+      name: '权限提示-通知权限',
       desc: '点击关闭',
+      quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      quickFind: true,
       rules: [
         {
           matches:

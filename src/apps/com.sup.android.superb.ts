@@ -30,7 +30,7 @@ export default defineGkdApp({
     },
     {
       key: 5,
-      name: '通知提示-请求开启通知权限弹窗',
+      name: '权限提示-通知权限',
       quickFind: true,
       actionMaximum: 1,
       resetMatch: 'app',
@@ -73,8 +73,11 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
-          matches: '[id="com.sup.android.superb:id/a1i"]',
-          snapshotUrls: 'https://i.gkd.li/i/14005608',
+          matches: ['[text^="喜欢皮皮虾吗"]', '[text="取消"]'],
+          snapshotUrls: [
+            'https://i.gkd.li/i/14005608',
+            'https://i.gkd.li/i/15285383',
+          ],
         },
       ],
     },
