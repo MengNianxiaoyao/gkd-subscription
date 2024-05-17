@@ -14,20 +14,21 @@ export default defineGkdApp({
       excludeActivityIds: [
         'com.tencent.mobileqq.activity.ChatActivity', // 在聊天界面禁用
         'com.tencent.mobileqq.search.activity.UniteSearchActivity', // 在搜索页面禁用
-        'com.tencent.mobileqq.activity.SplashActivity', // 在聊天界面禁用
       ],
-      rules: {
-        excludeMatches: '[vid="chat_item_content_layout"]', // 在聊天界面禁用
-        matches: 'TextView[text^="跳过"][text.length<=10][vid!="title"]',
-      },
-      snapshotUrls: [
-        'https://i.gkd.li/i/13062244',
-        'https://i.gkd.li/i/13093155',
-        'https://i.gkd.li/i/13207731',
-        'https://i.gkd.li/i/13217807', // 避免在聊天界面误触
-        'https://i.gkd.li/i/13856647', // 误触
-        'https://i.gkd.li/i/13868177', // 误触
-        'https://i.gkd.li/i/14341023', // 误触
+      rules: [
+        {
+          excludeMatches: '[vid="root"]', // 在聊天界面禁用，若排除EditText[vid="input"]则滑动消息时会造成误触
+          matches: 'TextView[text^="跳过"][text.length<=10][vid!="title"]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/13093155',
+            'https://i.gkd.li/i/13207731',
+            'https://i.gkd.li/i/13217807', // 避免在聊天界面误触
+            'https://i.gkd.li/i/13856647', // 误触
+            'https://i.gkd.li/i/13868177', // 误触
+            'https://i.gkd.li/i/14341023', // 误触
+            'https://i.gkd.li/i/15334565', // 误触
+          ],
+        },
       ],
     },
     {
@@ -409,12 +410,15 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
-          matches: '@[desc="关闭"] - * > [text="发现新版本"]',
-          snapshotUrls: 'https://i.gkd.li/i/13386719',
+          matches: '@[desc="关闭"] <2 * >2 Button[text^="立即"][text.length=4]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/13386719',
+            'https://i.gkd.li/i/13526551',
+          ],
         },
         {
           key: 1,
-          matches: '@[text="稍后处理"] +2 [text="立即升级"]',
+          matches: ['[text="立即升级"]', '[text="稍后处理"]'],
           snapshotUrls: 'https://i.gkd.li/i/14724108',
         },
       ],
@@ -437,21 +441,6 @@ export default defineGkdApp({
             'https://i.gkd.li/i/14138340',
             'https://i.gkd.li/i/13931212',
           ],
-        },
-      ],
-    },
-    {
-      key: 19,
-      name: '更新提示-内测邀请弹窗',
-      quickFind: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          key: 0,
-          matches: '@[desc="关闭"] - * > [text="QQ测试版"]',
-          snapshotUrls: 'https://i.gkd.li/i/13526551',
         },
       ],
     },
@@ -654,7 +643,7 @@ export default defineGkdApp({
         {
           key: 0,
           matches:
-            'ImageView <<2 FrameLayout +2 * >3 TextView[text*="红包"] - @ViewGroup[childCount=5] > TextView[text!="已领取"]',
+            'ImageView < * < FrameLayout +2 * >3 TextView[text*="红包"] - @ViewGroup[childCount=5] > TextView[text!="已领取"]',
           exampleUrls:
             'https://m.gkd.li/57941037/7a933a7f-dc5a-4eb7-8a6f-fe3cc4e8fb5e',
           snapshotUrls: 'https://i.gkd.li/i/14221309',

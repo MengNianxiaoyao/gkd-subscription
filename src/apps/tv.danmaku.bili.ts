@@ -62,7 +62,7 @@ export default defineGkdApp({
     // key = 3已弃用
     {
       key: 4,
-      name: '分段广告-视频底部与评论区中间卡片式广告',
+      name: '分段广告-视频底部与评论区中间卡片广告',
       desc: '需点击二次弹窗 屏蔽原因',
       quickFind: true,
       activityIds: [
@@ -276,6 +276,15 @@ export default defineGkdApp({
             'https://i.gkd.li/i/15219142',
             'https://i.gkd.li/i/15220560',
           ],
+        },
+        {
+          key: 2,
+          activityIds: 'com.bilibili.vip.web.VipWebActivity',
+          matches:
+            'WebView[text="大会员"] >3 View[childCount=4] >3 View[childCount=1] > View[childCount=1] > @Image[visibleToUser=true][childCount=0][text=""] <<n [vid="webview"]',
+          exampleUrls:
+            'https://m.gkd.li/57941037/f56c6392-c473-4988-af41-00adedbf3905',
+          snapshotUrls: 'https://i.gkd.li/i/15328394',
         },
       ],
     },

@@ -72,6 +72,9 @@ export const blackListAppIDs: string[] = [
   'org.kde.kdeconnect_tp', // KDE Connect
   'xyz.adproqwq.GKDTool', // GKDTool
   'com.alibaba.aliyun', // 阿里云
+  'com.alicloud.databox', // 阿里云盘 开屏广告在 https://i.gkd.li/i/15144565 误触导致自动签到规则执行中断
+  'xyz.nextalone.nagram', // Nagram
+  'com.openai.chatgpt', // ChatGPT
 
   'com.canghai.haoka',
   'com.xy.td',
@@ -111,6 +114,25 @@ export const blackListAppIDs: string[] = [
   'com.miui.compass', // 指南针
   'com.duokan.phone.remotecontroller', // 万能遥控
   'com.mfashiongallery.emag', // 小米画报
+
+  //三星
+  'com.samsung.android.app.cameraassistant',
+  'com.samsung.android.app.galaxyraw',
+  'com.samsung.android.appbooster',
+  'com.android.samsung.utilityapp',
+  'com.samsung.android.goodlock',
+  'com.samsung.android.thermalguardian',
+  'com.samsung.android.calendar',
+  'com.samsung.android.app.notes',
+  'com.jv.samsungeshop',
+  'com.samsung.android.app.sreminder',
+  'com.samsung.android.app.watchmanager',
+  'com.samsung.android.app.reminder',
+  'com.adguard.android.contentblocker',
+  'com.sec.android.app.music',
+  'com.sec.android.app.voicenote',
+  'com.futuremark.dmandroid.application',
+  'com.sec.android.app.clockpackage',
 
   // https://github.com/gkd-kit/gkd/issues/451
   'mark.via', // via浏览器
@@ -194,6 +216,7 @@ export const openAdWhiteListAppIDs = new Set([
   'com.huawei.appmarket', // 华为应用市场
   'com.miui.player', // 小米音乐
   'com.tencent.southpole.appstore', // 黑鲨应用市场
+  'com.vivo.space', // vivo 官网
 ]);
 
 // 全屏广告白名单
