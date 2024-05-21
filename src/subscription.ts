@@ -24,6 +24,7 @@ export default defineGkdSubscription({
   name: '梦念逍遥のGKD订阅',
   author: '梦念逍遥',
   supportUri: 'https://github.com/MengNianxiaoyao/gkd-subscription',
+  checkUpdateUrl: './gkd.version.json5',
   categories,
   globalGroups,
   apps: rawApps,
