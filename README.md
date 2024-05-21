@@ -14,9 +14,9 @@
 
 |                     npmmirror源（推荐）                      |                      unpkg源                      |                          jsDelivr源                          |
 | :----------------------------------------------------------: | :-----------------------------------------------: | :----------------------------------------------------------: |
-| [复制](https://registry.npmmirror.com/gkd-subscription/latest/files) | [复制](https://unpkg.com/gkd-subscription@latest) | [复制](https://cdn.jsdelivr.net/npm/gkd-subscription@latest/dist/gkd.json5) |
+| [复制](https://registry.npmmirror.com/gkd-subscription/latest/files/dist/gkd.json5) | [复制](https://unpkg.com/gkd-subscription@latest/dist/gkd.json5) | [复制](https://cdn.jsdelivr.net/npm/gkd-subscription@latest/dist/gkd.json5) |
 
-当前版本: v31
+当前版本: v32
 
 当前订阅文件已适配 741 个 APP, 共有 1727 规则组, 7 全局规则组
 
