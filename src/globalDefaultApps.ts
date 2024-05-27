@@ -217,6 +217,7 @@ export const openAdWhiteListAppIDs = new Set([
   'com.miui.player', // 小米音乐
   'com.tencent.southpole.appstore', // 黑鲨应用市场
   'com.vivo.space', // vivo 官网
+  'com.hihonor.appmarket', // 荣耀应用市场
 ]);
 
 // 全屏广告白名单
