@@ -10,11 +10,11 @@ export default defineGkdApp({
       quickFind: true,
       matchTime: 10000,
       actionMaximum: 2,
-      resetMatch: 'activity',
+      resetMatch: 'app',
       rules: [
         {
-          activityIds: 'com.yitong.mobile.biz.launcher.app.SplashActivity',
-          action: 'clickNode',
+          key: 0,
+          action: 'clickCenter',
           matches:
             '[id="com.srcb.pmbank:id/chronometer"][vid="chronometer"][text*="跳过"]',
           snapshotUrls: 'https://i.gkd.li/i/15491928',

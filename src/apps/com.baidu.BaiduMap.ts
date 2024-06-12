@@ -126,5 +126,21 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 10,
+      name: '开屏广告',
+      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 2,
+      resetMatch: 'app',
+      rules: [
+        {
+          key: 0,
+          action: 'clickCenter',
+          matches: '[name="android.widget.TextView"][text*="跳过"]',
+          snapshotUrls: 'https://i.gkd.li/i/15801034',
+        },
+      ],
+    },
   ],
 });
