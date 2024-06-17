@@ -296,12 +296,36 @@ export default defineGkdApp({
         },
         {
           key: 4,
-          activityIds: 'tv.danmaku.bili.MainActivityV2',
+          activityIds: [
+            'tv.danmaku.bili.MainActivityV2',
+            'com.bilibili.vip.web.VipWebActivity',
+          ],
           matches:
             'ComposeView > View[childCount=7] > @View[clickable=true][childCount=0] <<n [vid="vip_panel"]',
           exampleUrls:
             'https://m.gkd.li/57941037/a78a7719-b148-4df2-a225-f7a24be0c413',
-          snapshotUrls: 'https://i.gkd.li/i/15523975',
+          snapshotUrls: [
+            'https://i.gkd.li/i/15523975',
+            'https://i.gkd.li/i/15814146',
+          ],
+        },
+      ],
+    },
+    {
+      key: 13,
+      name: '全屏广告-分享稿件弹窗',
+      desc: '点击关闭',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          quickFind: true,
+          activityIds: 'tv.danmaku.bili.ui.splash.ad.page.HotSplashActivity',
+          matches: '[vid="poster_share_cancel"][visibleToUser=true]',
+          exampleUrls:
+            'https://m.gkd.li/57941037/80e5730d-6634-4a0a-9c58-c57f7ad5e58c',
+          snapshotUrls: 'https://i.gkd.li/i/15858057',
         },
       ],
     },
