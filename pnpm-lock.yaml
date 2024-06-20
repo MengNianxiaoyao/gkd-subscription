@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@commitlint/cli':
         specifier: 19.3.0
-        version: 19.3.0(@types/node@20.14.5)(typescript@5.4.5)
+        version: 19.3.0(@types/node@20.14.6)(typescript@5.4.5)
       '@commitlint/config-conventional':
         specifier: 19.2.2
         version: 19.2.2
@@ -24,17 +24,17 @@ importers:
         specifier: ^9.3.0
         version: 9.5.0
       '@gkd-kit/api':
-        specifier: 0.0.5
-        version: 0.0.5
+        specifier: 0.1.0
+        version: 0.1.0
       '@gkd-kit/define':
         specifier: 0.0.1
-        version: 0.0.1(@gkd-kit/api@0.0.5)
+        version: 0.0.1(@gkd-kit/api@0.1.0)
       '@gkd-kit/tools':
         specifier: 0.2.0
-        version: 0.2.0(@gkd-kit/api@0.0.5)(json5@2.2.3)
+        version: 0.2.0(@gkd-kit/api@0.1.0)(json5@2.2.3)
       '@types/node':
-        specifier: 20.14.5
-        version: 20.14.5
+        specifier: 20.14.6
+        version: 20.14.6
       '@typescript-eslint/eslint-plugin':
         specifier: 7.13.1
         version: 7.13.1(@typescript-eslint/parser@7.13.1(eslint@9.5.0)(typescript@5.4.5))(eslint@9.5.0)(typescript@5.4.5)
@@ -323,8 +323,8 @@ packages:
     resolution: {integrity: sha512-BsWiH1yFGjXXS2yvrf5LyuoSIIbPrGUWob917o+BTKuZ7qJdxX8aJLRxs1fS9n6r7vESrq1OUqb68dANcFXuQQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@gkd-kit/api@0.0.5':
-    resolution: {integrity: sha512-eKHkqcjlhUiQgg1WUepq7CNxVR/Q3PQWr8TMmfbYTqeq0pO7ABYNDuGkOptR+u2jQ1Qr+8bbX/ODfdB6jK8UfQ==}
+  '@gkd-kit/api@0.1.0':
+    resolution: {integrity: sha512-BtsXMjQma0luqSuK8TOWswiBcBrJEdlubdXJ1Gqcy83hNDN0HNKr6vBELGYSFNbGOu2UBs+Q9Y8jyaluwqtahw==}
 
   '@gkd-kit/define@0.0.1':
     resolution: {integrity: sha512-ql/f0TIlBQOSaJS6e9c8B4rLHYWyCzDctP0vRpc6aYaWGJXnZKZIbuTUr2ET45eNzD4dviCjTU6cSv/wcA07IQ==}
@@ -363,8 +363,8 @@ packages:
   '@types/conventional-commits-parser@5.0.0':
     resolution: {integrity: sha512-loB369iXNmAZglwWATL+WRe+CRMmmBPtpolYzIebFaX4YA3x+BEfLqhUAV9WanycKI3TG1IMr5bMJDajDKLlUQ==}
 
-  '@types/node@20.14.5':
-    resolution: {integrity: sha512-aoRR+fJkZT2l0aGOJhuA8frnCSoNX6W7U2mpNq63+BxBIj5BQFt8rHy627kijCmm63ijdSdwvGgpUsU6MBsZZA==}
+  '@types/node@20.14.6':
+    resolution: {integrity: sha512-JbA0XIJPL1IiNnU7PFxDXyfAwcwVVrOoqyzzyQTyMeVhBzkJVMSkC1LlVsRQ2lpqiY4n6Bb9oCS6lzDKVQxbZw==}
 
   '@typescript-eslint/eslint-plugin@7.13.1':
     resolution: {integrity: sha512-kZqi+WZQaZfPKnsflLJQCz6Ze9FFSMfXrrIOcyargekQxG37ES7DJNpJUE9Q/X5n3yTIP/WPutVNzgknQ7biLg==}
@@ -1305,11 +1305,11 @@ snapshots:
       js-tokens: 4.0.0
       picocolors: 1.0.0
 
-  '@commitlint/cli@19.3.0(@types/node@20.14.5)(typescript@5.4.5)':
+  '@commitlint/cli@19.3.0(@types/node@20.14.6)(typescript@5.4.5)':
     dependencies:
       '@commitlint/format': 19.3.0
       '@commitlint/lint': 19.2.2
-      '@commitlint/load': 19.2.0(@types/node@20.14.5)(typescript@5.4.5)
+      '@commitlint/load': 19.2.0(@types/node@20.14.6)(typescript@5.4.5)
       '@commitlint/read': 19.2.1
       '@commitlint/types': 19.0.3
       execa: 8.0.1
@@ -1356,7 +1356,7 @@ snapshots:
       '@commitlint/rules': 19.0.3
       '@commitlint/types': 19.0.3
 
-  '@commitlint/load@19.2.0(@types/node@20.14.5)(typescript@5.4.5)':
+  '@commitlint/load@19.2.0(@types/node@20.14.6)(typescript@5.4.5)':
     dependencies:
       '@commitlint/config-validator': 19.0.3
       '@commitlint/execute-rule': 19.0.0
@@ -1364,7 +1364,7 @@ snapshots:
       '@commitlint/types': 19.0.3
       chalk: 5.3.0
       cosmiconfig: 9.0.0(typescript@5.4.5)
-      cosmiconfig-typescript-loader: 5.0.0(@types/node@20.14.5)(cosmiconfig@9.0.0(typescript@5.4.5))(typescript@5.4.5)
+      cosmiconfig-typescript-loader: 5.0.0(@types/node@20.14.6)(cosmiconfig@9.0.0(typescript@5.4.5))(typescript@5.4.5)
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
@@ -1518,17 +1518,17 @@ snapshots:
 
   '@eslint/object-schema@2.1.4': {}
 
-  '@gkd-kit/api@0.0.5': {}
+  '@gkd-kit/api@0.1.0': {}
 
-  '@gkd-kit/define@0.0.1(@gkd-kit/api@0.0.5)':
+  '@gkd-kit/define@0.0.1(@gkd-kit/api@0.1.0)':
     dependencies:
-      '@gkd-kit/api': 0.0.5
+      '@gkd-kit/api': 0.1.0
 
   '@gkd-kit/selector@0.0.25': {}
 
-  '@gkd-kit/tools@0.2.0(@gkd-kit/api@0.0.5)(json5@2.2.3)':
+  '@gkd-kit/tools@0.2.0(@gkd-kit/api@0.1.0)(json5@2.2.3)':
     dependencies:
-      '@gkd-kit/api': 0.0.5
+      '@gkd-kit/api': 0.1.0
       '@gkd-kit/selector': 0.0.25
       json5: 2.2.3
 
@@ -1550,9 +1550,9 @@ snapshots:
 
   '@types/conventional-commits-parser@5.0.0':
     dependencies:
-      '@types/node': 20.14.5
+      '@types/node': 20.14.6
 
-  '@types/node@20.14.5':
+  '@types/node@20.14.6':
     dependencies:
       undici-types: 5.26.5
 
@@ -1767,9 +1767,9 @@ snapshots:
       meow: 12.1.1
       split2: 4.2.0
 
-  cosmiconfig-typescript-loader@5.0.0(@types/node@20.14.5)(cosmiconfig@9.0.0(typescript@5.4.5))(typescript@5.4.5):
+  cosmiconfig-typescript-loader@5.0.0(@types/node@20.14.6)(cosmiconfig@9.0.0(typescript@5.4.5))(typescript@5.4.5):
     dependencies:
-      '@types/node': 20.14.5
+      '@types/node': 20.14.6
       cosmiconfig: 9.0.0(typescript@5.4.5)
       jiti: 1.21.0
       typescript: 5.4.5
