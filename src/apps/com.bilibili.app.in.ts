@@ -34,8 +34,12 @@ export default defineGkdApp({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      rules: '[text="订阅感兴趣的通知"] +2 LinearLayout [text="暂不开启"]',
-      snapshotUrls: 'https://i.gkd.li/i/13399195',
+      rules: [
+        {
+          matches: ['[text="订阅感兴趣的通知"]', '[text="暂不开启"]'],
+          snapshotUrls: 'https://i.gkd.li/i/13399195',
+        },
+      ],
     },
     {
       key: 8,
@@ -45,9 +49,15 @@ export default defineGkdApp({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      rules:
-        '[text="打开推送通知"] +2 LinearLayout > [id="com.bilibili.app.in:id/close"]',
-      snapshotUrls: 'https://i.gkd.li/i/13600976',
+      rules: [
+        {
+          matches: ['[text="打开推送通知"]', '[text="暂不"]'],
+          snapshotUrls: [
+            'https://i.gkd.li/i/13600976',
+            'https://i.gkd.li/i/15907493',
+          ],
+        },
+      ],
     },
   ],
 });
