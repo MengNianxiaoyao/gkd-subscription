@@ -64,7 +64,7 @@
     "typescript": "5.5.2"
   },
   "volta": {
-    "node": "20.14.0"
+    "node": "20.15.0"
   },
   "author": "梦念逍遥",
   "license": "MIT",
