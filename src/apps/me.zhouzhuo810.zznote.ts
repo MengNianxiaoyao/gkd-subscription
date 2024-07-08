@@ -23,8 +23,17 @@ export default defineGkdApp({
         },
         {
           key: 1,
-          matches: '@LinearLayout > [text*="跳过"]',
-          snapshotUrls: 'https://i.gkd.li/i/13800235',
+          matches: '[text*="跳过"][text.length<10][visibleToUser=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/13800235',
+            'https://i.gkd.li/i/16115850',
+          ],
+        },
+        {
+          key: 2,
+          matches:
+            'FrameLayout > FrameLayout[childCount>2] > @View[clickable=true][visibleToUser=true] + TextView[text=null] <<n [id="android:id/content"]',
+          snapshotUrls: 'https://i.gkd.li/i/16118464',
         },
       ],
     },

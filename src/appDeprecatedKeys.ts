@@ -276,7 +276,7 @@ const appDeprecatedKeys: RawDeprecatedKeysSetting[] = [
   {
     id: 'com.cainiao.wireless',
     name: '菜鸟',
-    deprecatedKeys: [0, 3],
+    deprecatedKeys: [0, 3, 7, 8, 11],
   },
   {
     id: 'com.cctv.cctv5ultimate',
@@ -543,5 +543,10 @@ const appDeprecatedKeys: RawDeprecatedKeysSetting[] = [
     id: 'com.sina.weibo',
     name: '微博',
     deprecatedKeys: [10],
+  },
+  {
+    id: 'com.jingyao.easybike',
+    name: '哈啰',
+    deprecatedKeys: [11, 13, 14],
   },
 ];
