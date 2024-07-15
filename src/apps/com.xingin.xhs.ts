@@ -7,7 +7,7 @@ export default defineGkdApp({
     {
       key: 1,
       name: '权限提示-通知权限',
-      quickFind: true,
+      fastQuery: true,
       matchTime: 30000,
       actionMaximum: 1,
       resetMatch: 'app',
@@ -32,10 +32,11 @@ export default defineGkdApp({
     {
       key: 2,
       name: '更新提示',
-      quickFind: true,
+      fastQuery: true,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
+      actionMaximumKey: 0,
       rules: [
         {
           key: 0,
@@ -46,13 +47,18 @@ export default defineGkdApp({
             'https://i.gkd.li/i/14445193',
           ],
         },
+        {
+          key: 1,
+          matches: 'Button[text="立即安装"] + Button[text="稍后再说"]',
+          snapshotUrls: 'https://i.gkd.li/i/15283162',
+        },
       ],
     },
     {
       key: 3,
       name: '分段广告-信息流广告',
       desc: '长按"赞助"/"广告"标识的卡片-点"不感兴趣"',
-      quickFind: true,
+      fastQuery: true,
       activityIds: 'com.xingin.xhs.index.v2.IndexActivityV2',
       rules: [
         {
@@ -87,7 +93,7 @@ export default defineGkdApp({
         {
           key: 0,
           activityIds: 'com.xingin.reactnative.ui.XhsReactTranslucentActivity',
-          quickFind: true,
+          fastQuery: true,
           matches:
             '@ImageView[visibleToUser=true] < * -2 * > [text="你有新人券待领取"]',
           snapshotUrls: 'https://i.gkd.li/i/14391484',
@@ -98,7 +104,7 @@ export default defineGkdApp({
       key: 5,
       name: '评价提示-评分弹窗',
       desc: '返回关闭弹窗',
-      quickFind: true,
+      fastQuery: true,
       actionMaximum: 1,
       resetMatch: 'app',
       rules: [

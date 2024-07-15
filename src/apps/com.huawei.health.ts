@@ -10,7 +10,7 @@ export default defineGkdApp({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      quickFind: true,
+      fastQuery: true,
       rules: [
         {
           key: 0,
@@ -72,13 +72,28 @@ export default defineGkdApp({
       desc: '点击取消',
       rules: [
         {
-          quickFind: true,
+          fastQuery: true,
           activityIds: 'com.huawei.health.MainActivity',
           matches:
             '[text*="实时推送步数"] <2 * < * +2 * >4 [text="取消"][clickable=true]',
           exampleUrls:
             'https://m.gkd.li/57941037/7e9b7131-35ae-49dd-badf-13b6dae3aa96',
           snapshotUrls: 'https://i.gkd.li/i/14321121',
+        },
+      ],
+    },
+    {
+      key: 6,
+      name: '更新提示',
+      fastQuery: true,
+      actionMaximum: 1,
+      matchTime: 10000,
+      resetMatch: 'app',
+      rules: [
+        {
+          action: 'back',
+          matches: '[text="发现新版本"]',
+          snapshotUrls: 'https://i.gkd.li/i/15521811',
         },
       ],
     },

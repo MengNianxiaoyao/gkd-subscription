@@ -2,7 +2,7 @@ import { defineGkdCategories } from '@gkd-kit/define';
 
 export default defineGkdCategories([
   {
-    // 各种权限请求
+    // 各种权限请求，如定位权限、通知权限等
     key: -1,
     name: '权限提示',
   },

@@ -8,7 +8,7 @@ export default defineGkdApp({
       key: 0,
       name: '全屏广告-学习活动',
       desc: '开屏后屏幕下方的弹窗广告',
-      quickFind: true,
+      fastQuery: true,
       activityIds:
         'com.jingcai.apps.qualitydev.qualitync.activity_home.ActivityMainTab',
       rules: 'TextView[text="关闭"][clickable=true][id$="id/tv_step"]',

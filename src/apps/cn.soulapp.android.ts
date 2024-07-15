@@ -7,7 +7,7 @@ export default defineGkdApp({
     {
       key: 0,
       name: '开屏广告',
-      quickFind: true,
+      fastQuery: true,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
@@ -25,7 +25,7 @@ export default defineGkdApp({
     {
       key: 1,
       name: '青少年模式',
-      quickFind: true,
+      fastQuery: true,
       actionMaximum: 1,
       resetMatch: 'app',
       rules: [
@@ -38,7 +38,7 @@ export default defineGkdApp({
     {
       key: 2,
       name: '局部广告-广场页卡片广告',
-      quickFind: true,
+      fastQuery: true,
       activityIds: 'cn.soulapp.android.component.startup.main.MainActivity',
       rules: [
         {
@@ -54,7 +54,7 @@ export default defineGkdApp({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      quickFind: true,
+      fastQuery: true,
       rules: [
         {
           matches:
@@ -66,22 +66,29 @@ export default defineGkdApp({
     {
       key: 4,
       name: '更新提示',
-      quickFind: true,
+      fastQuery: true,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
+      actionMaximumKey: 0,
       rules: [
         {
+          key: 0,
           matches:
             '@[id="cn.soulapp.android:id/img_close"] -2 RelativeLayout > [text="升级到最新版本"]',
           snapshotUrls: 'https://i.gkd.li/i/13693361',
+        },
+        {
+          key: 1,
+          matches: '[text="升级体验"] - [text="关闭"]',
+          snapshotUrls: 'https://i.gkd.li/i/15034131',
         },
       ],
     },
     {
       key: 5,
       name: '权限提示-通知权限',
-      quickFind: true,
+      fastQuery: true,
       actionMaximum: 1,
       resetMatch: 'app',
       rules: '[text="消息通知显示消息内容"] +3 [vid="img_close"]',
@@ -90,7 +97,7 @@ export default defineGkdApp({
     {
       key: 6,
       name: '局部广告-帖子详情页卡片广告',
-      quickFind: true,
+      fastQuery: true,
       rules: [
         {
           key: 0,

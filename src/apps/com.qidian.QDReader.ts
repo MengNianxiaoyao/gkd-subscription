@@ -7,7 +7,7 @@ export default defineGkdApp({
     {
       key: 1,
       name: '更新提示',
-      quickFind: true,
+      fastQuery: true,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
@@ -26,7 +26,7 @@ export default defineGkdApp({
     {
       key: 2,
       name: '青少年模式',
-      quickFind: true,
+      fastQuery: true,
       actionMaximum: 1,
       resetMatch: 'app',
       rules:
@@ -62,7 +62,7 @@ export default defineGkdApp({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      quickFind: true,
+      fastQuery: true,
       rules: '@[id="com.qidian.QDReader:id/ivClose"] + [text^="开启推送"]',
       snapshotUrls: 'https://i.gkd.li/i/12640242',
     },
@@ -74,7 +74,7 @@ export default defineGkdApp({
           key: 0,
           name: '书架页面右侧悬浮广告',
           activityIds: 'com.qidian.QDReader.ui.activity.MainGroupActivity',
-          quickFind: true,
+          fastQuery: true,
           matches:
             '[id="com.qidian.QDReader:id/ivAd"] + [id="com.qidian.QDReader:id/ivAdClose"]',
           snapshotUrls: 'https://i.gkd.li/i/12717032',
@@ -107,7 +107,7 @@ export default defineGkdApp({
     },
     {
       key: 12,
-      quickFind: true,
+      fastQuery: true,
       name: '全屏广告-红包弹窗',
       desc: '点击X',
       rules: [
@@ -133,56 +133,10 @@ export default defineGkdApp({
     },
     {
       key: 14,
-      name: '功能类-看视频领福利',
-      desc: '福利中心自动点击"看视频领福利"',
-      activityIds: 'com.qidian.QDReader.ui.activity.QDBrowserActivity',
-      rules: {
-        action: 'clickNode',
-        matches: 'Button[text*="看视频领福利"]',
-      },
-      snapshotUrls: [],
-    },
-    {
-      key: 15,
-      name: '功能类-看视频限时彩蛋',
-      desc: '福利中心看视频限时彩蛋',
-      activityIds: 'com.qidian.QDReader.ui.activity.QDBrowserActivity',
-      rules: {
-        action: 'clickNode',
-        matches: 'TextView[text="看视频"]',
-      },
-      snapshotUrls: [],
-    },
-    {
-      key: 16,
-      name: '功能类-看视频开宝箱',
-      desc: '福利中心看视频开宝箱',
-      activityIds: 'com.qidian.QDReader.ui.activity.QDBrowserActivity',
-      resetMatch: 'app',
-      actionMaximum: 2,
-      rules: {
-        action: 'clickNode',
-        matches: 'View[text="看视频开宝箱"]',
-      },
-      snapshotUrls: [],
-    },
-    {
-      key: 17,
-      name: '功能类-福利中心领奖励',
-      desc: '福利中心自动点击"领奖励"',
-      activityIds: 'com.qidian.QDReader.ui.activity.QDBrowserActivity',
-      rules: {
-        action: 'clickNode',
-        matches: 'TextView[text="领奖励"]',
-      },
-      snapshotUrls: [],
-    },
-    {
-      key: 18,
       name: '功能类-移动网络下自动点击播放视频',
       rules: [
         {
-          quickFind: true,
+          fastQuery: true,
           activityIds: 'com.qidian.QDReader.ui.activity.QDBrowserActivity',
           matches: '[text^="当前处于移动网络"]',
           exampleUrls:
