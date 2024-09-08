@@ -6,8 +6,6 @@
 
 ## 更新策略
 
-**电脑坏了，暂时停止更新**
-
 同步[AIsouler](https://github.com/AIsouler/GKD_subscription)订阅更新为主
 
 ## 订阅
