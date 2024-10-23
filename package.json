@@ -46,13 +46,13 @@
     "@commitlint/types": "19.5.0",
     "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.3.0",
-    "@gkd-kit/api": "0.5.0",
+    "@gkd-kit/api": "0.6.0",
     "@gkd-kit/define": "0.0.1",
     "@gkd-kit/tools": "0.5.2",
-    "@types/node": "20.16.10",
-    "@typescript-eslint/eslint-plugin": "8.8.0",
-    "@typescript-eslint/parser": "8.8.0",
-    "eslint": "9.12.0",
+    "@types/node": "20.16.15",
+    "@typescript-eslint/eslint-plugin": "8.11.0",
+    "@typescript-eslint/parser": "8.11.0",
+    "eslint": "9.13.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-define-config": "2.1.0",
     "eslint-plugin-unused-imports": "4.1.4",
@@ -61,7 +61,7 @@
     "prettier": "3.3.3",
     "simple-git-hooks": "2.11.1",
     "tsx": "4.19.1",
-    "typescript": "5.6.2"
+    "typescript": "5.6.3"
   },
   "volta": {
     "node": "20.18.0"
