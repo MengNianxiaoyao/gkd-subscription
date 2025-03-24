@@ -189,7 +189,8 @@ export default defineGkdApp({
       activityIds: 'com.qidian.QDReader.ui.activity.QDBrowserActivity',
       rules: {
         action: 'clickNode',
-        matches: '@TextView[text="看视频"][clickable=true] <<n [id="com.qidian.QDReader:id/webViewContainer"]',
+        matches:
+          '@TextView[text="看视频"][clickable=true] <<n [id="com.qidian.QDReader:id/webViewContainer"]',
       },
     },
   ],
