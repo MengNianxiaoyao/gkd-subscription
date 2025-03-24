@@ -10,11 +10,11 @@ jobs:
     if: github.repository == 'MengNianxiaoyao/gkd-subscription' && github.event.pull_request.user.login != 'renovate[bot]'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.2.1
+      - uses: actions/checkout@v4.2.2
 
       - name: Get changed files
         id: changed_files
-        uses: tj-actions/changed-files@v45.0.3
+        uses: tj-actions/changed-files@v46.0.3
         with:
           files: |
             src/apps/*.ts
@@ -32,12 +32,12 @@ jobs:
             exit 1
           fi
 
-      - uses: pnpm/action-setup@v4.0.0
+      - uses: pnpm/action-setup@v4.1.0
         with:
           version: latest
           run_install: true
 
-      - uses: actions/setup-node@v4.0.4
+      - uses: actions/setup-node@v4.3.0
         with:
           node-version: lts/*
           cache: pnpm
