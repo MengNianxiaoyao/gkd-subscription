@@ -37,7 +37,7 @@ jobs:
           version: latest
           run_install: true
 
-      - uses: actions/setup-node@v4.0.4
+      - uses: actions/setup-node@v4.3.0
         with:
           node-version: lts/*
           cache: pnpm
