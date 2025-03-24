@@ -145,5 +145,15 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 15,
+      name: '功能类-自动点击"看视频"',
+      desc: '福利中心自动点击"看视频"',
+      activityIds: 'com.qidian.QDReader.ui.activity.QDBrowserActivity',
+      rules: {
+        action: 'clickNode',
+        matches: 'TextView[text="看视频"]',
+      },
+    },
   ],
 });

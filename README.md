@@ -2,13 +2,11 @@
 
 ## 声明
 
-**电脑坏了，暂停更新**
-
 来自 GKD 官方的订阅规则，个人使用
 
 ## 更新策略
 
-同步[AIsouler](https://github.com/AIsouler/GKD_subscription)订阅更新为主
+删除大量本人不使用的APP的规则，如影响使用，请自行更换其他规则订阅
 
 ## 订阅
 
