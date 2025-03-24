@@ -12,8 +12,8 @@ export default defineGkdApp({
       actionMaximum: 1,
       resetMatch: 'app',
       activityIds: [
-        'com.alicloud.databox.MainActivity',
-        'com.alicloud.databox.navigation.NavigationFragmentContainerActivity',
+        '.MainActivity',
+        '.navigation.NavigationFragmentContainerActivity',
       ],
       rules: [
         {
@@ -36,35 +36,31 @@ export default defineGkdApp({
     {
       key: 1,
       name: '全屏广告-活动弹窗',
-      activityIds: 'com.alicloud.databox.MainActivity',
-      rules:
-        '[id="com.alicloud.databox:id/webContainer"] >5 View[childCount=3] > TextView[index=1]',
-      snapshotUrls: [
-        'https://i.gkd.li/i/13228610',
-        'https://i.gkd.li/i/14235204',
-      ],
-    },
-    {
-      key: 2,
-      name: '功能类-时光设备间页面自动点击“开心收下”',
-      activityIds:
-        'com.alipay.mobile.nebulax.integration.mpaas.activity.NebulaActivity$Main',
-      actionMaximum: 1,
-      resetMatch: 'activity',
+      fastQuery: true,
       matchTime: 10000,
-      rules: 'View[childCount=9] > @Image -2 View[childCount=5]',
-      snapshotUrls: 'https://i.gkd.li/i/13596924',
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          activityIds: '.MainActivity',
+          matches:
+            '@TextView[clickable=true][visibleToUser=true] - Image[text!=null] < View < View < View < WebView < WebView < [vid="webContainer"]',
+          snapshotUrls: 'https://i.gkd.li/i/14235204',
+        },
+      ],
     },
     {
       key: 3,
       name: '更新提示',
+      fastQuery: true,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      fastQuery: true,
       rules: [
         {
-          matches: '[text^="立即了解"] -3 View[clickable=true]',
+          activityIds: '.MainActivity',
+          matches:
+            '[text^="立即了解"] -3 @View[clickable=true] <<n [vid="webContainer"]',
           snapshotUrls: 'https://i.gkd.li/i/13806865',
         },
       ],
@@ -75,9 +71,10 @@ export default defineGkdApp({
       desc: '关闭弹窗',
       rules: [
         {
-          activityIds: 'com.alicloud.databox.MainActivity',
+          fastQuery: true,
+          activityIds: '.MainActivity',
           matches:
-            '[vid="webContainer"] >5 View[childCount=4] > TextView[index=3][clickable=true]',
+            '@TextView[childCount=0][clickable=true][visibleToUser=true] <4 View[childCount=4] < View < View < WebView < WebView < [vid="webContainer"]',
           snapshotUrls: 'https://i.gkd.li/i/14414446',
         },
       ],
@@ -85,9 +82,9 @@ export default defineGkdApp({
     {
       key: 5,
       name: '功能类-扫描二维码登录时自动点击登录',
+      fastQuery: true,
       actionMaximum: 1,
       resetMatch: 'app',
-      fastQuery: true,
       rules: [
         {
           activityIds: 'com.taobao.login4android.scan.QrScanActivity',
@@ -124,12 +121,6 @@ export default defineGkdApp({
           activityIds: 'com.alicloud.databox.transferpage.TransferListActivity',
           matches: '[vid="close"]',
           snapshotUrls: 'https://i.gkd.li/i/15433289',
-        },
-        {
-          key: 1,
-          activityIds: 'com.alicloud.databox.MainActivity',
-          matches: '[vid="ivTitleAction"]',
-          snapshotUrls: 'https://i.gkd.li/i/15524767',
         },
       ],
     },

@@ -31,7 +31,7 @@ export default defineGkdApp({
           activityIds:
             'com.cainiao.wireless.homepage.view.activity.HomePageActivity',
           matches:
-            'View[clickable=true] > @[text="关闭"] + [text="活动"] <<n [vid="browser_fragment_layout"]',
+            'View[clickable=true] > @[text="关闭"] + [visibleToUser=true][text="活动"] <<n [vid="browser_fragment_layout"]',
           snapshotUrls: 'https://i.gkd.li/i/14033859',
         },
         {
@@ -48,7 +48,7 @@ export default defineGkdApp({
           activityIds:
             'com.cainiao.wireless.homepage.view.activity.HomePageActivity',
           matches:
-            '@[text="关闭"] + [text="活动"] <<n [vid="browser_fragment_layout"]',
+            '@[text="关闭"] + [visibleToUser=true][text="活动"] <<n [vid="browser_fragment_layout"]',
           snapshotUrls: 'https://i.gkd.li/i/14033859',
         },
         {
@@ -86,8 +86,11 @@ export default defineGkdApp({
           activityIds:
             'com.cainiao.wireless.homepage.view.activity.HomePageActivity',
           matches:
-            'FrameLayout[childCount=8] > @FrameLayout[clickable=true][childCount=0][text=null] <<n [vid="layout_root"]',
-          snapshotUrls: 'https://i.gkd.li/i/16024305',
+            'FrameLayout[childCount=8] > @FrameLayout[clickable=true][childCount=0][text=null] + ImageView[childCount=0][text=null] <<n [vid="layout_root"]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/16024305',
+            'https://i.gkd.li/i/16518502', // 避免误触
+          ],
         },
         {
           key: 3,
@@ -102,12 +105,17 @@ export default defineGkdApp({
     {
       key: 4,
       name: '更新提示',
+      fastQuery: true,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      fastQuery: true,
-      rules: '[text="确认"] - [text="取消"]',
-      snapshotUrls: 'https://i.gkd.li/i/13042207',
+      rules: [
+        {
+          activityIds: '.homepage.view.activity.HomePageActivity',
+          matches: '[text="确认"] - [text="取消"]',
+          snapshotUrls: 'https://i.gkd.li/i/13042207',
+        },
+      ],
     },
     {
       key: 5,

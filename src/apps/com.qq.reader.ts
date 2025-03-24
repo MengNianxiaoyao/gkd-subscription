@@ -7,27 +7,28 @@ export default defineGkdApp({
     {
       key: 0,
       name: '开屏广告',
-      fastQuery: true,
       matchTime: 10000,
-      resetMatch: 'app',
       actionMaximum: 1,
+      resetMatch: 'app',
+      actionMaximumKey: 0,
+      priorityTime: 10000,
       rules: [
         {
           key: 0,
-          matches:
-            'FrameLayout > FrameLayout[childCount>2] > @View[clickable=true][visibleToUser=true] + TextView[text=null] <<n [id="android:id/content"]',
+          anyMatches: [
+            '@View[clickable=true][text=null][visibleToUser=true] + TextView[index=parent.childCount.minus(1)][text=null] <n FrameLayout[childCount>2] >(7,8,9,10) [text*="第三方应用" || text*="扭动手机" || text*="点击或上滑"][visibleToUser=true]',
+            'FrameLayout > FrameLayout[childCount>2] > @View[clickable=true][text=null][visibleToUser=true] + TextView[index=parent.childCount.minus(1)][text=null][visibleToUser=true]',
+          ],
           snapshotUrls: 'https://i.gkd.li/i/14978239',
         },
+        {
+          key: 1,
+          fastQuery: true,
+          matches: '[text*="跳过"][text.length<10][visibleToUser=true]',
+          exampleUrls: 'https://e.gkd.li/347b9148-02d8-4806-bafe-3aee9e4094af',
+          snapshotUrls: 'https://i.gkd.li/i/16642890',
+        },
       ],
-    },
-    {
-      key: 2,
-      name: '青少年模式',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: '[id="com.qq.reader:id/tv_i_know"]',
-      snapshotUrls: 'https://i.gkd.li/i/13194867',
     },
     {
       key: 3,
@@ -36,22 +37,29 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds: 'com.qq.reader.activity.MainActivity',
-          matches: '[id="com.qq.reader:id/operating_activity_close"]',
-          exampleUrls:
-            'https://m.gkd.li/57941037/17b6444c-e275-4ee4-b1d7-bd7369e08e55',
-          snapshotUrls: 'https://i.gkd.li/i/14140100',
+          activityIds: [
+            'com.qq.reader.activity.MainActivity',
+            'com.qq.reader.activity.MainFlutterActivity',
+          ],
+          matches: '[vid="operating_activity_close_view"]',
+          exampleUrls: 'https://e.gkd.li/29b1cea7-6984-4d51-b1a0-f5ffd1b0d727',
+          snapshotUrls: [
+            'https://i.gkd.li/i/14140100',
+            'https://i.gkd.li/i/16517211',
+          ],
         },
       ],
     },
     {
       key: 4,
       name: '更新提示-内测邀请弹窗',
+      fastQuery: true,
+      matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      fastQuery: true,
       rules: [
         {
+          activityIds: 'com.tencent.upgrade.ui.UpgradeDialogActivity',
           matches: '[vid="upgrade_dialog_close_btn"][clickable=true]',
           exampleUrls:
             'https://m.gkd.li/57941037/03e35d57-5f40-4ccb-911a-5f9061eab46e',

@@ -5,16 +5,50 @@ export default defineGkdApp({
   name: '今日头条',
   groups: [
     {
-      key: 1,
-      name: '更新提示',
+      key: 0,
+      name: '开屏广告',
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      rules: '[text="升级版本"] +n [desc="关闭"][clickable=true]',
-      snapshotUrls: [
-        'https://i.gkd.li/i/12685000',
-        'https://i.gkd.li/i/12840104',
-        'https://i.gkd.li/i/13316081',
+      priorityTime: 10000,
+      rules: [
+        {
+          fastQuery: true,
+          matches: '[text*="跳过"][text.length<10][visibleToUser=true]',
+          exampleUrls: 'https://e.gkd.li/cf8b05a1-6406-4453-b498-f305b387f5c6',
+          snapshotUrls: 'https://i.gkd.li/i/17610127',
+        },
+      ],
+    },
+    {
+      key: 1,
+      name: '更新提示',
+      fastQuery: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      actionMaximumKey: 0,
+      rules: [
+        {
+          key: 0,
+          activityIds: [
+            'com.bytedance.ies.outertest.cn.OuterTestGuideDialogActivity',
+            'com.ss.android.article.base.feature.ugc.story.StoryVideoActivity',
+          ],
+          matches:
+            '@[desc="关闭"] -(2,3) [text*="版本更新" || text*="升级版本"]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/13316081',
+            'https://i.gkd.li/i/17681710',
+          ],
+        },
+        {
+          key: 1,
+          activityIds: '.activity.MainActivity',
+          matches: '[text="以后再说"][visibleToUser=true]',
+          exampleUrls: 'https://e.gkd.li/79b75132-9d6f-4e4c-a95b-56dbaca1965d',
+          snapshotUrls: 'https://i.gkd.li/i/18194356',
+        },
       ],
     },
     {
@@ -45,6 +79,7 @@ export default defineGkdApp({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
+      activityIds: '.activity.MainActivity',
       rules: [
         {
           key: 0,
@@ -66,15 +101,6 @@ export default defineGkdApp({
       activityIds: 'com.ss.android.ugc.detail.activity.TikTokActivity',
       rules: [
         {
-          key: -1,
-          preKeys: 0,
-          actionCd: 35000, //APP更新后点击不感兴趣不会跳过当前视频了，所以需要冷却一下等下一次重新跳过广告视频
-          name: '点击不感兴趣',
-          matches:
-            '@LinearLayout[clickable=true] > RelativeLayout + TextView[text="不感兴趣"]',
-          snapshotUrls: 'https://i.gkd.li/i/12679277',
-        },
-        {
           key: 0,
           name: '点击右上角[更多]图标按钮',
           matches: 'ImageView[clickable=true][desc="更多"]',
@@ -89,48 +115,48 @@ export default defineGkdApp({
             'https://i.gkd.li/i/13930050',
           ],
         },
+        {
+          key: -1,
+          preKeys: [0],
+          actionCd: 35000, //APP更新后点击不感兴趣不会跳过当前视频了，所以需要冷却一下等下一次重新跳过广告视频
+          name: '点击不感兴趣',
+          matches:
+            '@LinearLayout[clickable=true] > RelativeLayout + TextView[text="不感兴趣"]',
+          snapshotUrls: 'https://i.gkd.li/i/12679277',
+        },
       ],
     },
     {
       key: 12,
       name: '分段广告-信息流广告',
-      desc: '点击右上角x按钮,点击不感兴趣',
+      desc: '点击右上角x按钮,点击[不感兴趣]',
+      fastQuery: true,
+      activityIds: [
+        'com.ss.android.article.news.activity.MainActivity',
+        'com.bytedance.ugc.innerfeed.impl.PostInnerFeedActivity',
+      ],
       rules: [
         {
-          name: '点击右上角x按钮',
           key: 0,
-          activityIds: [
-            'com.ss.android.article.news.activity.MainActivity',
-            'com.bytedance.ugc.innerfeed.impl.PostInnerFeedActivity',
-          ],
+          name: '点击右上角x按钮',
           matches: 'UIView[text^="不感兴趣"][visibleToUser=true]',
-          action: 'clickCenter',
           snapshotUrls: [
-            'https://i.gkd.li/i/12733098',
-            'https://i.gkd.li/i/12755264',
             'https://i.gkd.li/i/12836272',
-            'https://i.gkd.li/i/12840162',
             'https://i.gkd.li/i/13093576',
-            'https://i.gkd.li/i/12733098',
-          ],
-          exampleUrls: [
-            'https://user-images.githubusercontent.com/44717382/273436460-cf007525-81ce-418b-ac05-3bfd75a627fe.gif', //这是 https://i.gkd.li/i/12840162
+            'https://i.gkd.li/i/16624480',
           ],
         },
         {
-          name: '点击不感兴趣',
-          preKeys: 0,
+          preKeys: [0],
           key: 1,
-          activityIds: [
-            'com.ss.android.article.news.activity.MainActivity',
-            'com.bytedance.ugc.innerfeed.impl.PostInnerFeedActivity',
-          ],
-          matches:
-            '@ViewGroup[clickable=true] > ImageView + TextView[text="不感兴趣"]',
-          action: 'clickCenter',
+          name: '点击不感兴趣',
+          matches: '@[clickable=true] >(1,2) [text="不感兴趣"]',
           snapshotUrls: [
             'https://i.gkd.li/i/12733152',
             'https://i.gkd.li/i/12755265',
+            'https://i.gkd.li/i/16624474',
+            'https://i.gkd.li/i/16624395',
+            'https://i.gkd.li/i/17893117',
           ],
         },
       ],
@@ -138,13 +164,13 @@ export default defineGkdApp({
     {
       key: 13,
       name: '局部广告-底部话题推荐弹窗',
-      activityIds: ['com.ss.android.article.news.activity.MainActivity'],
       rules: [
         {
+          activityIds: 'com.ss.android.article.news.activity.MainActivity',
           name: '话题谈论',
           matches:
             'FlattenUIText[text="参与讨论"] + FlattenUIImage[clickable=true]',
-          snapshotUrls: ['https://i.gkd.li/i/12706699'],
+          snapshotUrls: 'https://i.gkd.li/i/12706699',
         },
       ],
     },
@@ -163,6 +189,7 @@ export default defineGkdApp({
           snapshotUrls: 'https://i.gkd.li/i/13402468',
         },
         {
+          preKeys: [0],
           name: '等待30s点击"关闭"',
           actionDelay: 30000,
           activityIds: 'com.ss.android.excitingvideo.ExcitingVideoActivity',
@@ -173,7 +200,6 @@ export default defineGkdApp({
     },
     {
       key: 15,
-      fastQuery: true,
       name: '局部广告-底部热榜弹窗',
       desc: '点击X',
       rules: [
@@ -228,12 +254,23 @@ export default defineGkdApp({
           matchTime: 10000,
           actionMaximum: 1,
           resetMatch: 'app',
-          activityIds: 'com.ss.android.article.news.activity.MainActivity',
+          activityIds: '.activity.MainActivity',
           matches:
             '[id="android:id/content"] > FrameLayout[childCount=3] > ImageView[clickable=true][visibleToUser=true][index=2]',
-          exampleUrls:
-            'https://m.gkd.li/57941037/096c3d85-08b0-4566-865d-31eb0079ad6e',
+          exampleUrls: 'https://e.gkd.li/c3889d29-7260-4ab1-8070-75a6a68e4e2c',
           snapshotUrls: 'https://i.gkd.li/i/15314921',
+        },
+        {
+          key: 1,
+          fastQuery: true,
+          matchTime: 10000,
+          actionMaximum: 1,
+          resetMatch: 'app',
+          activityIds: '.activity.MainActivity',
+          matches:
+            '@FlattenUIImage[text=""] -10 FlattenUIText[text="恭喜获得惊喜奖励"]',
+          exampleUrls: 'https://e.gkd.li/057d40f6-f94e-4b54-857f-b5b11de245a5',
+          snapshotUrls: 'https://i.gkd.li/i/17681713',
         },
       ],
     },

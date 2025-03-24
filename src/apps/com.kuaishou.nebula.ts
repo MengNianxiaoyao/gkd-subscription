@@ -5,12 +5,20 @@ export default defineGkdApp({
   name: '快手极速版',
   groups: [
     {
-      key: 1,
-      name: '青少年模式',
+      key: 0,
+      name: '开屏广告',
+      matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      rules: '[id="com.kuaishou.nebula:id/positive"][text="我知道了"]',
-      snapshotUrls: 'https://i.gkd.li/i/13196316',
+      priorityTime: 10000,
+      rules: [
+        {
+          fastQuery: true,
+          matches: '[vid="splash_skip_text"]',
+          exampleUrls: 'https://e.gkd.li/5d393b9b-c327-4429-9759-8c18a097453a',
+          snapshotUrls: 'https://i.gkd.li/i/17631261',
+        },
+      ],
     },
     {
       key: 2,
@@ -20,7 +28,8 @@ export default defineGkdApp({
           key: 0,
           fastQuery: true,
           activityIds: 'com.yxcorp.gifshow.HomeActivity',
-          matches: '@[vid="close_btn"] <n * > [text="朋友推荐"]',
+          matches:
+            '[vid="popup_view" || vid="content_wrapper"] > [vid="close_btn"][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/14310639',
             'https://i.gkd.li/i/15061832',
@@ -37,7 +46,7 @@ export default defineGkdApp({
           fastQuery: true,
           activityIds: 'com.yxcorp.gifshow.HomeActivity',
           matches:
-            '@ImageView[clickable=true] - ViewGroup[childCount=3] <n * >n [text*="红包"]',
+            '@ImageView[clickable=true] <(2,3) ViewGroup >(1,4) [text*="红包"]',
           exampleUrls:
             'https://m.gkd.li/101449500/f7bbd1db-f519-4ff9-96cb-4cb5b2f483a2',
           snapshotUrls: [

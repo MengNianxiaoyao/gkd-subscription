@@ -7,21 +7,15 @@ export default defineGkdApp({
     {
       key: 1,
       name: '更新提示',
+      fastQuery: true,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      actionMaximumKey: 0,
       rules: [
         {
-          key: 0,
-          matches:
-            '@[id="com.chinamobile.mcloud:id/bn_cancel"] + [id="com.chinamobile.mcloud:id/upgrade_title"]',
-          snapshotUrls: 'https://i.gkd.li/i/12774833',
-        },
-        {
           key: 1,
-          fastQuery: true,
-          matches: '@[vid="bn_cancel"] + * > [vid="upgrade_title"]',
+          activityIds: '.client.ui.setting.UpgradeActivity',
+          matches: ['[text="发现新版本"]', '[vid="bn_cancel"]'],
           snapshotUrls: 'https://i.gkd.li/i/14297700',
         },
       ],
@@ -33,6 +27,9 @@ export default defineGkdApp({
         {
           key: 0,
           fastQuery: true,
+          matchTime: 10000,
+          actionMaximum: 1,
+          resetMatch: 'app',
           activityIds: [
             'com.chinamobile.mcloud.client.ui.MenuActivity',
             'com.chinamobile.mcloud.client.ui.CustomScanActivity',
@@ -47,8 +44,10 @@ export default defineGkdApp({
         },
         {
           key: 1,
+          fastQuery: true,
           activityIds: 'com.chinamobile.mcloud.client.ui.MenuActivity',
-          matches: '[text="马上领取"] +3 View > Image[clickable=true]',
+          matches:
+            '@Image[clickable=true] < View -3 [text="马上领取"] < View < View < View < WebView < WebView < FrameLayout < [id="android:id/content"]',
           snapshotUrls: 'https://i.gkd.li/i/13627832',
         },
       ],
@@ -59,8 +58,10 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
-          activityIds: 'com.chinamobile.mcloud.client.ui.MenuActivity',
           fastQuery: true,
+          actionMaximum: 1,
+          resetMatch: 'app',
+          activityIds: 'com.chinamobile.mcloud.client.ui.MenuActivity',
           matches:
             '[id="com.chinamobile.mcloud:id/iv_logo"] + [id="com.chinamobile.mcloud:id/iv_close"]',
           snapshotUrls: 'https://i.gkd.li/i/13627834',
@@ -69,13 +70,17 @@ export default defineGkdApp({
     },
     {
       key: 4,
-      name: '功能类-请求开启自动备份弹窗',
+      name: '全屏广告-请求开启自动备份弹窗',
       desc: '点击关闭',
-      fastQuery: true,
-      activityIds: 'com.chinamobile.mcloud.client.ui.MenuActivity',
-      rules:
-        '[text="开启自动备份"] +n [id="com.chinamobile.mcloud:id/tv_skip"]',
-      snapshotUrls: 'https://i.gkd.li/i/13627830',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.client.ui.MenuActivity',
+          matches:
+            '[text="开启自动备份"] +4 [text="暂不设置"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/13627830',
+        },
+      ],
     },
     {
       key: 5,
@@ -87,6 +92,7 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
+          activityIds: '.client.ui.MenuActivity',
           matches: '[vid="btn_push_notice_close_dialog"]',
           snapshotUrls: 'https://i.gkd.li/i/14882447',
         },

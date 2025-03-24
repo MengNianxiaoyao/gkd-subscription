@@ -7,29 +7,35 @@ export default defineGkdApp({
     {
       key: 0,
       name: '开屏广告',
+      matchRoot: true,
+      fastQuery: true,
       matchTime: 10000,
       actionMaximum: 1,
-      fastQuery: true,
       resetMatch: 'app',
+      priorityTime: 10000,
       rules: [
-        '[id="gov.pianzong.androidnga:id/iv_tg_ad"]',
-        '[id="gov.pianzong.androidnga:id/ksad_splash_circle_skip_view"]',
-        '[id="gov.pianzong.androidnga:id/ksad_skip_view_skip"]',
-      ],
-      snapshotUrls: [
-        'https://i.gkd.li/i/12476484',
-        'https://i.gkd.li/i/12706127', // activityIds: 'com.miui.home.launcher.Launcher',
-        'https://i.gkd.li/i/12864707', // activityIds: 'gov.pianzong.androidnga.activity.LoadingActivity',
-        'https://i.gkd.li/i/12911882', // activityIds: 'gov.pianzong.androidnga.activity.WarmstartActivity'
-        'https://i.gkd.li/i/13798686', // id="gov.pianzong.androidnga:id/ksad_skip_view_skip"
+        {
+          matches: '[vid="tv_tiaoguo" || vid="iv_tg_ad"]',
+          exampleUrls: 'https://e.gkd.li/d7520bc7-588b-4654-b6aa-d2736ac200bf',
+          snapshotUrls: [
+            'https://i.gkd.li/i/17082872',
+            'https://i.gkd.li/i/17082897',
+            'https://i.gkd.li/i/17082899',
+            'https://i.gkd.li/i/13798686',
+          ],
+        },
       ],
     },
     {
       key: 1,
       name: '局部广告-首页-推荐-卡片广告',
-      activityIds: 'com.donews.nga.activitys.MainActivity',
-      rules: ['[id="gov.pianzong.androidnga:id/iv_close_ad"]'],
-      snapshotUrls: 'https://i.gkd.li/i/12482727',
+      rules: [
+        {
+          activityIds: 'com.donews.nga.activitys.MainActivity',
+          matches: '[id="gov.pianzong.androidnga:id/iv_close_ad"]',
+          snapshotUrls: 'https://i.gkd.li/i/12482727',
+        },
+      ],
     },
     {
       key: 2,
@@ -39,37 +45,46 @@ export default defineGkdApp({
         'gov.pianzong.androidnga.activity.forumdetail.ForumDetailActivity',
       rules: [
         {
+          key: 1,
           matches: 'Image[text="ams_icon_single_close"]',
-          snapshotUrls: ['https://i.gkd.li/i/12655805'],
+          snapshotUrls: 'https://i.gkd.li/i/12655805',
         },
         {
+          key: 2,
           matches:
             'TextView[text!=null] - ImageView < LinearLayout[childCount=2] + FrameLayout[childCount=1] > ImageView[id=null]',
-          snapshotUrls: ['https://i.gkd.li/i/12706140'],
+          snapshotUrls: 'https://i.gkd.li/i/12706140',
         },
         {
+          key: 3,
           matches:
             '[text="广告"] - [id="gov.pianzong.androidnga:id/iv_information_ad_close"]',
-          snapshotUrls: ['https://i.gkd.li/i/13303236'],
+          snapshotUrls: 'https://i.gkd.li/i/13303236',
         },
       ],
     },
     {
       key: 3,
       name: '局部广告-社区-顶部广告',
-      activityIds: 'com.donews.nga.activitys.MainActivity',
-      rules: '[id="gov.pianzong.androidnga:id/iv_close_community_ad"]',
-      snapshotUrls: ['https://i.gkd.li/i/12706132'],
+      rules: [
+        {
+          activityIds: 'com.donews.nga.activitys.MainActivity',
+          matches: '[id="gov.pianzong.androidnga:id/iv_close_community_ad"]',
+          snapshotUrls: ['https://i.gkd.li/i/12706132'],
+        },
+      ],
     },
     {
       key: 4,
       name: '全屏广告-弹窗广告',
-      desc: '点击X',
+      desc: '点击关闭',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: [
         {
           fastQuery: true,
-          activityIds: 'com.hihonor.android.launcher.unihome.UniHomeLauncher',
-          matches: '[id="gov.pianzong.androidnga:id/iv_homedialog_close"]',
+          matches: '[vid="iv_homedialog_close"]',
           exampleUrls:
             'https://m.gkd.li/57941037/346f4485-82a7-4cf3-aab3-1fe6c9bb23af',
           snapshotUrls: 'https://i.gkd.li/i/14126934',
@@ -83,15 +98,15 @@ export default defineGkdApp({
       rules: [
         {
           position: {
-            left: 'width * 0.9325',
-            top: 'width * 0.04203',
+            left: 'width * 0.9629',
+            top: 'width * 0.0472',
           },
           activityIds:
             'gov.pianzong.androidnga.activity.forumdetail.ArticleDetailActivity',
-          matches: '[id="advertisementBottom"]',
-          exampleUrls:
-            'https://m.gkd.li/57941037/93c2431c-065c-421e-9fd4-112e65ef6ae2',
-          snapshotUrls: 'https://i.gkd.li/i/12893508',
+          matches: '[id="advertisementBottom"][visibleToUser=true]',
+          exampleUrls: 'https://e.gkd.li/589a4441-4be0-4ebc-90f5-d0dc5cfc84ff',
+          snapshotUrls: 'https://i.gkd.li/i/17348441',
+          excludeSnapshotUrls: 'https://i.gkd.li/i/17348415', // visibleToUser=true 防止误触
         },
       ],
     },

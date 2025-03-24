@@ -5,25 +5,19 @@ export default defineGkdApp({
   name: '优酷视频',
   groups: [
     {
-      key: 2,
-      name: '青少年模式',
+      key: 3,
+      name: '全屏广告-视频推荐弹窗',
       fastQuery: true,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      rules: '[text="青少年模式"] +(3) [text="我知道了"]',
-      snapshotUrls: [
-        'https://i.gkd.li/i/12701050',
-        'https://i.gkd.li/i/13498556',
+      rules: [
+        {
+          activityIds: 'com.youku.vip.wrapper.VipHomeActivity',
+          matches: '[id="com.youku.phone:id/closeView"][desc="关闭弹层"]',
+          snapshotUrls: 'https://i.gkd.li/i/12701029',
+        },
       ],
-    },
-    {
-      key: 3,
-      name: '全屏广告-视频推荐弹窗',
-      fastQuery: true,
-      activityIds: 'com.youku.vip.wrapper.VipHomeActivity',
-      rules: '[id="com.youku.phone:id/closeView"][desc="关闭弹层"]',
-      snapshotUrls: 'https://i.gkd.li/i/12701029',
     },
     {
       key: 4,
@@ -80,6 +74,34 @@ export default defineGkdApp({
             'https://i.gkd.li/i/14670383',
             'https://i.gkd.li/i/14680702',
           ],
+        },
+        {
+          key: 2,
+          fastQuery: true,
+          activityIds: 'com.youku.ui.activity.DetailActivity',
+          matches: '[vid="xadsdk_banner_ad_close"]',
+          exampleUrls: 'https://e.gkd.li/8577d2e5-20a4-40e0-92f0-191bafeb55ed',
+          snapshotUrls: 'https://i.gkd.li/i/16925042',
+        },
+      ],
+    },
+    {
+      key: 6,
+      name: '分段广告-首页卡片广告',
+      fastQuery: true,
+      activityIds: 'com.youku.v2.HomePageEntry',
+      rules: [
+        {
+          key: 0,
+          matches: '[vid="novel_banner_ad_feed_back"][visibleToUser=true]',
+          exampleUrls: 'https://e.gkd.li/6ae8cc7b-1302-4f10-b544-8d8265a69610',
+          snapshotUrls: 'https://i.gkd.li/i/16925043',
+        },
+        {
+          preKeys: [0],
+          matches: '[text="就是不感兴趣"]',
+          exampleUrls: 'https://e.gkd.li/be57974c-6656-4619-aed8-c61421f6a748',
+          snapshotUrls: 'https://i.gkd.li/i/16977036',
         },
       ],
     },

@@ -5,27 +5,45 @@ export default defineGkdApp({
   name: '中国移动',
   groups: [
     {
+      key: 0,
+      name: '开屏广告',
+      fastQuery: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      priorityTime: 10000,
+      rules: [
+        {
+          matches: '[text*="跳过"][text.length<10][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/16335136',
+        },
+      ],
+    },
+    {
       key: 1,
       name: '更新提示',
+      fastQuery: true,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
       rules: [
         {
-          matches:
-            'Button[text="以后再说"][id^="com.greenpoint.android.mc10086.activity:id/dialog_btn"]',
-          exampleUrls:
-            'https://m.gkd.li/57941037/65ee49f0-f3f2-4ef8-9f76-e832b0551b86',
-          snapshotUrls: 'https://i.gkd.li/i/12534264',
+          activityIds: 'com.mc10086.cmcc.view.tabs.AppTabFragment',
+          matches: '[text="暂不更新"][visibleToUser=true]',
+          exampleUrls: 'https://e.gkd.li/130e0c2e-f568-4a96-9c06-9876a21e0466',
+          snapshotUrls: 'https://i.gkd.li/i/18271745',
         },
       ],
     },
     {
       key: 2,
       name: '全屏广告-首页弹窗广告',
-      activityIds: 'com.mc10086.cmcc.view.tabs.AppTabFragment',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: [
         {
+          activityIds: 'com.mc10086.cmcc.view.tabs.AppTabFragment',
           matches:
             '[id="com.greenpoint.android.mc10086.activity:id/ad_image"] < RelativeLayout + [id="com.greenpoint.android.mc10086.activity:id/close_btn"]',
           snapshotUrls: 'https://i.gkd.li/i/12662361',
@@ -43,14 +61,13 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
+          activityIds: 'com.mc10086.cmcc.base.StartPageActivity',
           matches: ['[text*="开启推送通知"]', '[text="取消"]'],
-          snapshotUrls: [
-            'https://i.gkd.li/i/12662213',
-            'https://i.gkd.li/i/13327880',
-          ],
+          snapshotUrls: 'https://i.gkd.li/i/13327880',
         },
         {
           key: 1,
+          activityIds: 'com.mc10086.cmcc.view.tabs.AppTabFragment',
           matches: '[text="授权提醒"] +3 [text="拒绝"]',
           snapshotUrls: 'https://i.gkd.li/i/13775652',
         },
@@ -118,9 +135,27 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
+          activityIds: 'com.mc10086.cmcc.view.tabs.AppTabFragment',
           matches:
             '@[id="com.greenpoint.android.mc10086.activity:id/close_img"][desc="关闭"] - RelativeLayout >(2) [text$="好评"]',
           snapshotUrls: 'https://i.gkd.li/i/12662345',
+        },
+      ],
+    },
+    {
+      key: 14,
+      name: '权限提示-通讯录权限申请弹窗',
+      desc: '点击取消',
+      fastQuery: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          activityIds: 'com.cmccit.paycenter.PayCenterActivity',
+          matches: ['[text="通讯录权限申请"]', '[text="取消"]'],
+          exampleUrls: 'https://e.gkd.li/7d332325-497f-47a4-a322-729ffa5dd121',
+          snapshotUrls: 'https://i.gkd.li/i/16369235',
         },
       ],
     },

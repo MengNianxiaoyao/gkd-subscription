@@ -19,12 +19,15 @@ export default defineGkdApp({
           ],
           matches: [
             '[vid="itemUser"][visibleToUser=true]',
-            'FrameLayout[childCount=5] > FrameLayout[childCount=1] > @ImageView <<n [vid="bannerLayout"]',
+            'FrameLayout[childCount=5] > FrameLayout[childCount=1] > @ImageView[childCount=0][visibleToUser=true] <<n [vid="bannerLayout"]',
           ],
           snapshotUrls: [
             'https://i.gkd.li/i/14771070',
             'https://i.gkd.li/i/14771175',
+          ],
+          excludeSnapshotUrls: [
             'https://i.gkd.li/i/14771110', // 限定 visibleToUser, 防止误触
+            'https://i.gkd.li/i/17879219', // 限定 visibleToUser, 防止误触
           ],
         },
         {
@@ -70,9 +73,9 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
-          matches:
-            '[text*="隐藏"][id="com.magicalstory.AppStore:id/btn_selectNegative"]',
-          snapshotUrls: 'https://i.gkd.li/i/13437553',
+          activityIds: '.main.MainActivity',
+          matches: '[text="隐藏"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/17892865',
         },
       ],
     },
@@ -83,9 +86,15 @@ export default defineGkdApp({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      rules:
-        '[id="com.magicalstory.AppStore:id/tv_update"] <2 * + * > [id="com.magicalstory.AppStore:id/iv_close"]',
-      snapshotUrls: 'https://i.gkd.li/i/13459373',
+      rules: [
+        {
+          activityIds:
+            'com.cretin.www.cretinautoupdatelibrary.activity.UpdateType10Activity',
+          matches:
+            '[id="com.magicalstory.AppStore:id/tv_update"] <2 * + * > [id="com.magicalstory.AppStore:id/iv_close"]',
+          snapshotUrls: 'https://i.gkd.li/i/13459373',
+        },
+      ],
     },
   ],
 });

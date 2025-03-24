@@ -8,10 +8,10 @@ export default defineGkdApp({
       key: 10,
       name: '功能类-自动继续安装',
       desc: 'USB安装应用,点击继续安装',
-      fastQuery: true,
-      activityIds: 'com.miui.permcenter.install.AdbInstallActivity',
       rules: [
         {
+          fastQuery: true,
+          activityIds: 'com.miui.permcenter.install.AdbInstallActivity',
           matches: '[text="继续安装"]',
           snapshotUrls: 'https://i.gkd.li/i/13269875',
         },
@@ -21,20 +21,20 @@ export default defineGkdApp({
       key: 11,
       name: '功能类-禁止获取定位',
       desc: '关闭"允许联网及定位"后，每次打开手机管家都会出现',
-      fastQuery: true,
-      activityIds: [
-        'com.miui.securityscan.MainActivity', // app版本v8
-        'com.miui.permcenter.permissions.SystemAppPermissionDialogActivity', // app版本v5
-      ],
       rules: [
         {
+          fastQuery: true,
+          activityIds: [
+            'com.miui.securityscan.MainActivity',
+            'com.miui.permcenter.permissions.SystemAppPermissionDialogActivity',
+          ],
           matches: [
             '[id="com.miui.securitycenter:id/title"][text="获取位置信息"]',
             '[text="不同意"]',
           ],
           snapshotUrls: [
             'https://i.gkd.li/i/13474517',
-            'https://i.gkd.li/i/13476592', // activityIds: 'com.miui.permcenter.permissions.SystemAppPermissionDialogActivity',
+            'https://i.gkd.li/i/13476592',
           ],
         },
       ],
@@ -43,16 +43,20 @@ export default defineGkdApp({
       key: 12,
       name: '功能类-使用返回退出时直接点击[退出]',
       desc: '退出时忽略[体检优化分数]/忽略[存储空间预警]',
-      fastQuery: true,
-      activityIds: 'com.miui.securityscan.MainActivity',
       rules: [
         {
-          matches: '[text="退出"]',
+          fastQuery: true,
+          activityIds: 'com.miui.securityscan.MainActivity',
+          matches: [
+            '[text="体检优化" || text="存储空间预警"][visibleToUser=true]',
+            '[text="退出"][visibleToUser=true]',
+          ],
           snapshotUrls: [
-            'https://i.gkd.li/i/13474504', // app版本v5
-            'https://i.gkd.li/i/13476770', // app版本v8
+            'https://i.gkd.li/i/13474504',
+            'https://i.gkd.li/i/13476770',
             'https://i.gkd.li/i/15137908',
           ],
+          excludeSnapshotUrls: 'https://i.gkd.li/i/18126157',
         },
       ],
     },
@@ -121,6 +125,40 @@ export default defineGkdApp({
           key: 1,
           matches: ['[text^="关闭自启动后将导致"]', '[text="关闭"]'],
           snapshotUrls: 'https://i.gkd.li/i/15531343',
+        },
+      ],
+    },
+    {
+      key: 16,
+      name: '功能类-自动允许分享文件',
+      desc: '允许应用通过分享获取手机文件',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: 'com.miui.wakepath.ui.ConfirmStartActivity',
+          matches: ['[text="分享文件"]', '[text="允许"]'],
+          exampleUrls: 'https://e.gkd.li/02c752e7-3dd9-47dc-819b-e8246de29b6a',
+          snapshotUrls: 'https://i.gkd.li/i/17174152',
+        },
+      ],
+    },
+    {
+      key: 17,
+      name: '功能类-自动关闭SIM卡安全保护验证提示',
+      desc: '点击[确定]',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: [
+            'com.miui.simlock.activity.SuccessDialogActivity',
+            'com.miui.simlock.activity.SuccessDialogNormalActivity',
+          ],
+          matches: ['[text="SIM卡安全保护验证成功"]', '[text="确定"]'],
+          exampleUrls: 'https://e.gkd.li/2274c673-a2a9-43ad-a5ab-74598787ec0f',
+          snapshotUrls: [
+            'https://i.gkd.li/i/17276599',
+            'https://i.gkd.li/i/17276586',
+          ],
         },
       ],
     },

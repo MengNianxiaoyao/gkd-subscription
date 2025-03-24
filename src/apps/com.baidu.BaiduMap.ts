@@ -5,6 +5,22 @@ export default defineGkdApp({
   name: '百度地图',
   groups: [
     {
+      key: -1,
+      name: '开屏广告',
+      fastQuery: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      priorityTime: 10000,
+      rules: [
+        {
+          matches: '[text*="跳过"][text.length<10][visibleToUser=true]',
+          exampleUrls: 'https://e.gkd.li/f03b3648-757a-48e3-bd3b-098f8293edbf',
+          snapshotUrls: 'https://i.gkd.li/i/16556555',
+        },
+      ],
+    },
+    {
       key: 1,
       name: '局部广告-地图上方黄页横幅',
       fastQuery: true,
@@ -98,19 +114,29 @@ export default defineGkdApp({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      rules: 'ImageView[id="com.baidu.BaiduMap:id/cancel_update"]',
-      snapshotUrls: 'https://i.gkd.li/i/12909385',
+      rules: [
+        {
+          activityIds: 'com.baidu.baidumaps.MapsActivity',
+          matches: 'ImageView[id="com.baidu.BaiduMap:id/cancel_update"]',
+          snapshotUrls: 'https://i.gkd.li/i/12909385',
+        },
+      ],
     },
     {
       key: 8,
       name: '权限提示-通知权限',
       desc: '点击关闭',
+      fastQuery: true,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      fastQuery: true,
-      rules: '[vid="push_close"]',
-      snapshotUrls: 'https://i.gkd.li/i/15284736',
+      rules: [
+        {
+          activityIds: 'com.baidu.baidumaps.MapsActivity',
+          matches: '[vid="push_close"]',
+          snapshotUrls: 'https://i.gkd.li/i/15284736',
+        },
+      ],
     },
     {
       key: 9,
@@ -121,8 +147,11 @@ export default defineGkdApp({
       rules: [
         {
           activityIds: 'com.baidu.baidumaps.MapsActivity',
-          matches: 'TextView[id="com.baidu.BaiduMap:id/tv_dialog_cancel"]',
-          snapshotUrls: 'https://i.gkd.li/i/13439258',
+          matches: ['[text="添加至桌面"]', '[text="取消"]'],
+          snapshotUrls: [
+            'https://i.gkd.li/i/13439258',
+            'https://i.gkd.li/i/16920986', // 防止误触
+          ],
         },
       ],
     },

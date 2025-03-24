@@ -7,14 +7,15 @@ export default defineGkdApp({
     {
       key: -1,
       name: '开屏广告',
-      fastQuery: true,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
       actionMaximumKey: 0,
+      priorityTime: 10000,
       rules: [
         {
           key: 0,
+          fastQuery: true,
           matches: '[text*="跳过"][text.length<10][visibleToUser=true]',
           exampleUrls:
             'https://m.gkd.li/57941037/e88a7ab4-0aeb-4472-a49b-3252da21ae33',
@@ -22,8 +23,10 @@ export default defineGkdApp({
         },
         {
           key: 1,
-          matches:
-            'FrameLayout > FrameLayout[childCount>2] > @View[clickable=true][visibleToUser=true] + TextView[text=null] <<n [id="android:id/content"]',
+          anyMatches: [
+            '@View[clickable=true][text=null][visibleToUser=true] + TextView[index=parent.childCount.minus(1)][text=null] <n FrameLayout[childCount>2] >(7,8,9,10) [text*="第三方应用" || text*="扭动手机" || text*="点击或上滑"][visibleToUser=true]',
+            'FrameLayout > FrameLayout[childCount>2] > @View[clickable=true][text=null][visibleToUser=true] + TextView[index=parent.childCount.minus(1)][text=null][visibleToUser=true]',
+          ],
           exampleUrls:
             'https://m.gkd.li/57941037/7f1babd6-7da3-4733-aca9-80ddf3c0a84e',
           snapshotUrls: 'https://i.gkd.li/i/14596658',
@@ -71,6 +74,23 @@ export default defineGkdApp({
             '@TextView[text=""][clickable=true] - TextView[text="去使用"][clickable=true]',
           snapshotUrls: 'https://i.gkd.li/i/12738449',
         },
+        {
+          key: 3,
+          fastQuery: true,
+          activityIds: 'com.baidu.netdisk.ui.transfer.TransferListTabActivity',
+          matches:
+            '[vid="close_probationary_guide_layout"][visibleToUser=true]',
+          exampleUrls: 'https://e.gkd.li/ab41b402-c4d0-439a-96f3-23029434aec4',
+          snapshotUrls: 'https://i.gkd.li/i/16423129',
+        },
+        {
+          key: 4,
+          fastQuery: true,
+          activityIds: 'com.baidu.netdisk.ui.transfer.TransferListTabActivity',
+          matches: '[vid="youa_guide_close"][visibleToUser=true]',
+          exampleUrls: 'https://e.gkd.li/ab41b402-c4d0-439a-96f3-23029434aec4',
+          snapshotUrls: 'https://i.gkd.li/i/16423129',
+        },
       ],
     },
     {
@@ -82,6 +102,7 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
+          activityIds: 'com.baidu.netdisk.ui.MainActivity',
           matches: '[vid="view_score_style"] > [text="以后再说"]',
           exampleUrls:
             'https://m.gkd.li/57941037/167a8392-23c8-4e84-a55f-4f91e7e560d8',

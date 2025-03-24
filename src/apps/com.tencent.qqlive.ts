@@ -11,6 +11,7 @@ export default defineGkdApp({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
+      priorityTime: 10000,
       rules: [
         {
           key: 0,
@@ -21,25 +22,21 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 1,
-      name: '青少年模式',
-      actionMaximum: 1,
-      resetMatch: 'app',
-      fastQuery: true,
-      rules: 'TextView[text*="青少年模式"] +n TextView[text="我知道了"]',
-      snapshotUrls: 'https://i.gkd.li/i/12700145',
-    },
-    {
       key: 2,
       name: '更新提示',
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      rules:
-        '[text^="有新版本"] + FrameLayout + LinearLayout + [text="暂不升级"]',
-      snapshotUrls: [
-        'https://i.gkd.li/i/12700486',
-        'https://i.gkd.li/i/13799951',
+      rules: [
+        {
+          activityIds: '.ona.update.trunk.client.TrunkUpdateActivity',
+          matches:
+            '[text^="有新版本"] + FrameLayout + LinearLayout + [text="暂不升级"]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/12700486',
+            'https://i.gkd.li/i/13799951',
+          ],
+        },
       ],
     },
     {
@@ -118,7 +115,7 @@ export default defineGkdApp({
         },
         // 以下是配合本规则组内其他key使用的规则，反馈界面的规则都是一样的
         {
-          preKeys: 6,
+          preKeys: [6],
           key: 96,
           fastQuery: true,
           matches:
@@ -208,31 +205,36 @@ export default defineGkdApp({
         {
           key: 3,
           name: '居中广告-1',
+          fastQuery: true,
           matches:
-            'ViewGroup[childCount>10] > FrameLayout[index=10] >4 ImageView[clickable=true][visibleToUser=true][index=1 || index=3]',
+            '@ImageView[clickable=true][childCount=0] - * >(3,4) [text^="摇动或点击"][visibleToUser=true]',
           snapshotUrls: [
-            'https://i.gkd.li/i/13695067',
-            'https://i.gkd.li/i/13946107',
-            'https://i.gkd.li/i/14001277',
+            'https://i.gkd.li/i/18476380',
+            'https://i.gkd.li/i/18476384',
           ],
         },
         {
           key: 4,
           name: '居中广告-2',
           fastQuery: true,
-          matches: '[id="com.tencent.qqlive:id/pause_ad_close"]',
-          exampleUrls:
-            'https://m.gkd.li/57941037/c8f55e94-30ad-440d-b4d8-06fb19f0c17e',
-          snapshotUrls: 'https://i.gkd.li/i/14318385',
+          matches:
+            '@ImageView[clickable=true][childCount=0] +2 [text="下载应用" || text="了解详情"][visibleToUser=true]',
+          exampleUrls: 'https://e.gkd.li/4bf0ff94-239d-4b43-900f-a375b44922e0',
+          snapshotUrls: [
+            'https://i.gkd.li/i/13946107',
+            'https://i.gkd.li/i/14318385',
+            'https://i.gkd.li/i/18476383',
+          ],
         },
       ],
     },
     {
       key: 6,
       name: '全屏广告-首页-弹窗广告',
-      resetMatch: 'app',
-      actionMaximum: 1,
       fastQuery: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: [
         {
           key: 0,
@@ -252,6 +254,21 @@ export default defineGkdApp({
             'https://m.gkd.li/57941037/c8131a06-837a-4c42-9a70-9e8a7fe21334',
           snapshotUrls: 'https://i.gkd.li/i/14567294',
         },
+        {
+          key: 2,
+          activityIds: '.ona.activity.SplashHomeActivity',
+          matches:
+            '@ImageView[clickable=true][visibleToUser=true] -3 LinearLayout >2 [text="立即免费领取"]',
+          exampleUrls: 'https://e.gkd.li/8b128ebc-ce9c-4345-8094-769f9afa8cd6',
+          snapshotUrls: 'https://i.gkd.li/i/17088095',
+        },
+        {
+          key: 3,
+          activityIds: '.ona.activity.SplashHomeActivity',
+          matches: '[text="暂不需要，稍后领取"][visibleToUser=true]',
+          exampleUrls: 'https://e.gkd.li/3256ed8e-752c-426d-9d64-26c9fdea9b09',
+          snapshotUrls: 'https://i.gkd.li/i/17542869',
+        },
       ],
     },
     {
@@ -261,10 +278,10 @@ export default defineGkdApp({
       actionMaximum: 1,
       resetMatch: 'app',
       actionMaximumKey: 0,
+      activityIds: '.ona.activity.SplashHomeActivity',
       rules: [
         {
           key: 0,
-          fastQuery: true,
           matches: 'LinearLayout > @[text="以后再说"] + [text="好的"]',
           snapshotUrls: 'https://i.gkd.li/i/12700139',
         },
@@ -289,6 +306,24 @@ export default defineGkdApp({
           exampleUrls:
             'https://m.gkd.li/57941037/1b7518c9-4ca7-4905-8929-6f0130abf19f',
           snapshotUrls: 'https://i.gkd.li/i/14358913',
+        },
+      ],
+    },
+    {
+      key: 22,
+      name: '局部广告-悬浮广告',
+      desc: '点击关闭',
+      rules: [
+        {
+          fastQuery: true,
+          matchTime: 10000,
+          actionMaximum: 1,
+          resetMatch: 'app',
+          activityIds: '.ona.activity.SplashHomeActivity',
+          matches:
+            '@ImageView[clickable=true][visibleToUser=true] + [text="免费看"]',
+          exampleUrls: 'https://e.gkd.li/5f6447c1-39f6-4711-a907-fdf36f502ec6',
+          snapshotUrls: 'https://i.gkd.li/i/17542913',
         },
       ],
     },

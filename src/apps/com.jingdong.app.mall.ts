@@ -5,6 +5,32 @@ export default defineGkdApp({
   name: '京东',
   groups: [
     {
+      key: 0,
+      name: '开屏广告',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      actionMaximumKey: 0,
+      priorityTime: 10000,
+      rules: [
+        {
+          key: 0,
+          fastQuery: true,
+          excludeActivityIds: 'com.jd.lib.search.view.Activity.SearchActivity',
+          matches: '[text*="跳过"][text.length<10][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/16323111',
+          excludeSnapshotUrls: 'https://i.gkd.li/i/16323115',
+        },
+        {
+          key: 1,
+          excludeActivityIds: 'com.jd.lib.search.view.Activity.SearchActivity',
+          matches: '[text*="跳过"][text.length<10][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/17602356', // "跳过" 节点不支持fastQuery
+          excludeSnapshotUrls: 'https://i.gkd.li/i/16323115',
+        },
+      ],
+    },
+    {
       key: 1,
       name: '局部广告-购物车页面砸金蛋',
       desc: '点击关闭',
@@ -56,22 +82,27 @@ export default defineGkdApp({
       name: '权限提示-通知权限',
       desc: '点击关闭',
       fastQuery: true,
-      //matchTime: 10000, 该弹窗可能在多个页面出现
       actionMaximum: 1,
       resetMatch: 'app',
       rules: [
         {
           key: 0,
+          activityIds: [
+            '.MainFrameActivity',
+            'com.jd.lib.message.messagecenter',
+          ],
           matches:
-            '@ImageView[clickable=true][visibleToUser=true] <n * > [text="开启消息通知"]',
+            '@ImageView[index=parent.childCount.minus(1)][clickable=true][visibleToUser=true] -n [text="开启消息通知"]',
           snapshotUrls: [
             'https://i.gkd.li/i/13917163',
             'https://i.gkd.li/i/13463618',
             'https://i.gkd.li/i/14692570',
+            'https://i.gkd.li/i/18060234',
           ],
         },
         {
           key: 1,
+          activityIds: 'com.jd.lib.message.messagecenter',
           matches: '@[clickable=true] + [text^="打开系统通知"]',
           snapshotUrls: 'https://i.gkd.li/i/12839865',
         },
@@ -85,10 +116,13 @@ export default defineGkdApp({
           key: 0,
           activityIds: 'com.jingdong.app.mall.MainFrameActivity',
           matches: '@FrameLayout[clickable=true] > [desc="关闭"]',
+          excludeMatches:
+            '[text="确定" || text="加入购物车" || text*="购买" || text*="下单"][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/13165721',
             'https://i.gkd.li/i/15364514',
           ],
+          excludeSnapshotUrls: 'https://i.gkd.li/i/18455760', //避免在activityIds为null时误触
         },
         {
           key: 1,
@@ -105,11 +139,15 @@ export default defineGkdApp({
         },
         {
           key: 2,
+          fastQuery: true,
           activityIds: [
             'com.jingdong.app.mall.MainFrameActivity',
             'com.jd.lib.jshop.jshop.JshopMainShopActivity',
           ],
-          excludeMatches: 'ImageView[desc="关闭页面"] - [text="优惠券"]',
+          excludeMatches: [
+            'ImageView[desc="关闭页面"] - [text="优惠券"]',
+            'TextView[text="退换/售后"][id=null]',
+          ],
           matches:
             '[desc="关闭页面" || desc="关闭按钮"][clickable=true][visibleToUser=true]',
           snapshotUrls: [
@@ -118,7 +156,20 @@ export default defineGkdApp({
             'https://i.gkd.li/i/13336847', // 增加excludeMatches: 'ImageView[desc="关闭页面"] - [text="优惠券"]', 避免在该快照误触
             'https://i.gkd.li/i/15416926',
             'https://i.gkd.li/i/15862131',
+            'https://i.gkd.li/i/16818580', // 增加excludeMatches: 'TextView[text="退换/售后"]', 避免在刚刚打开该快照页面时误触（此时activityId并未改变）
           ],
+        },
+        {
+          key: 3,
+          fastQuery: true,
+          matchTime: 10000,
+          actionMaximum: 1,
+          resetMatch: 'app',
+          action: 'back',
+          activityIds: '.MainFrameActivity',
+          matches: '[text^="惊喜福利来袭"][visibleToUser=true]',
+          exampleUrls: 'https://e.gkd.li/580d3cb5-503e-47a9-ba88-056e91c2f084',
+          snapshotUrls: 'https://i.gkd.li/i/17974166',
         },
       ],
     },
@@ -197,6 +248,20 @@ export default defineGkdApp({
           activityIds: 'com.jd.lib.productdetail.ProductDetailActivity',
           matches: '[text="继续逛"]',
           snapshotUrls: 'https://i.gkd.li/i/15047243',
+        },
+      ],
+    },
+    {
+      key: 14,
+      name: '功能类-支付订单后点击[完成]',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds:
+            '.bundle.cashierfinish.view.CashierUserContentCompleteActivity',
+          matches: '[vid="lib_cashier_finish_back_page_text"]',
+          exampleUrls: 'https://e.gkd.li/ab886df0-2b34-4804-be7d-742a06fadda9',
+          snapshotUrls: 'https://i.gkd.li/i/17358003',
         },
       ],
     },
