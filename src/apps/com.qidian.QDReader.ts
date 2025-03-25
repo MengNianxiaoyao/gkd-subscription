@@ -149,20 +149,19 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 13,
-      name: '功能类-自动点击"我知道了"',
-      desc: '福利中心看视频后获得奖励，自动点击"我知道了"',
-      matchTime: 10000,
-      fastQuery: true,
-      activityIds: 'com.qidian.QDReader.ui.activity.QDBrowserActivity',
-      rules: {
-        action: 'clickNode',
-        matches:
-          '@View[desc="我知道了"][clickable=true] <<n [id="com.qidian.QDReader:id/webViewContainer"]',
-      },
-      snapshotUrls: 'https://i.gkd.li/i/13606901',
-    },
+    // {
+    //   key: 13,
+    //   name: '功能类-自动点击"我知道了"',
+    //   desc: '福利中心看视频后获得奖励，自动点击"我知道了"',
+    //   matchTime: 10000,
+    //   activityIds: 'com.qidian.QDReader.ui.activity.QDBrowserActivity',
+    //   rules: {
+    //     action: 'clickNode',
+    //     matches:
+    //       '@TextView[text="知道了"][clickable=true] <<n View <<n WebView < FrameLayout < [vid="webViewContainer"]',
+    //   },
+    //   snapshotUrls: 'https://i.gkd.li/i/13606901',
+    // },
     {
       key: 14,
       name: '功能类-移动网络下自动点击播放视频',
@@ -182,14 +181,12 @@ export default defineGkdApp({
     },
     {
       key: 15,
-      name: '功能类-自动点击"看视频"',
-      desc: '福利中心自动点击"看视频"',
-      fastQuery: true,
-      matchTime: 10000,
+      name: '功能类-自动点击"看视频"和"知道了"',
+      desc: '福利中心自动点击"看视频"和"知道了"',
       activityIds: 'com.qidian.QDReader.ui.activity.QDBrowserActivity',
       rules: {
         action: 'clickNode',
-        matches: '@TextView[text="看视频"][clickable=true] <<n [id="com.qidian.QDReader:id/webViewContainer"]',
+        matches: '@TextView[text="看视频"||text="知道了"][clickable=true] <<n View <<n WebView < FrameLayout < [vid="webViewContainer"]',
       },
     },
   ],
