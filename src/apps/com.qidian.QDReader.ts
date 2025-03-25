@@ -186,7 +186,8 @@ export default defineGkdApp({
       activityIds: 'com.qidian.QDReader.ui.activity.QDBrowserActivity',
       rules: {
         action: 'clickNode',
-        matches: '@TextView[text="看视频"||text="知道了"][clickable=true] <<n View <<n WebView < FrameLayout < [vid="webViewContainer"]',
+        matches:
+          '@TextView[text="看视频"||text="知道了"][clickable=true] <<n View <<n WebView < FrameLayout < [vid="webViewContainer"]',
       },
     },
   ],
