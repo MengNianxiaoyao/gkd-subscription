@@ -23,6 +23,7 @@ export default defineGkdApp({
     {
       key: 2,
       name: '功能类-文件即将过期提示',
+      enable: false,
       fastQuery: true,
       matchTime: 10000,
       actionMaximum: 1,
@@ -40,6 +41,7 @@ export default defineGkdApp({
     {
       key: 3,
       name: '功能类-自动点击原图',
+      enable: false,
       fastQuery: true,
       actionMaximum: 1,
       activityIds:
@@ -59,6 +61,7 @@ export default defineGkdApp({
     {
       key: 4,
       name: '更新提示',
+      enable: false,
       fastQuery: true,
       matchTime: 10000,
       actionMaximum: 1,
@@ -79,6 +82,7 @@ export default defineGkdApp({
     {
       key: 5,
       name: '功能类-扫码自动登录桌面版',
+      enable: false,
       fastQuery: true,
       matchTime: 10000,
       actionMaximum: 1,

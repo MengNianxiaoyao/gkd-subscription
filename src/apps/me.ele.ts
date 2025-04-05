@@ -5,31 +5,10 @@ export default defineGkdApp({
   name: '饿了么',
   groups: [
     {
-      key: 1,
-      name: '更新提示',
-      fastQuery: true,
-      // matchTime: 10000, 部分更新提示不在10s内
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: [
-            'com.afollestad.materialdialogs.MaterialDialog',
-            '.application.ui.Launcher.LauncherActivity',
-          ],
-          matches: ['[text*="更新应用版本"]', '[text="取消"]'],
-          exampleUrls: 'https://e.gkd.li/7a0ade81-d2f3-4174-ba6e-9976b8e7ecf5',
-          snapshotUrls: [
-            'https://i.gkd.li/i/12650280',
-            'https://i.gkd.li/i/13206819',
-            'https://i.gkd.li/i/18096620',
-          ],
-        },
-      ],
-    },
-    {
       key: 2,
       name: '全屏广告-红包弹窗',
+      desc: '关闭各类红包弹窗广告',
+      enable: false,
       rules: [
         {
           key: 0,
@@ -71,7 +50,6 @@ export default defineGkdApp({
           fastQuery: true,
           matches:
             '@ViewGroup[index=2][clickable=true][childCount=0][index=parent.childCount.minus(1)] <3 ViewGroup[childCount=3] < ViewGroup[childCount=1] < ViewGroup[vid="id_magex_mist_view"]',
-          exampleUrls: 'https://e.gkd.li/a933d63b-14b2-4c91-bdd9-0ba578da6bff',
           snapshotUrls: 'https://i.gkd.li/i/14472929',
           excludeSnapshotUrls: [
             'https://i.gkd.li/i/16346727', // 误触 add [childCount=0]
@@ -83,6 +61,8 @@ export default defineGkdApp({
     {
       key: 4,
       name: '全屏广告-活动弹窗',
+      desc: '关闭各类全屏活动弹窗广告',
+      enable: false,
       fastQuery: true,
       rules: [
         {
@@ -134,6 +114,8 @@ export default defineGkdApp({
     {
       key: 5,
       name: '全屏广告-付款后弹窗广告',
+      desc: '关闭支付完成后的广告弹窗',
+      enable: false,
       rules: [
         {
           fastQuery: true,
@@ -147,6 +129,8 @@ export default defineGkdApp({
     {
       key: 6,
       name: '全屏广告-吃货卡续费弹窗',
+      desc: '关闭吃货卡到期续费提示弹窗',
+      enable: false,
       rules: [
         {
           fastQuery: true,
@@ -160,6 +144,7 @@ export default defineGkdApp({
     {
       key: 7,
       name: '局部广告-首页底部浮窗广告',
+      desc: '关闭首页底部的悬浮广告',
       rules: [
         {
           key: 0,
@@ -175,67 +160,7 @@ export default defineGkdApp({
           fastQuery: true,
           activityIds: '.application.ui.Launcher.LauncherActivity',
           matches: '[vid="iv_close"][visibleToUser=true]',
-          exampleUrls: 'https://e.gkd.li/f706b801-44ee-4009-8082-75c9d4139065',
           snapshotUrls: 'https://i.gkd.li/i/17321305',
-        },
-      ],
-    },
-    {
-      key: 8,
-      name: '权限提示-定位权限',
-      desc: '点击关闭',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      actionMaximumKey: 0,
-      activityIds: 'me.ele.application.ui.Launcher.LauncherActivity',
-      rules: [
-        {
-          key: 0,
-          matches: '[text="去开启"] + [id="me.ele:id/close"]',
-          snapshotUrls: 'https://i.gkd.li/i/13710588',
-        },
-        {
-          key: 1,
-          matches: '[text="去开启"] + [id="me.ele:id/close_tips"]',
-          snapshotUrls: 'https://i.gkd.li/i/13710585',
-        },
-      ],
-    },
-    {
-      key: 9,
-      name: '通知提示-获取订单信息通知',
-      desc: '点击关闭',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.message.ui.PushMessageGuideActivity',
-          matches:
-            '@View[visibleToUser=true] < * <2 [id="me.ele:id/frame_bottom_bg"]',
-          snapshotUrls: 'https://i.gkd.li/i/13931205',
-        },
-      ],
-    },
-    {
-      key: 10,
-      name: '评价提示-底部调研邀请卡片',
-      desc: '点击关闭',
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          fastQuery: true,
-          activityIds: 'me.ele.foodchannel.page.WMChannelNativeActivity',
-          matches: [
-            '[text*="小调研"]',
-            '[vid="iv_cancel"][visibleToUser=true]',
-          ],
-          exampleUrls:
-            'https://m.gkd.li/57941037/350d8f4d-8ab0-4572-8ff0-450ab4729d53',
-          snapshotUrls: 'https://i.gkd.li/i/14630370',
         },
       ],
     },

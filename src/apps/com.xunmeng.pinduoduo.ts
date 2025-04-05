@@ -7,6 +7,8 @@ export default defineGkdApp({
     {
       key: 1,
       name: '更新提示',
+      desc: '关闭应用更新提示弹窗',
+      enable: false,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
@@ -22,6 +24,8 @@ export default defineGkdApp({
     {
       key: 2,
       name: '全屏广告-弹窗广告',
+      desc: '关闭各类全屏弹窗广告，包括活动弹窗、红包弹窗等',
+      enable: false,
       rules: [
         {
           key: 3,
@@ -86,7 +90,6 @@ export default defineGkdApp({
           ],
           matches:
             'ImageView[childCount=0] < ViewGroup[childCount=1] < @ViewGroup[childCount=1][clickable=true][visibleToUser=true] < ViewGroup <(1,2) ViewGroup < ViewGroup < FrameLayout < FrameLayout < FrameLayout < FrameLayout < FrameLayout <(1,2,3) [parent=null]',
-          exampleUrls: 'https://e.gkd.li/f74b5f58-e518-4e33-bbb4-0bf28e2b79d8',
           snapshotUrls: [
             'https://i.gkd.li/i/17528782',
             'https://i.gkd.li/i/17655498',
@@ -101,7 +104,6 @@ export default defineGkdApp({
           activityIds: '.ui.activity.HomeActivity',
           matches:
             '@ViewGroup[childCount=1][clickable=true] < ViewGroup[childCount=2] < [childCount=1] < [childCount=1] < [childCount=1] < [childCount=1] < [childCount=1] < [childCount=1] < [childCount=1] <2 FrameLayout <2 [parent=null]',
-          exampleUrls: 'https://e.gkd.li/e5428072-9ee3-47e9-87ad-d8b47e24f173',
           snapshotUrls: 'https://i.gkd.li/i/17773799',
         },
         {
@@ -112,7 +114,6 @@ export default defineGkdApp({
           activityIds: '.ui.activity.HomeActivity',
           matches:
             '@ImageView[index=0][vid="pdd"][childCount=0][visibleToUser=true][width<120&&height<120] < RelativeLayout[childCount=2] < FrameLayout[childCount=1] < FrameLayout[childCount=1] < [parent=null]',
-          exampleUrls: 'https://e.gkd.li/64f35ab7-37e1-4060-aa91-468116a42cae',
           snapshotUrls: 'https://i.gkd.li/i/18375615',
         },
       ],
@@ -120,14 +121,13 @@ export default defineGkdApp({
     {
       key: 6,
       name: '局部广告-悬浮广告',
-      desc: '点击关闭',
+      desc: '关闭各种悬浮广告',
       activityIds: 'com.xunmeng.pinduoduo.ui.activity.HomeActivity',
       rules: [
         {
           key: 0,
           matches:
             '@TextView[id=null][clickable=true] + Image[id=null][text="webp"]',
-          exampleUrls: 'https://e.gkd.li/20f77125-b223-4d65-b61e-826871e0032b',
           snapshotUrls: 'https://i.gkd.li/i/12642058',
         },
         {
@@ -141,7 +141,6 @@ export default defineGkdApp({
           activityIds: 'com.xunmeng.pinduoduo.ui.activity.HomeActivity',
           matches:
             'RelativeLayout[childCount=2] > RelativeLayout[vid="pdd"] + @FrameLayout[childCount=1][clickable=true][visibleToUser=true][text=null][vid="pdd"] > ImageView[childCount=0][visibleToUser=true]',
-          exampleUrls: 'https://e.gkd.li/0f850878-2b6a-46c7-86aa-28329df0993c',
           snapshotUrls: 'https://i.gkd.li/i/15140800',
         },
       ],
@@ -155,7 +154,6 @@ export default defineGkdApp({
           fastQuery: true,
           activityIds: 'com.xunmeng.pinduoduo.activity.NewPageActivity',
           matches: '[vid="iv_float_window_close"]',
-          exampleUrls: 'https://e.gkd.li/f81a45e4-09b4-498f-be72-ca84cdd0db83',
           snapshotUrls: 'https://i.gkd.li/i/14549415',
         },
       ],
@@ -163,6 +161,8 @@ export default defineGkdApp({
     {
       key: 9,
       name: '功能类-多多视频每日自动签到',
+      desc: '自动点击签到按钮并关闭签到后的弹窗',
+      enable: false,
       fastQuery: true,
       matchTime: 10000,
       actionMaximum: 1,
@@ -192,6 +192,7 @@ export default defineGkdApp({
       key: 10,
       name: '全屏广告-多多视频划到广告自动跳过',
       desc: '点击返回自动刷新，从而跳过广告',
+      enable: false,
       fastQuery: true,
       activityIds: 'com.xunmeng.pinduoduo.ui.activity.HomeActivity',
       rules: [
@@ -216,6 +217,8 @@ export default defineGkdApp({
     {
       key: 11,
       name: '功能类-发送图片时自动勾选原图',
+      desc: '发送图片时自动勾选原图选项',
+      enable: false,
       fastQuery: true,
       rules: [
         {
@@ -233,6 +236,7 @@ export default defineGkdApp({
       key: 12,
       name: '全屏广告-下单后出现的弹窗',
       desc: '点击关闭',
+      enable: false,
       rules: [
         {
           key: 0,
@@ -252,24 +256,11 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 16,
-      name: '青少年模式',
-      desc: '点击[我知道了]',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.ui.activity.HomeActivity',
-          matches:
-            '[text="青少年模式"] < FrameLayout +5 ViewGroup [text="我知道了"]',
-          snapshotUrls: 'https://i.gkd.li/i/13809053',
-        },
-      ],
-    },
-    {
       key: 17,
       name: '权限提示-通知权限',
+      desc: '关闭通知权限申请弹窗',
+      enable: false,
+      ignoreGlobalGroupMatch: true,
       actionMaximum: 1,
       resetMatch: 'app',
       rules: [
@@ -308,6 +299,7 @@ export default defineGkdApp({
       key: 19,
       name: '全屏广告-[个性化推荐]弹窗',
       desc: '点击[取消]',
+      enable: false,
       fastQuery: true,
       actionMaximum: 1,
       resetMatch: 'app',
@@ -315,34 +307,21 @@ export default defineGkdApp({
         {
           activityIds: 'com.xunmeng.pinduoduo.ui.activity.HomeActivity',
           matches: ['[text="个性化推荐未开启"]', '[text="取消"]'],
-          exampleUrls: 'https://e.gkd.li/816070f2-035d-4702-87e3-441cca8b5430',
           snapshotUrls: 'https://i.gkd.li/i/14964851',
         },
       ],
     },
     {
       key: 20,
-      name: '其他-登录提现页面点击[跳过]',
+      name: '全屏广告-登录提现页面点击[跳过]',
+      desc: '自动点击登录提现页面的跳过按钮',
+      enable: false,
       rules: [
         {
           fastQuery: true,
           activityIds: '.login.LoginActivity',
           matches: ['[text="已获得现金"]', '[text="跳过"]'],
-          exampleUrls: 'https://e.gkd.li/4197b363-3492-4f87-a9dd-109da67bb3bf',
           snapshotUrls: 'https://i.gkd.li/i/17450614',
-        },
-      ],
-    },
-    {
-      key: 21,
-      name: '功能类-关闭截图后的弹窗',
-      rules: [
-        {
-          fastQuery: true,
-          action: 'back', // 点击取消会导致 MIUI 截图悬浮窗收起
-          activityIds: '.activity.NewPageActivity',
-          matches: '[text="搜索图片同款商品"][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/i/19340768',
         },
       ],
     },

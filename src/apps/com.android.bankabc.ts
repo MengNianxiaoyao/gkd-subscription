@@ -17,14 +17,11 @@ export default defineGkdApp({
         {
           key: 0,
           matches: '[id="com.android.bankabc:id/close"]',
-          exampleUrls:
-            'https://m.gkd.li/57941037/67cfc2f8-a108-4382-976a-0da7d13764e9',
           snapshotUrls: 'https://i.gkd.li/i/14179162',
         },
         {
           key: 1,
           matches: '[text*="跳过"][text.length<10][visibleToUser=true]',
-          exampleUrls: 'https://e.gkd.li/a5f6ec81-04f6-4678-b1d5-f2f326521945',
           snapshotUrls: 'https://i.gkd.li/i/17879768',
         },
       ],
@@ -32,6 +29,7 @@ export default defineGkdApp({
     {
       key: 2,
       name: '更新提示',
+      enable: false,
       fastQuery: true,
       matchTime: 10000,
       actionMaximum: 1,
@@ -61,23 +59,10 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 3,
-      name: '权限提示-定位权限',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.MainActivity',
-          matches: '[text="允许获取位置信息"] +n * > [text="取消"]',
-          snapshotUrls: 'https://i.gkd.li/i/14208572',
-        },
-      ],
-    },
-    {
       key: 4,
       name: '权限提示-通知权限',
+      enable: false,
+      ignoreGlobalGroupMatch: true,
       fastQuery: true,
       matchTime: 10000,
       actionMaximum: 1,

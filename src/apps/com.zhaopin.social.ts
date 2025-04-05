@@ -5,40 +5,23 @@ export default defineGkdApp({
   name: '智联招聘',
   groups: [
     {
-      key: 1,
-      name: '更新提示',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules:
-        '[id="com.zhaopin.social:id/update"] + [id="com.zhaopin.social:id/ignore"]',
-      snapshotUrls: ['https://i.gkd.li/i/12706186'],
-    },
-    {
       key: 2,
       name: '局部广告-我的页面卡片广告',
+      desc: '关闭我的页面中的卡片式广告',
       activityIds: 'com.zhaopin.social.homepage.ZSC_MainTabActivity',
-      rules: '[id="com.zhaopin.social:id/rl_banner_close"][clickable=true]',
-      snapshotUrls: ['https://i.gkd.li/i/12706181'],
+      rules:
+        '[id="com.zhaopin.social:id/rl_banner_close"][visibleToUser=true][clickable=true]',
+      snapshotUrls: ['https://i.gkd.li/import/12706181'],
     },
     {
       key: 3,
       name: '全屏广告-社区页面弹窗广告',
+      desc: '关闭社区页面弹出的全屏推广弹窗',
+      enable: false,
       activityIds: ['com.zhaopin.social.homepage.ZSC_MainTabActivity'],
       rules:
         'ImageView[clickable=true&&focusable=true] < FrameLayout + FrameLayout > ImageView[clickable=false&&focusable=false]',
-      snapshotUrls: 'https://i.gkd.li/i/13063442',
-    },
-    {
-      key: 4,
-      name: '权限提示-通知权限',
-      desc: '自动点击关闭',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      fastQuery: true,
-      rules: '[id="com.zhaopin.social:id/message_pushlayout_close"]',
-      snapshotUrls: 'https://i.gkd.li/i/13063427',
+      snapshotUrls: 'https://i.gkd.li/import/13063442',
     },
   ],
 });

@@ -7,7 +7,8 @@ export default defineGkdApp({
     {
       key: 10,
       name: '全屏广告-首页红包弹窗',
-      desc: '点击关闭',
+      desc: '关闭首页弹出的各类红包广告弹窗',
+      enable: false,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
@@ -35,7 +36,8 @@ export default defineGkdApp({
     {
       key: 11,
       name: '局部广告-首页左侧红包悬浮控件',
-      desc: '点击关闭',
+      desc: '关闭首页左侧悬浮的红包广告控件',
+      enable: false,
       activityIds: 'com.yxcorp.gifshow.HomeActivity',
       rules: [
         {
@@ -51,7 +53,8 @@ export default defineGkdApp({
     {
       key: 12,
       name: '功能类-推荐关注',
-      desc: '自动点击"关闭/隐藏"',
+      desc: '关闭各页面的推荐关注提示',
+      enable: false,
       activityIds: 'com.yxcorp.gifshow.HomeActivity',
       rules: [
         {
@@ -78,24 +81,10 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 13,
-      name: '评价提示',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: 'com.yxcorp.gifshow.HomeActivity',
-          matches: '@[vid="close"] +2 * > [text="喜欢就给个好评吧"]',
-          exampleUrls:
-            'https://m.gkd.li/57941037/da412e0f-47db-4cc0-8821-184c6ba42882',
-          snapshotUrls: 'https://i.gkd.li/i/14343547',
-        },
-      ],
-    },
-    {
       key: 14,
       name: '全屏广告-直播间广告',
+      desc: '关闭直播间的全屏广告',
+      enable: false,
       rules: [
         {
           fastQuery: true,
@@ -103,8 +92,6 @@ export default defineGkdApp({
           activityIds:
             'com.kuaishou.live.core.basic.activity.LiveSlideActivity',
           matches: '[visibleToUser=true][text="幸运奖池"] <<n [vid="webView"]',
-          exampleUrls:
-            'https://m.gkd.li/57941037/338df1c2-8789-435b-8970-c837b00fc0f5',
           snapshotUrls: 'https://i.gkd.li/i/15629334',
         },
       ],

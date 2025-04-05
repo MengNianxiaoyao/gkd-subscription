@@ -5,28 +5,10 @@ export default defineGkdApp({
   name: '中国联通',
   groups: [
     {
-      key: 1,
-      name: '权限提示',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: [
-            'com.sinovatech.unicom.basic.ui.activity.MainActivity',
-            'com.sinovatech.unicom.basic.ui.activity.WelcomeClient',
-          ],
-          matches: '[text="去开启"] - [vid="custom_dialog_cancel_button"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/13331268',
-            'https://i.gkd.li/i/14751210',
-          ],
-        },
-      ],
-    },
-    {
       key: 2,
       name: '更新提示',
+      desc: '关闭应用内的更新弹窗提示',
+      enable: false,
       fastQuery: true,
       matchTime: 10000,
       actionMaximum: 1,
@@ -43,6 +25,8 @@ export default defineGkdApp({
     {
       key: 3,
       name: '全屏广告-弹窗广告',
+      desc: '关闭各页面的全屏广告弹窗',
+      enable: false,
       fastQuery: true,
       matchTime: 10000,
       actionMaximum: 1,
@@ -71,7 +55,7 @@ export default defineGkdApp({
     {
       key: 4,
       name: '局部广告-首页右下角卡片悬浮窗',
-      desc: '点击关闭',
+      desc: '关闭首页右下角的卡片悬浮广告',
       rules: [
         {
           fastQuery: true,

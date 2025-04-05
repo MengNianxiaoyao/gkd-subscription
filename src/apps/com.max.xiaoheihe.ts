@@ -7,7 +7,8 @@ export default defineGkdApp({
     {
       key: 1,
       name: '功能类-签到成功弹窗',
-      desc: '返回关闭弹窗',
+      desc: '关闭签到成功提示弹窗',
+      enable: false,
       fastQuery: true,
       matchTime: 10000,
       actionMaximum: 1,
@@ -17,7 +18,7 @@ export default defineGkdApp({
           action: 'back',
           matches: '[text*="签到成功"][text.length<10]',
           snapshotUrls: [
-            'https://i.gkd.li/i/13421535',
+            'https://i.gkd.li/import/13421535',
             'https://i.gkd.li/i/15048252',
           ],
         },
@@ -26,7 +27,7 @@ export default defineGkdApp({
     {
       key: 2,
       name: '局部广告-卡片广告',
-      desc: '点击关闭',
+      desc: '关闭帖子底部的推荐关注卡片',
       rules: [
         {
           name: '收藏帖子后底部推荐关注卡片',
@@ -34,27 +35,26 @@ export default defineGkdApp({
           activityIds:
             'com.max.xiaoheihe.module.bbs.post.ui.activitys.WebNewsPostPageActivity',
           matches: '[vid="iv_notify_close"]',
-          exampleUrls:
-            'https://m.gkd.li/57941037/b7c25b6e-cc77-4bcc-a477-23b3de74c61f',
           snapshotUrls: 'https://i.gkd.li/i/14914139',
         },
       ],
     },
     {
-      key: 3,
-      name: '功能类-自动点击查看原图',
+      key: 10,
+      name: '功能类-自动查看原图',
+      desc: '浏览图片时自动切换至原图模式',
+      enable: false,
+      fastQuery: true,
+      activityIds: [
+        'com.max.xiaoheihe.module.bbs.post.ui.activitys.PicturePostPageActivity',
+        'com.max.xiaoheihe.module.bbs.post.ui.activitys.WebNewsPostPageActivity',
+      ],
       rules: [
         {
-          fastQuery: true,
-          activityIds: [
-            'com.max.xiaoheihe.module.bbs.post.ui.activitys.WebNewsPostPageActivity',
-            '.module.bbs.post.ui.activitys.PicturePostPageActivity',
-          ],
-          matches: '[text^="查看原图"][visibleToUser=true]',
-          exampleUrls: 'https://e.gkd.li/f7222b21-7037-4614-95ab-cff19ee15d38',
+          matches: '[vid="tv_original"][visibleToUser=true]',
           snapshotUrls: [
-            'https://i.gkd.li/i/16646832',
-            'https://i.gkd.li/i/17574462',
+            'https://i.gkd.li/i/16028159',
+            'https://i.gkd.li/i/16156806',
           ],
         },
       ],

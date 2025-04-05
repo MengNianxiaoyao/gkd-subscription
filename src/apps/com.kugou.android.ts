@@ -7,6 +7,7 @@ export default defineGkdApp({
     {
       key: 0,
       name: '开屏广告',
+      desc: '点击跳过应用启动时的开屏广告',
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
@@ -29,8 +30,6 @@ export default defineGkdApp({
             top: 'width * 0.3906',
           },
           matches: '[desc="createSkipView"]',
-          exampleUrls:
-            'https://m.gkd.li/57941037/fc4a38c9-20aa-4cfc-9a92-c20e9194418b',
           snapshotUrls: 'https://i.gkd.li/i/14609953',
         },
       ],
@@ -38,6 +37,7 @@ export default defineGkdApp({
     {
       key: 1,
       name: '局部广告-卡片广告',
+      desc: '关闭播放页面的各种卡片广告',
       matchRoot: true,
       rules: [
         {
@@ -89,7 +89,6 @@ export default defineGkdApp({
           activityIds: '.app.MediaActivity',
           matches:
             '@ImageButton[clickable=true][childCount=0][visibleToUser=true] - LinearLayout > [text="广告"]',
-          exampleUrls: 'https://e.gkd.li/fcb3e4d2-73bf-49b5-9157-08cac0c11584',
           snapshotUrls: 'https://i.gkd.li/i/18207953',
         },
       ],
@@ -97,6 +96,8 @@ export default defineGkdApp({
     {
       key: 2,
       name: '全屏广告-VIP弹窗',
+      desc: '关闭VIP会员相关弹窗',
+      enable: false,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
@@ -106,7 +107,6 @@ export default defineGkdApp({
           fastQuery: true,
           matches:
             '@ImageView[clickable=true][visibleToUser=true] + RelativeLayout >2 [text*="豪华VIP已过期"]',
-          exampleUrls: 'https://e.gkd.li/cab683ac-801d-4089-8b5d-548954761c08',
           snapshotUrls: 'https://i.gkd.li/i/13548005',
         },
         {
@@ -114,7 +114,6 @@ export default defineGkdApp({
           activityIds: '.app.MediaActivity',
           matches:
             'WebView[text="开通会员"] >7 @TextView[clickable=true][childCount=0] +2 [text="当前歌曲支持蝰蛇全景声"]',
-          exampleUrls: 'https://e.gkd.li/86e4a797-5366-4579-81ee-bc5354e95568',
           snapshotUrls: 'https://i.gkd.li/i/17177377',
         },
         {
@@ -122,7 +121,6 @@ export default defineGkdApp({
           activityIds: '.app.MediaActivity',
           matches:
             '@[text="退出页面"][visibleToUser=true] + View > [text="你的会员已过期"]',
-          exampleUrls: 'https://e.gkd.li/f32ed6b7-e396-45a5-9849-f8a8ae99cb99',
           snapshotUrls: 'https://i.gkd.li/i/18070974',
         },
       ],
@@ -130,13 +128,12 @@ export default defineGkdApp({
     {
       key: 3,
       name: '全屏广告-[看广告免费听歌]弹窗',
-      desc: '点击关闭',
+      desc: '点击关闭看广告免费听歌的弹窗',
+      enable: false,
       rules: [
         {
           activityIds: 'com.kugou.android.app.MediaActivity',
           matches: '[desc="看广告，免费听会员歌"] +2 [desc="关闭"]',
-          exampleUrls:
-            'https://m.gkd.li/57941037/dfd70c7c-3200-493e-9afa-404de5fcd2ff',
           snapshotUrls: 'https://i.gkd.li/i/14722104',
         },
       ],
@@ -144,7 +141,8 @@ export default defineGkdApp({
     {
       key: 4,
       name: '全屏广告-[开启音乐DJ]弹窗',
-      desc: '勾选[今日不再提醒]-点击[关闭]',
+      desc: '勾选[今日不再提醒]并关闭音乐DJ弹窗',
+      enable: false,
       fastQuery: true,
       matchTime: 10000,
       actionMaximum: 1,
@@ -153,16 +151,12 @@ export default defineGkdApp({
         {
           key: 0,
           matches: '@[checked=false] + [text="今日不再提醒"]',
-          exampleUrls:
-            'https://m.gkd.li/57941037/69f564e9-464a-488b-a181-f1085176b49f',
           snapshotUrls: 'https://i.gkd.li/i/14722457',
         },
         {
           preKeys: [0],
           key: 1,
           matches: '@ImageView - * > [text="今日不再提醒"]',
-          exampleUrls:
-            'https://m.gkd.li/57941037/69f564e9-464a-488b-a181-f1085176b49f',
           snapshotUrls: 'https://i.gkd.li/i/14722457',
         },
       ],
@@ -170,7 +164,7 @@ export default defineGkdApp({
     {
       key: 5,
       name: '局部广告-悬浮广告',
-      desc: '点击关闭',
+      desc: '关闭各界面的悬浮广告',
       rules: [
         {
           matchTime: 10000,
@@ -179,7 +173,6 @@ export default defineGkdApp({
           activityIds: 'com.kugou.android.app.MediaActivity',
           matches:
             'ViewGroup > FrameLayout >2 FrameLayout[childCount=2] > FrameLayout > FrameLayout[childCount=2] > ImageView[index=1][clickable=true][childCount=0][width<80&&height<80]',
-          exampleUrls: 'https://e.gkd.li/2b240676-4dac-4375-b238-2d570962efd1',
           snapshotUrls: [
             'https://i.gkd.li/i/17004903',
             'https://i.gkd.li/i/18057265',
@@ -190,7 +183,8 @@ export default defineGkdApp({
     {
       key: 6,
       name: '全屏广告-签到弹窗',
-      desc: '点击关闭',
+      desc: '关闭金币中心的签到弹窗',
+      enable: false,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
@@ -203,7 +197,6 @@ export default defineGkdApp({
           activityIds: '.app.flexowebview.uploadvideo.ContributeWebActivity',
           matches:
             '@FrameLayout > WebView > WebView[text="金币中心"] > View[id="body"] > TextView[id="root"][childCount=0]',
-          exampleUrls: 'https://e.gkd.li/f2a44161-d0a2-421d-a5e7-26fcf005daf2',
           snapshotUrls: 'https://i.gkd.li/i/18071067',
         },
       ],
@@ -211,6 +204,8 @@ export default defineGkdApp({
     {
       key: 7,
       name: '功能类-自动关闭速听模式',
+      desc: '自动关闭播放界面的速听模式',
+      enable: false,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
@@ -221,14 +216,12 @@ export default defineGkdApp({
           fastQuery: true,
           matches:
             '@[desc="关闭"][visibleToUser=true] < RelativeLayout < RelativeLayout + FrameLayout >3 ViewGroup[desc="速听卡片"] >2 [text="喜欢"][visibleToUser=true]',
-          exampleUrls: 'https://e.gkd.li/e24dda6a-c5fa-4c93-9026-cda7a4d9e205',
           snapshotUrls: 'https://i.gkd.li/i/18164732',
         },
         {
           preKeys: [1],
           matches:
             '@FrameLayout[clickable=true][visibleToUser=true] < RelativeLayout - [desc="暂停"][visibleToUser=true]',
-          exampleUrls: 'https://e.gkd.li/ffb25ec5-35b0-47ff-9387-54c757c90f29',
           snapshotUrls: 'https://i.gkd.li/i/18165065',
         },
       ],

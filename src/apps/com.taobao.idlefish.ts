@@ -6,105 +6,86 @@ export default defineGkdApp({
   groups: [
     {
       key: 1,
-      name: '权限提示-通知权限',
-      matchTime: 10000,
+      name: '通知提示',
+      desc: '关闭消息推送开启提示',
+      enable: false,
       actionMaximum: 1,
       resetMatch: 'app',
-      rules: [
-        {
-          activityIds:
-            'com.idlefish.flutterbridge.flutterboost.boost.FishFlutterBoostTransparencyActivity',
-          matches:
-            '@ImageView[clickable=true][desc=null] < [desc^="开启系统通知"]',
-          snapshotUrls: 'https://i.gkd.li/i/13538351',
-        },
+      activityIds: [
+        'com.idlefish.flutterbridge.flutterboost.boost.FishFlutterBoostTransparencyActivity',
+        '.maincontainer.activity.MainActivity',
       ],
-    },
-    {
-      key: 2,
-      name: '权限提示-手机信息权限',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.maincontainer.activity.MainActivity',
-          matches: ['[text*="手机信息权限"]', '[text="取消"]'],
-          exampleUrls: 'https://e.gkd.li/81e3e4d8-f297-4476-b22c-73f0b97879ee',
-          snapshotUrls: 'https://i.gkd.li/i/13620277',
-        },
-      ],
-    },
-    {
-      key: 3,
-      name: '更新提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.maincontainer.activity.MainActivity',
-          matches: '[text="立即升级"] -2 [text="暂不升级"]',
-          snapshotUrls: 'https://i.gkd.li/i/13832272',
-        },
-      ],
+      rules:
+        '[desc^="开启系统通知"||desc^="开启消息通知"] > ImageView[clickable=true][desc=null]',
+      snapshotUrls: 'https://i.gkd.li/import/13538351',
     },
     {
       key: 4,
       name: '全屏广告-红包弹窗',
-      desc: '点击关闭',
-      matchTime: 10000,
+      desc: '关闭首页红包弹窗广告',
+      enable: false,
       actionMaximum: 1,
       resetMatch: 'app',
-      rules: [
-        {
-          key: 0,
-          activityIds:
-            'com.taobao.idlefish.maincontainer.activity.MainActivity',
-          matches:
-            'WebView[text="Rax App"] > [id="root"] >6 View[index=2][clickable=true]',
-          snapshotUrls: 'https://i.gkd.li/i/14551046',
-        },
-      ],
+      activityIds: 'com.taobao.idlefish.maincontainer.activity.MainActivity',
+      rules:
+        'WebView[text="Rax App"] > [id="root"] >6 View[index=2][clickable=true]',
+      snapshotUrls: 'https://i.gkd.li/i/14551046',
     },
     {
       key: 5,
-      name: '分段广告-搜索结果页广告',
+      name: '分段广告-信息流广告',
+      desc: '通过长按然后点击关闭按钮来移除信息流中的广告',
+      enable: false,
+      activityIds:
+        'com.idlefish.flutterbridge.flutterboost.boost.FishFlutterBoostActivity',
       rules: [
         {
           key: 0,
-          action: 'longClick',
-          activityIds:
-            'com.idlefish.flutterbridge.flutterboost.boost.FishFlutterBoostActivity',
-          excludeMatches: '@[clickable=true] > [desc^="反馈成功"]',
           matches: '@[clickable=true] > [desc$="广告"]',
-          snapshotUrls: 'https://i.gkd.li/i/14723597',
-          excludeSnapshotUrls: 'https://i.gkd.li/i/14723718',
+          excludeMatches: '@[clickable=true] > [desc^="反馈成功"]',
+          action: 'longClick',
+          snapshotUrls: [
+            'https://i.gkd.li/i/14723597',
+            'https://i.gkd.li/i/14723718', // excludeMatches
+          ],
         },
         {
-          preKeys: [0],
           key: 1,
-          activityIds:
-            'com.idlefish.flutterbridge.flutterboost.boost.FishFlutterBoostActivity',
+          preKeys: 0,
           matches:
-            '[desc^="不喜欢该商品"] > ImageView[index=1][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/i/14723632',
+            'View[childCount=6] > ImageView[index=1][visibleToUser=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/14723632',
+            'https://i.gkd.li/i/16486792',
+          ],
         },
       ],
     },
     {
       key: 6,
-      name: '功能类-自动点击[查看原图]',
+      name: '功能类-自动查看原图',
+      desc: '浏览图片时自动切换至原图模式',
+      enable: false,
+      activityIds:
+        'com.idlefish.flutterbridge.flutterboost.boost.FishFlutterBoostActivity',
+      rules: [
+        {
+          matches: '[desc="查看原图"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/15463399',
+        },
+      ],
+    },
+    {
+      key: 7,
+      name: '功能类-自动选中发送原图',
+      desc: '图片和视频选择器-自动选中底部中间的发送原图',
+      actionMaximum: 1,
       rules: [
         {
           activityIds:
             'com.idlefish.flutterbridge.flutterboost.boost.FishFlutterBoostActivity',
-          matches: '[desc="查看原图"][visibleToUser=true]',
-          exampleUrls:
-            'https://m.gkd.li/57941037/12b60303-4fb8-4786-b636-4efef10f3d78',
-          snapshotUrls: 'https://i.gkd.li/i/15463399',
+          matches: 'View[childCount=2] > @View[clickable=true] + [desc="原图"]',
+          snapshotUrls: 'https://i.gkd.li/i/18824808',
         },
       ],
     },
