@@ -22,7 +22,7 @@ export default defineGkdApp({
         {
           key: 0,
           matches:
-            '@[(name$=".Image"&&text.length=0)||((text^="暂不升级"||text^="放弃升级")||text="关闭")][visibleToUser=true][desc.length=null] <<n * <n * > * >n [((text^="同意")&&((text*="协议并"||text*="升级并")))&&(text$="确认交易"||text$="升级"||text$="开通"||text$="刷脸验证"||text$="付款")||text="确认"||text="立即领取"][visibleToUser=true]',
+            '@[(name$=".Image"&&text.length=0)||((text^="暂不升级"||text^="放弃升级")||text="关闭")][visibleToUser=true][desc.length=null] <<n * <n * > * >n [((text^="同意")&&((text*="协议并"||text*="升级并")))&&(text$="确认交易"||text$="升级"||text$="开通"||text$="刷脸验证"||text$="付款")||text="确认"||text="立即领取"]',
           snapshotUrls: [
             'https://i.gkd.li/import/12737055', //com.alipay.mobile.nebulax.integration.mpaas.activity.NebulaActivity$Main
             'https://i.gkd.li/import/13915022',
@@ -41,10 +41,7 @@ export default defineGkdApp({
             'https://i.gkd.li/i/14893122',
             'https://i.gkd.li/i/19449399',
           ],
-          excludeSnapshotUrls: [
-            'https://i.gkd.li/i/19478718',
-            'https://i.gkd.li/i/19562031',
-          ],
+          excludeSnapshotUrls: ['https://i.gkd.li/i/19478718'],
         },
       ],
     },
@@ -249,6 +246,24 @@ export default defineGkdApp({
           matches:
             '@[text*="跳过"] + [visibleToUser=true][text^="账单分期还"] <<n [id="com.alipay.mobile.nebula:id/h5_pc_container"]',
           snapshotUrls: 'https://i.gkd.li/i/18409779',
+        },
+      ],
+    },
+    {
+      key: 17,
+      name: '功能类-自动授权登录',
+      desc: '自动点击登录确认',
+      enable: false,
+      rules: [
+        {
+          fastQuery: true,
+          actionMaximum: 1,
+          action: 'clickCenter', // clickNode可能无效
+          activityIds:
+            'com.alipay.mobile.nebulax.xriver.activity.XRiverActivity',
+          matches:
+            '[text="支付宝授权"] >3 @[childCount=0][text="同意"] <<n [id="com.alipay.mobile.nebula:id/h5_pc_container"]',
+          snapshotUrls: 'https://i.gkd.li/i/17376764',
         },
       ],
     },

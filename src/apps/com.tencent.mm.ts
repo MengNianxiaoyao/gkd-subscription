@@ -24,18 +24,18 @@ export default defineGkdApp({
             '[text="申请添加朋友"||text="申請添加朋友"]', // 添加好友页面
           ],
           matches:
-            'LinearLayout[visibleToUser=true][checked=false] >2 LinearLayout[visibleToUser=true][focusable=false] > TextView[text.length!=null] +1 LinearLayout[text.length=null&&desc=null&&clickable=true&&focusable=true]',
+            '@LinearLayout[text.length=null&&desc=null&&clickable=true&&focusable=true][index=parent.childCount.minus(1)] <2 LinearLayout[visibleToUser=true][focusable=false] ->1 LinearLayout[visibleToUser=true][checked=false] >2 LinearLayout[visibleToUser=true][focusable=false] >(1,2) TextView[text.length!=null]',
           snapshotUrls: [
             'https://i.gkd.li/import/12642588',
             'https://i.gkd.li/import/12888129', // ImageView - TextView[text="广告"][id!=null][index=0]这个规则无法匹配该广告，需要删除[index=0]
             'https://i.gkd.li/import/12907641',
             'https://i.gkd.li/import/13000395',
-            'https://i.gkd.li/i/14647413',
-            'https://i.gkd.li/i/16568338',
-            'https://i.gkd.li/i/14647413',
             'https://i.gkd.li/import/14164508', // TextView[text.length!=null] +1 LinearLayout[text.length=null&&clickable=true&&focusable=true]
             'https://i.gkd.li/import/12905837', // 英文
             'https://i.gkd.li/import/13791200', // 繁体
+            'https://i.gkd.li/i/16568338',
+            'https://i.gkd.li/i/14647413',
+            'https://i.gkd.li/i/19633571',
           ],
           excludeSnapshotUrls: [
             'https://i.gkd.li/import/14193379', // 误触，用 LinearLayout[visibleToUser=true] 排除
@@ -86,6 +86,8 @@ export default defineGkdApp({
           snapshotUrls: [
             'https://i.gkd.li/import/12907642',
             'https://i.gkd.li/import/13926578',
+            'https://i.gkd.li/i/15531274',
+            'https://i.gkd.li/i/19633486',
             'https://i.gkd.li/i/14207480',
             'https://i.gkd.li/i/15137016',
           ],
@@ -358,6 +360,7 @@ export default defineGkdApp({
             'https://i.gkd.li/i/16987144', // 未选中
             'https://i.gkd.li/i/18413281',
             'https://i.gkd.li/i/14661734',
+            'https://i.gkd.li/i/19625049',
           ],
           excludeSnapshotUrls: [
             'https://i.gkd.li/i/16987141', // 已选中
@@ -374,7 +377,7 @@ export default defineGkdApp({
       fastQuery: true,
       activityIds: ['.ui.chatting.gallery.ImageGalleryUI', '.ui.LauncherUI'],
       rules: {
-        matches: ['[text^="查看原"][clickable=true][visibleToUser=true]'],
+        matches: ['[text^="查看"][clickable=true][visibleToUser=true]'],
       },
       snapshotUrls: [
         'https://i.gkd.li/import/13523031',
@@ -382,7 +385,7 @@ export default defineGkdApp({
         'https://i.gkd.li/i/16833732',
         'https://i.gkd.li/i/17698956',
         'https://i.gkd.li/i/19515095',
-        'https://i.gkd.li/i/19562003',
+        'https://i.gkd.li/i/19645122',
       ],
     },
     {
@@ -619,7 +622,7 @@ export default defineGkdApp({
         {
           fastQuery: true,
           activityIds: '.ui.LauncherUI',
-          matches: '@[clickable=true] >(1,2) [text="转文字"]',
+          matches: '@[clickable=true] >(1,2) [text$="文字"&&text.length<=4]',
           snapshotUrls: [
             'https://i.gkd.li/i/14497389',
             'https://i.gkd.li/i/14538322',
