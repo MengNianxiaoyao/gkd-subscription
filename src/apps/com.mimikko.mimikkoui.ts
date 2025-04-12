@@ -14,7 +14,6 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
-          activityIds: 'com.mimikko.app.feature.home.ui.HomeMainActivity',
           matches:
             '@TextView[text="今日不再提醒"] < View <3 View < View < ViewGroup < [id="android:id/content"]',
           snapshotUrls: 'https://i.gkd.li/i/19642049',
