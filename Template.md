@@ -1,12 +1,12 @@
 # gkd-subscription
 
-## 声明
+## 说明
 
-来自 GKD 官方的订阅规则，个人使用
+本订阅规则为本人自用规则，已删除大量本人不使用的APP的规则，如影响使用，请自行更换其他规则订阅
 
-## 更新策略
+**🔍 查看 [适配 APP 列表](./dist/README.md)**
 
-删除大量本人不使用的APP的规则，如影响使用，请自行更换其他规则订阅
+**❗️ 此仓库仅接受[适配 APP 列表](./dist/README.md)内存在的 APP 与全局规则相关的维护或改进的 issues 或 PR 提交。**
 
 ## 订阅
 
@@ -20,16 +20,8 @@
 
 当前订阅文件已适配 --APP_SIZE-- 个 APP, 共有 --GROUP_SIZE-- 规则组, --GLOBALGROUP_SIZE-- 全局规则组
 
-查看 [适配 APP 列表](./dist/README.md)
+### 第三方规则
 
 查看 [第三方订阅规则汇总](https://github.com/Adpro-Team/GKD_THS_List) By [@adproqwq](https://github.com/adproqwq)
 
-### 第三方规则快速订阅
-
 使用 [GKDTool](https://rules.adproqwq.xyz)工具 By [@adproqwq](https://github.com/adproqwq) [GKDTool_Vue](https://github.com/adproqwq/GKDTool_Vue)
-
-## 贡献
-
-查看 [GKD基础使用、规则编写教程](https://github.com/Snoopy1866/blogs/tree/main/software/gkd) By [@Snoopy1866](https://github.com/Snoopy1866)
-
-如何编写订阅/贡献此项目 -> [CONTRIBUTING.md](./CONTRIBUTING.md)
