@@ -8,8 +8,7 @@ export default defineGkdApp({
       key: 2,
       name: '更新提示',
       desc: '点击[今日不再提醒]',
-      matchTime: 10000,
-      matchDelay: 3000,
+      matchTime: 9000,
       actionMaximum: 1,
       resetMatch: 'app',
       rules: [
