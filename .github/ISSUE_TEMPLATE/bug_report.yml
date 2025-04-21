@@ -35,9 +35,9 @@ body:
     id: feature-description
     attributes:
       label: |
-        请输入 误触/不执行规则 的界面的快照, 或者生成的快照链接。\
-        请注意: 不提供快照或者仅提供截图的 issue 将被自动关闭
+        请输入 误触/不执行规则 的界面的快照, 或者生成的快照链接
       description: |
+        请注意: 不提供快照或者仅提供截图的 issue 将被自动关闭 \
         快照是一个 zip 文件, 快照链接是类似 "https://i.gkd.li/import/XXXXXXXX" 或 "https://i.gkd.li/i/XXXXXXXX" 的文本。\
         如果你不了解什么是快照，请先阅读[ GKD 相关文档](https://gkd.li/guide/snapshot)
     validations:
