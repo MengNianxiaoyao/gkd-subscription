@@ -23,5 +23,3 @@
 ### 第三方规则
 
 查看 [第三方订阅规则汇总](https://github.com/Adpro-Team/GKD_THS_List) By [@adproqwq](https://github.com/adproqwq)
-
-使用 [GKDTool](https://rules.adproqwq.xyz)工具 By [@adproqwq](https://github.com/adproqwq) [GKDTool_Vue](https://github.com/adproqwq/GKDTool_Vue)
