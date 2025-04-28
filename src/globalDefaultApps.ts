@@ -4,10 +4,10 @@ const apps = await batchImportApps(`${import.meta.dirname}/apps`);
 
 // 全局规则黑名单
 export const blackListAppIDs: string[] = [
-// 在一些常见的应用中禁用
-'com.tencent.mm', // 微信
-'li.songe.gkd', // GKD
-'com.eg.android.AlipayGphone', //支付宝
+  // 在一些常见的应用中禁用
+  'com.tencent.mm', // 微信
+  'li.songe.gkd', // GKD
+  'com.eg.android.AlipayGphone', //支付宝
   'com.tencent.wetype', // 微信输入法
   'com.tmri.app.main', // 交管12123
   'com.github.android', // GitHub
@@ -20,12 +20,12 @@ export const blackListAppIDs: string[] = [
   'com.assistant.ongoingclear', // 固定通知隐藏
   'com.duokan.phone.remotecontroller', // 万能遥控
 
-// https://github.com/gkd-kit/gkd/issues/451
-'mark.via', // via浏览器
-'mark.via.gp', // via浏览器Google Play版
-'com.mmbox.xbrowser', // X浏览器
-'com.mmbox.xbrowser.pro', // X浏览器Google Play版
-'com.mycompany.app.soulbrowser', // soul浏览器
+  // https://github.com/gkd-kit/gkd/issues/451
+  'mark.via', // via浏览器
+  'mark.via.gp', // via浏览器Google Play版
+  'com.mmbox.xbrowser', // X浏览器
+  'com.mmbox.xbrowser.pro', // X浏览器Google Play版
+  'com.mycompany.app.soulbrowser', // soul浏览器
 ];
 
 // 如果某应用的规则中已有全局规则中的某一类的规则, 则在此应用禁用对应全局规则
