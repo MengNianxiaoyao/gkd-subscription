@@ -16,12 +16,10 @@
 | :----------------------------------------------------------: | :-----------------------------------------------: | :----------------------------------------------------------: |
 | [复制](https://registry.npmmirror.com/gkd-subscription/latest/files) | [复制](https://unpkg.com/gkd-subscription@latest) | [复制](https://cdn.jsdelivr.net/npm/gkd-subscription@latest/dist/gkd.json5) |
 
-当前版本: v51
+当前版本: v52
 
-当前订阅文件已适配 285 个 APP, 共有 854 规则组, 7 全局规则组
+当前订阅文件已适配 285 个 APP, 共有 855 规则组, 7 全局规则组
 
 ### 第三方规则
 
 查看 [第三方订阅规则汇总](https://github.com/Adpro-Team/GKD_THS_List) By [@adproqwq](https://github.com/adproqwq)
-
-使用 [GKDTool](https://rules.adproqwq.xyz)工具 By [@adproqwq](https://github.com/adproqwq) [GKDTool_Vue](https://github.com/adproqwq/GKDTool_Vue)
