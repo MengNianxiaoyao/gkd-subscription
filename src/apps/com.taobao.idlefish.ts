@@ -14,7 +14,6 @@ export default defineGkdApp({
       priorityTime: 10000,
       rules: [
         {
-          activityIds: 'com.taobao.fleamarket.home.activity.InitActivity',
           action: 'clickCenter',
           matches: '[vid="advert_close_text"]',
           snapshotUrls: 'https://i.gkd.li/i/19977732',
