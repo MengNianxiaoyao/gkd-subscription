@@ -5,6 +5,23 @@ export default defineGkdApp({
   name: '闲鱼',
   groups: [
     {
+      key: 0,
+      name: '开屏广告',
+      fastQuery: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      priorityTime: 10000,
+      rules: [
+        {
+          activityIds: 'com.taobao.fleamarket.home.activity.InitActivity',
+          action: 'clickCenter',
+          matches: '[vid="advert_close_text"]',
+          snapshotUrls: 'https://i.gkd.li/i/19977732',
+        },
+      ],
+    },
+    {
       key: 1,
       name: '通知提示',
       desc: '关闭消息推送开启提示',
