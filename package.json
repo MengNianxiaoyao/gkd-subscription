@@ -52,7 +52,7 @@
     "@types/node": "22.15.3",
     "@typescript-eslint/eslint-plugin": "8.31.1",
     "@typescript-eslint/parser": "8.31.1",
-    "eslint": "9.25.1",
+    "eslint": "9.26.0",
     "eslint-config-prettier": "10.1.2",
     "eslint-define-config": "2.1.0",
     "eslint-plugin-unused-imports": "4.1.4",
