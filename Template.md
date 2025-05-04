@@ -18,7 +18,7 @@
 
 当前版本: v--VERSION--
 
-当前订阅文件已适配 --APP_SIZE-- 个 APP, 共有 --GROUP_SIZE-- 规则组, --GLOBALGROUP_SIZE-- 全局规则组
+当前订阅文件已适配 --APP_SIZE-- 个 APP, 共有 --GROUP_SIZE-- 个规则组, --GLOBALGROUP_SIZE-- 个全局规则组
 
 ### 第三方规则
 
