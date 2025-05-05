@@ -253,8 +253,8 @@ export default defineGkdApp({
           fastQuery: true,
           matches: ['[text*="《"&&text*="协议"]', '[text*="暂不"]'],
           snapshotUrls: [
-             'https://i.gkd.li/i/19918601',
-             'https://i.gkd.li/i/20033983',
+            'https://i.gkd.li/i/19918601',
+            'https://i.gkd.li/i/20033983',
           ],
         },
       ],
