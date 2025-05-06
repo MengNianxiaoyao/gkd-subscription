@@ -8,14 +8,14 @@ export default defineGkdApp({
       key: 2,
       name: '更新提示',
       desc: '点击[今日不再提醒]',
+      matchDelay: 1000,
       matchTime: 9000,
-      actionMaximum: 2,
+      actionMaximum: 1,
       resetMatch: 'app',
       rules: [
         {
-          action: 'clickNode',
           matches:
-            '@TextView[text="今日不再提醒"] < View <3 View < View < ViewGroup < [id="android:id/content"]',
+            '@TextView < View <3 View < View < ViewGroup < [id="android:id/content"]',
           snapshotUrls: 'https://i.gkd.li/i/19642049',
         },
       ],
