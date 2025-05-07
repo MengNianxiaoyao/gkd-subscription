@@ -15,7 +15,7 @@ export default defineGkdApp({
       rules: [
         {
           matches:
-            '@TextView < View <3 View < View < ViewGroup < [id="android:id/content"]',
+            '@TextView[text="今日不再提醒"] < View <3 View < View < ViewGroup < [id="android:id/content"]',
           snapshotUrls: 'https://i.gkd.li/i/19642049',
         },
       ],
