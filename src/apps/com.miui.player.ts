@@ -78,10 +78,10 @@ export default defineGkdApp({
           key: 0,
           matches:
             '[id="com.miui.player:id/banner_image"] + [id="com.miui.player:id/close_banner"]',
-            snapshotUrls: [
-              'https://i.gkd.li/import/12700984',
-              'https://i.gkd.li/i/20420253',
-            ],
+          snapshotUrls: [
+            'https://i.gkd.li/import/12700984',
+            'https://i.gkd.li/i/20420253',
+          ],
         },
         {
           key: 1,
