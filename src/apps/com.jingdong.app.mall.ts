@@ -5,6 +5,21 @@ export default defineGkdApp({
   name: '京东',
   groups: [
     {
+      key: 0,
+      name: '开屏广告',
+      fastQuery: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      priorityTime: 10000,
+      rules: [
+        {
+          matches: '@TextView < [vid="b22"]',
+          snapshotUrls: 'https://i.gkd.li/i/20533156',
+        },
+      ],
+    },
+    {
       key: 2,
       name: '局部广告-悬浮广告',
       desc: '关闭首页悬浮广告、参与调研提示、红包弹窗和购物车砸金蛋',
