@@ -40,6 +40,9 @@ jobs:
         with:
           node-version: lts/*
           cache: pnpm
+        
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
 
       - run: pnpm run check
 
