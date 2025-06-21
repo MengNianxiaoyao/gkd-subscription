@@ -174,7 +174,7 @@ export default defineGkdApp({
       rules: {
         action: 'clickNode',
         matches:
-          '@TextView[text="看视频"||text="知道了"][clickable=true] <<n View <<n WebView < FrameLayout < [vid="webViewContainer"]',
+          '@TextView[text="看视频"||text="知道了"] <<n View <<n WebView < FrameLayout < [vid="webViewContainer"]',
       },
     },
   ],
