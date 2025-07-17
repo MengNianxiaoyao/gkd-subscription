@@ -18,7 +18,7 @@ export default defineGkdApp({
           matches: 'TextView[text*="跳过广告"]',
           snapshotUrls: [
             'https://i.gkd.li/i/19977732',
-            'https://i.gkd.li/i/21297609'
+            'https://i.gkd.li/i/21297609',
           ],
         },
       ],
