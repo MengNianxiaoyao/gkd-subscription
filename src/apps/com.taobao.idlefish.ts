@@ -15,8 +15,11 @@ export default defineGkdApp({
       rules: [
         {
           action: 'clickCenter',
-          matches: '[vid="advert_close_text"]',
-          snapshotUrls: 'https://i.gkd.li/i/19977732',
+          matches: 'TextView[text*="跳过广告"]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/19977732',
+            'https://i.gkd.li/i/21297609'
+          ],
         },
       ],
     },
