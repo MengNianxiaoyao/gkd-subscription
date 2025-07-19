@@ -53,7 +53,7 @@
     "@typescript-eslint/eslint-plugin": "8.37.0",
     "@typescript-eslint/parser": "8.37.0",
     "eslint": "9.31.0",
-    "eslint-config-prettier": "10.1.5",
+    "eslint-config-prettier": "10.1.8",
     "eslint-define-config": "2.1.0",
     "eslint-plugin-unused-imports": "4.1.4",
     "json5": "2.2.3",
