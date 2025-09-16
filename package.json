@@ -49,22 +49,22 @@
     "@gkd-kit/api": "0.7.3",
     "@gkd-kit/define": "0.0.1",
     "@gkd-kit/tools": "0.8.0",
-    "@types/node": "22.18.0",
-    "@typescript-eslint/eslint-plugin": "8.41.0",
-    "@typescript-eslint/parser": "8.41.0",
-    "eslint": "9.34.0",
+    "@types/node": "22.18.4",
+    "@typescript-eslint/eslint-plugin": "8.44.0",
+    "@typescript-eslint/parser": "8.44.0",
+    "eslint": "9.35.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-define-config": "2.1.0",
     "eslint-plugin-unused-imports": "4.2.0",
     "json5": "2.2.3",
-    "lint-staged": "16.1.5",
+    "lint-staged": "16.1.6",
     "prettier": "3.6.2",
     "simple-git-hooks": "2.13.1",
     "tsx": "4.20.5",
     "typescript": "5.9.2"
   },
   "volta": {
-    "node": "22.18.0"
+    "node": "22.19.0"
   },
   "author": "梦念逍遥",
   "license": "MIT",
