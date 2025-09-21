@@ -168,14 +168,15 @@ export default defineGkdApp({
     },
     {
       key: 15,
-      name: '功能类-自动点击"看视频"和"知道了"',
-      desc: '福利中心自动点击"看视频"和"知道了"',
-      activityIds: 'com.qidian.QDReader.ui.activity.QDBrowserActivity',
-      rules: {
-        action: 'clickNode',
-        matches:
-          '@TextView[text="看视频"||text="知道了"] <<n View <<n WebView < FrameLayout < [vid="webViewContainer"]',
-      },
+      name: '功能类-自动点击"知道了"',
+      desc: '福利中心自动点击"知道了"',
+      rules: [
+        {
+          activityIds: 'com.qidian.QDReader.ui.activity.QDBrowserActivity',
+          matches:
+            '@TextView[text*="知道了"] <<n View <<n WebView < FrameLayout < [vid="webViewContainer"]',
+        },
+      ],
     },
   ],
 });
