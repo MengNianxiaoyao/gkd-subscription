@@ -41,15 +41,15 @@
     "./dist"
   ],
   "dependencies": {
-    "@commitlint/cli": "20.0.0",
+    "@commitlint/cli": "20.1.0",
     "@commitlint/config-conventional": "20.0.0",
     "@commitlint/types": "20.0.0",
     "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.3.0",
-    "@gkd-kit/api": "0.7.3",
+    "@gkd-kit/api": "0.8.0",
     "@gkd-kit/define": "0.0.1",
     "@gkd-kit/tools": "0.8.0",
-    "@types/node": "22.18.7",
+    "@types/node": "22.18.8",
     "@typescript-eslint/eslint-plugin": "8.45.0",
     "@typescript-eslint/parser": "8.45.0",
     "eslint": "9.36.0",
@@ -61,7 +61,7 @@
     "prettier": "3.6.2",
     "simple-git-hooks": "2.13.1",
     "tsx": "4.20.6",
-    "typescript": "5.9.2"
+    "typescript": "5.9.3"
   },
   "volta": {
     "node": "22.20.0"
