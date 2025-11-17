@@ -177,5 +177,28 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 16,
+      name: '每日福利-自动看广告',
+      desc: '点击去完成',
+      rules: [
+        {
+          actionCd: 1500,
+          // anyMatches: [
+          //   '[text="激励任务" || text^="做任务" || text^="完成"] < * + [text="去完成"][visibleToUser=true]', // 422
+          //   '[id="video"] >(1,2) [text="激励任务" || text^="做任务" || text*="完成"] +(2,3,4) [text="去完成"][visibleToUser=true]', // 420,428
+          // ],
+          matches: '[id="video"] >(1,2) [text="去完成"][visibleToUser=true]',
+          fastQuery: false,
+          snapshotUrls: [
+            'https://i.gkd.li/i/23290942',
+            'https://i.gkd.li/i/23561866',
+            'https://i.gkd.li/i/23561912',
+          ],
+          excludeSnapshotUrls: 'https://i.gkd.li/i/23562885',
+          activityIds: 'com.qidian.QDReader.ui.activity.QDBrowserActivity',
+        },
+      ],
+    }
   ],
 });
