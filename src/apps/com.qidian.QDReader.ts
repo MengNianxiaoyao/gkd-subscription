@@ -199,6 +199,6 @@ export default defineGkdApp({
           excludeSnapshotUrls: 'https://i.gkd.li/i/23562885',
         },
       ],
-    }
+    },
   ],
 });
