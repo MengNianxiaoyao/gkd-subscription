@@ -179,10 +179,11 @@ export default defineGkdApp({
     },
     {
       key: 16,
-      name: '每日福利-自动看广告',
+      name: '功能类-自动看广告',
       desc: '点击去完成',
       rules: [
         {
+          activityIds: 'com.qidian.QDReader.ui.activity.QDBrowserActivity',
           actionCd: 1500,
           // anyMatches: [
           //   '[text="激励任务" || text^="做任务" || text^="完成"] < * + [text="去完成"][visibleToUser=true]', // 422
@@ -196,7 +197,6 @@ export default defineGkdApp({
             'https://i.gkd.li/i/23561912',
           ],
           excludeSnapshotUrls: 'https://i.gkd.li/i/23562885',
-          activityIds: 'com.qidian.QDReader.ui.activity.QDBrowserActivity',
         },
       ],
     }
