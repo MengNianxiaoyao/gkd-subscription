@@ -23,7 +23,7 @@ export default defineGkdApp({
           snapshotUrls: [
             'https://i.gkd.li/i/13093155',
             'https://i.gkd.li/i/13207731',
-            ],
+          ],
           excludeSnapshotUrls: [
             'https://i.gkd.li/i/13217807', // 避免在聊天界面误触
             'https://i.gkd.li/i/13856647', // 误触
