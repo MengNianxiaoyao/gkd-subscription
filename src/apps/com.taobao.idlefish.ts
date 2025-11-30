@@ -53,15 +53,43 @@ export default defineGkdApp({
     },
     {
       key: 4,
-      name: '全屏广告-红包弹窗',
-      desc: '关闭首页红包弹窗广告',
+      name: '全屏广告',
+      desc: '关闭首页各种全屏弹窗广告',
       enable: false,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      activityIds: 'com.taobao.idlefish.maincontainer.activity.MainActivity',
-      rules:
-        'WebView[text="Rax App"] > [id="root"] >6 View[index=2][clickable=true]',
-      snapshotUrls: 'https://i.gkd.li/i/14551046',
+     rules: [
+        {
+          key: 0,
+          name: '红包弹窗',
+          actionMaximum: 1,
+          resetMatch: 'app',
+          activityIds:
+            'com.taobao.idlefish.maincontainer.activity.MainActivity',
+          matches:
+            'WebView[text="Rax App"] > [id="root"] >6 View[index=2][clickable=true]',
+          snapshotUrls: ['https://i.gkd.li/i/14551046'],
+        },
+        {
+          key: 1,
+          name: '夜市弹窗',
+          actionMaximum: 1,
+          resetMatch: 'app',
+          activityIds: '.maincontainer.activity.MainActivity',
+          matches: 'WebView[text="夜市氛围弹框"] > [id="root"] >3 TextView',
+          snapshotUrls: [
+            'https://i.gkd.li/i/23694103',
+            'https://i.gkd.li/i/23183586',
+          ],
+        },
+        {
+          key: 2,
+          fastQuery: true,
+          activityIds:
+            'com.taobao.idlefish.search_implement.SearchResultActivity',
+          matches:
+            '@TextView[width<250 && height<250] - [childCount=0][text="收下红包"] <<n [vid="fish_layer_container_id"]',
+          snapshotUrls: 'https://i.gkd.li/i/23125419',
+        },
+      ],
     },
     {
       key: 5,
@@ -140,6 +168,24 @@ export default defineGkdApp({
           activityIds: 'com.taobao.login4android.scan.QrScanActivity',
           matches: '[text="同意"][visibleToUser=true]',
           snapshotUrls: ['https://i.gkd.li/i/20239322'],
+        },
+      ],
+    },
+    {
+      key: 9,
+      name: '功能类-关闭小额免密支付',
+      desc: '关闭支付时的小额免密支付选项',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: 'com.alipay.android.msp.ui.views.MspContainerActivity',
+          matches:
+            '@CheckBox[clickable=true][checked=true] < * - [text$="免密支付"][visibleToUser=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/22656242',
+            'https://i.gkd.li/i/23455398',
+            'https://i.gkd.li/i/23455378', // 关闭后
+          ],
         },
       ],
     },

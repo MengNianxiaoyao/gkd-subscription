@@ -41,7 +41,7 @@ export default defineGkdApp({
           key: 0,
           name: '点击广告卡片右侧菜单图标',
           matches:
-            '[(((desc*="广告"||desc*="来自淘宝")&&desc*="查看")||desc$=",,轻点两下查看详情"||(desc^="【有奖调研】"&&desc.length=22))||(id*="/ad_")][visibleToUser=true] >(2,3,4) @ImageView[visibleToUser=true] < [vid^="more" || id^="tv.danmaku.bili.adbiz:id/more"][visibleToUser=true]',
+            '[parent=null][height > prev.bottom.plus(200)] >n [(((desc*="广告"||desc*="来自淘宝")&&desc*="查看")||desc$=",,轻点两下查看详情"||(desc^="【有奖调研】"&&desc.length=22))||(id*="/ad_")][visibleToUser=true] >(2,3,4) @ImageView[visibleToUser=true] < [vid^="more" || id^="tv.danmaku.bili.adbiz:id/more"][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/import/12642260', // n = 2
             'https://i.gkd.li/import/12705266', // n = 3
@@ -64,7 +64,13 @@ export default defineGkdApp({
             'https://i.gkd.li/i/21552836',
             'https://i.gkd.li/i/21705345',
             'https://i.gkd.li/i/21947622',
+            'https://i.gkd.li/i/18306851',
+            'https://i.gkd.li/i/19537979',
+            'https://i.gkd.li/i/23012670',
+            'https://i.gkd.li/i/23123800',
+            'https://i.gkd.li/i/23687196',
           ],
+          excludeSnapshotUrls: ['https://i.gkd.li/i/23833031'], // 会出现按钮在底部导航栏后且visibleToUser=true的情况，需要使用 [parent=null][height > prev.bottom.plus(200)] 排除，原理是根元素的高度必须大于右侧元素（视频卡片元素）bottom+200
         },
         {
           preKeys: [0],
@@ -108,6 +114,7 @@ export default defineGkdApp({
             'https://i.gkd.li/i/20718890',
             'https://i.gkd.li/i/20720187',
             'https://i.gkd.li/i/20739391',
+            'https://i.gkd.li/i/23687208',
           ],
         },
         {
@@ -156,26 +163,31 @@ export default defineGkdApp({
     },
     {
       key: 8,
-      name: '局部广告-直播间卡片广告',
-      desc: '关闭直播间的底部售卖卡片和关注/投喂弹窗',
+      name: '局部广告-直播间悬浮窗广告',
+      desc: '关闭直播间的悬浮窗广告',
       fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
       activityIds: 'com.bilibili.bililive.room.ui.roomv3.LiveRoomActivityV3',
       rules: [
         {
           key: 0,
           name: '直播间底部售卖卡片',
-          matches: '[id="tv.danmaku.bili:id/shopping_close"]',
-          snapshotUrls: 'https://i.gkd.li/i/13200549',
+          matches:
+            '[id="tv.danmaku.bili:id/shopping_close" || vid="live_game_card_close" || vid="match_close"][visibleToUser=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/13200549',
+            'https://i.gkd.li/i/22990081',
+            'https://i.gkd.li/i/23098023',
+          ],
         },
         {
           key: 1,
           name: '[关注/投喂]弹窗',
-          matches: '@[vid="close"] - [vid="up_avatar" || vid="gift_icon"]',
+          matches:
+            '@[vid="close" || vid="iv_close"] - [vid="up_avatar" || vid="gift_icon" || vid="follow_container"][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/14782965',
             'https://i.gkd.li/i/18046573',
+            'https://i.gkd.li/i/22990105',
           ],
         },
       ],
@@ -218,9 +230,85 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds: 'com.bilibili.video.story.StoryVideoActivity',
+          activityIds: [
+            'com.bilibili.video.story.StoryVideoActivity',
+            'com.bilibili.video.story.StoryTransparentActivity',
+          ],
           matches: '[vid="story_ctrl_router"][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/i/18164075',
+          snapshotUrls: [
+            'https://i.gkd.li/i/18164075',
+            'https://i.gkd.li/i/23325994',
+          ],
+        },
+      ],
+    },
+    {
+      key: 11,
+      name: '功能类-自动点击评论区的[展开更多评论]',
+      desc: '自动点击评论区的[展开更多评论]',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: [
+            'com.bilibili.video.story.StoryVideoActivity',
+            'com.bilibili.video.story.StoryTransparentActivity',
+            'com.bilibili.ship.theseus.detail.UnitedBizDetailsActivity',
+            'com.bilibili.ship.theseus.playlist.UnitedPlaylistActivity',
+          ],
+          matches: '@LinearLayout[clickable=true] > [text="展开更多评论"]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/22572375',
+            'https://i.gkd.li/i/23325508',
+            'https://i.gkd.li/i/22573433',
+            'https://i.gkd.li/i/23786106',
+          ],
+        },
+      ],
+    },
+    {
+      key: 18,
+      name: '功能类-自动领取会员经验',
+      desc: '在会员中心页面自动领取会员经验',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: 'com.bilibili.vip.web.VipWebActivity',
+          matches:
+            'TextView[childCount=0][text!=null][index=parent.childCount.minus(1)] -2 View >3 [text^="专属等级加速包"] +2 @TextView[childCount=0][text="领取"] <<n [vid="webview"]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/22886723', // 领取前
+            'https://i.gkd.li/i/22886739', // 领取后
+          ],
+          excludeSnapshotUrls: 'https://i.gkd.li/i/23385023',
+        },
+      ],
+    },
+    {
+      key: 19,
+      name: '功能类-自动点击查看原图',
+      desc: '浏览图片时自动切换至原图模式',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: [
+            'com.bilibili.video.story.StoryVideoActivity', // 视频：竖屏模式1
+            'com.bilibili.video.story.StoryTransparentActivity', // 视频：竖屏模式2
+            'com.bilibili.ship.theseus.detail.UnitedBizDetailsActivity', // 视频：详情页模式
+            'com.bilibili.ship.theseus.playlist.UnitedPlaylistActivity', // 视频：播放列表（稍后再看/收藏夹）
+            'com.bilibili.bplus.followinglist.page.browser.ui.LightBrowserActivityV2', // 动态：图片
+            'com.bilibili.lib.ui.ComposeActivity', // 动态：评论图片
+            'com.bilibili.column.ui.detail.image.ColumnImageViewerActivity', // 专栏图片
+          ],
+          matches: '[text^="查看原图"][visibleToUser=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/23325552', // 视频：竖屏模式1
+            'https://i.gkd.li/i/23304237', // 视频：竖屏模式2
+            'https://i.gkd.li/i/23304245', // 视频：详情页模式
+            'https://i.gkd.li/i/23786065', // 视频：播放列表（稍后再看/收藏夹）
+            'https://i.gkd.li/i/23305280', // 动态：帖内图片
+            'https://i.gkd.li/i/23305281', // 动态：评论图片
+            'https://i.gkd.li/i/23305275', // 专栏图片
+          ],
         },
       ],
     },
