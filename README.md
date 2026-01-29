@@ -14,9 +14,30 @@
 
 **仅默认启用`开屏广告`一类规则**
 
-|                     npmmirror源（推荐）                      |                      unpkg源                      |                          jsDelivr源                          |
-| :----------------------------------------------------------: | :-----------------------------------------------: | :----------------------------------------------------------: |
-| [复制](https://registry.npmmirror.com/gkd-subscription/latest/files) | [复制](https://unpkg.com/gkd-subscription@latest) | [复制](https://cdn.jsdelivr.net/npm/gkd-subscription@latest/dist/gkd.json5) |
+|              npmmirror源<br />（国内用户推荐）               |                        unpkg源                        |                          jsDelivr源                          |                           Github源                           |
+| :----------------------------------------------------------: | :---------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| [跳转链接](https://registry.npmmirror.com/gkd-subscription/latest/files) | [跳转链接](https://unpkg.com/gkd-subscription@latest) | [跳转链接](https://cdn.jsdelivr.net/npm/gkd-subscription@latest/dist/gkd.json5) | [跳转链接](https://raw.githubusercontent.com/MengNianxiaoyao/gkd-subscription/refs/heads/main/dist/gkd.json5) |
+
+
+- npmmirrow
+```txt
+https://registry.npmmirror.com/gkd-subscription/latest/files
+```
+
+- unpkg
+```txt
+https://unpkg.com/gkd-subscription@latest
+```
+
+- jsDeliver
+```txt
+https://cdn.jsdelivr.net/npm/gkd-subscription@latest/dist/gkd.json5
+```
+- Github
+```txt
+https://raw.githubusercontent.com/MengNianxiaoyao/gkd-subscription/refs/heads/main/dist/gkd.json5
+```
+
 
 当前版本: v66
 
