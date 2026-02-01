@@ -13,7 +13,7 @@ export const FULLSCREEN_AD_ORDER = -2; // 全屏广告
 export const SEGMENTED_AD_ORDER = -1; // 分段广告
 
 const COMMON_PREFIX =
-  '[name!$=".CheckBox"][name!$=".EditText"][name!$=".ProgressBar"][childCount=0][visibleToUser=true][height>0&&width>0][top>0&&left>0]';
+  '[name!$=".CheckBox"][name!$=".EditText"][name!$=".ProgressBar"][childCount=0][visibleToUser=true][height>0&&width>0&&width<500&&height<300][top>0&&left>0]';
 
 // 通知提示
 const NEGATION_PART_RULE_TEXT = `${COMMON_PREFIX}[(((text^="不"||text^="现在不要")&&text$="谢谢")||text="没兴趣"||text="否"||text="关闭"||text~="跳[\\\\s]+过"||text~="跳[\\\\s]+過"||text="关闭按钮"||text="我没空"||text="不开启"||text="暂时不用"||text="暂时不要"||text="我已知晓"||text="不用了"||text="本次忽略"||text="考虑一下"||text="考慮一下"||text="先不了"||text="不允许"||text^="不了"||text^="不再"||(text^="稍后"&&text!="稍后再看")||text^="忽略"||text^="暂不"||text^="放弃"||text^="放棄"||text^="取消"||text$="再说"||text$="拒绝"||text$="再想想"||text$="知道了"||text$="稍后提醒我"||text$="稍後提醒我"||((text^="不"||text^="現在不要")&&text$="謝謝")||text="關閉"||text="關閉按鈕"||text="我已知曉"||text="不開啟"||text$="再說"||text$="拒絕"||text^="暫不"||text~="close"||text~="not now"||text~="(?is)Ignore.*"||text~="(?is)cancel.*"||text~="(?is).*later"||text~="(?is).*refuse"||text~="(?is).*i see")&&(text!*="取消全部")&&(text!*="取消订单")&&text.length<=7]`;
