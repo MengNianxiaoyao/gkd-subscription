@@ -171,7 +171,7 @@ export default defineGkdApp({
           fastQuery: true,
           activityIds: [
             'com.qzone.reborn.feedpro.activity.QzoneFriendFeedProActivity',
-          '.guild.base.QPublicFragmentActivityForMainWebActivity',
+            '.guild.base.QPublicFragmentActivityForMainWebActivity',
           ],
           matches: '@[clickable=true] > [text="广告"][visibleToUser=true]',
           snapshotUrls: [
