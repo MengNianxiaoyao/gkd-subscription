@@ -82,7 +82,7 @@ export default defineGkdApp({
             'https://i.gkd.li/import/12828832', // com.twitter.tweetdetail.TweetDetailActivity
             'https://i.gkd.li/import/12904601', // com.twitter.app.profiles.ProfileActivity
             'https://i.gkd.li/import/13680798', // 兼容英文
-            'https://i.gkd.li/i/25089666'
+            'https://i.gkd.li/i/25089666',
           ],
         },
       ],

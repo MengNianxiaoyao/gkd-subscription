@@ -56,7 +56,7 @@ export default defineGkdApp({
           snapshotUrls: [
             'https://i.gkd.li/i/16646832',
             'https://i.gkd.li/i/17574462',
-            'https://i.gkd.li/i/25336815'
+            'https://i.gkd.li/i/25336815',
           ],
           excludeSnapshotUrls: 'https://i.gkd.li/i/22377026',
         },
