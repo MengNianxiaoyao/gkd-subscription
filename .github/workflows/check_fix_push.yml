@@ -19,7 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6.0.2
 
-      - uses: pnpm/action-setup@v4.3.0
+      - uses: pnpm/action-setup@v4.4.0
         with:
           version: latest
 
