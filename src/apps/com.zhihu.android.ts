@@ -14,7 +14,7 @@ export default defineGkdApp({
         {
           key: 0,
           activityIds: [
-            '.feature.short_container_feature.ui.ShortContainerHostActivity',
+            '.feature.short_container_feature.ui',
             '.ContentActivity',
           ],
           matches:
@@ -29,6 +29,7 @@ export default defineGkdApp({
             'https://i.gkd.li/i/14206949',
             'https://i.gkd.li/i/14206988',
             'https://i.gkd.li/i/18008867',
+            'https://i.gkd.li/i/25572259',
           ],
           excludeSnapshotUrls: [
             'https://i.gkd.li/i/17002118',
@@ -148,7 +149,7 @@ export default defineGkdApp({
         {
           key: 0,
           matches:
-            '@[text="×"||(name*=".Image"&&clickable=true)][index!=0][visibleToUser=true][!(vid="medal")] <n [!(vid!=null)] > [name!*="WebView"][(text$="热度"||text$="广告"||text="创作者小助手"||(text^="知乎"&&text!*="·"))||(text="查看详情")][text.length>2&&text.length<20]',
+            '@[text="×"||(name*=".Image"&&id=null)][index!=0][visibleToUser=true][!(vid="medal")] <n [!(vid!=null)] > [name!*="WebView"][(text$="热度"||text$="广告"||text="创作者小助手"||(text^="知乎"&&text!*="·"))||(text="查看详情")][text.length>2&&text.length<20]',
           snapshotUrls: [
             'https://i.gkd.li/import/14178980',
             'https://i.gkd.li/import/14206949',
@@ -185,8 +186,8 @@ export default defineGkdApp({
         {
           key: 1,
           name: '首页-右侧悬浮窗广告',
-          fastQuery: true,
           activityIds: ['com.zhihu.android.app.ui.activity.MainActivity'],
+          fastQuery: true,
           matches:
             '@ImageView[clickable=true][visibleToUser=true] + * >2 [text="广告"]',
           snapshotUrls: 'https://i.gkd.li/i/14635636',
@@ -194,19 +195,19 @@ export default defineGkdApp({
         {
           key: 2,
           name: '回答页-底部关注悬浮窗',
-          fastQuery: true,
           activityIds: [
             'com.zhihu.android.feature.short_container_feature.ui.ShortContainerHostActivity',
           ],
+          fastQuery: true,
           matches: '[vid="close_img"]',
           snapshotUrls: 'https://i.gkd.li/i/14970008',
         },
         {
           key: 3,
           name: '回答页-底部关注悬浮窗-2',
-          fastQuery: true,
           activityIds:
             'com.zhihu.android.mix.activity.ContentMixProfileActivity',
+          fastQuery: true,
           matches:
             'View[childCount=3] > @View[clickable=true][childCount=1][text=""] > Image[childCount=0][text=""] <<n [vid="view_content"]',
           snapshotUrls: 'https://i.gkd.li/i/16422471',

@@ -5,21 +5,6 @@ export default defineGkdApp({
   name: '京东',
   groups: [
     {
-      key: 0,
-      name: '开屏广告',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      priorityTime: 10000,
-      rules: [
-        {
-          matches: '@TextView < [vid="b22"]',
-          snapshotUrls: 'https://i.gkd.li/i/20533156',
-        },
-      ],
-    },
-    {
       key: 2,
       name: '局部广告-悬浮广告',
       desc: '关闭首页悬浮广告、参与调研提示、红包弹窗和购物车砸金蛋',
@@ -201,13 +186,16 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
-          matches:
-            'ImageView < FrameLayout[index=0] < ViewGroup[childCount=3] > FrameLayout[index=parent.childCount.minus(1)||index=parent.childCount.minus(2)][childCount=1] > ImageView[desc="关闭"]',
+          anyMatches: [
+            'ImageView < FrameLayout[index=0] < ViewGroup[childCount>=3] > FrameLayout[index=parent.childCount.minus(1)||index=parent.childCount.minus(2)][childCount=1] > ImageView[desc="关闭"]',
+            'View + FrameLayout[index=1] <2 ViewGroup[childCount>=3] > FrameLayout[index=parent.childCount.minus(1)||index=parent.childCount.minus(2)][childCount=1] > ImageView[desc="关闭"]',
+          ],
           snapshotUrls: [
             'https://i.gkd.li/import/13258973',
             'https://i.gkd.li/import/13258980',
             'https://i.gkd.li/import/13258981',
             'https://i.gkd.li/i/22319329',
+            'https://i.gkd.li/i/26164414',
           ],
         },
         {
@@ -231,9 +219,14 @@ export default defineGkdApp({
         },
         {
           key: 3,
-          matches:
+          anyMatches: [
             '[desc="吸顶楼层"] > [desc="关闭按钮"][clickable=true][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/i/15112953',
+            'ImageView[clickable=false] < @ViewGroup[clickable=true] <<4 [desc="吸顶楼层"]',
+          ],
+          snapshotUrls: [
+            'https://i.gkd.li/i/15112953',
+            'https://i.gkd.li/i/26164445',
+          ],
         },
         {
           key: 4,
