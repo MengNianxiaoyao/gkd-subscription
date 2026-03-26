@@ -18,9 +18,9 @@
 | :----------------------------------------------------------: | :-----------------------------------------------: | :----------------------------------------------------------: |
 | [复制](https://registry.npmmirror.com/gkd-subscription/latest/files) | [复制](https://unpkg.com/gkd-subscription@latest) | [复制](https://cdn.jsdelivr.net/npm/gkd-subscription@latest/dist/gkd.json5) |
 
-当前版本: v68
+当前版本: v69
 
-当前订阅文件已适配 285 个 APP, 共有 866 个规则组, 7 个全局规则组
+当前订阅文件已适配 285 个 APP, 共有 864 个规则组, 9 个全局规则组
 
 ### 第三方规则
 
