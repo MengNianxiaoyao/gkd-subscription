@@ -40,15 +40,17 @@
     "./dist"
   ],
   "dependencies": {
-    "@eslint/js": "^10.0.0",
     "@gkd-kit/api": "0.9.1",
     "@gkd-kit/define": "0.0.1",
     "@gkd-kit/tools": "0.8.0",
+    "json5": "2.2.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.0",
     "@types/node": "24.12.2",
     "eslint": "10.2.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-unused-imports": "4.4.1",
-    "json5": "2.2.3",
     "lint-staged": "16.4.0",
     "prettier": "3.8.1",
     "simple-git-hooks": "2.13.1",

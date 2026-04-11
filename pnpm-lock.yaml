@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@eslint/js':
-        specifier: ^10.0.0
-        version: 10.0.1(eslint@10.2.0(jiti@2.4.2))
       '@gkd-kit/api':
         specifier: 0.9.1
         version: 0.9.1
@@ -20,6 +17,13 @@ importers:
       '@gkd-kit/tools':
         specifier: 0.8.0
         version: 0.8.0(@gkd-kit/api@0.9.1)(json5@2.2.3)
+      json5:
+        specifier: 2.2.3
+        version: 2.2.3
+    devDependencies:
+      '@eslint/js':
+        specifier: ^10.0.0
+        version: 10.0.1(eslint@10.2.0(jiti@2.4.2))
       '@types/node':
         specifier: 24.12.2
         version: 24.12.2
@@ -32,9 +36,6 @@ importers:
       eslint-plugin-unused-imports:
         specifier: 4.4.1
         version: 4.4.1(@typescript-eslint/eslint-plugin@8.58.1(@typescript-eslint/parser@8.58.1(eslint@10.2.0(jiti@2.4.2))(typescript@5.9.3))(eslint@10.2.0(jiti@2.4.2))(typescript@5.9.3))(eslint@10.2.0(jiti@2.4.2))
-      json5:
-        specifier: 2.2.3
-        version: 2.2.3
       lint-staged:
         specifier: 16.4.0
         version: 16.4.0
