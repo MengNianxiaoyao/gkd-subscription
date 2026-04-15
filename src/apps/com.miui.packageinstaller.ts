@@ -43,7 +43,8 @@ export default defineGkdApp({
             'com.miui.packageInstaller.NewInstallerPrepareActivity',
             'com.miui.packageInstaller.ui.InstallPrepareAlertActivity',
           ],
-          excludeMatches: '[text="已了解此应用存在风险"][visibleToUser=true]',
+          excludeMatches:
+            '[text="已了解此应用存在风险" || text="已了解此应用未经安全检测"][visibleToUser=true]',
           matches:
             '@FrameLayout[clickable=true] > LinearLayout[childCount=1] > [text^="继续" || text^="仍然"][text.length=4][visibleToUser=true]',
           snapshotUrls: [
@@ -52,7 +53,10 @@ export default defineGkdApp({
             'https://i.gkd.li/i/17691996',
             'https://i.gkd.li/i/20053957',
           ],
-          excludeSnapshotUrls: 'https://i.gkd.li/i/25095995',
+          excludeSnapshotUrls: [
+            'https://i.gkd.li/i/25095995',
+            'https://i.gkd.li/i/26748736',
+          ],
         },
         {
           preKeys: [0],
@@ -198,13 +202,19 @@ export default defineGkdApp({
         {
           key: 0,
           matches:
-            '[text="已了解此应用存在风险"][checked=false][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/i/25095995',
+            '[text="已了解此应用存在风险" || text="已了解此应用未经安全检测"][checked=false][visibleToUser=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/25095995',
+            'https://i.gkd.li/i/26748736',
+          ],
         },
         {
           preKeys: [0],
           matches: '@[clickable=true] >2 [text^="继续"][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/i/25095995',
+          snapshotUrls: [
+            'https://i.gkd.li/i/25095995',
+            'https://i.gkd.li/i/26748736',
+          ],
         },
       ],
     },
