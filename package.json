@@ -40,7 +40,7 @@
     "./dist"
   ],
   "dependencies": {
-    "@gkd-kit/api": "0.9.2",
+    "@gkd-kit/api": "0.9.3",
     "@gkd-kit/define": "0.0.1",
     "@gkd-kit/tools": "0.8.0",
     "json5": "2.2.3"
