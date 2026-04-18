@@ -2,6 +2,10 @@ name: build_release
 
 on: workflow_dispatch
 
+permissions:
+  id-token: write
+  contents: read
+
 jobs:
   build_release:
     runs-on: ubuntu-latest
@@ -76,11 +80,11 @@ jobs:
 
       - name: Publish package
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          if: ${{ steps.commit.outcome == 'success' && env.NPM_TOKEN != '' }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          if: ${{ steps.commit.outcome == 'success' && env.NODE_AUTH_TOKEN != '' }}
         run: |
           pnpm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
-          pnpm publish --no-git-checks
+          pnpm publish --access public --no-git-checks
           node -e "import('@gkd-kit/tools').then((m) => m.syncNpmmirror());"
 
       - name: sync
