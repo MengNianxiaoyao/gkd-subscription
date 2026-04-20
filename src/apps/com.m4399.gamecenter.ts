@@ -48,7 +48,8 @@ export default defineGkdApp({
         {
           activityIds:
             '.plugin.main.controllers.activities.ActivitiesDetailActivity',
-          matches: 'View[index=0] > [text="选这个"]',
+          matches:
+            'View[id="manqin"] > ListView > View[index=0] > [text="选这个"]',
           snapshotUrls: 'https://i.gkd.li/i/26899535',
         },
       ],
