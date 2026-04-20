@@ -40,5 +40,18 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 3,
+      name: '功能类-满勤抢游戏币',
+      desc: '点击"选这个"',
+      rules: [
+        {
+          activityIds:
+            '.plugin.main.controllers.activities.ActivitiesDetailActivity',
+          matches: 'View[index=0] > [text="选这个"]',
+          snapshotUrls: 'https://i.gkd.li/i/26899535',
+        },
+      ],
+    },
   ],
 });
