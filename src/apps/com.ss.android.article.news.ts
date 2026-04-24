@@ -39,23 +39,34 @@ export default defineGkdApp({
     {
       key: 2,
       name: '局部广告-浮窗广告',
-      desc: '关闭各页页的浮窗广告',
+      desc: '关闭各页的浮窗广告',
       rules: [
         {
           key: 0,
+          fastQuery: true,
           name: '首页-浮窗广告',
           activityIds: 'com.ss.android.article.news.activity.MainActivity',
           matches:
-            'FrameLayout > FrameLayout > FrameLayout[childCount=2] > @ImageView + ImageView[clickable=true][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/i/13762123',
+            'FrameLayout > FrameLayout > FrameLayout[childCount=2] > ImageView[id="com.ss.android.article.news:id/cnd"]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/13762123',
+            'https://i.gkd.li/i/27056157',
+          ],
         },
         {
           key: 1,
           name: '视频页-浮窗广告',
           activityIds: 'com.ss.android.ugc.detail.activity.TikTokActivity',
+          position: {
+            left: 'width * 0.104',
+            top: 'height * 0.108',
+          },
           matches:
-            'FrameLayout > FrameLayout > FrameLayout[childCount=2] > ImageView + ImageView[clickable=true][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/i/13761236',
+            'FrameLayout > MeasureOnceRelativeLayout2 > [id="com.ss.android.article.news:id/m4g"]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/13761236',
+            'https://i.gkd.li/i/27056687',
+          ],
         },
       ],
     },
