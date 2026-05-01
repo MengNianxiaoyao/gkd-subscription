@@ -73,10 +73,7 @@ export default defineGkdApp({
       activityIds: '.model.finish.InstallFinishActivity',
       rules: [
         {
-          matches: [
-            '[text*="增强防护"]',
-            '[text="取消"]',
-          ],
+          matches: ['[text*="增强防护"]', '[text="取消"]'],
           snapshotUrls: 'https://i.gkd.li/i/27193239',
         },
       ],
