@@ -7,12 +7,13 @@ export default defineGkdApp({
     {
       key: 1,
       name: '功能类-自动安装应用',
-      desc: '点击 ①继续安装 ②完成',
+      desc: '点击[继续安装]',
       fastQuery: true,
       rules: [
         {
           key: 0,
           name: '点击[继续安装]',
+          actionDelay: 50,
           activityIds: [
             '.model.guide.ui.InstallGuideActivity',
             '.modelv2.parsing.PackageParsingV2Activity',
