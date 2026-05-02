@@ -48,7 +48,7 @@
   "devDependencies": {
     "@eslint/js": "^10.0.0",
     "@types/node": "24.12.2",
-    "eslint": "10.2.1",
+    "eslint": "10.3.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-unused-imports": "4.4.1",
     "lint-staged": "16.4.0",
