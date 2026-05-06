@@ -64,14 +64,14 @@ export default defineGkdApp({
           key: 2,
           name: '加油页面优惠券弹窗',
           matches:
-            '@ImageView < [desc="关闭"][clickable=true] <n * > * >n View[text="立即领取"]',
+            'ImageView < @[desc="关闭"][clickable=true] <n * > * >n View[text="立即领取"]',
           snapshotUrls: ['https://i.gkd.li/import/12642857'],
         },
         {
           key: 3,
           fastQuery: true,
           matches:
-            '@ViewGroup[clickable=true] > View[visibleToUser=true][text^="关闭"] <<n [vid="mapInteractiveRelativeLayout"]',
+            '@ViewGroup[clickable=true] > View[text^="关闭"][visibleToUser=true] <<n [vid="mapInteractiveRelativeLayout"]',
           snapshotUrls: 'https://i.gkd.li/i/22287641',
         },
       ],
@@ -97,7 +97,7 @@ export default defineGkdApp({
           fastQuery: true,
           activityIds: 'com.autonavi.map.activity.NewMapActivity',
           matches:
-            'ViewGroup[desc="图片"][childCount=2] > ViewGroup[clickable=true] > @ImageView[childCount=0] <<n [vid="tab_container_id"]',
+            'ViewGroup[desc="图片"][childCount=2] > @ViewGroup[clickable=true] > ImageView[childCount=0] <<n [vid="tab_container_id"]',
           snapshotUrls: 'https://i.gkd.li/i/16960367',
         },
         {
@@ -105,7 +105,7 @@ export default defineGkdApp({
           fastQuery: true,
           activityIds: 'com.autonavi.map.activity.NewMapActivity',
           matches:
-            '@ImageView < ViewGroup[clickable=true] -2 * > View[text^="高德购票" && text$="优惠"] <<n [vid="mapInteractiveRelativeLayout"]',
+            'ImageView < @ViewGroup[clickable=true] -2 * > View[text^="高德购票" && text$="优惠"] <<n [vid="mapInteractiveRelativeLayout"]',
           snapshotUrls: 'https://i.gkd.li/i/16960157',
         },
         {
@@ -113,7 +113,7 @@ export default defineGkdApp({
           fastQuery: true,
           activityIds: 'com.autonavi.map.activity.NewMapActivity',
           matches:
-            '@[clickable=true] > [visibleToUser=true][text="关闭"] <<n [vid="ajx_view_container"]',
+            '@[clickable=true] > [text="关闭"][visibleToUser=true] <<n [vid="ajx_view_container"]',
           snapshotUrls: 'https://i.gkd.li/i/18627401',
         },
       ],
