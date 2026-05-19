@@ -4,29 +4,31 @@ on:
   issues:
     types: [opened]
 
+permissions:
+  issues: write
+
 jobs:
   add-labels:
     runs-on: ubuntu-latest
     if: |
-      contains(github.event.issue.body, 'i.gkd.li/import') == false &&
-      contains(github.event.issue.body, 'i.gkd.li/i/') == false &&
-      contains(github.event.issue.body, 'f.gkd.li') == false &&
-      contains(github.event.issue.body, '.zip') == false
+      !contains(github.event.issue.body || '', 'i.gkd.li/import') &&
+      !contains(github.event.issue.body || '', 'i.gkd.li/i/') &&
+      !contains(github.event.issue.body || '', 'f.gkd.li') &&
+      !contains(github.event.issue.body || '', '.zip')
     steps:
-      - name: Add labels
-        uses: actions-cool/issues-helper@v3
-        with:
-          actions: 'add-labels'
-          token: ${{ secrets.GITHUB_TOKEN }}
-          issue-number: ${{ github.event.issue.number }}
-          labels: 'need info'
-      - name: Create comment
-        uses: actions-cool/issues-helper@v3
-        with:
-          actions: 'create-comment'
-          token: ${{ secrets.GITHUB_TOKEN }}
-          issue-number: ${{ github.event.issue.number }}
-          body: |
-            您好 ${{ github.event.issue.user.login }}。由于您的 Issue 缺少必要的快照或信息。请在评论中提供更多相关且必要的信息，以便我们更好地帮助您。否则该 Issue 将在 3 天后关闭，谢谢！
+      - name: Add need info label
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          gh issue edit "$ISSUE_NUMBER" --add-label "need info"
 
-            Hello, ${{ github.event.issue.user.login }}. Your issue lacks necessary snapshots or information. Please provide additional relevant and necessary details in the comments to help us assist you better. Otherwise, this issue will be closed in 3 days. Thank you!
+      - name: Create comment
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
+        run: |
+          gh issue comment "$ISSUE_NUMBER" --body "您好 ${ISSUE_AUTHOR}。由于您的 Issue 缺少必要的快照或信息。请在评论中提供更多相关且必要的信息，以便我们更好地帮助您。否则该 Issue 将在 5 天后关闭，谢谢！
+
+          Hello, ${ISSUE_AUTHOR}. Your issue lacks necessary snapshots or information. Please provide additional relevant and necessary details in the comments to help us assist you better. Otherwise, this issue will be closed in 5 days. Thank you!"
