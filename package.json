@@ -59,7 +59,7 @@
     "typescript-eslint": "8.59.3"
   },
   "volta": {
-    "node": "24.15.0"
+    "node": "24.16.0"
   },
   "author": "梦念逍遥",
   "license": "MIT",
