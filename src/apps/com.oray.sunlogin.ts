@@ -18,6 +18,19 @@ export default defineGkdApp({
           exampleUrls: 'https://e.gkd.li/f41b0367-9161-4329-987d-b2d0ad9ec233',
           snapshotUrls: 'https://i.gkd.li/i/17004919',
         },
+        {
+          fastQuery: true,
+          matches: '[vid="anythink_myoffer_splash_skip"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/29830684',
+        },
+        {
+          fastQuery: true,
+          matches: '@View[clickable=true] - TextView[text="互动广告"]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/29830482',
+            'https://i.gkd.li/i/29830555',
+          ],
+        },
       ],
     },
     {
