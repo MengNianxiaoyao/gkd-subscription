@@ -10,7 +10,7 @@ jobs:
     if: github.repository == 'MengNianxiaoyao/gkd-subscription' && github.event.pull_request.user.login != 'renovate[bot]'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7.0.0
+      - uses: actions/checkout@v7
 
       - name: Get changed files
         id: changed_files
@@ -31,15 +31,13 @@ jobs:
             echo "your src subscription changed files count must <= 1"
             exit 1
           fi
-
-      - uses: pnpm/action-setup@v6.0.9
+    
+      - uses: actions/setup-node@v7
         with:
-          version: latest
+          node-version-file: package.json
+          package-manager-cache: false
 
-      - uses: actions/setup-node@v6.4.0
-        with:
-          node-version: lts/*
-          cache: pnpm
+      - uses: pnpm/action-setup@v6
         
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile

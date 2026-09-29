@@ -14,8 +14,8 @@
   "jsdelivr": "./dist/gkd.json5",
   "scripts": {
     "postinstall": "simple-git-hooks",
-    "format": "prettier --cache --write ./**/*.{js,cjs,mjs,ts,jsx,tsx,json}",
-    "lint": "eslint --cache --fix ./**/*.{js,cjs,mjs,ts,jsx,tsx}",
+    "format": "prettier --cache --write --ignore-unknown .",
+    "lint": "eslint --cache --fix .",
     "check": "tsc --noEmit && tsx ./scripts/check.ts",
     "build": "tsc --noEmit && tsx ./scripts/build.ts"
   },
@@ -25,7 +25,6 @@
   },
   "lint-staged": {
     "*.{js,cjs,mjs,ts,cts,mts,jsx,tsx}": [
-      "prettier --cache --write",
       "eslint --cache --fix"
     ],
     "*.json": [
@@ -47,19 +46,18 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.0",
-    "@types/node": "24.12.4",
-    "eslint": "10.4.0",
+    "@types/node": "26.1.2",
+    "eslint": "10.8.0",
     "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-prettier": "5.5.6",
     "eslint-plugin-unused-imports": "4.4.1",
-    "lint-staged": "17.0.5",
-    "prettier": "3.8.3",
+    "jiti": "2.7.0",
+    "lint-staged": "17.3.0",
+    "prettier": "3.9.6",
     "simple-git-hooks": "2.13.1",
-    "tsx": "4.22.0",
+    "tsx": "4.23.5",
     "typescript": "6.0.3",
-    "typescript-eslint": "8.59.3"
-  },
-  "volta": {
-    "node": "24.18.0"
+    "typescript-eslint": "8.66.0"
   },
   "author": "梦念逍遥",
   "license": "MIT",
@@ -71,8 +69,11 @@
     "type": "git",
     "url": "git+https://github.com/MengNianxiaoyao/gkd-subscription.git"
   },
-  "engineStrict": true,
-  "engines": {
-    "node": ">=22"
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "26",
+      "onFail": "warn"
+    }
   }
 }
