@@ -45,7 +45,7 @@ const OPEN_AD_SKIP_VID_SUFFIX = `${COMMON_PREFIX}[vid~="(?is).*skip.*"][vid!~="(
 const OPEN_AD_COUNT_DOWN_VID_SUFFIX = `${COMMON_PREFIX}[(vid~="(?is).*count.*"&&vid~="(?is).*down.*"&&!(vid~="(?is).*load.*")&&!(vid~="(?is).*hour.*")&&!(vid~="(?is).*minute.*")&&!(vid~="(?is).*timing.*")&&!(vid~="(?is).*add.*")&&!(vid~="(?is).*ead.*"))]${OPEN_AD_TIME_EXCLUDES}`;
 // 这里必须使用 vid 精确匹配作为选择器首个条件，才能命中文档要求的 fastQuery 格式。
 const OPEN_AD_FAST_SKIP_VIDS =
-  '[vid="tt_splash_skip_btn"||vid="btn_skip"||vid="skip_btn"||vid="skip_button"||vid="skipButton"||vid="ad_skip"||vid="ad_skip_btn"||vid="splash_skip"||vid="splash_skip_btn"||vid="tme_ad_skip_button"||vid="skip_ad_button"||vid="ksad_splash_skip_view"||vid="ksad_skip_view"]';
+  '[vid="tt_splash_skip_btn"||vid="btn_skip"||vid="skip_btn"||vid="skip_button"||vid="skipButton"||vid="ad_skip"||vid="ad_skip_btn"||vid="splash_skip"||vid="splash_skip_btn"||vid="tme_ad_skip_button"||vid="skip_ad_button"||vid="splash_ad_close"||vid="ksad_splash_skip_view"||vid="ksad_skip_view"]';
 const OPEN_AD_FAST_COUNT_DOWN_VIDS =
   '[vid="count_down"||vid="count_down_view"||vid="countDown"||vid="countDownView"||vid="gdt_count_down_view"||vid="GdtCountDownView"||vid="ui_count_down"]';
 // 兜底规则保持旧主规则的匹配表达式，避免只优化快速路径导致 desc/宽泛 vid 场景回归。
